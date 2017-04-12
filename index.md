@@ -1,12 +1,9 @@
 ---
 layout: page
-title: Hello !
-tagline: Tagline
+title: Welcome
+tagline: Let's begin somewhere...
 ---
-{% include JB/setup %}
 
-Welcome !
+Welcome to my repository of non-convergent suite of random letters.
 
-<?php
-This is a code example.
-?>
+On this website, you may contemplate the variation of 26 letters.

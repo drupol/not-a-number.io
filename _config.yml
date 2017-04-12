@@ -5,10 +5,14 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
 
+paginate: 10
+paginate_path: "blog/page:num"
+excerpt_separator: <!--break-->
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : My tech book
+title : new Blog();
 tagline: Just another non-convergent suite of random letters...
 author :
   name : Pol Dellaiera
@@ -24,9 +28,9 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://drupol.github.io
+production_url : https://drupol.github.io
 
-gems: ["jekyll-sitemap"]
+gems: ["jekyll-sitemap", "jekyll-paginate"]
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

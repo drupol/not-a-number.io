@@ -1,7 +1,7 @@
 ---
 layout: post
 category : git
-tagline: "Prenez un chewing-gum Emile"
+title: "Prenez un chewing-gum Emile"
 tags : [git, rebase, work, github]
 ---
 {% include JB/setup %}
@@ -13,6 +13,8 @@ We were working on a specific part, which is a component composed of sub compone
 During the development, the parent branch “**master**”, where the feature branch “**feature/feature-198**” is originating from has evolved on its own. Some small bugs were discovered, fixed and merged.
 
 However, you guessed it, some of these commits were needed in the feature branch.
+
+<!--break-->
 
 As always, I try to keep all my branches clean. It means that I try to avoid useless commit logs.
 
