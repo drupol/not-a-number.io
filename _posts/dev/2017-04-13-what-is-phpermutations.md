@@ -29,9 +29,9 @@ The permutations are: $$ [A, B] $$ and $$ [B, A] $$.
 
 The combination are: $$ [A, B] $$.
 
-When the element order does matter, it is a Permutation.
+When the element order does matter, it is a permutation.
 
-When the element order does not matter, it is a Combination.
+When the element order does not matter, it is a combination.
 
 If you have a group of 10 items, you'll have 3628800 permutations and 1 combination.
 
