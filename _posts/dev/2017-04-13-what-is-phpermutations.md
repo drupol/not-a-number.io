@@ -15,12 +15,12 @@ But before continuing, let me remind you what are the differences between a perm
 
 <blockquote class="blockquote">
 The notion of permutation relates to the act of arranging all the members of a set into some sequence or order.
-<footer class="blockquote-footer"><a href="https://en.wikipedia.org/wiki/Permutation">Wikipedia</a></footer>
+<footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Permutation">Wikipedia</a></cite></footer>
 </blockquote>
 
 <blockquote class="blockquote">
 A combination is a way of selecting items from a collection, such that, unlike Permutations, the order of selection does not matter.
-<footer class="blockquote-footer"><a href="https://en.wikipedia.org/wiki/Combination">Wikipedia</a></footer>
+<footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Combination">Wikipedia</a></cite></footer>
 </blockquote>
 
 Example, you have a group composed of 2 items: $$ \{A, B\} $$.
