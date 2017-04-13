@@ -12,8 +12,8 @@ excerpt_separator: <!--break-->
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : new Blog();
-tagline: Just another non-convergent suite of random letters...
+title : "NaN"
+tagline: Just another non-convergent suite of random characters...
 author :
   name : Pol Dellaiera
   email : pol.dellaiera@gmail.com
@@ -109,7 +109,7 @@ JB :
     gauges :
         site_id : 'SITE ID'
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-97356033-1'
     getclicky :
       site_id : 
     mixpanel :

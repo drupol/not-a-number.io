@@ -1,6 +1,95 @@
 ---
-theme :
-  name : twitter
 ---
 {% include JB/setup %}
-{% include themes/twitter/default.html %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="//code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <link href="/assets/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+
+<div class="bg-faded">
+  <div class="container">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{{ HOME_PATH }}">
+        <img src="/assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        NaN
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          {% assign pages_links = site.pages | sort:"order" %}
+          {% assign group = 'navigation' %}
+          {% include JB/pages_links %}
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<br/>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      {{ content }}
+    </div><!-- /.blog-main -->
+
+    <div class="col-sm-3">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        Feel free to contribute to this <a href="https://github.com/drupol/drupol.github.io">blog</a>!
+        <nav>
+          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/drupol.github.io/blob/master/{{ page.path }}">View the source</a>
+          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/drupol.github.io/edit/master/{{ page.path }}">Edit this page</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-module">
+        <h4>Elsewhere</h4>
+        <ol class="list-unstyled">
+          <li><a href="https://github.com/drupol">GitHub</a></li>
+          <li><a href="https://twitter.com/drupol">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/poldellaiera/">LinkedIn</a></li>
+        </ol>
+      </div>
+    </div><!-- /.blog-sidebar -->
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <hr>
+      {% include JB/comments %}
+    </div>
+  </div>
+</div>
+
+<footer class="blog-footer">
+  <p>&copy;{{ site.author.name }} 2017 :: N0t A Number.</p>
+</footer>
+
+{% include JB/analytics %}
+</body>
+</html>

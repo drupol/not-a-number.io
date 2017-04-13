@@ -1,7 +1,38 @@
 ---
-theme :
-  name : twitter
 layout: default
 ---
 {% include JB/setup %}
-{% include themes/twitter/post.html %}
+
+<article>
+
+  <h2>{{ page.title }}</h2>
+
+  <p class="blog-post-meta">The
+    {{ page.date | date_to_long_string }}
+  {% unless page.tags == empty %}
+  <span class="tag_box"> filled in
+    {% assign badge_list = page.tags %}
+    {% include JB/badge_list %}
+  </span>
+  {% endunless %}
+  </p>
+
+  {{ content }}
+
+  <div class="blog-pagination">
+    <nav>
+      {% if page.previous %}
+      <a class="btn btn-outline-primary" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
+      {% else %}
+      <a class="btn btn-outline-primary">&larr; Previous</a>
+      {% endif %}
+      <a class="btn btn-outline-primary" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+      {% if page.next %}
+      <a class="btn btn-outline-primary" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
+      {% else %}
+      <a class="btn btn-outline-primary">Next &rarr;</a>
+      {% endif %}
+    </nav>
+  </div>
+
+</article>
