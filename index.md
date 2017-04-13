@@ -26,7 +26,7 @@ tagline: Not A Number
 <h2><a href="{{ HOME_PATH }}{{post.url}}">{{post.title}}</a></h2>
 
 <div class="excerpt">
-{{post.excerpt | strip_html | strip_newlines}}
+{{post.excerpt | strip_html | strip_newlines}}..
 </div>
 
 <div class="read-more">
@@ -35,4 +35,3 @@ tagline: Not A Number
 
 </article>
 {% endfor %}  
-

@@ -15,8 +15,8 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script src="//code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">  <script src="//code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -57,20 +57,21 @@
 
     <div class="col-sm-3">
       <div class="sidebar-module sidebar-module-inset">
-        <h4>About</h4>
-        Feel free to contribute to this <a href="https://github.com/drupol/drupol.github.io">blog</a>!
+        Spotted an error? Please let me know by contributing to this <a href="https://github.com/drupol/drupol.github.io">blog</a>!
         <nav>
-          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/drupol.github.io/blob/master/{{ page.path }}">View the source</a>
-          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/drupol.github.io/edit/master/{{ page.path }}">Edit this page</a>
+          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/drupol.github.io/blob/master/{{ page.path }}"><i class="fa fa-code" aria-hidden="true"></i> View the source</a>
+          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/drupol.github.io/edit/master/{{ page.path }}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit this page</a>
         </nav>
       </div>
 
       <div class="sidebar-module">
-        <h4>Elsewhere</h4>
+        <h4>Get in touch</h4>
         <ol class="list-unstyled">
-          <li><a href="https://github.com/drupol">GitHub</a></li>
-          <li><a href="https://twitter.com/drupol">Twitter</a></li>
-          <li><a href="https://www.linkedin.com/in/poldellaiera/">LinkedIn</a></li>
+          <li><a href="https://github.com/drupol"><i class="fa fa-github" aria-hidden="true"></i> On GitHub</a></li>
+          <li><a href="https://www.drupal.org/u/pol"><i class="fa fa-drupal" aria-hidden="true"></i> On Drupal</a></li>
+          <li><a href="https://twitter.com/drupol"><i class="fa fa-twitter" aria-hidden="true"></i> On Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/poldellaiera/"><i class="fa fa-linkedin" aria-hidden="true"></i> On LinkedIn</a></li>
+          <li><a href="/contact"><i class="fa fa-envelope" aria-hidden="true"></i> By email</a></li>
         </ol>
       </div>
     </div><!-- /.blog-sidebar -->
@@ -87,7 +88,7 @@
 </div>
 
 <footer class="blog-footer">
-  <p>&copy;{{ site.author.name }} 2017 :: N0t A Number.</p>
+  <p>&copy;N0t A Number :: Made with <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://">Bootstrap 4</a>.</p>
 </footer>
 
 {% include JB/analytics %}
