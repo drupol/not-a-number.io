@@ -3,7 +3,7 @@ layout: post
 category : drupal
 title: "Why companies are not ready for Drupal?"
 tags : [drupal, work]
-schema: Article
+schema: BlogPosting
 ---
 {% include JB/setup %}
 
