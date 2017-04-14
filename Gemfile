@@ -10,7 +10,7 @@ gem "jekyll-mentions"
 gem "jekyll-avatar"
 gem "jekyll-admin"
 gem "jemoji"
-gem 'jekyll-twitter-plugin'
+gem "jekyll-twitter-plugin"
 gem "pygments.rb"
 require 'json'
 require 'open-uri'
