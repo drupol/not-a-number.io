@@ -3,6 +3,13 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.1"
 gem "jekyll-sitemap"
 gem "jekyll-paginate"
+gem "jekyll-seo-tag"
+gem "jekyll-gist"
+gem "jekyll-github-metadata"
+gem "jekyll-sitemap"
+gem "jekyll-mentions"
+gem "jekyll-avatar"
+gem "jemoji"
 gem "pygments.rb"
 require 'json'
 require 'open-uri'

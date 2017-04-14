@@ -3,36 +3,40 @@ layout: default
 ---
 {% include JB/setup %}
 
-<article>
+<article itemscope itemtype="http://schema.org/{{ page.schema }}">
 
-  <h2>{{ page.title }}</h2>
+  <header>
+    <h1 itemprop="name">{{ page.title }}</h1>
+    {% if page.summary != nil %}
+    <p itemprop="headline">{{ page.summary }}</p>
+    {% endif %}
+  </header>
 
-  <p class="blog-post-meta">The
-    {{ page.date | date_to_long_string }}
-  {% unless page.tags == empty %}
-  <span class="tag_box"> filled in
-    {% assign badge_list = page.tags %}
-    {% include JB/badge_list %}
-  </span>
-  {% endunless %}
+  <p class="blog-post-meta">
+    <i class="fa fa-calendar"></i>
+    <time datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%SZ" }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>
   </p>
 
-  {{ content }}
-
-  <div class="blog-pagination">
-    <nav>
-      {% if page.previous %}
-      <a class="btn btn-outline-primary" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
-      {% else %}
-      <a class="btn btn-outline-primary">&larr; Previous</a>
-      {% endif %}
-      <a class="btn btn-outline-primary" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
-      {% if page.next %}
-      <a class="btn btn-outline-primary" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
-      {% else %}
-      <a class="btn btn-outline-primary">Next &rarr;</a>
-      {% endif %}
-    </nav>
+  <div  itemprop="articleBody">
+    {{ content }}
   </div>
 
+  <p class="blog-post-meta">
+    <small>
+      <i class="fa fa-tags"></i> Categories:
+      {% assign taglist = page.tags | sort %}
+      {% for tag in taglist %}
+      <a itemprop="articleSection" class="text-dblue" href="/tags/#{{ tag | cgi_escape }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>
+      {% if forloop.last != true %}, {% endif %}
+      {% endfor %}
+    </small>
+  </p>
+
+  <footer>
+    <meta itemprop="url" content="http://{{ site.domain }}{{ page.url }}">
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pol Dellaiera">
+      <meta itemprop="image" content="https://{{ site.domain }}/assets/images/PolDellaiera.png">
+    </span>
+  </footer>
 </article>

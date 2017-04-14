@@ -1,6 +1,6 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:year/:title.html
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
@@ -13,9 +13,11 @@ excerpt_separator: <!--break-->
 # so be sure to set them if your theme uses them.
 #
 title : "NaN"
-tagline: Just another non-convergent suite of random characters...
+tagline: N0t A Number
+domain: drupol.github.io
 author :
   name : Pol Dellaiera
+  picture: https://drupol.github.io/assets/images/PolDellaiera.png
   email : pol.dellaiera@gmail.com
   github : drupol
   twitter : drupol
@@ -30,7 +32,7 @@ author :
 #
 production_url : https://drupol.github.io
 
-gems: ["jekyll-sitemap", "jekyll-paginate"]
+gems: ["jekyll-sitemap", "jekyll-paginate", "jekyll-seo-tag", "jekyll-gist", "jekyll-github-metadata", "jekyll-sitemap", "jekyll-mentions", "jekyll-avatar", "jemoji"]
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

@@ -199,8 +199,14 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 134)
   jekyll (~> 3.1)
+  jekyll-avatar
+  jekyll-gist
+  jekyll-github-metadata
+  jekyll-mentions
   jekyll-paginate
+  jekyll-seo-tag
   jekyll-sitemap
+  jemoji
   pygments.rb
 
 BUNDLED WITH

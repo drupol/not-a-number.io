@@ -1,14 +1,10 @@
 ---
 layout: default
-title: "Home"
+title: "News"
+tagline: Not A Number
+group: navigation
+order: -10
 ---
-<div class="jumbotron">
-    <h1 class="display-3">{{ site.title }}</h1>
-    <p class="lead">
-      Welcome to my repository of non-convergent suite of random letters.<br/>
-      Here, you may contemplate the variation of 26 letters and some other weird characters.
-    </p>
-</div>
 
 {% for post in site.posts %}
 <article class="teaser">
@@ -22,6 +18,10 @@ title: "Home"
 {% endif %}
 
 <h2><a href="{{ HOME_PATH }}{{post.url}}">{{post.title}}</a></h2>
+  <p class="blog-post-meta small">
+    <i class="fa fa-calendar"></i>
+    <time datetime="{{ post.date | date: "%Y-%m-%dT%H:%M:%SZ" }}" itemprop="datePublished">{{ post.date | date_to_long_string }}</time>
+  </p>
 
 <div class="excerpt">
 {{post.excerpt | strip_html | strip_newlines}}..
@@ -32,4 +32,4 @@ title: "Home"
 </div>
 
 </article>
-{% endfor %}  
+{% endfor %}

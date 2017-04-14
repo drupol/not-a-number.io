@@ -3,6 +3,7 @@ layout: post
 category : git
 title: "Prenez un chewing-gum Emile"
 tags : [git, rebase, work, github]
+schema: Article
 ---
 {% include JB/setup %}
 

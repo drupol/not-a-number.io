@@ -3,6 +3,7 @@ layout: post
 category : dev
 title: "What is PHPermutations?"
 tags : [php, combinatorics, library]
+schema: Article
 ---
 {% include JB/setup %}
 
