@@ -14,9 +14,18 @@ layout: default
     {% endif %}
   </header>
 
+  {% if page.image != nil %}
+    <div class="media">
+      <img itemprop="image" src="/assets/images/{{ page.image }}" class="img-fluid rounded"/>
+    </div>
+  {% endif %}
+
   <p class="blog-post-meta">
     <i class="fa fa-calendar"></i>
     <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%SZ' }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>
+    {% if site.author %}
+     by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author.name }}</span></span>
+    {% endif %}</p>
   </p>
 
   <div  itemprop="articleBody">
@@ -35,7 +44,7 @@ layout: default
   </p>
 
   <footer>
-    <meta itemprop="url" content="http://{{ site.domain }}{{ page.url }}">
+    <meta itemprop="url" content="{{ production_url }}{{ page.url }}">
     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pol Dellaiera">
       <meta itemprop="image" content="https://{{ site.domain }}/assets/images/PolDellaiera.png">

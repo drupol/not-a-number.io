@@ -4,6 +4,7 @@ category : dev
 title: "What is PHPermutations?"
 tags : [php, combinatorics, library]
 schema: BlogPosting
+image: posts/Rubiks-Cube.jpg
 ---
 {% include JB/setup %}
 
