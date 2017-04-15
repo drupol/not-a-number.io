@@ -75,10 +75,6 @@
             </div>
 
             <div class="sidebar-module">
-                {% twitter https://twitter.com/drupol limit=5 %}
-            </div>
-
-            <div class="sidebar-module">
                 <h4>Share this page</h4>
                 {% assign url =  site.production_url | append: '/' | append: page.url %}
                 <a href="http://www.facebook.com/sharer/sharer.php?u={{ url | cgi_escape }}" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>

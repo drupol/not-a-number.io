@@ -146,7 +146,6 @@ GEM
       jekyll (~> 3.3)
     jekyll-titles-from-headings (0.1.5)
       jekyll (~> 3.3)
-    jekyll-twitter-plugin (2.0.0)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     jemoji (0.8.0)
@@ -207,8 +206,6 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-twitter-plugin
-  jemoji
   pygments.rb
 
 BUNDLED WITH
