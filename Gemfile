@@ -9,7 +9,6 @@ gem "jekyll-sitemap"
 gem "jekyll-mentions"
 gem "jekyll-avatar"
 gem "jemoji"
-gem "jekyll-twitter-plugin"
 gem "pygments.rb"
 require 'json'
 require 'open-uri'
