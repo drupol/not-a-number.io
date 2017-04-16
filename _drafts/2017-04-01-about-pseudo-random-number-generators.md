@@ -8,4 +8,5 @@ image_copyrights: 'Image from <a href="https://commons.wikimedia.org/wiki/File:E
 ---
 {% include JB/setup %}
 
-TODO
+Pseudo Random Number Generators(PRNG) are something easy to understand and hard to invent.
+
