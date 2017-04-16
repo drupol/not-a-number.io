@@ -9,14 +9,6 @@ order: -10
 {% for post in site.posts %}
 <article class="teaser">
 
-{% if post.image %}
-<div class="image">
-<a href="{{ HOME_PATH }}{{post.url}}">
-  <img src="{{site.url}}/assets/images/{{post.image}}" />
-</a>
-</div>
-{% endif %}
-
 <h2><a href="{{ HOME_PATH }}{{post.url}}">{{post.title}}</a></h2>
   <p class="blog-post-meta small">
     <i class="fa fa-calendar"></i>
