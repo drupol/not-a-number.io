@@ -96,7 +96,9 @@ article.teaser {
   display: none;
 }
 
-article header p {
+.blog-subtitle {
+  font-size: 1.1rem;
   color: #999;
   font-style: italic;
+  text-align: justify;
 }

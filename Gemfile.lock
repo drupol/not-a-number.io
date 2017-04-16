@@ -206,7 +206,6 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-swiss
   jemoji
   pygments.rb
 

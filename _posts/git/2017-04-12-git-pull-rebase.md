@@ -2,6 +2,7 @@
 layout: post
 category: git
 title: "Prenez un chewing-gum Emile"
+subtitle: A small story about git with an inappropriate title.
 tags : [git, rebase, work, github]
 schema: BlogPosting
 image: /assets/images/posts/6333984637_7d08596f9e_b.jpg

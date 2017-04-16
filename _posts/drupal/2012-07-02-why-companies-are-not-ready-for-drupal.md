@@ -2,15 +2,13 @@
 layout: post
 category : drupal
 title: "Why companies are not ready for Drupal?"
+subtitle: It doesn't means that Drupal is not ready for companies ;-)
 tags : [drupal, work]
 schema: BlogPosting
 image: /assets/images/posts/losing_money.jpg
 image_copyrights: 'Image from <a href="http://buzzghana.com/50-foolish-ways-lose-money-daily-ghana/">buzzghana.com</a>.'
-
 ---
 {% include JB/setup %}
-
-_It doesn't means that Drupal is not ready for companies ;-)_
 
 I have been working for more than five years now, as a consultant in Belgium.
 
