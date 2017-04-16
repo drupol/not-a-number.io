@@ -10,14 +10,4 @@ title: "Home"
     </p>
 </div>
 
-{% for post in site.posts %}
-<article class="teaser">
-<h2><a href="{{ HOME_PATH }}{{post.url}}">{{post.title}}</a></h2>
-<div class="excerpt">
-{{post.excerpt | strip_html | strip_newlines}}..
-</div>
-<div class="read-more">
-    <p><a class="btn btn-secondary btn-block" href="{{ post.url }}" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a></p>
-</div>
-</article>
-{% endfor %}  
+{% include news_list %}

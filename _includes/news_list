@@ -1,0 +1,22 @@
+{% for post in site.posts %}
+  <div class="card">
+    <div class="card-header text-right text-muted">
+        <i class="fa fa-calendar"></i> <time class="text-muted" datetime="{{ post.date | date: "%Y-%m-%dT%H:%M:%SZ" }}" itemprop="datePublished">{{ post.date | date_to_long_string }}</time>
+        in
+          {% assign taglist = post.tags | sort %}
+          {% for tag in taglist %}{{ tag }}{% if forloop.last != true %}, {% endif %}{% endfor %}.
+    </div>
+
+    <div class="card-block">
+      <h2 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h6 class="card-subtitle mb-2 text-muted"><em>{{ post.subtitle }}</em></h6>
+      <p class="card-text">{{post.excerpt | strip_html | strip_newlines}}</p>
+   </div>
+
+     <div class="card-footer text-right">
+          <a href="{{ post.url }}" class="card-link">Read more <i class="fa fa-arrow-circle-right"></i></a>
+     </div>
+
+  </div>
+  <br/>
+{% endfor %}
