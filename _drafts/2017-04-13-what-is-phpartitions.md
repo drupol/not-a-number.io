@@ -3,6 +3,8 @@ layout: post
 category : dev
 title: "What is PHPartition?"
 tags : [php, partition, library]
+image: /posts/cake_cutting.jpg
+image_copyrights: 'Image from <a href="https://commons.wikimedia.org/wiki/File:U.S._Marine_Corps_Maj._Thomas_Siverts,_the_executive_officer_of_the_1st_Battalion,_9th_Marine_Regiment,_cuts_a_birthday_cake_during_a_cake-cutting_ceremony_Nov._11,_2013,_at_Camp_Leatherneck,_Helmand_province_131111-M-WA264-009.jpg">Wikimedia commons</a>.'
 ---
 {% include JB/setup %}
 

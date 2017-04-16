@@ -4,6 +4,9 @@ category : drupal
 title: "Why companies are not ready for Drupal?"
 tags : [drupal, work]
 schema: BlogPosting
+image: /posts/losing_money.jpg
+image_copyrights: 'Image from <a href="http://buzzghana.com/50-foolish-ways-lose-money-daily-ghana/">buzzghana.com</a>.'
+
 ---
 {% include JB/setup %}
 
