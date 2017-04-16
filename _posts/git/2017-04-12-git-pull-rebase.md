@@ -4,7 +4,7 @@ category: git
 title: "Prenez un chewing-gum Emile"
 tags : [git, rebase, work, github]
 schema: BlogPosting
-image: 6333984637_7d08596f9e_b.jpg
+image: /assets/images/posts/6333984637_7d08596f9e_b.jpg
 image_copyrights: 'Image by <a href="https://www.flickr.com/photos/loughboroughuniversitylibrary/">Loughborough University Library</a>.'
 ---
 {% include JB/setup %}
