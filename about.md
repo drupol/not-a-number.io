@@ -1,6 +1,8 @@
 ---
 layout: page
 title : About
+subtitle: "TODO: find a subtitle."
+image: /assets/images/PolDellaiera.png
 group: navigation
 order: -15
 ---
