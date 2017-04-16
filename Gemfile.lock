@@ -200,6 +200,7 @@ DEPENDENCIES
   github-pages (= 134)
   jekyll (~> 3.1)
   jekyll-avatar
+  jekyll-coffeescript
   jekyll-gist
   jekyll-github-metadata
   jekyll-mentions

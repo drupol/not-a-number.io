@@ -32,7 +32,7 @@ author :
 #
 production_url : https://drupol.github.io
 
-gems: ["jekyll-sitemap", "jekyll-paginate", "jekyll-seo-tag", "jekyll-gist", "jekyll-github-metadata", "jekyll-sitemap", "jekyll-mentions", "jekyll-avatar", "jemoji"]
+gems: ["jekyll-sitemap", "jekyll-paginate", "jekyll-seo-tag", "jekyll-gist", "jekyll-github-metadata", "jekyll-sitemap", "jekyll-mentions", "jekyll-avatar", "jemoji", "jekyll-coffeescript"]
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
