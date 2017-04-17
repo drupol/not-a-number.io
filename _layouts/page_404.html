@@ -25,26 +25,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
 
-<div class="bg-faded">
-  <div class="container">
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="{{ HOME_PATH }}">
-        <img src="/assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        NaN
-      </a>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          {% assign pages_links = site.pages | sort:"order" %}
-          {% assign group = 'navigation' %}
-          {% include JB/pages_links %}
-        </div>
-      </div>
-    </nav>
-  </div>
-</div>
+{% include navbar %}
 
 <br/>
 
@@ -57,15 +38,7 @@
   </div><!-- /.row -->
 </div><!-- /.container -->
 
-<footer class="blog-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <p class="small">&copy;2017 N0t A Number :: Made with <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://">Bootstrap 4</a>.</p>
-      </div>
-    </div>
-  </div>
-</footer>
+{% include footer %}
 
 {% include JB/analytics %}
 </body>

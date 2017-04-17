@@ -1,0 +1,9 @@
+<footer class="blog-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="small">&copy;2017 {{ site.title }} :: Made with <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://">Bootstrap 4</a>.</p>
+            </div>
+        </div>
+    </div>
+</footer>
