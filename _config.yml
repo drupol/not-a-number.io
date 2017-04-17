@@ -10,8 +10,8 @@ excerpt_separator: <!--break-->
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : "NaN"
-tagline: N0t A Number
+title : "N0t a number"
+tagline: NaN
 domain: drupol.github.io
 author :
   name : Pol Dellaiera
