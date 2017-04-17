@@ -14,10 +14,10 @@
     <div class="card-footer text-muted">
       <div class="row">
         <div class="col-sm-6 text-left">
-            <p><i class="fa fa-tags"></i> {% for tag in taglist %}{{ tag }}{% if forloop.last != true %}, {% endif %}{% endfor %}</p>
+            <p class="mb-0"><i class="fa fa-tags"></i> {% for tag in taglist %}{{ tag }}{% if forloop.last != true %}, {% endif %}{% endfor %}</p>
         </div>
         <div class="col-sm-6 text-right">
-            <p><i class="fa fa-calendar"></i> <time class="text-muted" datetime="{{ post.date | date: "%Y-%m-%dT%H:%M:%SZ" }}" itemprop="datePublished">{{ post.date | date_to_long_string }}</time></p>
+            <p class="mb-0"><i class="fa fa-calendar"></i> <time class="text-muted" datetime="{{ post.date | date: "%Y-%m-%dT%H:%M:%SZ" }}" itemprop="datePublished">{{ post.date | date_to_long_string }}</time></p>
         </div>
       </div>
     </div>
