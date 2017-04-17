@@ -20,12 +20,17 @@ This list is not a ranking of the best software. This is why it is sorted in alp
 ## Blender
 
 [Blender](https://www.blender.org/) is a free and open source 3D creation suite. I started to use it 15 years ago.
-I remember at that time, you could even copy it on a floppy disk! I started to use it more and more, I loved it.
+I remember at that time, you could even copy it on a floppy disk!.
+
+I discovered this software while I was discovering Linux. At that time, that was the only 3D software available.
+
+I spend days and night learning it. The 3D world was something pretty new for me, I really loved it.
 
 Then I remember I bought the "_C-Key_" to unlock some features, I went to London to meet the developers team, I remember I was in a cab with Ton Roosendaal, the Blender's project founder.
 At that time, my english was not very good !
 
-This is thanks to Blender that I discovered the [Python language](https://www.python.org/). I even made some scripts to show the visual result of some algorithms.
+This is thanks to Blender that I discovered the [Python language](https://www.python.org/).
+I even made some scripts to show the visual result of some algorithms, [the bifurcation diagram](https://en.wikipedia.org/wiki/Bifurcation_diagram), [the Koch snowflake fractal](https://en.wikipedia.org/wiki/Koch_snowflake), [the chainette curve](https://en.wikipedia.org/wiki/Catenary), etc etc...
 
 Unfortunately, I rarely use it now :cry: but I still keep the last version on my computer and can still use it, but I forgot a lot.
 
@@ -108,16 +113,16 @@ Ok, [Linux](https://en.wikipedia.org/wiki/Linux) is not a software, it's an oper
 
 I'm using Linux since more than 15 years now. The first Linux I had was Red Hat 5.2, and I still have the original box :sweat_smile:.
 
-My computer with a i386 with 16MB of RAM. This is where it all began.
+My computer was an IBM i386 with 16MB of RAM. This is where it all began.
 
-I remember at the time where Internet was expensive and not that widespread in Belgium, there where not a lot of instant communication software. 
+I remember at the time where Internet was expensive and not that widespread in Belgium, there were not a lot of instant communication software. 
 With friends, we were using [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) and then later [ICQ](https://icq.com). 
 I remember I was having a lot of "_Connection reset by peer_", it is while asking how to prevent such that I've been told about Linux and its security advantages.
 This is during those conversations about security that I saw the Linux word for the first time.
 
-The curious animal that I was already at that time, and that I am still, started with [Red Hat](https://www.redhat.com) 5.2, then [Suse](https://www.suse.com/), then [Slackware](http://www.slackware.com/) and finally [Gentoo](https://gentoo.org/). 
+The curious animal that I was already at that time (_and that I am still_), started with [Red Hat](https://www.redhat.com) 5.2, then [Suse](https://www.suse.com/), then [Slackware](http://www.slackware.com/) and finally [Gentoo](https://gentoo.org/). 
 
-And since more than 10 years, I'm still a very happy user of Gentoo.
+And since more than 10 years, I'm still a very happy Gentoo user.
 
 I also tested the BSDs but I always ended up using Linux for some practical reasons.
 
@@ -129,7 +134,7 @@ I'm using Linux on my personal laptop and at work. I almost never use any other 
 
 It's a bit against my philosophy to use it but I have to say that I haven't found the equivalent in the open source world.
 
-Of course there are [Eclipse](https://eclipse.org/), [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), and many others... but they are at lightyears from it.
+Of course, there are [Eclipse](https://eclipse.org/), [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), and many others... but they are at lightyears from it.
 
 I use PHPStorm for PHP and [Pycharm](https://www.jetbrains.com/pycharm) for Python.
 

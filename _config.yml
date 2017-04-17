@@ -5,8 +5,6 @@ permalink: /:year/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
 
-paginate: 10
-paginate_path: "/page:num"
 excerpt_separator: <!--break-->
 
 # Themes are encouraged to use these universal variables 
@@ -32,7 +30,7 @@ author :
 #
 production_url : https://drupol.github.io
 
-gems: ["jekyll-sitemap", "jekyll-paginate", "jekyll-seo-tag", "jekyll-gist", "jekyll-github-metadata", "jekyll-sitemap", "jekyll-mentions", "jekyll-avatar", "jemoji", "jekyll-coffeescript"]
+gems: ["jekyll-sitemap", "jekyll-seo-tag", "jekyll-gist", "jekyll-github-metadata", "jekyll-sitemap", "jekyll-mentions", "jekyll-avatar", "jemoji", "jekyll-coffeescript"]
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -139,3 +137,8 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
   
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/PolDellaiera.png
