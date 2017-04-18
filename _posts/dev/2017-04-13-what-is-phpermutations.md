@@ -16,12 +16,12 @@ But before continuing, let me remind you what are the differences between a perm
 
 <!--break-->
 
-<blockquote class="blockquote">
+<blockquote class="blockquote text-justify">
 The notion of permutation relates to the act of arranging all the members of a set into some sequence or order.
 <footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Permutation">Wikipedia</a></cite></footer>
 </blockquote>
 
-<blockquote class="blockquote">
+<blockquote class="blockquote text-justify">
 A combination is a way of selecting items from a collection, such that, unlike permutations, the order of selection does not matter.
 <footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Combination">Wikipedia</a></cite></footer>
 </blockquote>
@@ -68,11 +68,29 @@ So, with 9 cards, you'll be able to make 60480 permutations and 84 combinations 
 
 ---
 
-As you can see, the number of permutations grow exponentially and if you might run out of memory if you do not use a good implementation.
+To give you an idea of how the function is growing, we can use the _[Big O Notation](https://en.wikipedia.org/wiki/Big_O_notation)_.
 
-This is why, in order to run without running out of memory, it has been written only using [PHP Generators](https://secure.php.net/manual/en/language.generators.overview.php) and 
-and [Iterators](https://secure.php.net/manual/en/class.iterator.php).
+The Big O notation characterizes functions according to their growth rates. Different functions with the same growth rate may be represented using the same O notation.
+
+In this case, the order is $$ O(n!) $$, results are growing quickly for small input values.
+
+And if you have to store huge results arrays, you might end up with the infamous:
+
+`Fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 54 bytes)`
+
+This is why in order to avoid those errors, I only used [PHP Generators](https://secure.php.net/manual/en/language.generators.overview.php) and [Iterators](https://secure.php.net/manual/en/class.iterator.php) in PHPermutations.
+
+<blockquote class="blockquote text-justify">
+A generator allows you to write code that uses foreach to iterate over a set of data without needing to build an array in memory, which may cause you to exceed a memory limit, or require a considerable amount of processing time to generate. Instead, you can write a generator function, which is the same as a normal function, except that instead of returning once, a generator can yield as many times as it needs to in order to provide the values to be iterated over.
+<footer class="blockquote-footer"><cite><a href="https://secure.php.net/manual/en/language.generators.overview.php">php.net</a></cite></footer>
+</blockquote>
 
 Moreover, the notable difference with other combinatorics library is that you can use an extra parameter $$ r $$ (_the length_), that allows you to
 compute permutations and combinations of any particular size.
 
+Last but not least, PHPermutations includes tests for most of its functionalities.
+Tests are not my cup of tea, however, I tried to be as much complete as possible with those.
+
+Every time the sources are modified, [Travis](https://travis-ci.org/drupol/phpermutations), the continuous integration service, tests the library against those tests, this way you are aware if the changes you introduce are valid.
+
+If you'd like to review [PHPermutations](https://github.com/drupol/phpermutations) or think that things should be done in another way or just found a bug, please, let me know or submit a pull request on Github, I'm quite reactive.
