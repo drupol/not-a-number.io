@@ -21,7 +21,7 @@ The notion of permutation relates to the act of arranging all the members of a s
 </blockquote>
 
 <blockquote class="blockquote">
-A combination is a way of selecting items from a collection, such that, unlike Permutations, the order of selection does not matter.
+A combination is a way of selecting items from a collection, such that, unlike permutations, the order of selection does not matter.
 <footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Combination">Wikipedia</a></cite></footer>
 </blockquote>
 
@@ -35,13 +35,43 @@ When the element order does matter, it is a permutation.
 
 When the element order does not matter, it is a combination.
 
-If you have a group of 10 items, you'll have 3628800 permutations and 1 combination.
+The formula to find the number of permutations of $$ n $$ items among $$ r $$ items is written:
+ 
+$$ P(n, r) = \frac{n!}{(n-r)!}$$
+
+The formula to find the number of combinations of $$ n $$ items among $$ r $$ items is written:
+
+$$ C(n, r) = \frac{P(n, r)}{r!} = \frac{\frac{n!}{(n-r)!}}{r!} = \frac{n!}{r!(n-r)!} $$
+
+---
+
+#### Real life example 1
+
+Let's say you have a card game composed of 10 different cards and you would like to know how many permutations and combinations of 10 cards you can do with it.
+
+In this case, this is $$ P(10, 10) = \frac{10!}{(10-10)!} = 3628800 $$
+
+In this case, this is $$ C(10, 10) = \frac{10!}{10!(10-10)!} = 1 $$
+
+So, with 10 cards, you'll be able to make 3628800 permutations and only 1 combination.
+
+#### Real life example 2
+
+Let's say you have a card game composed of 9 different cards and you would like to know how many permutations and combinations of 6 cards you can do with it.
+
+In this case, this is $$ P(9, 6) = \frac{9!}{(9-6)!} = 60480 $$
+
+In this case, this is $$ C(9, 6) = \frac{9!}{6!(9-6)!} = 84 $$
+
+So, with 9 cards, you'll be able to make 60480 permutations and 84 combinations of 6 cards.
+
+---
 
 As you can see, the number of permutations grow exponentially and if you might run out of memory if you do not use a good implementation.
 
 This is why, in order to run without running out of memory, it has been written only using [PHP Generators](https://secure.php.net/manual/en/language.generators.overview.php) and 
 and [Iterators](https://secure.php.net/manual/en/class.iterator.php).
 
-Moreover, the notable difference with other combinatorics library is that you can use an extra parameter 'length', that allows you to
-compute Permutations and Combinations of any particular size.
+Moreover, the notable difference with other combinatorics library is that you can use an extra parameter $$ r $$ (_the length_), that allows you to
+compute permutations and combinations of any particular size.
 
