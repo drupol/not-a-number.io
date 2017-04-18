@@ -15,7 +15,7 @@
     {% assign taglist = post.tags | sort %}
     <div class="card-footer text-muted small">
       <div class="row">
-        <div class="col-6 text-left">
+        <div class="col-6 text-left text-nowrap">
             <p class="mb-0"><i class="fa fa-tags"></i> {% for tag in taglist %}{{ tag }}{% if forloop.last != true %}, {% endif %}{% endfor %}</p>
         </div>
         <div class="col-6 text-right">
