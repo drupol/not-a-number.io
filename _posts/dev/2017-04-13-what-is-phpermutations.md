@@ -5,6 +5,7 @@ title: "What is PHPermutations?"
 tags : [php, combinatorics, library]
 schema: BlogPosting
 image: /assets/images/posts/Rubiks-Cube.jpg
+image_copyrights: "Image by <a href='https://www.flickr.com/photos/wwarby/11913013374/in/photostream/'>William Warby</a>."
 ---
 {% include JB/setup %}
 
