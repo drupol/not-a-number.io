@@ -26,23 +26,17 @@ A combination is a way of selecting items from a collection, such that, unlike p
 <footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Combination">Wikipedia</a></cite></footer>
 </blockquote>
 
-Example, you have a group composed of 2 items: $$ \{A, B\} $$.
-
-The permutations are: $$ [A, B] $$ and $$ [B, A] $$.
-
-The combination are: $$ [A, B] $$.
-
-When the element order does matter, it is a permutation.
-
-When the element order does not matter, it is a combination.
-
 The formula to find the number of permutations of $$ n $$ items among $$ r $$ items is written:
  
 $$ P(n, r) = \frac{n!}{(n-r)!}$$
 
+When the element order does matter, it is a permutation.
+
 The formula to find the number of combinations of $$ n $$ items among $$ r $$ items is written:
 
 $$ C(n, r) = \frac{P(n, r)}{r!} = \frac{\frac{n!}{(n-r)!}}{r!} = \frac{n!}{r!(n-r)!} $$
+
+When the element order does not matter, it is a combination.
 
 ---
 
