@@ -141,4 +141,4 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/PolDellaiera.png
+      image: /assets/images/PolDellaiera.jpg
