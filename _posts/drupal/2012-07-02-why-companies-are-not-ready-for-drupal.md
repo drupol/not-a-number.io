@@ -24,7 +24,7 @@ Most of the time, I enjoy my work. I enjoy meeting people, having a talk with pe
 
 As long as I learn new stuff everyday and I as long as I can share it with people and make them happy, I'm happy.
 
-Working in the web and especially Drupal requires a couple of skills.You have to be able to work on Linux, setup a webserver and understand how it works, understanding PHP and managing databases and how they works and if you're lazy, you'll use extensively a tool called Drush.
+Working in the web and especially Drupal requires a couple of skills. You have to be able to work on Linux, setup a webserver and understand how it works, understanding PHP and managing databases and how they works and if you're lazy, you'll use extensively a tool called Drush.
 
 Working with all those technologies requires the knowledge of other sub tools like SSH, Bash, a command line editor, an IDE, etc etc... 
 
@@ -47,7 +47,7 @@ The pros are:
 - No need to count on someone else to do it. 
 - No need to ask someone to make the task a priority. 
 - There's nobody else to blame if something fails. 
-- Almost no need to document what you do even if it's strongly advised.   
+- Almost no need to document what you do even if it's strongly advised. 
 
 When you work in team, it's totally different, and when you work in big companies, you can be seriously disappointed by your job, you better have shoulders and strong backs.
 
@@ -55,7 +55,7 @@ First of all, large companies are often structured. It means that every part of 
 
 Of course, this experience is from my personal point of view, and all it doesn’t means that all companies are working like that, fortunately for me, and for them !
 
-Working with Drupal doesn't help, it requires several types of knowledge.  This knowledge is arising because of the different most commonly used softwares needed to run Drupal, like Apache, PHP and MySQL.
+Working with Drupal doesn't help, it requires several types of knowledge. This knowledge is arising because of the different most commonly used softwares needed to run Drupal, like Apache, PHP and MySQL.
 
 When working alone, these softwares are often installed on a single machine and you have complete control over but when working with others, that stack is splitted on different servers and taken care by different teams of people.
 
@@ -68,7 +68,7 @@ If you want to run a version of the website you are developing on the staging se
 3. Ask Team B to create a database and send credentials to team A. 
 4. Ask Team C to create DNS entries, with two different address for frontend and backend. 
 5. Ask Team D to create content. 
-6. Ask Team E to run a full battery of tests.   
+6. Ask Team E to run a full battery of tests.
 
 Be aware that if Team A is using an multisite infrastructure, you have to provide a full explanation on how to install it... and don't forget the custom SQL queries to Team B, to change the path of files and modules !
 
@@ -115,7 +115,7 @@ This, an example of all the people working in a Drupal team:
 - Site Builder: Create the views, the whole configuration of the website. They should also take care of the test content used in the site. 
 - Site Configurator: In charge to export the whole configuration of the website into files to get them under versioning. 
 - Content team: Create the main content into the website. 
-  
+
 What would be the best number of people working on a Drupal project according to you ?
 
 Another idea would be to use the already famous and scary: cloud. I recently started to use for the first time a very well known Drupal cloud service and I think it might be a good solution when working in team on a Drupal project. You can create user accounts, it automatically provides you the git access and also multiple environments.

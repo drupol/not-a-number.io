@@ -9,7 +9,7 @@ image_copyrights: 'Image by Pol Dellaiera.'
 ---
 {% include JB/setup %}
 
-Here's a personal list of software that I have used across my career and which are my favorites.
+Here's a list of software that I have used across my career and which are my favorites.
 
 Some of them were used for work, some of them for personal use, but that's absolutely not relevant here.
 
