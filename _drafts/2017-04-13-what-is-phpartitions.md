@@ -8,9 +8,9 @@ image_copyrights: 'Image from <a href="https://commons.wikimedia.org/wiki/File:U
 ---
 {% include JB/setup %}
 
-Again in December 2016, I wrote a PHP library called [PHPartition](https://packagist.org/packages/drupol/phpartition).
+Again in December 2016, I started to wrote a PHP library: [PHPartition](https://packagist.org/packages/drupol/phpartition).
 
-The idea behind this library was simple, I was looking for a way to create $$ n $$ subsets of a set of items. Each of these subsets must have the same sum or when it's not possible, the difference between each subset must be minimized.
+The idea behind this library was simple. I was looking for a way to create $$ n $$ subsets of a set of items. Each of these subsets must have the same sum or when it's not possible, the delta of the sum difference of each subsets must be minimized.
 
 This problem is a famous well known problem in Mathematics, called: "_the partition problem_".
 
@@ -20,3 +20,4 @@ For this reason, it has been called "<i>the easiest NP-hard problem</i>".
 <footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Partition_problem">Wikipedia</a></cite></footer>
 </blockquote>
 
+There are different algorithms existing for doing that.
