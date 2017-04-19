@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: "News"
-tagline: Not A Number
+subtitle: "TODO: Find a subtitle"
 group: navigation
 order: -10
 ---
