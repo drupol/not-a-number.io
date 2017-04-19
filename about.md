@@ -26,4 +26,4 @@ Oh, and I couldn't finish this bio without having a word about my cat Izumi! He'
 
 Feel free to get in touch with me, check out the links on the sidebar!
 
-My public key fingerprint: `55A6 7A31 0629 AAD1 364A EB22 3266 8369 1C32 50DB`
+My public key fingerprint: `55A6 7A31 0629 AAD1 364A EB22 3266 8369 1C32 50DB`.
