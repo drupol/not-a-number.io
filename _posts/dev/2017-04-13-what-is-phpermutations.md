@@ -12,7 +12,7 @@ image_copyrights: "Image by <a href='https://www.flickr.com/photos/wwarby/119130
 In December 2016, I started to write a PHP library called [PHPermutations](https://packagist.org/packages/drupol/phpermutations) to handle permutations and combinations of an array of items.
 The array items can be any type of object: integers, arrays, strings or objects, the library will still continue to work without any trouble.
 
-But before continuing, let me remind you what are the differences between a permutation and a combination.
+But before going further, let me remind you what are the differences between permutations and combinations.
 
 <!--break-->
 
@@ -26,17 +26,17 @@ A combination is a way of selecting items from a collection, such that, unlike p
 <footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Combination">Wikipedia</a></cite></footer>
 </blockquote>
 
-The formula to find the number of permutations of $$ n $$ items among $$ r $$ items is written:
+The formula to find the number of **permutations** of $$ n $$ items among $$ r $$ items is:
  
 $$ P(n, r) = \frac{n!}{(n-r)!}$$
 
-When the element order does matter, it is a permutation.
+When the elements order does matter, it is a permutation.
 
-The formula to find the number of combinations of $$ n $$ items among $$ r $$ items is written:
+The formula to find the number of **combinations** of $$ n $$ items among $$ r $$ items is:
 
 $$ C(n, r) = \frac{P(n, r)}{r!} = \frac{\frac{n!}{(n-r)!}}{r!} = \frac{n!}{r!(n-r)!} $$
 
-When the element order does not matter, it is a combination.
+When the elements order does not matter, it is a combination.
 
 ---
 
