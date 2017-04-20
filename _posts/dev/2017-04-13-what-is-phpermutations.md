@@ -9,6 +9,8 @@ image_copyrights: "Image by <a href='https://www.flickr.com/photos/wwarby/119130
 ---
 {% include JB/setup %}
 
+blabla
+
 In December 2016, I started to write a PHP library called [PHPermutations](https://packagist.org/packages/drupol/phpermutations) to handle permutations and combinations of an array of items.
 The array items can be any type of object: integers, arrays, strings or objects, the library will still continue to work without any trouble.
 
