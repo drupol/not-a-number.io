@@ -53,7 +53,20 @@
                     <li><a href="https://www.linkedin.com/in/poldellaiera/"><i class="fa fa-linkedin" aria-hidden="true"></i> On LinkedIn</a></li>
                     <li><a href="/contact"><i class="fa fa-envelope" aria-hidden="true"></i> By email</a></li>
                 </ol>
-                {% include JB/sharing %}
+            </div>
+
+            <div class="sidebar-module">
+                <h4>Newsletter</h4>
+                <form action="https://tinyletter.com/drupol" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/drupol', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+                    <p>
+                        <label for="tlemail">Get an email me when a new article is published</label>
+                    </p>
+                    <p>
+                        <input class="form-control" type="text" name="email" id="tlemail" placeholder="Your email"/>
+                    </p>
+                    <input type="hidden" value="1" name="embed"/>
+                    <input class='btn btn-primary btn-block' type="submit" value="Subscribe" />
+                </form>
             </div>
 
             <div class="sidebar-module">
@@ -64,6 +77,7 @@
                 <a href="https://plus.google.com/share?url={{ url | cgi_escape }}" target="_blank"><i class="fa fa-google-plus-square fa-3x"></i></a>
                 <a href="http://www.linkedin.com/shareArticle?title={{ page.title | cgi_escape }}&url={{ url | cgi_escape }}" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
             </div>
+
         </div><!-- /.blog-sidebar -->
     </div><!-- /.row -->
 </div><!-- /.container -->

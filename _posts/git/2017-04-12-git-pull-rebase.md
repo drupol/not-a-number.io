@@ -67,7 +67,7 @@ I felt guilty at first.
 
 I know that doing a rebase on a branch where multiple people is working on is not a good practice, but still, we are developpers and we need to deal with such situations. Git is THE tool that we need to use and understand in order to ensure that what we do is kept somewhere safe.
 
-On the other, even if we shouldn’t do that, we have to learn how to prevent data loss and how to handle that.
+On the other hand, even if we shouldn’t do that, we have to learn how to prevent data loss and how to handle that.
 
 This is where the idea of writing a blog post explaining the situation came to my mind to, first get some feedback on what I did, secondly, to share the experience with other colleagues and lastly, to remember how to avoid these errors in the future.
 
