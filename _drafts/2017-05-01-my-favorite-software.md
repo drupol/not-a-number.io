@@ -100,8 +100,8 @@ It's been years that I'm using it almost every single day and it amaze me.
 According to me, the best way to learn it is to read a good book and to practice it on the side.
 Of course there are very good websites to learn it like:
 
-* https://try.github.io/
-* http://learngitbranching.js.org/
+* [https://try.github.io/](https://try.github.io/),
+* [http://learngitbranching.js.org/](http://learngitbranching.js.org/).
 
 There are many others but your favorite search engine is your friend for that.
 
