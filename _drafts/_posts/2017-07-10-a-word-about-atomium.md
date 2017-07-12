@@ -28,7 +28,7 @@ The requirements were simple:
 
 * break up with Bootstrap CSS framework,
 
-* must be *very* simple to extend.
+* must be *very* simple to extend using atomic principles.
 
 That was quite a challenge for me to imagine and write such a thing. I'm not a frontend guy... and I don't like so much designing user interface related stuff.
 <span style="font-size: 1rem;">I really like searching for algorithms, writing them, optimizing them... but theming stuff was not my cup of tea.<br></span><span style="font-size: 1rem;">However, I knew that the theme layer in Drupal 7 is a mess and I decided that I should do something to help, and as I said, I like to improve things.</span>
