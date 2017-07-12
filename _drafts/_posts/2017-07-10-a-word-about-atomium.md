@@ -38,7 +38,7 @@ So, I started to study how the most commonly themes were written and how they we
 
 Atomium needed to break up with old theme's habits. Prior explaining how we dealt with them, let's explain what are the issues with the current theme layer.
 
-The complexity in the theme layer lies in the fact that Drupal allows you to define HTML components in a template file or in a function. And defining them is sometimes complex. The rendering workflow is something tricky too, and not so logic, but that will be for later.
+The complexity in the theme layer lies in the fact that Drupal allows you to define HTML components in a template file or in a function. And defining them is sometimes complex. The rendering workflow is something tricky and not so logical, but that will be for later.
 
 Drupal 7 using standard install and Stark theme defines 152 HTML elements or commonly named "*hook themes*". 132 of them are made out of PHP functions. The 20 leftovers are from templates.
 <span style="font-size: 1rem;">According to me, mixing templates and functions for rendering HTML is a bit messy.<br>Each of these two methods has its own pros and cons.<br></span><span style="font-size: 1rem;">HTML should resides in template files and should be easy to extend.<br></span><span style="font-size: 1rem;">In Drupal 7, you can extend, preprocess and process a template, but you can not extend a theme function, only overwrite it and preprocess, process it.</span>
@@ -60,6 +60,28 @@ The registry alteration workflow is based on [Boostrap theme](https://drupal.org
 
 Then, to help newcomers to dive into the theme, I've created three subthemes, one based on [Bootstrap 4](https://v4-alpha.getbootstrap.com/), one on [Foundation](http://foundation.zurb.com/), and the last one is a copy of Bartik but using the Atomium mechanisms.
 
+As a base theme, Atomium will be empowering all the European Commission websites built with Drupal. The final theme will be [EC Europa Theme](https://github.com/ec-europa/ec-europa-theme/tree/europa-atomium).
+
+Atomium has special features that makes it unique in the Drupal ecosystem.
+One of the most interesting feature is the following.
+I think, but I can be wrong, that this is the only theme that provides a working cascade of preprocess and process functions for theme hook suggestions.
+
+It means that if you call the hook theme 'link' with some custom suggestions like:
+
+`$mylink = theme('link__suggestion1__suggestion2', array(...));`
+
+The preprocess and process mechanisms of Drupal 7 will run, in order the following functions:
+
+* `HOOK_preprocess_link(&amp;$variables, $hook)`
+
+* `HOOK_preprocess_link__suggestion1(&amp;$variables, $hook)`
+
+* `HOOK_preprocess_link__suggestion1__suggestion2(&amp;$variables, $hook)`
+
+Without Atomium, the default behavior of Drupal is to only run the `HOOK_preprocess_link()`.
+
+Apparently there has been [some updates in Drupal 8](https://www.drupal.org/node/939462) regarding this and the issue needs to be [backported to Drupal 7](https://www.drupal.org/node/2563445)... Let's hope I can find some time to propose a patch for it.
+
 * Why it started ?
 
 * When it started ?
@@ -74,4 +96,4 @@ Then, to help newcomers to dive into the theme, I've created three subthemes, on
 
 * How pre and process mechanism are different from regular themes ? From Bootstrap theme ?
 
-[{:class="img-fluid img-thumbnail float-left" :height="200px" width="200px"}](/assets/images/posts/IMG_20170224_104603.jpg)
+<img src="/assets/images/posts/IMG_20170224_104603.jpg" class=" forestry--left" style="float: left;">
