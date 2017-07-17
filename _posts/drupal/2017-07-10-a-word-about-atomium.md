@@ -16,6 +16,8 @@ date: '2017-07-10T00:00:00.000+00:00'
 
 The Drupal 7 theme layer has, and sometimes still is, been a nightmare to understand for me. In my modules, I've always tried to avoid this dark corner that are the theme hooks and inspire my code from what I see somewhere else. Until now, it helped me so far pretty well, that's the beauty of the Open Source.
 
+<!--break-->
+
 ## Background ##
 
 Working at [European Commission](https://www.drupal.org/european-commission) with a team of fellow Drupalers, I'm in charge of designing a new Drupal 7 base theme.
