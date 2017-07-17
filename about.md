@@ -19,6 +19,7 @@ Drupal passionate and "working" as a Drupal Consultant, I maintain a couple of m
 I currently work in an amazing team at [the European Commission](https://www.drupal.org/european-commission) in Brussels and I'm always ready for new challenges.
 
 I also like sciences a lot in general and especially mathematics, that explains why I'm so fascinated by numbers and the way Nature uses them.
+I'm fond of graphical visualisations of data, my favorites are the one from [Jason Davies](https://bl.ocks.org/jasondavies) and [Mike Bostock](https://bl.ocks.org/mbostock).
 
 Besides my work and the geek stuff, I love music (_I'm learning to play electric guitar & piano!_), photography and swimming.
 
