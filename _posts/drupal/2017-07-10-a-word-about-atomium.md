@@ -14,7 +14,11 @@ date: '2017-07-10T00:00:00.000+00:00'
 
 {% include JB/setup %}
 
-The Drupal 7 theme layer has, and sometimes still is, been a nightmare to understand for me. In my modules, I've always tried to avoid this dark corner that are the theme hooks and inspire my code from what I see somewhere else. Until now, it helped me so far pretty well, that's the beauty of the Open Source.
+The Drupal 7 theme layer has, and sometimes still is, been a nightmare to understand for me. In my modules, I've always tried to avoid this dark corner that are the theme hooks and inspire my code from what I see somewhere else.
+
+Until now, it helped me so far pretty well, that's the beauty of the Open Source.
+
+But recently I've been given the task to build a new base theme for Drupal 7 and thus, to have a deep understanding on how the theme layer is working.
 
 <!--break-->
 
@@ -44,19 +48,23 @@ So, I started to study how the most commonly themes were written and how they we
 
 Atomium needed to break up with old theme's habits. Prior explaining how we dealt with them, let's explain what are the issues with the current theme layer.
 
-For the record, the name "*Atomium*" has been chosen among a list that we've made at work with the colleagues, the photo on the left illustrate all the candidate names that we've come up with before choosing Atomium, suggested by [a colleague](https://twitter.com/gdeudon). It fits perfectly for the project, it's short, not too difficult to write in any language and... [it comes from Belgium](https://en.wikipedia.org/wiki/Atomium) :-)
+Oh and by the way, the name "*Atomium*" has been chosen among a list that we've made at work with the colleagues, the photo on the left illustrate all the candidate names that we've come up with before choosing Atomium, suggested by [a colleague](https://twitter.com/gdeudon). It fits perfectly for the project, it's short, not too difficult to write in any language and... [it comes from Belgium](https://en.wikipedia.org/wiki/Atomium) :-)
 
 ## Why ##
 
-The complexity in the theme layer lies in the fact that Drupal allows you to define HTML components in a template file or in a function. And defining them is sometimes complex. The rendering workflow is something tricky and not so straightforward, but that will be for later.
+On of the complexity in the theme layer lies in the fact that Drupal allows you to define HTML components in a template file or in a function. And defining them is sometimes complex. The rendering workflow is something tricky and not so straightforward.
 
 Drupal 7 using standard install and Stark theme defines 152 HTML elements or commonly named '*hook themes*'. 132 of them are made out of PHP functions. The 20 leftovers are from templates.
 According to me, mixing templates and functions for rendering HTML is a bit messy.
-Each of these two methods has its own pros and cons.<br>HTML should resides in template files and should be easy to extend.
+Each of these two methods has its own pros and cons.
+
+HTML should resides in template files and should be easy to extend.
+
 In Drupal 7, you can extend, preprocess and process a template, but you can not extend a theme function, only overwrite it and preprocess, process it.
 
 So, I tried to see how I could fix that in Atomium, how I could rewrite the "*theme functions*" into simple templates.
 Some of you might think "*Why the hell this guy is looking after that ? Does this guy likes to suffer ?*". I just like to fix things properly :-)
+
 Also because [since Drupal 7.33](https://www.drupal.org/drupal-7.33-release-notes), you can debug templates and see which one is used when rendering HTML components, and their corresponding templates suggestions, just by looking at the HTML source code... This option is also configurable within the Atomium settings, see the screenshot below.
 
 But prior fixing that, I needed to find a proper folders and files structure.
@@ -64,7 +72,15 @@ But prior fixing that, I needed to find a proper folders and files structure.
 ## Structure ##
 
 Most of the themes are composed of template files, assets, preprocess and process functions. There is no conventions on how to order and sort these.
-There is no hierarchy, no structure, nothing. It means that before doing anything, the first thing to do was to implement this.With the requirements in mind, I've managed to build the folder and files structure so it can be easily extended throughout a children theme.
+There is no hierarchy, no structure, nothing.
+
+Most of the themes I reviewed are using the file template.php as a junk room where everything is dumped in there.
+
+This has to change.
+
+Before doing anything, the first thing to do was to implement a clean structure.
+
+With the requirements in mind, I've managed to build the folder and files structure so it can be easily extended throughout a children theme.
 
 Then, once that was settled, I started [to convert most of Drupal core theme functions into templates](https://github.com/ec-europa/atomium/tree/7.x-1.x/atomium/templates)... and that helped me to understand and improve even further the theme.
 
@@ -72,7 +88,10 @@ After a couple of meetings with the colleagues, we've adjusted the folders and f
 
 ## In-depth mechanisms ##
 
-The registry alteration workflow is based on [Boostrap theme](https://drupal.org/project/bootstrap), clean HTML from [Mothership](https://drupal.org/project/mothership) and a lot of customizations were done for each '*hook themes*', now called '*components*'.
+The registry alteration workflow is based on [Boostrap theme](https://drupal.org/project/bootstrap) with small modifications, clean HTML from [Mothership](https://drupal.org/project/mothership) and other themes I reviewed.
+
+A lot of customizations were done for each '*hook themes*', now called '*components*'.
+
 In order to test if Atomium was behaving correctly, my fellow italian colleague [Antonio De Marco](https://github.com/ademarco) implemented [a nifty way to test the rendering layer](https://github.com/ec-europa/atomium/blob/7.x-1.x/tests/bootstrap.php) by overriding the global "*theme_engine*" variable and have a total control on what Drupal is rendering, just for testing purposes.
 
 Then, to help newcomers to dive into the theme, I've created three subthemes, one based on [Bootstrap 4](https://v4-alpha.getbootstrap.com/), one on [Foundation](http://foundation.zurb.com/), and the last one is a copy of Bartik but using the Atomium mechanisms.
@@ -84,6 +103,7 @@ As a base theme, Atomium will be empowering all European Commission websites bui
 ### Preprocessing and processing functions ###
 
 Atomium has special features that makes it unique in the Drupal ecosystem.
+
 I think, but I can be wrong, that this is the only theme that provides such a working cascade of preprocess and process functions based on the theme hooks suggestions.
 
 It means that if you call the hook theme '*link*' with some custom suggestions like:
@@ -111,10 +131,11 @@ Another feature added in Atomium is the automatic processing of attributes based
 Let's say that you create in your preprocess a variable named: '*something_attributes_array*'.
 
 During the main Atomium preprocess function, there is a mechanism that will detect those variables based on the pattern '*\*_attributes_array*' and then will process them through the '*atomium_drupal_attributes()*' function.
-Then, in the template, the variable '*something*' will be available as a string containing the attributes.
+Then, in the template, the variable '*something_attributes*' will be available as a string containing the attributes.
 
 The function '*atomium_drupal_attributes()*' is a extended version of '*[drupal_attributes()](https://api.drupal.org/api/drupal/includes%21common.inc/function/drupal_attributes/7.x)*'.
 By default, it will `trim()` and `check_plain()` the values, but also, if the key of an attribute is numeric, it will only display its value. Ex: `0 => "data-closable"` will be displayed: `data-closable`.
+
 The other small difference with the original function is that the values in the '*class*' key will be sorted alphabetically.
 
 ### Assets ###
@@ -141,7 +162,9 @@ I strongly suggest to read the documentation, it explains everything from the gr
 ### Clean markup ###
 
 Atomium tries, in every way, to be as clean as possible when rendering its markup.
+
 Some default added classes has been removed, and most of the components rendered using a theme function has been converted using a template.
+
 As every component is based on a template, we have to make sure that templates are without error and we are good to ship.
 
 ## Notable changes ##
@@ -211,6 +234,8 @@ Atomium is an [European Commission Open Source project hosted on Github](https:/
 Don't be afraid to drop me a line, I'm quite reactive !
 
 ## The future ##
+
+Since a couple of months, I took some distances from Drupal planet for personal reasons. I can't wait to come back after my personal stuff are done.
 
 The plan for the future is to maintain Atomium and improve it. I wish to have time to work on some particular issues that keeps me up at night.
 
