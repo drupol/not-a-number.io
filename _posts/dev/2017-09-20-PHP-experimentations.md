@@ -43,7 +43,7 @@ Atomium is full of new concepts and I wanted to innovate again.
 
 The idea I had was to create a single custom variable that would contains all the attributes. Those attributes would not be an array but an object that would have easy methods to add, remove and replace attributes values.
 
-So here I was, coding a very basic Attribute object, with simple methods. I also created an Attribute container extending [\ArrayAccess](http://php.net/manual/en/class.arrayaccess.php) so it could automatically spawn attributes at will, just what I was looking for.
+So here I was, coding a very basic Attribute object, with simple methods. I also created an Attribute container implementing [\ArrayAccess](http://php.net/manual/en/class.arrayaccess.php) so it could automatically spawn attributes at will, just what I was looking for.
 
 Implementing the Attribute object was fun, but to be honest, it was even better when I started to create the Attributes container.
 
