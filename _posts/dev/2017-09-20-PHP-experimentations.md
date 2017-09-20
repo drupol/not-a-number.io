@@ -22,8 +22,9 @@ And these last days were even more full of "_busy-ness_".
 
 Let me tell you how I get there... it's a small story.
 
+<!--break-->
 
-So, 3 weeks ago, I was looking for performance improvements with Atomium. I wanted to get rid of useless loops by removing all **hook_process_hook()** calls.
+So, 3 weeks ago, I was looking for performance improvements with [Atomium](https://github.com/ec-europa/atomium). I wanted to get rid of useless loops by removing all **hook_process_hook()** calls.
 
 These hooks were mainly used to process custom attributes added into some particular templates. As you may know, Drupal 7 provides default variables for attributes: attributes_array, title_attributes_array, content_attributes_array, see _template_preprocess_default_variables().
 This is ok for most of the templates we have. But there are some templates who requires specific attributes per item. Like, an item list, a table with rows and cells, etc etc.
