@@ -26,7 +26,7 @@ Let me tell you how I get there... it's a small story...
 
 So, 3 weeks ago, I was looking for performance improvements with [Atomium](https://github.com/ec-europa/atomium). I wanted to get rid of useless loops by removing all **hook_process_hook()** calls.
 
-These hooks were mainly used to process custom attributes added into some particular templates. As you may know, Drupal 7 provides default variables for attributes: `attributes_array`, `title_attributes_array`, `content_attributes_array` (see [_template_preprocess_default_variables()](https://api.drupal.org/api/drupal/includes%21theme.inc/function/_template_preprocess_default_variables/7.x).
+These hooks were mainly used to process custom attributes added into some particular templates. As you may know, Drupal 7 provides default variables for attributes: `attributes_array`, `title_attributes_array`, `content_attributes_array` (_see [the API](https://api.drupal.org/api/drupal/includes%21theme.inc/function/_template_preprocess_default_variables/7.x)_).
 This was ok for most of the templates we had, but there are some templates who requires specific attributes per item. Like, an items list, a table with rows and cells, etc etc.
 
 How to deal with that ?
@@ -75,9 +75,9 @@ While doing the library on my own, I wanted to do things in the state of the art
 So, I learned to use [PHPSpec](https://github.com/phpspec/phpspec), and I wrote all the tests of the library using it. I really enjoyed it to, much better than what I was used to know.
 
 
-Leo and TagAttributes are using dynamically created methods and properties and some properties are functions, callbacks or better: Closures.
+Leo and TagAttributes are using dynamically created methods and properties and some properties are functions, callbacks or better: [Closures](http://php.net/manual/en/class.closure.php).
 
-All these new concepts of programming were bubbling in my head and thanks to TagAttributes, I've decided to externalize the library to create dynamic methods and properties into its own package: [DynamicObjects](https://github.com/drupol/dynamicobjects).
+All these new programming concepts were bubbling in my head and thanks to TagAttributes, I've decided to externalize the library to create dynamic methods and properties into its own package: [DynamicObjects](https://github.com/drupol/dynamicobjects).
 
 There were a couple of libraries around playing with these PHP magic methods, but none were good or complete enough for what I was looking for. DynamicObjects allows you to create and manage objects methods and properties. It comes in two flavors, as a PHP Trait, or as a PHP Class that you can extend.
 
@@ -96,7 +96,7 @@ In computing, memoization is an optimization technique used primarily to speed u
 
 I first started to include the functionality "_as-is_" in DynamicObjects and then, just like before, I made a package out of it: [PHP Memoize](https://github.com/drupol/memoize).
 
-Of course there were [packages](https://packagist.org/?q=memoize) that can do memoization, but not like I wanted to. As the memoization is using a cache to store its data, I wanted it to be able to use a standardized cache system: [PSR-16](http://www.php-fig.org/psr/psr-16/). 
+Of course there were [packages](https://packagist.org/?q=memoize) that can do memoization, but not like I wanted to. As the memoization is using a cache to store its data, I wanted it to be able to use a standardized cache system: [PSR-16](http://www.php-fig.org/psr/psr-16/).
 
 
 The second feature I added, was inspired by [Macroable](https://github.com/spatie/macroable), a PHP package that has the same purpose as DynamicObjects and written at the same time by a fellow colleague [Freek Van der Herten](https://github.com/freekmurze) at [Spatie](https://spatie.be).
@@ -107,8 +107,8 @@ This is how I created the package: [PHP Anonymize](https://github.com/drupol/ano
 
 
 In less than 3 weeks, I've created 4 small different libraries and I don't know what will be the outcome of these.
-Doing them was very important because it helped me keeping me busy learning new stuff related to my work. I learn very nice concepts and I think it will open the doors to a new way of writing libraries, at least, for me.
-I've learned Leo, PHPSpec, the importance of closures, the bindings, and so much more...
+Doing them was very important because it helped me keeping me busy learning new stuff related to my work. I've learned very nice concepts and I think it might open the doors to a new way of writing libraries, at least, for me.
+I've learned Leo, PHPSpec, the PHP Closures and its bindings, and so much more...
 
 This is exactly what I love in my work. There's so much things to discover, to build to learn, to show...
 Some people are singing, dancing, painting, acting... but for me, learning new work-related stuff and writing opensource softwares, are a way to express my creativity... and as long as this will exists, I will never get fed up of what I do.
