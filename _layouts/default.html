@@ -13,7 +13,7 @@
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}" >
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">  <script src="//code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
@@ -47,11 +47,12 @@
             <div class="sidebar-module">
                 <h4>Get in touch</h4>
                 <ol class="list-unstyled">
-                    <li><a href="https://github.com/drupol"><i class="fa fa-github" aria-hidden="true"></i> On GitHub</a></li>
-                    <li><a href="https://www.drupal.org/u/pol"><i class="fa fa-drupal" aria-hidden="true"></i> On Drupal</a></li>
-                    <li><a href="https://twitter.com/drupol"><i class="fa fa-twitter" aria-hidden="true"></i> On Twitter</a></li>
-                    <li><a href="https://www.linkedin.com/in/poldellaiera/"><i class="fa fa-linkedin" aria-hidden="true"></i> On LinkedIn</a></li>
-                    <li><a href="/contact"><i class="fa fa-envelope" aria-hidden="true"></i> By email</a></li>
+                    <li><a href="https://github.com/drupol"><i class="fab fa-github" aria-hidden="true"></i> On GitHub</a></li>
+                    <li><a href="https://packagist.org/packages/drupol/"><i class="fas fa-link" aria-hidden="true"></i> On Packagist</a></li>
+                    <li><a href="https://www.drupal.org/u/pol"><i class="fab fa-drupal" aria-hidden="true"></i> On Drupal</a></li>
+                    <li><a href="https://twitter.com/drupol"><i class="fab fa-twitter" aria-hidden="true"></i> On Twitter</a></li>
+                    <li><a href="https://www.linkedin.com/in/poldellaiera/"><i class="fab fa-linkedin" aria-hidden="true"></i> On LinkedIn</a></li>
+                    <li><a href="/contact"><i class="far fa-envelope" aria-hidden="true"></i> By email</a></li>
                 </ol>
             </div>
 
@@ -72,10 +73,10 @@
             <div class="sidebar-module">
                 <h4>Share this page</h4>
                 {% assign url =  site.production_url | append: page.url %}
-                <a href="http://www.facebook.com/sharer/sharer.php?u={{ url | cgi_escape }}" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
-                <a href="https://twitter.com/intent/tweet?text={% if page.twitter_text %}{{ page.twitter_text | cgi_escape }}{% else %}{{ page.title | cgi_escape }}{% endif %}&url={{ url | cgi_escape }}{% if page.twitter_tags %}&hashtags={{ page.twitter_tags | cgi_escape }}{% endif %}" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a>
-                <a href="https://plus.google.com/share?url={{ url | cgi_escape }}" target="_blank"><i class="fa fa-google-plus-square fa-3x"></i></a>
-                <a href="http://www.linkedin.com/shareArticle?title={{ page.title | cgi_escape }}&url={{ url | cgi_escape }}" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
+                <a href="http://www.facebook.com/sharer/sharer.php?u={{ url | cgi_escape }}" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+                <a href="https://twitter.com/intent/tweet?text={% if page.twitter_text %}{{ page.twitter_text | cgi_escape }}{% else %}{{ page.title | cgi_escape }}{% endif %}&url={{ url | cgi_escape }}{% if page.twitter_tags %}&hashtags={{ page.twitter_tags | cgi_escape }}{% endif %}" target="_blank"><i class="fab fa-twitter-square fa-3x"></i></a>
+                <a href="https://plus.google.com/share?url={{ url | cgi_escape }}" target="_blank"><i class="fab fa-google-plus-square fa-3x"></i></a>
+                <a href="http://www.linkedin.com/shareArticle?title={{ page.title | cgi_escape }}&url={{ url | cgi_escape }}" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
             </div>
 
         </div><!-- /.blog-sidebar -->

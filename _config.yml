@@ -34,7 +34,7 @@ gems: ["jekyll-sitemap", "jekyll-seo-tag", "jekyll-gist", "jekyll-github-metadat
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
-JB :
+JB:
   version : 0.3.0
 
   # All links will be namespaced by BASE_PATH if defined.
