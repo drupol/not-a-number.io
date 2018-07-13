@@ -11,6 +11,7 @@ gem "jekyll-avatar"
 gem "jemoji"
 gem "jekyll-coffeescript"
 gem "pygments.rb"
+gem "jekyll-redirect-from"
 require 'json'
 require 'open-uri'
 versions = JSON.parse(open('https://pages.github.com/versions.json').read)
