@@ -1,14 +1,16 @@
 ---
 layout: post
 category : random
-title: "How I fall into Drupal"
+title: "How did I fall into Drupal"
 subtitle: How it all began
 tags : [drupal, personal, career]
 schema: BlogPosting
 image:
 image_copyrights: ''
-
+redirect_from:
+  - /2018/how-i-fall-into-drupal
 ---
+
 {% include JB/setup %}
 
 I started to use Drupal ~13 years ago. It was the end of life of version 4.5 at the time.
@@ -63,7 +65,7 @@ I also like to experiment and push the boundaries of my own knowledge in PHP by 
 
 # Why I applied for the Drupal 7 maintainership? #
 
-As you may know now, I [applied](https://www.drupal.org/project/drupal/issues/2982027) for being a provisional maintainer of Drupal 7.
+As you may know now, I [applied](https://www.drupal.org/project/drupal/issues/2982027) for being a maintainer of Drupal 7.
 
 Drupal 7 is still there, even if the trends is decreasing and I’m a bit tired of the lack of responsiveness in the queue and statements like “_Drupal 7 is dead, use Drupal 8_”.
 
@@ -74,3 +76,16 @@ So, my goal is to revive the forgotten Drupal 7 and to be responsive and an acti
 I want to take care of it for the time being and to provide support for it.
 
 I'll be available on the usual Slack channels or on IRC under the name of @drupol, feel free to have a chat, I speak English, French, Dutch and Italian.
+
+My priorities during with this new role are:
+
+* Review and test patches that are waiting, with a priority to the patches that are backported from Drupal 8,
+* Backport new patches,
+* Complete and update the Drupal 7 inline Documentation (PHPDoc, etc etc),
+* Update the code style.
+
+I'd like to introduce a couple of new things as well:
+
+* Updating PHP function declarations by updating parameters types,
+* Improve and optimize the theming layer,
+* (more to come here very soon).
