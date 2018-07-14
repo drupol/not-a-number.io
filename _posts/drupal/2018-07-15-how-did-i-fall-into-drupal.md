@@ -88,4 +88,5 @@ I'd like to introduce a couple of new things as well:
 
 * Updating PHP function declarations by updating parameters types,
 * Improve and optimize the theming layer,
-* (more to come here very soon).
+* Make Drupal pass PHPCS, update the coding standard,
+* _more to come here very soon_...
