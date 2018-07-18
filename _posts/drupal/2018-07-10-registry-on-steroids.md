@@ -40,11 +40,8 @@ I first started it alone, then [Andreas Hennings](https://www.drupal.org/u/donqu
 Before diving into the main subject, let's refresh our memory on how the Drupal theme layer works.
 
 The Drupal theme registry is, according to me, one of the most important piece in Drupal.
-
 It contains all the theme hooks declared in the system. Each of these theme hooks have a definition that contains crucial information.
-
 One of the most important piece of information is the phase callbacks.
-
 Before going there, be aware that Drupal 7 is able to render an HTML component in two different ways.
 
 * Using a template
@@ -56,9 +53,7 @@ Drupal 7 processes the variables that are sent in the templates and/or through a
 * The process phase
 
 Each of those phase contains a list of callbacks that are executed one after the other.
-
 The process phase is not used that much in the community. The Drupal 7 fork, [Backdrop](https://backdropcms.org/) decided [to get rid of it](https://github.com/backdrop/backdrop-issues/issues/193).
-
 Anyway, one of the most important role of the Drupal theme registry is to collect those callbacks automatically and sort them in a particular order, for each theme hook.
 
 The order is the following for the preprocess phase:
