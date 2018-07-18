@@ -225,17 +225,17 @@ Unfortunately, Drupal will not execute those preprocess when rendering the `marq
 
 There is no phase callbacks inheritance in Drupal 7.
 
-And this is why Registry on steroids has been created.
+**And this is why Registry on steroids has been created!**
 
 It has been created to fill that gap and allow people to have an inheritance in the preprocess and process phase callbacks.
 
-The issue [#2563445](https://www.drupal.org/project/drupal/issues/2563445) is about this, but I doubt it will be fixed one day.
+The issue [#2563445](https://www.drupal.org/project/drupal/issues/2563445) is about this, but I doubt it will be fixed one day unfortunately.
 
 ## Registry on steroids Alter ##
 
 If you install Registry on steroids, you will notice that it comes with one submodule.
 
-Know that you know what ROS is doing, that `Alter` submodule is basically a module that alter all the render array of Drupal and update and extend the `#theme` property, based on the element value.
+Now that you're aware of what **Registry on steroids** is doing, that `Alter` submodule is basically a module that alter all the render arrays of Drupal. It update and extend the `#theme` property, based on the element value.
 
 Example with the `region` hook theme.
 
@@ -298,14 +298,14 @@ During the making of Registry on steroids, I noticed weird things in the Drupal 
 
 I will explain here one of the weirdest thing, thing that I didn't find why it's done this way. I haven't found a proper explanation yet, do not hesitate to let me know in the comment if you know why.
 
-As you know now, there are two ways to render a hook theme:
+As you know now, there are two ways to render a theme hook:
 
 * With a template
 * With a function
 
-When using a function to render your hook theme, Drupal will skip some phase callbacks.
+The issue is that when using a function to render your hook theme, Drupal will skip some phase callbacks.
 
-Here's the ordered list of preprocess callbacks that Drupal will execute if your theme `HOOK` is using a template:
+Here's the ordered list of `preprocess` callbacks that Drupal will execute if your theme hook is using a template:
 
 * `template_preprocess()`
 * `template_preprocess_HOOK()`
@@ -327,8 +327,8 @@ Now, if it's using a function, here's the list:
 * `[BASE_THEME_IF_ANY]_preprocess_HOOK()`
 * `[THEME]_preprocess_HOOK()`
 
-As you can see, there are some preprocess callbacks that are skipped. All the callbacks ending with `_preprocess` basically, except [template_preprocess()](https://api.drupal.org/api/drupal/includes%21theme.inc/function/template_preprocess/7.x) which is executed manually in the [theme()](https://api.drupal.org/api/drupal/includes!theme.inc/function/theme/7.x) function.
+As you can see, some `preprocess` callbacks are skipped. All the callbacks ending with `_preprocess` basically, except [template_preprocess()](https://api.drupal.org/api/drupal/includes%21theme.inc/function/template_preprocess/7.x) which is executed manually in the [theme()](https://api.drupal.org/api/drupal/includes!theme.inc/function/theme/7.x) function.
 
-Crazy isn't it ?
+_Crazy isn't it ?_
 
 In Atomium and Registry on steroids, we had to reproduce that behavior in order to not break existing contrib modules.
