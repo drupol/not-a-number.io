@@ -202,7 +202,7 @@ You can also create preprocess that goes with it:
 * In the custom module: `mymodule_preprocess_marquee__july__tuesday(&$variables, $hook)`
 * In the theme: `seven_preprocess_marquee__july__tuesday(&$variables, $hook)`
 
-Drupal includes a very nice and handy template file detection system by splitting the theme name at each '__' (double underscores), starting from the right.
+Drupal includes a very nice and handy template file detection system by splitting the theme name at each `__` (_double underscores_), starting from the right.
 
 In this particular case, you could create 2 templates `marquee--july--tuesday.tpl.php` and another `marquee--july.tpl.php`, those templates will be automatically picked up by Drupal at the right time.
 
@@ -210,7 +210,7 @@ In this particular case, you could create 2 templates `marquee--july--tuesday.tp
 - Every other days in July it will be: `marquee--july.tpl.php`
 - Every other days it will be: `marquee.tpl.php`
 
-Pretty nice isn't it ?
+_Pretty nice isn't it ?_
 
 ## Registry on steroids ##
 
