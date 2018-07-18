@@ -32,8 +32,8 @@ The team I was going to train was composed of mostly developers, so I decided to
 
 Atomium is obviously composed of templates, but also of an heavy layer of code that alter the Drupal theme registry, this is usually the part that people never understand, but this is the most important one.
 
-I had the idea to move out that part of the code into a module and make it available to the whole community without forcing people to use Atomium. This is how Registry on steroids has been created.
-I first started [Registry on steroids](https://www.drupal.org/project/registryonsteroids) alone, then [Andreas Hennings](https://www.drupal.org/u/donquixote) joined the adventure. Thanks to him for his amazing knowledge of PHP and Drupal.
+I had the idea to move out that part of the code into a module and make it available to the whole community without forcing people to use Atomium. This is how [Registry on steroids](https://www.drupal.org/project/registryonsteroids) has been created.
+I first started it alone, then [Andreas Hennings](https://www.drupal.org/u/donquixote) joined the team. Thanks to him for his amazing knowledge of PHP and Drupal.
 
 ## Let's dive ##
 
