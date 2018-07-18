@@ -42,21 +42,21 @@ Before diving into the main subject, let's refresh our memory on how the Drupal 
 The Drupal theme registry is, according to me, one of the most important piece in Drupal.
 It contains all the theme hooks declared in the system. Each of these theme hooks have a definition that contains crucial information.
 One of the most important piece of information is the phase callbacks.
-Before going there, be aware that Drupal 7 is able to render an HTML component in two different ways.
+Before going there, be aware that Drupal 7 is able to render an HTML component in two different ways:
 
 * Using a template
 * Using a render function
 
-Drupal 7 processes the variables that are sent in the templates and/or through a render function in 2 phases:
+Drupal 7 processes the variables that are sent in the templates and/or through a render function in two phases:
 
-* The preprocess phase
-* The process phase
+* The `preprocess` phase
+* The `process` phase
 
 Each of those phase contains a list of callbacks that are executed one after the other.
 The process phase is not used that much in the community. The Drupal 7 fork, [Backdrop](https://backdropcms.org/) decided [to get rid of it](https://github.com/backdrop/backdrop-issues/issues/193).
 Anyway, one of the most important role of the Drupal theme registry is to collect those callbacks automatically and sort them in a particular order, for each theme hook.
 
-The order is the following for the preprocess phase:
+The order is the following for the `preprocess` phase:
 
 * `template_preprocess()`
 * `template_preprocess_HOOK()`
@@ -69,7 +69,7 @@ The order is the following for the preprocess phase:
 * `[THEME]_preprocess()`
 * `[THEME]_preprocess_HOOK()`
 
-And the same for the process phase:
+And the same for the `process` phase:
 
 * `template_process()`
 * `template_process_HOOK()`
@@ -88,7 +88,7 @@ In addition to automatically detect the callbacks, it is possible to manually ad
 
 ## A hidden feature ##
 
-Rendering a theme hook in Drupal can be done in different ways.
+Rendering a theme hook in Drupal can be done in different ways:
 
 * Using the [theme()](https://api.drupal.org/api/drupal/includes!theme.inc/function/theme/7.x) function
 * Using a [render array](https://www.drupal.org/docs/7/api/render-arrays/render-arrays-overview)
@@ -130,12 +130,12 @@ The result is:
 
 You may have noticed that I have enabled [the theme debug of Drupal](https://www.drupal.org/docs/7/theming/overriding-themable-output/working-with-template-suggestions) in order to show which template is used to render my `marquee` component.
 
-Now let's say that we want to create some preprocess callbacks:
+Now let's say that we want to create some `preprocess` callbacks:
 
 * In the custom module: `mymodule_preprocess_marquee(&$variables, $hook)`
 * In the theme: `seven_preprocess_marquee(&$variables, $hook)`
 
-Once you flush the cache, the Drupal theme registry will detect those callbacks and add them in the proper phase callbacks stack, in this case, the preprocess phase.
+Once you flush the cache, Drupal will detect those callbacks and add them in the theme registry, in the proper phase callbacks stack, in this case, the `preprocess` phase.
 
 Now, there's a kind of secret feature, not really a secret, but rather an undocumented feature.
 
