@@ -88,7 +88,7 @@ After a couple of meetings with the colleagues, we've adjusted the folders and f
 
 ## In-depth mechanisms ##
 
-The registry alteration workflow is based on [Boostrap theme](https://drupal.org/project/bootstrap) with small modifications, clean HTML from [Mothership](https://drupal.org/project/mothership) and other themes I reviewed.
+The registry alteration workflow is based on [Bootstrap theme](https://drupal.org/project/bootstrap) with small modifications, clean HTML from [Mothership](https://drupal.org/project/mothership) and other themes I reviewed.
 
 A lot of customizations were done for each '*hook themes*', now called '*components*'.
 
