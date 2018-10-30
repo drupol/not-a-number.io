@@ -65,7 +65,7 @@ declare(strict_types = 1);
 trait GreatestCommonDivisor
 {
   /**
-   * Get the divisor of a given number.
+   * Get the divisors of a given number.
    * 
    * @param int $num
    *   The number.
@@ -173,7 +173,7 @@ declare(strict_types = 1);
 class GreatestCommonDivisor
 {
   /**
-   * Get the divisor of a given number.
+   * Get the divisors of a given number.
    * 
    * @param int $num
    *   The number.
