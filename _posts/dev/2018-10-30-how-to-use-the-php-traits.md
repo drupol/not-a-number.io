@@ -3,8 +3,8 @@ layout: post
 category : dev
 title: "How to use PHP traits?"
 tags : [php, traits, coding]
-image: 
-image_copyrights: 'TODO'
+image: /assets/images/posts/IMG_20181014_110212-01.jpg
+image_copyrights: 'Image by Pol Dellaiera'
 ---
 {% include JB/setup %}
 
@@ -12,11 +12,10 @@ Recently, I've been busy rewriting small PHP libraries like [PHPNgrams](https://
 
 I mostly rewrote them because of multiple things I wanted to do:
 
-* Use SOLID principle: [The Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
+* Use [SOLID](https://en.wikipedia.org/wiki/SOLID) principle: [The Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 * Automatically generate and publish the library documentation using [APIgen](https://github.com/ApiGen/ApiGen)
 * Improve the quality of the tests by using [PHP Infection](https://github.com/infection/infection)
-
-The main reason I rewrote those libraries is because most of them were built out of a single PHP trait and there were some limitations.
+* Improve the class hierarchy design when using a PHP trait and remove some limitations.
 
 This article will explain what are traits and will try to propose, without pretension, a better way to write them.
 
@@ -36,16 +35,16 @@ When it comes to designing the library and it's classes organisation, it's anoth
 
 * How to reduce and minimize code duplication,
 * How to make sure that the inheritance hierarchy is optimal,
-* Which design pattern should I use...
+* Which design pattern to use,
 * etc etc
 
-Sometimes, it's possible that you'd wish your class to inherit from multiple classes, but unlike in Python (and probably some other languages), it's not possible in PHP (Yet?).
+Sometimes, it's possible that you'd wish your class to inherit from multiple classes, but unlike in Python (_and probably some other languages_), it's not possible in PHP (Yet?).
 
 Of course, inheritance with multiple classes can be hard to work with, it adds complexity and has issues like the [Diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem).
 
 <blockquote class="blockquote text-justify">
 The "diamond problem" (sometimes referred to as the "deadly diamond of death") is an ambiguity that arises when two classes B and C inherit from A, and class D inherits from both B and C. If there is a method in A that B and C have overridden, and D does not override it, then which version of the method does D inherit: that of B, or that of C? 
-<footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem">From wikidpedia</a></cite></footer>
+<footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem">From wikipedia</a></cite></footer>
 </blockquote>
 
 Introduced in PHP 5.4, traits is a way to solve this. Basically, it allows developers to reuse horizontally the same code across independent and different classes hierarchies.
@@ -85,20 +84,17 @@ trait GreatestCommonDivisor
   /**
    * Get the greatest common divisor.
    * 
-   * @param int $x
-   *   The first number.
-   * @param int $y
-   *   The second number.
+   * @param int ...$x
+   *   The numbers.
    * 
    * @return int
    *   The greatest common divisor.
    */
-  public function gcd(int $x, int $y): int
+  public function gcd(...$x): int
   {
-    $intersect = array_intersect(
-      $this->factors($x), 
-       $this->factors($y)
-    );
+    $x = array_map([$this, 'factors'], $x);
+      
+    $intersect = array_intersect(...$x);
       
     return end($intersect);
   }
@@ -154,6 +150,8 @@ Of course, you could wrap your trait in an new object, then wrap that object in 
 This issue raise another set of issues. Using traits usually gives you more work. Why ?
 
 As the visibility of methods cannot be changed, you'll have to test all the methods, individually.
+
+Testing private or protected methods could be cumbersome and in some cases, it's better to test public methods which internally uses those methods.
 
 A way to avoid those situations is to use traits in a different way, based on an object.
 
