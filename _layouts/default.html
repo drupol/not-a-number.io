@@ -79,7 +79,6 @@
                 {% assign url =  site.production_url | append: page.url %}
                 <a href="http://www.facebook.com/sharer/sharer.php?u={{ url | cgi_escape }}" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
                 <a href="https://twitter.com/intent/tweet?text={% if page.twitter_text %}{{ page.twitter_text | cgi_escape }}{% else %}{{ page.title | cgi_escape }}{% endif %}&url={{ url | cgi_escape }}{% if page.twitter_tags %}&hashtags={{ page.twitter_tags | cgi_escape }}{% endif %}" target="_blank"><i class="fab fa-twitter-square fa-3x"></i></a>
-                <a href="https://plus.google.com/share?url={{ url | cgi_escape }}" target="_blank"><i class="fab fa-google-plus-square fa-3x"></i></a>
                 <a href="http://www.linkedin.com/shareArticle?title={{ page.title | cgi_escape }}&url={{ url | cgi_escape }}" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
             </div>
 
