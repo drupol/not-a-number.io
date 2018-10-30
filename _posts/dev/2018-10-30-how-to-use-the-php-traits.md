@@ -57,7 +57,7 @@ Let's see with a basic example.
 
 In the following example, we want to create a trait that compute [the greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor) of 2 integers.
 
-```php
+{% highlight php %}
 <?php
 
 trait GreatestCommonDivisor
@@ -99,8 +99,7 @@ trait GreatestCommonDivisor
     return end($intersect);
   }
 }
-
-```
+{% endhighlight %}
 
 This trait can be used in any classes just by adding:
 
