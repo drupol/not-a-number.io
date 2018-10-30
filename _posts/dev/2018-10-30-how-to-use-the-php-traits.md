@@ -8,7 +8,7 @@ image_copyrights: 'Image by Pol Dellaiera'
 ---
 {% include JB/setup %}
 
-Recently, I've been busy rewriting small PHP libraries like [PHPNgrams](https://github.com/drupol/phpngrams), [DynamicObjects](https://github.com/drupol/dynamicobjects), [PHPartition](https://github.com/drupol/phpartition), [PHPermutations](https://github.com/drupol/phpermutations) and [Memoize](https://github.com/drupol/memoize).
+Recently, I've been busy rewriting small PHP libraries like [ValueWrapper](https://github.com/drupol/valuewrapper), [HTMLTag](https://github.com/drupol/htmltag), [PHPNgrams](https://github.com/drupol/phpngrams), [DynamicObjects](https://github.com/drupol/dynamicobjects), [PHPartition](https://github.com/drupol/phpartition), [PHPermutations](https://github.com/drupol/phpermutations) and [Memoize](https://github.com/drupol/memoize).
 
 I mostly rewrote them because of multiple things I wanted to do:
 
