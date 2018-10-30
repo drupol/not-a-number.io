@@ -60,6 +60,8 @@ In the following example, we want to create a trait that compute [the greatest c
 ```php
 <?php
 
+declare(strict_types = 1);
+
 trait GreatestCommonDivisor
 {
   /**
@@ -107,6 +109,8 @@ This trait can be used in any classes just by adding:
 ```php
 <?php
 
+declare(strict_types = 1);
+
 class Foo
 {
   use GreatestCommonDivisor;
@@ -118,6 +122,8 @@ This will add the 2 methods to your class and you'll be able to call them.
 
 ```php
 <?php 
+
+declare(strict_types = 1);
 
 $foo = new Foo();
 
@@ -161,6 +167,8 @@ First we are going to create a single class.
 
 ```php
 <?php
+
+declare(strict_types = 1);
 
 class GreatestCommonDivisor
 {
