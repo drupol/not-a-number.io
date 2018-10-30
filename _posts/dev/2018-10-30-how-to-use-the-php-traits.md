@@ -8,13 +8,13 @@ image_copyrights: 'Image by Pol Dellaiera'
 ---
 {% include JB/setup %}
 
-Recently, I've been busy rewriting small PHP libraries like [PHPNgrams](https://github.com/drupol/phpngrams), [DynamicObjects](https://github.com/drupol/dynamicobjects), [PHPartitions](https://github.com/drupol/phpartitions), [PHPermutations](https://github.com/drupol/phpermutations) and [Memoize](https://github.com/drupol/memoize).
+Recently, I've been busy rewriting small PHP libraries like [PHPNgrams](https://github.com/drupol/phpngrams), [DynamicObjects](https://github.com/drupol/dynamicobjects), [PHPartition](https://github.com/drupol/phpartition), [PHPermutations](https://github.com/drupol/phpermutations) and [Memoize](https://github.com/drupol/memoize).
 
 I mostly rewrote them because of multiple things I wanted to do:
 
 * Use [SOLID](https://en.wikipedia.org/wiki/SOLID) principle: [The Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 * Automatically generate and publish the library documentation using [APIgen](https://github.com/ApiGen/ApiGen)
-* Improve the quality of the tests by using [PHP Infection](https://github.com/infection/infection)
+* Improve the tests quality by using [PHP Infection](https://github.com/infection/infection)
 * Improve the class hierarchy design when using a PHP trait and remove some limitations.
 
 This article will explain what are traits and will try to propose, without pretension, a better way to write them.
@@ -237,13 +237,10 @@ Basically, the ```GreatestCommonDivisor``` object is wrapped in a trait, and the
 
 When this trait will be used, in any object you want, it will only provide 1 method and nothing else.
 
-This is why I rewrote my own libraries. I wanted something clean, easy to use and properly tested.
-
 To summarize this post:
 
 * All the traits that you create should wrap an inner class that does the job properly,
 * Don't do logic in your traits,
-* Do not overload traits with a lot of methods, keep in mind that 1 trait = 1 method (usually),
+* Do not overload traits with a lot of methods, try to keep in mind that "1 trait = 1 method",
 * Carefully select which methods you want to expose in your traits,
 * Unit test your objects and not your traits.
-
