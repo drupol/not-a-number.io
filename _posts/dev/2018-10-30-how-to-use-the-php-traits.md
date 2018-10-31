@@ -40,12 +40,14 @@ When it comes to designing the library and it's classes organisation, it's anoth
 
 Sometimes, it's possible that you'd wish your class to inherit from multiple classes, but unlike in Python (_and probably some other languages_), it's not possible in PHP (Yet?).
 
-Of course, inheritance with multiple classes can be hard to work with, it adds complexity and has issues like the [Diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem), which PHP is not concerned.
+Of course, inheritance with multiple classes can be hard to work with, it adds complexity and has issues like the [Diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem).
 
 <blockquote class="blockquote text-justify">
 The "diamond problem" (sometimes referred to as the "deadly diamond of death") is an ambiguity that arises when two classes B and C inherit from A, and class D inherits from both B and C. If there is a method in A that B and C have overridden, and D does not override it, then which version of the method does D inherit: that of B, or that of C? 
 <footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem">From wikipedia</a></cite></footer>
 </blockquote>
+
+But obviously, PHP is not concerned by this.
 
 Introduced in PHP 5.4, traits is a way to solve this. Basically, it allows developers to reuse horizontally the same code across independent and different classes hierarchies.
 
