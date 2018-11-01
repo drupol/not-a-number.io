@@ -49,7 +49,7 @@ The "diamond problem" (sometimes referred to as the "deadly diamond of death") i
 
 But obviously, PHP is not concerned by this.
 
-Introduced in PHP 5.4, traits is a way to solve this. Basically, it allows developers to reuse horizontally the same code across independent and different classes hierarchies.
+Introduced in PHP 5.4, using traits is a way to solve this. Basically, it allows developers to reuse horizontally the same code across independent and different classes hierarchies.
 
 It seems to be an amazing discovery, but it's nothing new, this concept is used in languages like Scala and Perl.
 
@@ -215,7 +215,6 @@ class GreatestCommonDivisor
 
 Then a trait
 
-
 ```php
 <?php
 
@@ -249,8 +248,9 @@ When this trait will be used, in any object you want, it will only provide 1 met
 
 To summarize this post:
 
+* Even if traits seems to be wonderful, use them with parsimony, at the last resort,
 * All the traits that you create should wrap an inner class that does the job properly,
-* Don't do logic in your traits,
+* Reduce or don't do logic in your traits,
 * Do not overload traits with a lot of methods, try to keep in mind that "1 trait = 1 method",
 * Carefully select which methods you want to expose in your traits,
 * Unit test your objects and not your traits.
