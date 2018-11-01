@@ -68,21 +68,35 @@ trait GreatestCommonDivisor
 {
   /**
    * Get the divisors of a given number.
-   * 
+   *
    * @param int $num
    *   The number.
+   *
+   * @param int $start
+   *   The number to start from.
    *
    * @return int[]
    *   The divisors of the number.
    */
-  public function factors(int $num): array
+  public function factors(int $num, int $start = 2): array
   {
-    return array_filter(
-      range(1, $num),
-      function (int $i) use ($num) {
-        return 0 === $num % $i;
+    $return = [1, $num];
+
+    $end = ceil(sqrt($num)) + 1;
+
+    for ($i = $start; $i < $end; $i++)
+    {
+      if (0 !== $num % $i) {
+        continue;
       }
-    );
+
+      $return[$i] = $i;
+      $return[$num/$i] = $num/$i;
+    }
+
+    asort($return);
+
+    return array_values($return);
   }
 
   /**
@@ -176,22 +190,37 @@ class GreatestCommonDivisor
 {
   /**
    * Get the divisors of a given number.
-   * 
+   *
    * @param int $num
    *   The number.
+   *
+   * @param int $start
+   *   The number to start from.
    *
    * @return int[]
    *   The divisors of the number.
    */
-  private function factors(int $num): array
+  public function factors(int $num, int $start = 2): array
   {
-    return array_filter(
-      range(1, $num),
-      function (int $i) use ($num) {
-        return 0 === $num % $i;
+    $return = [1, $num];
+
+    $end = ceil(sqrt($num)) + 1;
+
+    for ($i = $start; $i < $end; $i++)
+    {
+      if (0 !== $num % $i) {
+        continue;
       }
-    );
+
+      $return[$i] = $i;
+      $return[$num/$i] = $num/$i;
+    }
+
+    asort($return);
+
+    return array_values($return);
   }
+
 
   /**
    * Get the greatest common divisor.
