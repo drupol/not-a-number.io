@@ -113,12 +113,47 @@ PHPTree gives you the opportunity to export trees in multiple formats:
 * To text
 * To PHP array
 * To Graph
+* To Ascii (just for fun)
 
 Here's an example of how [this graph](/assets/images/posts/tree-example2.svg) is exported:
 
 As Text:
 ```
 [PHPTree [is [fast [to] [manipulate]] [and [trees] [data]]] [a [fun [structure]] [library]]]
+```
+
+As Ascii:
+
+```
+├─ PHPTree
+└─┐
+  ├─┐
+  │ ├─ is
+  │ └─┐
+  │   ├─┐
+  │   │ ├─ fast
+  │   │ └─┐
+  │   │   ├─┐
+  │   │   │ └─ to
+  │   │   └─┐
+  │   │     └─ manipulate
+  │   └─┐
+  │     ├─ and
+  │     └─┐
+  │       ├─┐
+  │       │ └─ trees
+  │       └─┐
+  │         └─ data
+  └─┐
+    ├─ a
+    └─┐
+      ├─┐
+      │ ├─ fun
+      │ └─┐
+      │   └─┐
+      │     └─ structure
+      └─┐
+        └─ library
 ```
 
 As Array:
