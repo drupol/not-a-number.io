@@ -78,9 +78,9 @@ Find all the details and more [on Wikipedia](https://en.wikipedia.org/wiki/Tree_
 
 #### About the library
 
-The purpose of this post is not about tree theories but about a library I've been working on lately called: [PHPTree](https://github.com/drupol/phptree).
+The purpose of this post is not about trees theory but about a library I've been working on called: [PHPTree](https://github.com/drupol/phptree).
 
-It allows you to manipulate trees, to export them in text or dot format and also to import them.
+It allows you to manipulate trees, to export and import them.
 
 PHPTree is gentle with memory thanks to PHP Iterator(_Yield, ArrayObject_), I tried to use them as much as possible.
 
