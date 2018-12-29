@@ -10,11 +10,11 @@ image_copyrights: 'Image from <a href="https://www.pexels.com/photo/wood-light-n
 
 Hopefully for most of us, holidays are here. a time for resting and thinking.
 
-Even if I'm not attached to religion, doing a Christmas tree is a kind of tradition... cats really loves it :-)
+Even if I'm not attached to any religion, doing a Christmas tree is a kind of tradition... cats really loves it :-)
 
-While doing it, it got me thinking about tree based data structure. I used to play with trees into a previous project with Neo4J ([Post about Neo4J]({% post_url 2018-01-01-discovering-a-new-database-neo4j %})) and I remember that I loved it.
+While doing it, it got me thinking about tree based data structure. I used to play with trees into [a previous project with Neo4J]({% post_url 2018-01-01-discovering-a-new-database-neo4j %})) and I remember that I loved it.
 
-I used to see trees data structure at university but it's been a while, so I started to re-investigate into graphs and trees.
+And even if I remember the vague souvenirs about trees and data structure at university, I started to re-investigate into graphs and trees.
 
 <!--break-->
 
@@ -30,8 +30,8 @@ referred to as trees in computer science have underlying graphs that are trees i
 although such data structures are generally rooted trees.
 
 A rooted tree may be directed either making all its edges point away from the
-root (in which case it is called an arborescence, branching, or _out-tree_], when its edges point towards the
-root (in which case it is called an anti-arborescence or _in-tree_).
+rootn (in which case it is called an arborescence, branching, or _out-tree_), when its edges point towards the
+root (in which case it is called an anti-arborescence or _in-tree_).,j
 
 A rooted tree itself has been defined as a directed graph.
 
@@ -148,18 +148,18 @@ The **InOrder** tree traversal is usually made for binary trees, PHPTree has sta
 PHPTree gives you the opportunity to export trees in multiple formats:
 
 * To text
+* To ascii (just for fun)
 * To PHP array
 * To Graph
-* To Ascii (just for fun)
 
 Here's an example of how [this graph](/assets/images/posts/tree-example2.svg) is exported:
 
-As Text:
+To text:
 ```
 [PHPTree [is [fast [to] [manipulate]] [and [trees] [data]]] [a [fun [structure]] [library]]]
 ```
 
-As Ascii:
+To ascii:
 
 ```
 ├─ PHPTree
@@ -193,7 +193,7 @@ As Ascii:
         └─ library
 ```
 
-As Array:
+To PHP array:
 ```php
 [
   'value' => 'PHPTree',
@@ -245,7 +245,7 @@ As Array:
 ] 
 ```
 
-As Graph:
+To Graph:
 
 Graph is a class from the package [graphp/graph](https://github.com/graphp/graph) of [Christian Lück](https://github.com/clue), so I won't be able to show it here.
 
