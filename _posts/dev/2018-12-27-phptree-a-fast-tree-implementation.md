@@ -61,18 +61,27 @@ This tree is a degenerate (_or pathological_) tree is where each parent node has
 
 As you can see, graphs have its own vocabulary and classification.
 
+A tree can be summarized with one simple definition ([from this amazing article](https://medium.freecodecamp.org/all-you-need-to-know-about-tree-data-structures-bceacb85490c))
+
+_A tree is a collection of entities called nodes._
+_Nodes are connected by edges. Each node may or may not contains some data, and it may or may not have a child node._
+_The first node of the tree, usually at the top, is called the root node._
+
 ##### Tree traversal
 
 In computer theory and algorithms, one of the most important facet of trees is the way we read them.
-As a tree is a 2 dimensional data structure, we cannot read it from the top to the bottom like we would do it in a simple list.
-We must find strict ways to "traverse" them.
+As a tree is a 2 dimensional data structure, we cannot read it from the top to the bottom like we would do it in a simple list, data are organized hierarchically.
+
+That said, we must find strict ways to "traverse" them.
 
 There are 4 well known tree traversal algorithms:
 
-* In Order
-* Pre Order
-* Post Order
-* Breadth first
+* In Order (Depth first)
+* Pre Order (Depth first)
+* Post Order (Depth first)
+* Breadth first (Breadth first)
+
+Usually those traversal algorithms are made for binary trees (2-ary trees), trees having maximum 2 children per node.
 
 Find all the details and more [on Wikipedia](https://en.wikipedia.org/wiki/Tree_traversal).
 
@@ -102,9 +111,37 @@ when adding nodes.
 
 ##### Tree traversal algorithms
 
-PHPTree also implements the 4 well known tree traversal algorithms with a little extra.
+PHPTree also implements the 4 well known tree traversal algorithms with some extra.
 
-The **InOrder** tree traversal is usually made for binary trees (_2-ary tree, or trees with node having maximum 2 children_], PHPTree has standardized the algorithm and it can work with any type of trees.
+Many of these algorithms are made to work with 2-ary trees (binary trees), in PHPTree, they are working for all kind of trees.
+
+I think this is something new, I was not able to find any equivalent on the internet.
+
+##### Example 1
+
+Let this tree:
+
+[![An example of tree](/assets/images/posts/tree-example5.svg){:width="800" class="img-thumbnail"}](/assets/images/posts/tree-example5.svg)
+
+be traversed with the In-Order algorithm, the result would be:
+
+```
+O, G, P, C, Q, H, R, A, S, I, T, D, U, J, V, root, W, K, X, E, Y, L, Z, B, M, F, N
+```
+
+##### Example 2
+
+Let this tree:
+
+[![An example of tree](/assets/images/posts/tree-example6.svg){:width="800" class="img-thumbnail"}](/assets/images/posts/tree-example6.svg)
+
+be traversed with the In-Order algorithm, the result would be:
+
+```
+U, V, E, W, X, Y, F, Z, A, G, H, I, J, B, K, L, root, M, N, C, O, P, Q, R, D, S, T
+```
+
+The **InOrder** tree traversal is usually made for binary trees, PHPTree has standardized the algorithm and it can work with any type of trees.
 
 ##### Tree exporters
 
