@@ -31,7 +31,7 @@ although such data structures are generally rooted trees.
 
 A rooted tree may be directed either making all its edges point away from the
 rootn (in which case it is called an arborescence, branching, or _out-tree_), when its edges point towards the
-root (in which case it is called an anti-arborescence or _in-tree_).,j
+root (in which case it is called an anti-arborescence or _in-tree_).
 
 A rooted tree itself has been defined as a directed graph.
 
