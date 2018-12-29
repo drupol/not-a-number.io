@@ -117,9 +117,9 @@ Many of these algorithms are made to work with 2-ary trees (binary trees), in PH
 
 I think this is something new, I was not able to find any equivalent on the internet.
 
-##### Example 1
+##### Example with a binary tree
 
-Let this tree:
+Let this binary tree (2-ary tree):
 
 [![An example of tree](/assets/images/posts/tree-example5.svg){:width="800" class="img-thumbnail"}](/assets/images/posts/tree-example5.svg)
 
@@ -129,9 +129,9 @@ be traversed with the In-Order algorithm, the result would be:
 O, G, P, C, Q, H, R, A, S, I, T, D, U, J, V, root, W, K, X, E, Y, L, Z, B, M, F, N
 ```
 
-##### Example 2
+##### Example with another tree
 
-Let this tree:
+Let this tree (4-ary tree):
 
 [![An example of tree](/assets/images/posts/tree-example6.svg){:width="800" class="img-thumbnail"}](/assets/images/posts/tree-example6.svg)
 
