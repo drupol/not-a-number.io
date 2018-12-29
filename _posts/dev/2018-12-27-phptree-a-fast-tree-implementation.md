@@ -12,9 +12,9 @@ Hopefully for most of us, holidays are here. a time for resting and thinking.
 
 Even if I'm not attached to any religion, doing a Christmas tree is a kind of tradition... cats really loves it :-)
 
-While doing it, it got me thinking about tree based data structure. I used to play with trees into [a previous project with Neo4J]({% post_url 2018-01-01-discovering-a-new-database-neo4j %})) and I remember that I loved it.
+While doing it, it got me thinking about tree based data structure. I used to play with trees into [a previous project with Neo4J]({% post_url 2018-01-01-discovering-a-new-database-neo4j %}) and I remember that I loved it.
 
-And even if I remember the vague souvenirs about trees and data structure at university, I started to re-investigate into graphs and trees.
+And even if I have vague souvenirs about trees and data structure from university, I started to re-investigate into graphs and trees.
 
 <!--break-->
 
