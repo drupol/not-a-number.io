@@ -260,6 +260,18 @@ PHPTree also provides 2 importers:
 
 The text exporter and importer can be very useful to store/retrieve a tree into/from a database.
 
+##### Tree modifiers
+
+A modifier is an object that modify a tree and return a new modified tree.
+
+Let this tree:
+
+[![An example of tree](/assets/images/posts/tree-example7.svg){:width="800" class="img-thumbnail"}](/assets/images/posts/tree-example7.svg)
+
+Be modified with the *Reverse* modifier:
+
+[![An example of tree](/assets/images/posts/tree-example8.svg){:width="800" class="img-thumbnail"}](/assets/images/posts/tree-example8.svg)
+
 ##### Code examples
 
 I [posted on gist](https://gist.github.com/drupol/c20e3f1a825fae2ebfb06f888401f7dc) the code that I used to generate the trees in this post, feel free to test them as well.
