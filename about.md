@@ -1,7 +1,7 @@
 ---
 layout: page
 title : About
-subtitle: "TODO: find a subtitle."
+subtitle: "A little about me"
 image: /assets/images/PolDellaiera.png
 group: navigation
 order: -15
@@ -19,9 +19,10 @@ Drupal passionate and "working" as a Drupal Consultant, I maintain a couple of m
 I currently work in an amazing team at [the European Commission](https://www.drupal.org/european-commission) in Brussels and I'm always ready for new challenges.
 
 I also like sciences a lot in general and especially mathematics, that explains why I'm so fascinated by numbers and the way Nature uses them.
-I'm fond of graphical visualisations of data, my favorites are the one from [Jason Davies](https://bl.ocks.org/jasondavies) and [Mike Bostock](https://bl.ocks.org/mbostock).
+I'm fond of graphical visualisations of data, my favorites are the one from [Jason Davies](https://www.jasondavies.com/) ([bl.ocks](https://bl.ocks.org/jasondavies)) and [Mike Bostock](https://bost.ocks.org/mike/) ([bl.ocks](https://bl.ocks.org/mbostock)).
+I also really like the (Nick Berry's blog)[http://datagenetics.com/], I can't stop retweeting each of his post.
 
-Besides my work and the geek stuff, I love music (_I'm learning to play electric guitar & piano!_), photography and swimming.
+Besides my work and the geek stuff, I love music (_I'm currently learning piano!_), photography and swimming.
 
 Oh, and I couldn't finish this bio without having a word about my cat Izumi! He's the happiest cat in the world and it's also the first cat to have its own name in Drupal core thanks to [a patch I did some times ago](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_system_theme_engine_info/7.x).
 
