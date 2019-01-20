@@ -20,7 +20,7 @@ I currently work in an amazing team at [the European Commission](https://www.dru
 
 I also like sciences a lot in general and especially mathematics, that explains why I'm so fascinated by numbers and the way Nature uses them.
 I'm fond of graphical visualisations of data, my favorites are the one from [Jason Davies](https://www.jasondavies.com/) ([bl.ocks](https://bl.ocks.org/jasondavies)) and [Mike Bostock](https://bost.ocks.org/mike/) ([bl.ocks](https://bl.ocks.org/mbostock)).
-I also really like the (Nick Berry's blog)[http://datagenetics.com/], I can't stop retweeting each of his post.
+I also really like the [Nick Berry's blog](http://datagenetics.com/), I can't stop retweeting each of his post.
 
 Besides my work and the geek stuff, I love music (_I'm currently learning piano!_), photography and swimming.
 
