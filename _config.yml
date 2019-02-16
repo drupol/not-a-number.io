@@ -149,3 +149,5 @@ JB:
 
 plugins:
   - jekyll-redirect-from
+
+include: ["keybase.txt"]

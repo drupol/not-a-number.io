@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/poldellaiera
+--------------------------------------------------------------------
+
+I hereby claim:
+
+* I am an admin of https://not-a-number.io
+* I am poldellaiera (https://keybase.io/poldellaiera) on keybase.
+* I have a public key ASD7NjxxB0Y_sANjg-o1OoKlSpUBN4KGtbRa-wSZDt3EpQo
+
+To do so, I am signing this object:
+
+{
+"body": {
+"key": {
+"eldest_kid": "0120fb363c7107463fb0036383ea353a82a54a9501378286b5b45afb04990eddc4a50a",
+"host": "keybase.io",
+"kid": "0120fb363c7107463fb0036383ea353a82a54a9501378286b5b45afb04990eddc4a50a",
+"uid": "4d4d5eac812d1606ecac7290c5631c19",
+"username": "poldellaiera"
+},
+"merkle_root": {
+"ctime": 1550329056,
+"hash": "7a743f2893e94e7c2376f3129047fc576deb978f2a9115d6d583a5e587a290a46769e00ee939df8c474686be72ad5c689e6cf4ce8759405f740f0afb4d37b363",
+"hash_meta": "5e1e7fab3075a53ac1a4b2971537c49fa4ed559d79388fafc937c173511259b0",
+"seqno": 4776105
+},
+"service": {
+"entropy": "KRCgcoYZjnwfH4qmyxTMDNJ2",
+"hostname": "not-a-number.io",
+"protocol": "https:"
+},
+"type": "web_service_binding",
+"version": 2
+},
+"client": {
+"name": "keybase.io go client",
+"version": "3.0.0"
+},
+"ctime": 1550329095,
+"expire_in": 504576000,
+"prev": "9d52fc71f3a3d45f5612aba720c193218355a39867ab807c17ea7579903375f4",
+"seqno": 30,
+"tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg+zY8cQdGP7ADY4PqNTqCpUqVATeChrW0WvsEmQ7dxKUKp3BheWxvYWTESpcCHsQgnVL8cfOj1F9WEqunIMGTIYNVo5hnq4B8F+p1eZAzdfTEINR0fHxf8mp0ffGpPB1bXFbAJex3bCOq0i6cXleEwWFpAgHCo3NpZ8RAzFbSNSUVNCbjX8xApLJ6tDcwtEfY4AKmkSsz38OgVWKTbIAuIQToscHDu82H0pw9flfUzqXJHfHwIZmW6hnODqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIC7X4+pIMoZZFRtnseeaYxNFR+znfDnxGcojD/uUSGruo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/poldellaiera
+
+==================================================================
