@@ -1,7 +1,7 @@
 ---
 layout: post
 category : dev
-title: "PHP and multiple inheritance"
+title: "PHP, composition and inheritance"
 tags : [php, data structure, inheritance, final]
 image: /assets/images/posts/IMG_20190217_111322-01.jpeg
 image_copyrights: 'Image from me'
