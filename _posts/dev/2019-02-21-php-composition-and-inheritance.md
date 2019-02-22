@@ -33,19 +33,17 @@ By doing so, you enforce users to use a proper dependency injection mechanism if
 
 Since a couple of months, I'm starting use more and more `composition` over `inheritance`.
 
-Composition is in the end much more flexible than inheritance.
-
-Dependency injection is a valid way to compose an object.
+Composition is in the end much more flexible than inheritance and dependency injection is a valid way to compose a class.
 
 However, there is a simple solution if you really need to extends a final class.
 
 As you cannot extend a final class, the only way is to inject the final class as argument in the constructor of your class.
 
-In my article about [How to use PHP Traits]({% post_url 2018-10-30-how-to-use-the-php-traits %}) I wrote a bit about it, it's not possible to inherit multiple objects at the same time, hence "*using inheritance*".
+In my article about [How to use PHP Traits]({% post_url 2018-10-30-how-to-use-the-php-traits %}) I wrote a bit about it, it's not possible to inherit from multiple classes at the same time, hence "*using inheritance*".
 
 When you have a good composition mechanism, this is fully possible.
 
-Let's say we have two objects:
+Let's say we have two classes:
 
 ```php
 class Foo {
@@ -61,9 +59,9 @@ class Bar {
 }
 ```
 
-If you want to create a new objects that potentially could use methods from `Foo` and `Bar`:
+If you want to create a new class that potentially could use methods from `Foo` and `Bar`:
 
-First, create an interface for your parent objects, this step is optional but greatly encouraged.
+First, create an interface for your parent classes, this step is optional but greatly encouraged.
 
 ```php
 class Foo implements FooInterface {}
@@ -75,7 +73,7 @@ and
 class Bar implements BarInterface {}
 ```
 
-Then, create your custom objects:
+Then, create your custom class:
 
 ```php
 class FooBar implements FooInterface, BarInterface {
