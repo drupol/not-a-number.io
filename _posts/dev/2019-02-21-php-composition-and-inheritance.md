@@ -41,7 +41,7 @@ However, there is a simple solution if you really need to extends a final class.
 
 As you cannot extend a final class, the only way is to inject the final class as argument in the constructor of your class.
 
-In my article about [How to use PHP Traits](({{ site.baseurl }}{% post_url 2018-10-30-how-to-use-php-traits %})) I wrote a bit about it, it's not possible to inherit multiple objects at the same time, hence "using inheritance".
+In my article about [How to use PHP Traits]({% post_url 2018-10-30-how-to-use-the-php-traits %}) I wrote a bit about it, it's not possible to inherit multiple objects at the same time, hence "*using inheritance*".
 
 When you have a good composition mechanism, this is fully possible.
 
