@@ -20,6 +20,9 @@ This article will try to bring an explanation to this.
 
 <!--break-->
 
+Just like [Marco Pivetta (@ocramius)](https://ocramius.github.io/blog/when-to-declare-classes-final/) or [Tomas Votruba](https://www.tomasvotruba.cz/blog/2019/01/24/how-to-kill-parents/) wrote on their respective blogs,
+this article will basically explain the use of the `final` keywords.
+
 Libraries like [PHP Infection](https://github.com/infection/infection), [PHPSpec](https://github.com/phpspec/phpspec), [PHP-CS-Fixer](https://github.com/friendsofphp/php-cs-fixer) are using [final classes](http://php.net/manual/en/language.oop5.final.php) almost everywhere.
 
 When you use the word `final` for a class, it means that your class will not be able to extend another one.
