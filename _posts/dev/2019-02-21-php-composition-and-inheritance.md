@@ -4,7 +4,7 @@ category : dev
 title: "PHP, composition and inheritance"
 tags : [php, data structure, inheritance, final]
 image: /assets/images/posts/IMG_20190217_111322-01.jpeg
-image_copyrights: 'Image from me'
+image_copyrights: 'Image from Pol Dellaiera'
 ---
 {% include JB/setup %}
 
@@ -29,9 +29,9 @@ That means that you forbid anyone to create a class that extend your class.
 The goal of creating classes is to use the amazing inheritance mechanism, why would we forbid that ?!
 At first, that sounds stupid, but in the end, it's not that bad.
 
-By doing so, you enforce users to use a proper dependency injection mechanism if they really need the parent class.
+By doing so, you enforce users to use a proper dependency injection mechanism if they really need to use the parent class.
 
-Since a couple of months, I'm starting use more and more `composition` over `inheritance`.
+Since a couple of months, I'm starting use more and more [`composition` over `inheritance`](https://en.wikipedia.org/wiki/Composition_over_inheritance).
 
 Composition is in the end much more flexible than inheritance and dependency injection is a valid way to compose a class.
 
@@ -39,7 +39,25 @@ However, there is a simple solution if you really need to extends a final class.
 
 As you cannot extend a final class, the only way is to inject the final class as argument in the constructor of your class.
 
-In my article about [How to use PHP Traits]({% post_url 2018-10-30-how-to-use-the-php-traits %}) I wrote a bit about it, it's not possible to inherit from multiple classes at the same time, hence "*using inheritance*".
+```php
+final class Foo {}
+```
+
+If I want to use it in my own class, as I cannot extend it, the only way to use it is to inject it in the constructor.
+
+```php
+final class Bar {
+    public function __construct(Foo $foo);
+}
+```
+
+Then, I can chose to expose or not some of it's methods, a bit like [the proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern).
+
+On the other hand, using this construction method could be a way to fill the gap on how to have a class _extending_
+multiple objects.
+
+In my article about [How to use PHP Traits]({% post_url 2018-10-30-how-to-use-the-php-traits %}) I wrote a bit about it
+the fact that it is not possible to inherit from multiple classes at the same time... *using inheritance*.
 
 When you have a good composition mechanism, this is fully possible.
 
@@ -61,7 +79,7 @@ class Bar {
 
 If you want to create a new class that potentially could use methods from `Foo` and `Bar`:
 
-First, create an interface for your parent classes, this step is optional but greatly encouraged.
+First, create an interface for each parent classes, this step is optional but greatly encouraged.
 
 ```php
 class Foo implements FooInterface {}
@@ -90,9 +108,13 @@ class FooBar implements FooInterface, BarInterface {
 }
 ```
 
-Then, that's it ! It's up to you now to implements some kind of proxy methods.
+Then, that's it ! You'll be able to use methods from objects `Foo` and `Bar` in your own custom class, and expose some
+of them if needed.
 
 That said, inheritance is not something to throw away.
 
 Inheritance is something to use, but keep in mind that if you want an ultimate flexibility, composing your classes
 with dependency injection mechanism is the key.
+
+You might end-up writing more code but in the end, you'll have a better control on your classes and what to expose or
+not to the public.
