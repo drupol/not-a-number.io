@@ -46,7 +46,7 @@ During two days, participants coming mostly from Europe, but surprisingly also f
 
 Those 50 selected developers were personally invited a month before the event and most of them were PHP heads, driving the PHP world and shaking the trends since a couple of years.
 
-I will take the opportunity to personally thanks again [Jean-François Hovinne](https://cleverway.eu/) for inviting me to the event.
+I will take the opportunity to personally thanks again [Jean-François Hovinne](https://linkedin.com/in/jfhovinne) for inviting me to the event.
 A big up to the all the other organizers, it was perfect.
 
 I was and I am glad to be part of this.
