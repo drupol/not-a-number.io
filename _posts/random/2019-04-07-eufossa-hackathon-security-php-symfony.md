@@ -42,7 +42,7 @@ The European Commission pulled out all the stops for this event, every participa
 
 ## The participants
 
-During two days, participants coming mostly from Europe, but surprisingly also from Switzerland, Morocco, Russia and even US and Cuba, were having a complete programme with meetings, goals and tasks.
+During two days, participants coming mostly from Europe, Morocco, Russia and even US and Cuba, were having a complete programme with meetings, goals and tasks.
 
 Those 50 selected developers were personally invited a month before the event and most of them were PHP heads, driving the PHP world and shaking the trends since a couple of years.
 
