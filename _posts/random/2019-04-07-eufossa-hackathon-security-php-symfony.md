@@ -10,7 +10,7 @@ image_copyrights: 'Image by <a href="https://twitter.com/michaelcullumuk/status/
 
 During the first weekend of April 2019, a [hackathon](https://en.wikipedia.org/wiki/Hackathon) was held in [Silverquare Triomphe venue](https://silversquare.eu/location/triomphe/) in Brussels.
 
-The organizer, [the European Commission](https://ec.europa.eu/), and a community of carefully selected developers were kept in an amazing place.
+The organizer, [the European Commission](https://ec.europa.eu/), and a community of carefully selected developers participated to a hackathon in an amazing place.
 
 The goal of having such an amount of skills contained in one single place, is to participate to the [EU-FOSSA hackathon](https://eufossahackathon.bemyapp.com/) that
 [the European Commission](https://ec.europa.eu/) organised and funded.
