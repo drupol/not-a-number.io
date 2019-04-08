@@ -135,3 +135,4 @@ Thanks and see you probably to the next during [the 4 and 5 of May](https://eufo
 * [Robert Czarny and Jean Francois Hovinne's blog post](https://eufossa.github.io/symfony-hackathon-2019/)
 * [My photos album](https://photos.app.goo.gl/8e7cWwHnurVhWJWe8)
 * [Twitter #FOSSHackathons hashtag](https://twitter.com/search?q=%23FOSSHackathons)
+* [Maxime Veber's (@Nek-) photos album](https://photos.app.goo.gl/RBphJV3Jf5AwCMSq6)
