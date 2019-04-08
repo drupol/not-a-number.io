@@ -137,3 +137,4 @@ Thanks and see you probably to the next during [the 4 and 5 of May](https://eufo
 * [Twitter #FOSSHackathons hashtag](https://twitter.com/search?q=%23FOSSHackathons)
 * [Maxime Veber's (@Nek-) photos album](https://photos.app.goo.gl/RBphJV3Jf5AwCMSq6)
 * [Yanick Witschi's (@Toflar) blog post](https://medium.com/@yanick.witschi/eu-fossa-symfony-hackathon-6866d7c0c422)
+* [BeMyApp photos album](https://www.flickr.com/photos/bemyapp/sets/72157679752994498)
