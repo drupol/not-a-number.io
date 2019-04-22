@@ -12,7 +12,9 @@ It's been 2 months now that I left aside my regular work with Drupal 8 and switc
 
 I will soon publish another post on all the new stuff that has been made there, but for now, I will focus on a side project I've been doing.
 
-It's a simple PHP tasks runner based on [Robo](https://robo.li/), inspired by what's already existing so far with Drupal 8, but not tied to Drupal or whatsoever.
+Started as a POC a couple of weeks ago, Taskman is tasks runner based on [Robo](https://robo.li/), extendable at will through YAML files.
+
+It has been inspired by what's already existing so far, but not tied to Drupal or whatsoever.
 
 <!--break-->
 
@@ -108,7 +110,7 @@ commands:
     - mkdir -p ${directories.log}
 ```
 
-This YAML files provides one command that contains variables.
+This YAML files provides a single command that contains variables.
 
 If for some reason those variables are not the one you expect, you can still override them manually.
 
