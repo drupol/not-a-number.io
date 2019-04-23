@@ -12,7 +12,7 @@ It's been 2 months now that I left aside my regular work with Drupal 8 and switc
 
 I will soon publish another post on all the new stuff that has been made there, but for now, I will focus on a side project I've been doing.
 
-Started as a POC a couple of weeks ago, Taskman is tasks runner based on [Robo](https://robo.li/), extendable at will through YAML files.
+Started as a proof-of-concept a couple of weeks ago, Taskman is tasks runner based on [Robo](https://robo.li/), extendable at will through YAML files.
 
 It has been inspired by what's already existing so far, but not tied to Drupal or whatsoever.
 
@@ -158,4 +158,3 @@ I have quite a few ideas to improve Taskman, but as they are not yet mature, I c
 One of the first idea was to get rid of the Taskman executable (`./vendor/bin/taskman`) and use exclusively the Robo executable (`./vendor/bin/robo`).
 
 After some discussions with [Greg Anderson](https://github.com/greg-1-anderson), it would be possible to do it using [CGR](https://github.com/consolidation/cgr), but I still need to look deeper into it.
-
