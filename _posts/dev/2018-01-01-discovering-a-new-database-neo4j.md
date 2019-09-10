@@ -14,13 +14,13 @@ image_copyrights: 'Image by <a href="https://commons.wikimedia.org/wiki/File:Rho
 I joined an amazing team and we are doing very nice things all together.
 
 But my brain is constantly sparkling and I've got plenty of new ideas.
-During the last months, I've explored new universes. [Symfony, NodeJS, Opendata, Telegram bot API, Twitter API](({{ site.baseurl }}{% post_url 2017-12-17-playing-with-trains-opendata-symfony-and-nodejs %}))...
+During the last months, I've explored new universes. [Symfony, NodeJS, Opendata, Telegram bot API, Twitter API]({% post_url 2017-12-17-playing-with-trains-opendata-symfony-and-nodejs %})...
 I've learned so much things in a so short time, it's crazy how much behind we can be if we do not have side projects to let our creativity express itself.
 It's now my job to try to push these new technologies and new tools at work, that is the most complicated part.
 
 <!--break-->
 
-Lately, I've been playing a lot with [Opendata, NodeJS, Wikidata, iRail]({{ site.baseurl }}{% post_url 2017-12-17-playing-with-trains-opendata-symfony-and-nodejs %})...
+Lately, I've been playing a lot with [Opendata, NodeJS, Wikidata, iRail]({% post_url 2017-12-17-playing-with-trains-opendata-symfony-and-nodejs %})...
 As you may know, [iRail](http://irail.be) provides Belgian railway (_open_)data and I was looking for a way to get trains stations and their lines.
 I ended up doing [_irail-api_ a NodeJS/NPM package](https://www.npmjs.com/package/irail-api) and a custom tool in NodeJS based on it, using Leaflet and Websockets.
 That tool helped me to complete the Belgium station data on Wikidata. There are more than 600 stations, and I completed them last week. All the details of this in [the Github issue](https://github.com/iRail/iRail/issues/334).

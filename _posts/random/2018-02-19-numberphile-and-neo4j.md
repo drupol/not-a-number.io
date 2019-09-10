@@ -11,7 +11,7 @@ image_copyrights: 'Image by <a href="https://www.flickr.com/photos/teosaurio/339
 ---
 {% include JB/setup %}
 
-Since [the last post about Neo4J](({{ site.baseurl }}{% post_url 2018-01-01-discovering-a-new-database-neo4j %})), I had to work on some project not involving it unfortunately.
+Since [the last post about Neo4J]({% post_url 2018-01-01-discovering-a-new-database-neo4j %}), I had to work on some project not involving it unfortunately.
 
 However, being a regular user of [Numberphile](http://www.numberphile.com/), I came across [a specific video footage](https://www.youtube.com/embed/G1m7goLCJDY) and I had the idea that we could find the solution to it using Neo4J.
 
