@@ -102,7 +102,7 @@ Composer Packages is a Composer plugin for getting information about installed p
 It could be very useful for anyone who wants to build a package discovery system, crawling the filesystem is then not
 needed.
 
-Thanks to [Bob de Notter](https://github.com/bobdenotter), it has been adopted from the beginning by [the Bolt community](https://bolt.cm/) for [the bolt/core project](https://github.com/bolt/core).
+Thanks to [Bob den Otter](https://github.com/bobdenotter), it has been adopted from the beginning by [the Bolt community](https://bolt.cm/) for [the bolt/core project](https://github.com/bolt/core).
 
 ### Belgian national number faker
 
