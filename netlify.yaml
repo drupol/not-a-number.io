@@ -1,0 +1,9 @@
+build:
+  publish: public
+  command: hugo -b $URL --gc --minify --themesDir themes/
+  environment:
+    HUGO_VERSION: 0.68.3
+
+context:
+  deploy-preview:
+    command: 'hugo -b ${DEPLOY_PRIME_URL}'
