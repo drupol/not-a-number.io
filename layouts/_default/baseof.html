@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}" {{ if or (eq .Lang "ar") (eq .Lang "fa") }}dir="rtl"{{ end }}>
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+  {{ partial "navbar.html" . }}
+
+  <br/>
+
+    {{ block "body" . }}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+
+          {{ partial "content-header.html" . }}
+
+          {{ block "main" . }}
+          <!-- The part of the page that begins to differ between templates -->
+          {{ end }}
+
+        </div> {{ "<!-- /.blog-main -->" | safeHTML }}
+
+        {{ partial "sidebar.html" . }}
+
+      </div> {{ "<!-- /.row -->" | safeHTML }}
+    </div> {{ "<!-- /.container -->" | safeHTML }}
+    {{ end }}
+
+    {{ partial "footer.html" . }}
+
+  </body>
+
+</html>

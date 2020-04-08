@@ -1,0 +1,22 @@
+{{ $dateFormat := default "Mon Jan 2, 2006" (index .Site.Params "date_format") }}
+<div class="card mb-4">
+  <div class="card-header">
+    <h2 class="card-title mb-0"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+  </div>
+
+  <div class="card-body">
+    <p class="card-text">{{ .Summary }}</p>
+    <p class="text-right"><a href="{{ .Permalink }}" class="card-link">{{ i18n "readMore" }} <i class="fa fa-arrow-circle-right"></i></a></p>
+  </div>
+
+  <div class="card-footer text-muted small">
+    <div class="row">
+      <div class="col-6 text-left text-nowrap">
+        <p class="mb-0"><i class="fa fa-tags"></i>Tags: {{ delimit .Params.tags " | " }}</p>
+      </div>
+      <div class="col-6 text-right">
+        <p class="mb-0"><i class="fa fa-calendar"></i> <time {{ .Date.Format "2006-01-02T15:04:05Z07:00" | printf "datetime=%q" | safeHTMLAttr }}>{{ .Date.Format $dateFormat }}</time></p>
+      </div>
+    </div>
+  </div>
+</div>

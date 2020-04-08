@@ -1,0 +1,94 @@
+{{ define "title" }}{{ .Title | markdownify }} | {{ .Site.Title }}{{ end }}
+
+{{ define "schema-dot-org" }}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  {{- /* Google recommends the headline be no more than 110 characters */}}
+  "headline": {{ substr .Title 0 110 }},
+  {{- with .Params.images -}}{{ range first 1 . }}
+  "image": {
+    "@type": "ImageObject",
+    "url": {{ . | absURL }}
+    {{- /* Don't try to get imageConfig if image param is not local */ -}}
+    {{- if not (or (hasPrefix . "http://") (hasPrefix . "https://")) -}}
+    {{- with (imageConfig (printf "/static/%s" .)) -}}
+    ,
+    "height": "{{ .Height }}",
+    "width": "{{ .Width }}"
+    {{- end -}}
+    {{ end }}
+  },
+  {{- end -}}{{ end }}
+  "url": {{ printf "%s" .Permalink }},
+  "wordCount": "{{ .WordCount }}",
+  {{- $ISO8601 := "2006-01-02T15:04:05-07:00" }}
+  {{- if not .PublishDate.IsZero }}
+  "datePublished": {{ .PublishDate.Format $ISO8601 }},
+  {{- else }}
+  "datePublished": {{ .Date.Format $ISO8601 }},
+  {{- end }}
+  {{- if not .Lastmod.IsZero }}
+  "dateModified": {{ .Lastmod.Format $ISO8601 }},
+  {{- end }}
+  "author": {
+    "@type": "Person",
+    "name": {{ .Params.author | default .Site.Params.author }}
+  }
+  {{- if or (.Params.keywords) (or (.Params.categories) (.Params.tags)) -}}
+  ,
+  "keywords": {{ delimit (union .Params.keywords (union .Params.categories .Params.tags)) ", " }}
+  {{- end }}
+
+  {{- with .Params.description -}}
+  ,
+  "description": {{ . }}
+  {{- end }}
+}
+</script>
+
+{{ end }}
+
+{{ define "main" }}
+
+<article>
+  <header class="mb-2">
+    <h2 class="text-justify">{{ .Title | markdownify }}</h2>
+    {{ partial "post-meta.html" . }}
+  </header>
+
+  {{ if .Params.images }}
+    <div class="media">
+      <figure class="figure">
+        <img itemprop="image" src="{{ index .Params.images 0 }}" class="figure-img img-fluid rounded mb-0" alt="{{ .Title }}"/>
+        {{ if .Params.image_copyrights }}
+          <figcaption class="figure-caption text-right text-muted"><i class="fa fa-bookmark" aria-hidden="true"></i> {{ .Params.image_copyrights | markdownify }}</figcaption>
+        {{ end }}
+      </figure>
+    </div>
+  {{ end }}
+
+  {{ .Content }}
+
+  {{ if .IsTranslated }}
+  <h4>{{ i18n "translations" }}</h4>
+  <ul>
+    {{ range .Translations }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }}{{ end }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+
+  {{ if (.Site.DisqusShortname) }}
+  <hr>
+
+  <footer>
+    {{ template "_internal/disqus.html" . }}
+  </footer>
+  {{ end }}
+
+</article>
+{{ end }}

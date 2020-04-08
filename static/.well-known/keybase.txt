@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/poldellaiera
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://not-a-number.io
+  * I am poldellaiera (https://keybase.io/poldellaiera) on keybase.
+  * I have a public key ASAqEUeo09hxMfbMs_GvyWF2_uJ2GXWfDDCu_LZtOoU51go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120fb363c7107463fb0036383ea353a82a54a9501378286b5b45afb04990eddc4a50a",
+      "host": "keybase.io",
+      "kid": "01202a1147a8d3d87131f6ccb3f1afc96176fee27619759f0c30aefcb66d3a8539d60a",
+      "uid": "4d4d5eac812d1606ecac7290c5631c19",
+      "username": "poldellaiera"
+    },
+    "merkle_root": {
+      "ctime": 1586423487,
+      "hash": "a44a902cb949600f4648537afae8084ae2c688bf820c7e1f05d748cf976463cf301525c05722f709530a8d1039172cb065d589d7771e18468fc6851587379c96",
+      "hash_meta": "5ea0bf690f4fac6de37ff8975641aa584d9a111f4abb65570fd29d5b410a95e0",
+      "seqno": 15858466
+    },
+    "service": {
+      "entropy": "sONTFD+lLxMDNEkbIu15wyIp",
+      "hostname": "not-a-number.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.3.1"
+  },
+  "ctime": 1586423476,
+  "expire_in": 504576000,
+  "prev": "916c62fd8d12a3631fa5b4c7737c11ae7173fed7ad1b61b6530f7d97a7e5972c",
+  "seqno": 83,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgKhFHqNPYcTH2zLPxr8lhdv7idhl1nwwwrvy2bTqFOdYKp3BheWxvYWTESpcCU8QgkWxi/Y0So2MfpbTHc3wRrnFz/tetG2G2Uw99l6fllyzEIBpKwo2VmMNdRB+BeOAvbkhsiVDga31vl+cIGh+ffW2tAgHCo3NpZ8RAuHWHK57H7sY8POcADfiSmJXSDt6MMyR5pAqsv/yte5rUJsP0KcnFbfI8nKUuhrReAw0QKULNfaXNjDOpywbTD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINxfugE5eXyEG4P+fWnY25yEbsU7ddn1RY5hyeUbfmZOo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/poldellaiera
+
+==================================================================

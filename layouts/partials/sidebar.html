@@ -1,0 +1,52 @@
+<aside class="col-sm-3 ml-auto">
+  {{ if .IsPage }}
+  <div class="card bg-light">
+    <div class="card-body">
+      <h5 class="card-title">Improve this page?</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Contribute!</h6>
+      <p class="card-text">Then contribute to this <a href="https://github.com/drupol/drupol.github.io">blog</a>!</p>
+
+      <details>
+        <dl class="row">
+          <dt class="col-sm-6">Version</dt>
+          <dd class="col-sm-6"><a href="https://github.com/drupol/drupol.github.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></dd>
+          <dt class="col-sm-6">Date</dt>
+          <dd class="col-sm-6">{{ .Page.Lastmod }}</dd>
+        </dl>
+
+        <nav>
+          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/drupol.github.io/blob/master/content/{{ .File.Path }}"><i class="fa fa-code" aria-hidden="true"></i> View the source</a>
+          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/drupol.github.io/edit/master/content/{{ .File.Path }}"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit this page</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="card-body">
+    <h5 class="card-title">Get in touch</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Get in touch with me</h6>
+
+    <ol class="list-unstyled">
+      <li><a href="https://keybase.io/poldellaiera"><i class="fab fa-keybase" aria-hidden="true"></i> On Keybase</a></li>
+      <li><a href="https://t.me/drupol"><i class="fab fa-telegram" aria-hidden="true"></i> On Telegram</a></li>
+      <li><a href="https://github.com/drupol"><i class="fab fa-github" aria-hidden="true"></i> On GitHub</a></li>
+      <li><a href="https://packagist.org/packages/drupol/"><i class="fas fa-link" aria-hidden="true"></i> On Packagist</a></li>
+      <li><a href="https://twitter.com/drupol"><i class="fab fa-twitter" aria-hidden="true"></i> On Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/poldellaiera/"><i class="fab fa-linkedin" aria-hidden="true"></i> On LinkedIn</a></li>
+      <li>{{ partial "cloakemail" (dict "address" .Site.Params.authoremail "display" "<i class='far fa-envelope' aria-hidden='true'></i> By email" "class" "my-class") }}</li>
+    </ol>
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">{{ i18n "share" }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Because sharing is caring</h6>
+    {{ partial "sharing-icons.html" . }}
+  </div>
+
+  <div class="card-body">
+    <p class="text-muted small text-right mb-0">{{ if .IsPage }}Version {{ .GitInfo.AbbreviatedHash }}{{ end }}</p>
+    <p class="text-muted small text-right mb-0">Made with <a href="https://gohugo.io">Hugo</a>.</p>
+    <p class="text-muted small text-right mb-0">&copy;2017 {{ .Site.Title }}</p>
+  </div>
+</aside>

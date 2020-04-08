@@ -1,0 +1,41 @@
+baseURL: 'https://not-a-number.io/'
+languageCode: en-us
+title: Not A Number
+theme:
+  - hugo-theme-bootstrap4-blog
+paginate: 10
+summaryLength: 50
+googleAnalytics: UA-97356033-1
+disqusShortname: drupol
+enableGitInfo: true
+permalinks:
+  posts: '/:year/:title/'
+  page: '/:slug/'
+
+menu:
+  navbar:
+    - name: About
+      url: /about
+
+author:
+  name: "Pol Dellaiera"
+
+params:
+  author: Pol Dellaiera
+  authoremail: pol.dellaiera@protonmail.com
+  tagline: NaN
+  logo: /static/logo.svg
+  favicon: /static/logo.svg
+  readingTime: true
+  wordCount: true
+  hideAuthor: false
+  description: >-
+    Welcome to my repository of non-convergent suite of random letters.Here, you
+    may contemplate the variation of 26 letters and some other weird characters.
+  header_visible: true
+  date_format: 'Mon Jan 02, 2006'
+  sharingicons: true
+  truncate: true
+  DefaultContentLanguage: en
+  github: drupol
+  twitter: drupol

@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ $dateFormat := default "Mon Jan 2, 2006" (index .Site.Params "date_format") }}
+
+<article>
+    <header class="text-justify">
+        <h1 itemprop="name headline">{{ .Title | markdownify }}</h1>
+        <p class="text-muted mb-2"><em>{{ .Params.description | markdownify }}</em></p>
+    </header>
+
+    {{ if .Params.image }}
+    <div class="media">
+        <figure class="figure">
+            <img itemprop="image" src="{{ .Params.image }}" class="figure-img img-fluid rounded mb-0" alt="{{ .Title }}"/>
+            {{ if .Params.image_copyrights }}
+            <figcaption class="figure-caption text-right text-muted">{{ .Params.image_copyrights }}</figcaption>
+            {{ end }}
+        </figure>
+    </div>
+    {{ end }}
+
+    {{ .Content }}
+
+    {{ if .IsTranslated }}
+    <h4>{{ i18n "translations" }}</h4>
+    <ul>
+        {{ range .Translations }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }}{{ end }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+    {{ if or (ne ($.Param "sharingicons") false) (.Site.DisqusShortname) }}
+    <hr>
+
+    {{ end }}
+
+</article> <!-- /.blog-post -->
+
+{{ end }}
