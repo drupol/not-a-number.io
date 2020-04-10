@@ -1,6 +1,6 @@
 baseURL: 'https://not-a-number.io/'
 languageCode: en-us
-title: Not A Number
+title: Not a Number
 theme:
   - hugo-theme-bootstrap4-blog
 paginate: 10
@@ -17,6 +17,9 @@ menu:
     - name: About
       url: /about
 
+    - name: Bookshelf
+      url: /bookshelf
+
 author:
   name: "Pol Dellaiera"
 
@@ -30,8 +33,8 @@ params:
   wordCount: true
   hideAuthor: true
   description: >-
-    Welcome to my repository of non-convergent suite of random letters.Here, you
-    may contemplate the variation of 26 letters and some other weird characters.
+    Welcome to my repository of non-convergent suite of random letters.
+    Here, you may contemplate the variation of 26 letters and some other weird characters.
   header_visible: true
   date_format: '02 Jan 2006 @ 15:04 MST'
   sharingicons: true

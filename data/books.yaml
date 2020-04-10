@@ -1,0 +1,108 @@
+- title: Structure and Interpretation of Computer Programs
+  isbn: "0262510871"
+  tags:
+    - functional programming
+    - lisp
+    - logic
+    - programming
+- title: Types and programming languages
+  isbn: "0262162091"
+  purchase: 2020
+  tags:
+    - functional programming
+    - logic
+    - mathematics
+- title: How to mock a mockingbird
+  isbn: "0192801422"
+  purchase: 2019
+  tags:
+    - logic
+    - puzzle
+- title: Infinite powers
+  isbn: "1328879984"
+  purchase: 2019
+  tags:
+    - mathematics
+- title: Théorie des graphes
+  isbn: "9782842251895"
+  purchase: 2018
+  tags:
+    - graph theory
+- title: Théorème vivant
+  isbn: 9782246798828
+  purchase: 2014
+  tags:
+    - biography
+    - mathematics
+- title: Le gorille invisible
+  isbn: "0307459667"
+  purchase: 2016
+  tags:
+    - perception
+    - thought and thinking
+    - memory
+- title: Thinking, Fast and Slow
+  isbn: "9780141033570"
+  purchase: 2016
+  tags:
+    - intuition
+    - thought and thinking
+    - reasoning
+- title: Les objects fractals
+  isbn: 2081246171
+  purchase: 2015
+  tags:
+    - geometry
+    - fractals
+- title: Le choix du meilleur urinoir
+  isbn: "270119766X"
+  purchase: 2016
+  tags:
+    - mathematics
+- title: La formule du savoir
+  isbn: "2759822605"
+  purchase: 2018
+  tags:
+    - statistics
+    - mathematics
+- title: Nonlinear Dynamics and Chaos
+  isbn: "0813350840"
+  purchase: 2016
+  tags:
+    - mathematics
+- title: The First Six Books of the Elements of Euclid
+  isbn: "3836544717"
+  purchase: 2017
+- title: Calcul differentiel integral
+  isbn: "2729893407"
+  purchase: 2014
+- title: Calcul differentiel integral
+  isbn: "2729893415"
+  purchase: 2014
+- title: "How not to be wrong: The Power of Mathematical Thinking"
+  isbn: "0143127535"
+  purchase: 2017
+- title: "Calculus: A complete course"
+  isbn: "0321549287"
+  purchase: 2014
+- title: 17 équations qui ont changé le monde
+  isbn: "9782221133347"
+  purchase: 2014
+- title: Dieu joue-t-il aux dés?
+  isbn: "2082112004"
+  purchase: 2014
+- title: Le nombre d'or
+  isbn: "2020259168"
+  purchase: 2014
+- title: Y a t-il un grand architecte dans l'Univers?
+  isbn: "2738131964"
+  purchase: 2014
+- title: La relativité
+  isbn: "2228882542"
+  purchase: 2014
+- title: Histoire des codes secrets
+  isbn: "2253150975"
+  purchase: 2014
+- title: Einstein à la plage
+  isbn: "2100722239"
+  purchase: 2015
