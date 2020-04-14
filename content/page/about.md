@@ -10,30 +10,31 @@ time.
 More specifically, I'm a curious guy who loves his work and likes to discover
 new things related to IT: *I do things*.
 
-Core developer, I used to work with Drupal since years, first as a hobby, then
-as a freelance.
-I maintain a couple of modules ([check out my Drupal.org profile](https://drupal.org/u/pol)),
-teach Drupal to some organisations and do some specific development upon
-requests.
+Full stack developer, I used to work with Drupal since years, first as a hobby,
+then as a contributer, then as a service provider.
+I maintain [a couple of modules](https://drupal.org/u/pol), teach Drupal to some
+organisations and do some specific development upon requests.
 
 In 2019, after more than 10 years working with Drupal, I re-oriented my career
 and I'm now working with Symfony instead. I will be working more on packages
-that are not tied to any framework or cms.
+that are not tied to any framework.
 You can follow my work on [Packagist](https://packagist.org/packages/drupol/)
 or [Drupol's Github](https://github.com/drupol/) or [Loophp's Github](https://github.com/loophp/).
 
 I work at [the European Commission](https://www.drupal.org/european-commission)
 in Brussels and I'm always ready for new challenges.
 
-I love {{< abbr title="Science, technology, engineering, and mathematics" >}}STEM{{< /abbr >}} a lot and especially mathematics,
-that explains why I'm so fascinated by numbers and the way Nature uses them. 
+"_The best is the enemy of the good_", therefore my dream workplace would be a
+team of passionate, open-minded, non-paranoid and friendly people.
+
+I love {{< abbr title="Science, technology, engineering, and mathematics" >}}STEM{{< /abbr >}}
+a lot and especially mathematics, that explains why I'm so fascinated by numbers
+and the way Nature uses them. 
+
 I'm fond of graphical visualisations of data, my favorites are the one from [Jason Davies](https://www.jasondavies.com/)
 ([His bl.ocks](https://bl.ocks.org/jasondavies)) and [Mike Bostock](https://bost.ocks.org/mike/) ([His bl.ocks](https://bl.ocks.org/mbostock)).
 I also really like the [Nick Berry's blog](http://datagenetics.com/), I can't
 stop sharing each of his [tweet](https://twitter.com/datagenetics).
-
-My dream workplace would be a team of passionate, open-minded, non-paranoid and
-friendly people.
 
 I don't have any regret in my career at all, but if I had a chance to restart
 it, I would most probably study Mathematics in depth and still do programming,
@@ -42,7 +43,7 @@ I would also have liked to work in a university and teach students. I kinda miss
 the school atmosphere.
 
 Besides my work and the geek stuff, I'm currently fullfilling a childhood dream,
-I'm learning piano!
+I'm learning music and piano!
 I love photography and I learned by myself most of the secrets of a reflex
 camera, just for fun.
 I do swim a lot and I also really like riding my mountain bike.
