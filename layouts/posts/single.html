@@ -63,7 +63,7 @@
       <figure class="figure">
         <img itemprop="image" src="{{ index .Params.images 0 }}" class="figure-img img-fluid rounded mb-0" alt="{{ .Title }}"/>
         {{ if .Params.image_copyrights }}
-          <figcaption class="figure-caption text-right text-muted"><i class="fa fa-bookmark" aria-hidden="true"></i> {{ .Params.image_copyrights | markdownify }}</figcaption>
+        <figcaption class="figure-caption text-right text-muted">{{ .Params.image_copyrights | markdownify }}</figcaption>
         {{ end }}
       </figure>
     </div>
