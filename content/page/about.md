@@ -11,7 +11,7 @@ More specifically, I'm a curious guy who loves his work and likes to discover
 new things related to IT: *I do things*.
 
 Full stack developer, I used to work with Drupal since years, first as a hobby,
-then as a contributer, then as a service provider.
+then as a contributor, then as a service provider.
 I maintain [a couple of modules](https://drupal.org/u/pol), teach Drupal to some
 organisations and do some specific development upon requests.
 
@@ -28,7 +28,7 @@ in Brussels and I'm always ready for new challenges.
 team of passionate, open-minded, non-paranoid and friendly people.
 
 I love {{< abbr title="Science, technology, engineering, and mathematics" >}}STEM{{< /abbr >}}
-a lot and especially mathematics, that explains why I'm so fascinated by numbers
+a lot and especially Mathematics, that explains why I'm so fascinated by numbers
 and the way Nature uses them. 
 
 I'm fond of graphical visualisations of data, my favorites are the one from [Jason Davies](https://www.jasondavies.com/)
