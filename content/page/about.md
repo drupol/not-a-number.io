@@ -25,14 +25,6 @@ or [Drupol's Github](https://github.com/drupol/) or [Loophp's Github](https://gi
 I work at [the European Commission](https://www.drupal.org/european-commission)
 in Brussels and I'm always ready for new challenges.
 
-My dream work would be to work in a team of passionate, open-minded,
-non-paranoid and friendly people.
-
-If I had to redo my professional career I would most probably study the
-Mathematics in depth and still do programming, as those two sciences are tightly
-linked together and then I would probably teach those to some students. I kinda
-miss the school atmosphere.
-
 I love {{< abbr title="Science, technology, engineering, and mathematics" >}}STEM{{< /abbr >}} a lot and especially mathematics,
 that explains why I'm so fascinated by numbers and the way Nature uses them. 
 I'm fond of graphical visualisations of data, my favorites are the one from [Jason Davies](https://www.jasondavies.com/)
@@ -40,10 +32,22 @@ I'm fond of graphical visualisations of data, my favorites are the one from [Jas
 I also really like the [Nick Berry's blog](http://datagenetics.com/), I can't
 stop sharing each of his [tweet](https://twitter.com/datagenetics).
 
-Besides my work and the geek stuff, I love music (_I'm currently learning piano!_),
-photography, mountain biking and swimming.
-I'm also an [OpenStreetMap](https://www.openstreetmap.org/#map=15/50.5893/4.2732)
-user and contributor since more than a decade.
+My dream workplace would be a team of passionate, open-minded, non-paranoid and
+friendly people.
+
+I don't have any regret in my career at all, but if I had a chance to restart
+it, I would most probably study Mathematics in depth and still do programming,
+as those two sciences are tightly linked together.
+I would also have liked to work in a university and teach students. I kinda miss
+the school atmosphere.
+
+Besides my work and the geek stuff, I'm currently fullfilling a childhood dream,
+I'm learning piano!
+I love photography and I learned by myself most of the secrets of a reflex
+camera, just for fun.
+I do swim a lot and I also really like riding my mountain bike.
+Biking is also why I'm an heavy user and contributor of [OpenStreetMap](https://www.openstreetmap.org/)
+since more than a decade.
 
 Oh, and I couldn't finish this bio without having a word about my cats Izumi &
 Nakano! They are the happiest cats in the world and Izumi is the first cat to
