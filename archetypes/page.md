@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 images: 
-  - images/logo.svg
+  - images/logo.png
 draft: false
 ---

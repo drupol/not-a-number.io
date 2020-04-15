@@ -2,7 +2,7 @@
 title: "About"
 description: A little about me
 images: 
-  - images/logo.svg
+  - images/logo.png
 draft: false
 ---
 My job title is: Senior analyst... but it means all and nothing at the same
