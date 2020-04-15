@@ -1,23 +1,17 @@
 <aside class="col-sm-3 ml-auto">
-  {{ if .IsPage }}
+  {{ if and (.GitInfo) (.IsPage) }}
   <div class="card bg-light mb-2 text-justify">
     <div class="card-body">
       <h5 class="card-title" data-leet>Improve this page?</h5>
       <p class="card-text">Spotted an typo ? This site is open-source, and you are welcome to contribute to it.</p>
 
       <details>
-        <summary><i class="fas fa-search mr-1"></i>Details</summary>
+        <summary><i class="fas fa-search mr-1"></i>Last commit</summary>
         <dl class="row">
-          {{ if .GitInfo }}
             <dt class="col-sm-2"><i class="fas fa-bars mr-1"></i></dt>
             <dd class="col-sm-10"><pre>{{ .GitInfo.Subject }}</pre></dd>
             <dt class="col-sm-2"><i class="fas fa-code-branch mr-1"></i></dt>
             <dd class="col-sm-10"><pre><a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></pre></dd>
-          {{ end }}
-          <dt class="col-sm-2"><i class="fas fa-clock mr-1"></i></dt>
-          <dd class="col-sm-10"><pre>{{ .Page.Lastmod }}</pre></dd>
-          <dt class="col-sm-2"><i class="fas fa-terminal mr-1"></i></i></dt>
-          <dd class="col-sm-10"><pre>git --recurse-submodules --remote-submodules clone https://github.com/drupol/not-a-number.io</pre></dd>
         </dl>
       </details>
     </div>
