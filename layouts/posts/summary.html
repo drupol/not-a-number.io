@@ -15,7 +15,7 @@
         <p class="mb-0"><i class="fa fa-tags"></i>Tags: {{ delimit .Params.tags ", " }}</p>
       </div>
       <div class="col-6 text-right">
-        <p class="mb-0"><i class="fa fa-calendar"></i> <time {{ .Date.Format "2006-01-02T15:04:05Z07:00" | printf "datetime=%q" | safeHTMLAttr }}>{{ .Date.Format $dateFormat }}</time></p>
+        <p class="mb-0"><i class="fa fa-calendar mr-1"></i><time {{ .Date.Format "2006-01-02T15:04:05Z07:00" | printf "datetime=%q" | safeHTMLAttr }}>{{ .Date.Format $dateFormat }}</time></p>
       </div>
     </div>
   </div>
