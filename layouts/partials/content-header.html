@@ -1,9 +1,8 @@
 {{ if .IsHome }}
 <div class="jumbotron text-justify">
-    <h1 class="display-3" data-leet>Not a Number</h1>
-    <p class="lead">
-        Welcome to my repository of non-convergent suite of random letters.<br />
-        Here, you may contemplate the variation of 26 letters and some other weird characters.
-    </p>
+  <h1 class="display-3" data-leet>{{ .Site.Title }}</h1>
+  <p class="lead">
+    {{ .Site.Params.description | markdownify}}
+  </p>
 </div>
 {{ end }}
