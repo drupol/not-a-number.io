@@ -1,31 +1,38 @@
 <aside class="col-sm-3 ml-auto">
   {{ if .IsPage }}
-  <div class="card bg-light mb-2">
+  <div class="card bg-light mb-2 text-justify">
     <div class="card-body">
       <h5 class="card-title" data-leet>Improve this page?</h5>
       <h6 class="card-subtitle mb-2 text-muted">Contribute!</h6>
       <p class="card-text">Then contribute to this <a href="https://github.com/drupol/not-a-number.io">blog</a>!</p>
 
       <details>
+        <summary><i class="fas fa-search mr-1"></i>Details</summary>
         <dl class="row">
           {{ if .GitInfo }}
-          <dt class="col-sm-6"><i class="fas fa-code-branch mr-1"></i>Version</dt>
-          <dd class="col-sm-6"><a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></dd>
+            <dt class="col-sm-2"><i class="fas fa-bars mr-1"></i></dt>
+          <dd class="col-sm-10"><pre>{{ .GitInfo.Subject }}</pre></dd>
+            <dt class="col-sm-2"><i class="fas fa-code-branch mr-1"></i></dt>
+            <dd class="col-sm-10"><pre><a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></pre></dd>
           {{ end }}
-          <dt class="col-sm-6"><i class="fas fa-clock mr-1"></i>Date</dt>
-          <dd class="col-sm-6">{{ .Page.Lastmod }}</dd>
+          <dt class="col-sm-2"><i class="fas fa-clock mr-1"></i></dt>
+          <dd class="col-sm-10"><pre>{{ .Page.Lastmod }}</pre></dd>
+          <dt class="col-sm-2"><i class="fas fa-terminal mr-1"></i></i></dt>
+          <dd class="col-sm-10"><pre>git clone https://github.com/drupol/not-a-number.io</pre></dd>
         </dl>
-
-        <nav>
-          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/not-a-number.io/blob/master/content/{{ .File.Path }}"><i class="fa fa-code mr-1" aria-hidden="true"></i>View the source</a>
-          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/not-a-number.io/edit/master/content/{{ .File.Path }}"><i class="fas fa-pencil-alt mr-1" aria-hidden="true"></i>Edit this page</a>
-        </nav>
       </details>
+    </div>
+
+    <div class="card-footer">
+      <nav>
+        <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/not-a-number.io/blob/master/content/{{ .File.Path }}"><i class="fa fa-code mr-1" aria-hidden="true"></i>View the source</a>
+        <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/not-a-number.io/edit/master/content/{{ .File.Path }}"><i class="fas fa-pencil-alt mr-1" aria-hidden="true"></i>Edit this page</a>
+      </nav>
     </div>
   </div>
   {{ end }}
 
-  <div class="card mb-2">
+  <div class="card mb-2 text-justify">
     <div class="card-body">
       <h5 class="card-title" data-leet>Get in touch</h5>
       <h6 class="card-subtitle mb-2 text-muted">Get in touch with me</h6>
@@ -37,12 +44,12 @@
         <li><a href="https://packagist.org/packages/drupol/"><i class="fas fa-link mr-1" aria-hidden="true"></i>On Packagist</a></li>
         <li><a href="https://twitter.com/drupol"><i class="fab fa-twitter mr-1" aria-hidden="true"></i>On Twitter</a></li>
         <li><a href="https://www.linkedin.com/in/poldellaiera/"><i class="fab fa-linkedin mr-1" aria-hidden="true"></i>On LinkedIn</a></li>
-        <li>{{ partial "cloakemail" (dict "address" .Site.Params.authoremail "display" "<i class='far fa-envelope mr-1' aria-hidden='true'></i>By email" "class" "my-class") }}</li>
+        <li>{{ partial "cloakemail" (dict "address" .Site.Params.authoremail "display" "<i class='far fa-envelope mr-1' aria-hidden='true'></i>By email") }}</li>
       </ol>
     </div>
   </div>
 
-  <div class="card mb-2">
+  <div class="card mb-2 text-justify">
     <div class="card-body">
       <h5 class="card-title" data-leet>{{ i18n "share" }}</h5>
       <h6 class="card-subtitle mb-2 text-muted">Because sharing is caring</h6>
@@ -50,13 +57,13 @@
     </div>
   </div>
 
-  <div class="card mb-2">
-    <div class="card-body">
+  <div class="card mb-2 text-justify">
+    <div class="card-body text-muted bg-light">
       {{ if and (.GitInfo) (.IsPage) }}
-      <p class="text-muted small text-right mb-0"><i class="fas fa-code-branch mr-1"></i><a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
+      <p class="small text-right mb-0"><i class="fas fa-code-branch mr-1"></i><a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
       {{ end }}
-      <p class="text-muted small text-right mb-0">Made with <a href="https://gohugo.io">Hugo</a>.</p>
-      <p class="text-muted small text-right mb-0"><i class="fas fa-copyright"></i> 2017 {{ .Site.Title }}</p>
+      <p class="small text-right mb-0">Made with <a href="https://gohugo.io">Hugo</a>.</p>
+      <p class="small text-right mb-0"><i class="fas fa-copyright"></i> 2017 {{ .Site.Title }}</p>
     </div>
   </div>
 </aside>

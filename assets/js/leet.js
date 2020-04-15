@@ -2,8 +2,6 @@
 var leet = {
 
   /**
-   * Map of conversions.
-   *
    * @var object
    */
   characterMap: {
@@ -11,8 +9,8 @@ var leet = {
     'b': '8',
     'c': '(',
     'e': '3',
-    'g': '6',
-    'i': '1',
+    'g': ['6', '9'],
+    'i': ['1', '|'],
     'l': '1',
     'o': '0',
     's': '5',
@@ -31,23 +29,37 @@ var leet = {
     string = string || '';
     string = string.replace(/cks/g, 'x');
 
-    for (letter in leet.characterMap) {
+    var characterMap = leet.getCharacterMap();
+
+    for (var letter in string) {
       if (leet.characterMap.hasOwnProperty(letter)) {
-        string = string.replace(new RegExp(letter, 'ig'), leet.characterMap[letter]);
+        string = string.replace(new RegExp(letter, 'ig'), characterMap[letter]);
       }
     }
 
     return string.toUpperCase();
   },
 
+  getCharacterMap: function() {
+    var map = leet.characterMap;
+
+    for (var prop in map) {
+      var values = Array.from(map[prop]);
+      map[prop] = values[Math.floor(Math.random() * values.length)];
+    }
+
+    return map;
+  },
+
   convertsingle: function (string) {
     string = string || '';
     string = string.replace(/cks/g, 'x');
 
-    var keys = Object.keys(leet.characterMap);
-    var randomIndex = keys.length * Math.random() << 0;
+    var characterMap = leet.getCharacterMap();
+    var keys = Object.keys(characterMap);
+    var search = keys[keys.length * Math.random() << 0];
 
-    return string.replace(new RegExp(keys[randomIndex], 'ig'), leet.characterMap[keys[randomIndex]]);
+    return string.replace(new RegExp(search, 'ig'), characterMap[search]);
   },
 };
 
