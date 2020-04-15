@@ -31,13 +31,13 @@
       <h6 class="card-subtitle mb-2 text-muted">Get in touch with me</h6>
 
       <ol class="list-unstyled">
-        <li><a href="https://keybase.io/poldellaiera"><i class="fab fa-keybase" aria-hidden="true"></i> On Keybase</a></li>
-        <li><a href="https://t.me/drupol"><i class="fab fa-telegram" aria-hidden="true"></i> On Telegram</a></li>
-        <li><a href="https://github.com/drupol"><i class="fab fa-github" aria-hidden="true"></i> On GitHub</a></li>
-        <li><a href="https://packagist.org/packages/drupol/"><i class="fas fa-link" aria-hidden="true"></i> On Packagist</a></li>
-        <li><a href="https://twitter.com/drupol"><i class="fab fa-twitter" aria-hidden="true"></i> On Twitter</a></li>
-        <li><a href="https://www.linkedin.com/in/poldellaiera/"><i class="fab fa-linkedin" aria-hidden="true"></i> On LinkedIn</a></li>
-        <li>{{ partial "cloakemail" (dict "address" .Site.Params.authoremail "display" "<i class='far fa-envelope' aria-hidden='true'></i> By email" "class" "my-class") }}</li>
+        <li><a href="https://keybase.io/poldellaiera"><i class="fab fa-keybase mr-1" aria-hidden="true"></i>On Keybase</a></li>
+        <li><a href="https://t.me/drupol"><i class="fab fa-telegram mr-1" aria-hidden="true"></i>On Telegram</a></li>
+        <li><a href="https://github.com/drupol"><i class="fab fa-github mr-1" aria-hidden="true"></i>On GitHub</a></li>
+        <li><a href="https://packagist.org/packages/drupol/"><i class="fas fa-link mr-1" aria-hidden="true"></i>On Packagist</a></li>
+        <li><a href="https://twitter.com/drupol"><i class="fab fa-twitter mr-1" aria-hidden="true"></i>On Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/poldellaiera/"><i class="fab fa-linkedin mr-1" aria-hidden="true"></i>On LinkedIn</a></li>
+        <li>{{ partial "cloakemail" (dict "address" .Site.Params.authoremail "display" "<i class='far fa-envelope mr-1' aria-hidden='true'></i>By email" "class" "my-class") }}</li>
       </ol>
     </div>
   </div>
@@ -53,7 +53,7 @@
   <div class="card mb-2">
     <div class="card-body">
       {{ if and (.GitInfo) (.IsPage) }}
-      <p class="text-muted small text-right mb-0"><i class="fas fa-code-branch"></i> Version <a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
+      <p class="text-muted small text-right mb-0"><i class="fas fa-code-branch"></i> <a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
       {{ end }}
       <p class="text-muted small text-right mb-0">Made with <a href="https://gohugo.io">Hugo</a>.</p>
       <p class="text-muted small text-right mb-0"><i class="fas fa-copyright"></i> 2017 {{ .Site.Title }}</p>
