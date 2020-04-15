@@ -31,6 +31,9 @@
 
     {{ partial "footer.html" . }}
 
+  {{ $scripts := resources.Get "js/leet.js" | minify}}
+  <script src="{{ $scripts.Permalink }}" crossorigin="anonymous"></script>
+
   </body>
 
 </html>
