@@ -25,8 +25,9 @@ working more on packages that are not tied to any framework.
 You can follow my work on [Packagist](https://packagist.org/packages/drupol/)
 or [Drupol's Github](https://github.com/drupol/) or [Loophp's Github](https://github.com/loophp/).
 
-"_The best is the enemy of the good_", therefore my dream workplace would be a
-team of passionate, open-minded, non-paranoid and friendly people.
+"_The best is the enemy of the good_", therefore my dream workplace would be to
+work on open-source projects with a team of true, passionate, open-minded,
+non-paranoid and friendly people.
 
 I love {{< abbr title="Science, technology, engineering, and mathematics" >}}STEM{{< /abbr >}}
 a lot and especially Mathematics, that explains why I'm so fascinated by numbers
