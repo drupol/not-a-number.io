@@ -1,7 +1,8 @@
 ---
 title: "About"
 description: A little about me
-date: 2020-04-08T09:52:21+02:00
+images: 
+  - images/logo.svg
 draft: false
 ---
 My job title is: Senior analyst... but it means all and nothing at the same
