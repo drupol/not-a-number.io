@@ -9,16 +9,16 @@
       <details>
         <dl class="row">
           {{ if .GitInfo }}
-          <dt class="col-sm-6">Version</dt>
+          <dt class="col-sm-6"><i class="fas fa-code-branch mr-1"></i>Version</dt>
           <dd class="col-sm-6"><a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></dd>
           {{ end }}
-          <dt class="col-sm-6">Date</dt>
+          <dt class="col-sm-6"><i class="fas fa-clock mr-1"></i>Date</dt>
           <dd class="col-sm-6">{{ .Page.Lastmod }}</dd>
         </dl>
 
         <nav>
-          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/not-a-number.io/blob/master/content/{{ .File.Path }}"><i class="fa fa-code" aria-hidden="true"></i> View the source</a>
-          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/not-a-number.io/edit/master/content/{{ .File.Path }}"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit this page</a>
+          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/not-a-number.io/blob/master/content/{{ .File.Path }}"><i class="fa fa-code mr-1" aria-hidden="true"></i>View the source</a>
+          <a class="btn btn-primary btn-sm btn-block" href="https://github.com/drupol/not-a-number.io/edit/master/content/{{ .File.Path }}"><i class="fas fa-pencil-alt mr-1" aria-hidden="true"></i>Edit this page</a>
         </nav>
       </details>
     </div>
@@ -53,7 +53,7 @@
   <div class="card mb-2">
     <div class="card-body">
       {{ if and (.GitInfo) (.IsPage) }}
-      <p class="text-muted small text-right mb-0"><i class="fas fa-code-branch"></i> <a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
+      <p class="text-muted small text-right mb-0"><i class="fas fa-code-branch mr-1"></i><a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
       {{ end }}
       <p class="text-muted small text-right mb-0">Made with <a href="https://gohugo.io">Hugo</a>.</p>
       <p class="text-muted small text-right mb-0"><i class="fas fa-copyright"></i> 2017 {{ .Site.Title }}</p>

@@ -28,7 +28,7 @@ params:
   favicon: /static/logo.svg
   readingTime: true
   wordCount: true
-  hideAuthor: false
+  hideAuthor: true
   description: >-
     Welcome to my repository of non-convergent suite of random letters.Here, you
     may contemplate the variation of 26 letters and some other weird characters.
