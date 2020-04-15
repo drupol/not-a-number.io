@@ -9,15 +9,15 @@ var leet = {
   characterMap: {
     'a': '4',
     'b': '8',
+    'c': '(',
     'e': '3',
     'g': '6',
+    'i': '1',
     'l': '1',
     'o': '0',
     's': '5',
     't': '7',
-    'æ': '43',
-    'ø': '03',
-    'å': '44'
+    'z': '2'
   },
 
   /**
@@ -33,7 +33,7 @@ var leet = {
 
     for (letter in leet.characterMap) {
       if (leet.characterMap.hasOwnProperty(letter)) {
-        string = string.replace(new RegExp(letter, 'g'), leet.characterMap[letter]);
+        string = string.replace(new RegExp(letter, 'ig'), leet.characterMap[letter]);
       }
     }
 
@@ -41,17 +41,13 @@ var leet = {
   },
 
   convertsingle: function (string) {
-    var letter;
     string = string || '';
     string = string.replace(/cks/g, 'x');
 
-    letter = string[Math.floor(Math.random() * string.length)];
+    var keys = Object.keys(leet.characterMap);
+    var randomIndex = keys.length * Math.random() << 0;
 
-    if (leet.characterMap.hasOwnProperty(letter)) {
-      string = string.replace(new RegExp(letter, 'g'), leet.characterMap[letter]);
-    }
-
-    return string;
+    return string.replace(new RegExp(keys[randomIndex], 'ig'), leet.characterMap[keys[randomIndex]]);
   },
 };
 
