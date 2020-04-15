@@ -1,5 +1,6 @@
 - title: Structure and Interpretation of Computer Programs
   isbn: "0262510871"
+  purchase: 2020
   tags:
     - functional programming
     - lisp
