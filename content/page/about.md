@@ -5,25 +5,25 @@ images:
   - images/logo.png
 draft: false
 ---
-My job title is: Senior analyst... but it means all and nothing at the same
+My job title is _Senior analyst_ but it means all and nothing at the same
 time.
 
 More specifically, I'm a curious guy who loves his work and likes to discover
 new things related to IT: *I do things*.
 
-Full stack developer, I used to work with Drupal since years, first as a hobby,
-then as a contributor, then as a service provider.
+I currently work at [the European Commission](https://ec.europa.eu) in Brussels
+and I'm always ready for new and exciting challenges.
+
+Full stack developer, I used to work with Drupal since more than 10 years.
+First as a hobby, then as a contributor, then as a service provider.
 I maintain [a couple of modules](https://drupal.org/u/pol), teach Drupal to some
 organisations and do some specific development upon requests.
 
-In 2019, after more than 10 years working with Drupal, I re-oriented my career
-and I'm now working with Symfony instead. I will be working more on packages
-that are not tied to any framework.
+In 2019, after [resigning from being Drupal core maintainer](https://www.drupal.org/project/drupal/issues/3089877),
+I re-oriented my career and I'm now working with Symfony instead. I will be
+working more on packages that are not tied to any framework.
 You can follow my work on [Packagist](https://packagist.org/packages/drupol/)
 or [Drupol's Github](https://github.com/drupol/) or [Loophp's Github](https://github.com/loophp/).
-
-I work at [the European Commission](https://www.drupal.org/european-commission)
-in Brussels and I'm always ready for new challenges.
 
 "_The best is the enemy of the good_", therefore my dream workplace would be a
 team of passionate, open-minded, non-paranoid and friendly people.
