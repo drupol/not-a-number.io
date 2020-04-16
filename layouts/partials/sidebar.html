@@ -2,7 +2,7 @@
   {{ if and (.GitInfo) (.IsPage) }}
   <div class="card bg-light mb-2 text-justify">
     <div class="card-body">
-      <h5 class="card-title" data-leet>Improve this page?</h5>
+      <h5 class="card-title"><i class="far fa-edit fa-1x mr-1"></i><span data-leet>Improve this page?</span></h5>
       <p class="card-text">Spotted an typo ? This site is open-source, and you are welcome to contribute to it.</p>
 
       <details>
@@ -27,7 +27,7 @@
 
   <div class="card mb-2 text-justify">
     <div class="card-body">
-      <h5 class="card-title" data-leet>Get in touch</h5>
+      <h5 class="card-title"><i class="far fa-comment fa-1x mr-1"></i><span data-leet>Get in touch</span></h5>
       <h6 class="card-subtitle mb-2 text-muted">Get in touch with me</h6>
 
       <ol class="list-unstyled">
@@ -44,7 +44,7 @@
 
   <div class="card mb-2 text-justify">
     <div class="card-body">
-      <h5 class="card-title" data-leet>{{ i18n "share" }}</h5>
+      <h5 class="card-title"><i class="fas fa-share-alt fa-1x mr-1"></i><span data-leet>{{ i18n "share" }}</span></h5>
       <h6 class="card-subtitle mb-2 text-muted">Because sharing is caring</h6>
       {{ partial "sharing-icons.html" . }}
     </div>
