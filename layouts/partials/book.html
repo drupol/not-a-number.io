@@ -1,28 +1,30 @@
 <div class="card mb-3">
   <div class="row no-gutters">
-    <div class="col-sm-4">
-      <img src="https://covers.openlibrary.org/b/isbn/{{ .isbn }}-M.jpg" alt="{{ .title }}" class="img-fluid"/>
+    <div class="col-md-4">
+      <img src="https://covers.openlibrary.org/b/isbn/{{ .isbn }}-M.jpg" alt="{{ .title }}" class="card-img"/>
     </div>
-    <div class="col-sm-8">
+    <div class="col-md-8">
       <div class="card-body">
         <div class="card-title"><h3>{{ .title }}</h3></div>
-        <dl class="row">
-          <dt class="col-sm-4">ISBN</dt>
-          <dd class="col-sm-8"><code>{{ .isbn }}</code></dd>
-          {{ if .purchase }}
-          <dt class="col-sm-4">Purchase date</dt>
-          <dd class="col-sm-8">{{ .purchase }}</dd>
+        <div class="card-body">
+          <dl class="row">
+            <dt class="col-sm-4">ISBN</dt>
+            <dd class="col-sm-8"><code>{{ .isbn }}</code></dd>
+            {{ if .purchase }}
+            <dt class="col-sm-4">Purchase date</dt>
+            <dd class="col-sm-8">{{ .purchase }}</dd>
+            {{ end }}
+            {{ if .tags }}
+            <dt class="col-sm-4">Tags</dt>
+            <dd class="col-sm-8">{{ delimit .tags ", " }}</dd>
+            {{ end }}
+            <dt class="col-sm-4">Link</dt>
+            <dd class="col-sm-8"><a href="https://openlibrary.org/search?q={{ .isbn }}">OpenLibrary</a></dd>
+          </dl>
+          {{ if .description }}
+          <p>{{ .description | markdownify }}</p>
           {{ end }}
-          {{ if .tags }}
-          <dt class="col-sm-4">Tags</dt>
-          <dd class="col-sm-8">{{ delimit .tags ", " }}</dd>
-          {{ end }}
-          <dt class="col-sm-4">Link</dt>
-          <dd class="col-sm-8"><a href="https://openlibrary.org/search?q={{ .isbn }}">OpenLibrary</a></dd>
-        </dl>
-        {{ if .description }}
-        <p>{{ .description | markdownify }}</p>
-        {{ end }}
+        </div>
       </div>
     </div>
   </div>
