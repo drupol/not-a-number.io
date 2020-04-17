@@ -32,11 +32,11 @@ params:
   readingTime: true
   wordCount: true
   hideAuthor: true
-  description: >-
+  description: |
     Welcome to my repository of non-convergent suite of random letters.
     Here, you may contemplate the variation of 26 letters and some other weird characters.
   header_visible: true
-  date_format: '02 Jan 2006 @ 15:04 MST'
+  date_format: '02 Jan 2006'
   sharingicons: true
   truncate: true
   DefaultContentLanguage: en
