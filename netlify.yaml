@@ -2,7 +2,7 @@ build:
   publish: public
   command: hugo -b $URL --gc --minify --themesDir themes/
   environment:
-    HUGO_VERSION: 0.69.0
+    HUGO_VERSION: 0.69.2
 
 context:
   deploy-preview:

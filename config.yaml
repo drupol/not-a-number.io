@@ -2,6 +2,8 @@ baseURL: 'https://not-a-number.io/'
 languageCode: en-us
 title: Not a Number
 theme:
+  - hugo-notice
+  - hugo-loremipsum
   - hugo-theme-bootstrap4-blog
 paginate: 10
 summaryLength: 50
