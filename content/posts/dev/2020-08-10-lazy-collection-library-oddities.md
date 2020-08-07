@@ -13,20 +13,19 @@ A year ago I started to write [a lazy collection library]({{< ref "2019-09-09-su
 
 I haven't written a specific article about it despite the fact that I would have wanted to, mostly by lack of time.
 
-Almost a year ago and 318 commits later, I published the release 2.0.0 last week.
+Almost a year ago and 318 commits later, I published [the release 2.0.0](https://github.com/loophp/collection/releases/tag/2.0.0) last week.
 
 <!--break-->
 
-A year ago, I came across a [pull request made against the Laravel framework](https://github.com/laravel/framework/pull/29415).
+It all started a year ago, when I came across a [pull request made against the Laravel framework](https://github.com/laravel/framework/pull/29415).
 
-Writing a lazy collection library was something that I had in mind since a couple of months ago, and that pull request
-has revived my motivation to write one. After understanding what was happening in that pull request, I started to write
-my own library.
+Writing a lazy collection library was something that I had in mind, and that pull request has revived my motivation to
+write one. After understanding what was happening in that pull request, I started to write my own library.
 
-There are already [some collection libraries in PHP](https://packagist.org/?query=collection&tags=collection), but I
+There were already [some collection libraries in PHP](https://packagist.org/?query=collection&tags=collection), but I
 wanted to do something more complete, fully tested and  typed, with a good documentation.
 
-I did countless iterations because I was not happy of the result and I felt that I could improve things.
+I did countless iterations because I was not happy of the result and I felt that I could improve and optimize things.
 
 Writing such library also put me on the path of functional programming even more, and I also lost quite a lot of time
 learning new things from that amazing field.
@@ -35,17 +34,18 @@ So far, writing this package has been my greatest source of personal learning in
 It opened my eyes to a lot of things that I had no idea before.
 
 I suggest to the readers to also read [this post](https://josephsilber.com/posts/2020/07/29/lazy-collections-in-laravel)
-from Joseph Silber, the author of the Laravel pull request, it's a great article about lazy collections.
+from **Joseph Silber**, the author of the Laravel pull request, it's a great and probably the best article about lazy
+collections.
 
-This post is not about how to use PHP Collection, but merely about the oddities that I wasn't expecting to find while
+This post is not about how to use my library, but merely about the oddities that I wasn't expecting to find while
 coding it.
 
 # Oddity #1
 
-There are some question on StackOverflow on how to "dedup" (deduplicate) an array. How to remove duplicated values from
-an array.
+There are some question on StackOverflow on how to "dedup" (deduplicate) an array.
+Basically it means: "_How to remove duplicated values from an array_".
 
-There are many ways to do that, the most obvious example with [array_unique()](https://php.net/array-unique) is the following.
+There are many ways to do that, the most trivial example is with [array_unique()](https://php.net/array-unique).
 
 ```php
 <?php
@@ -82,7 +82,7 @@ $filtered = array_flip(array_flip($input));
 
 We can directly notice that the keys are different, but the values are the same as the previous example.
 
-What is happening here?
+**What is happening here?**
 
 Let's break down the calls and print the arrays in between:
 
@@ -136,7 +136,8 @@ using `array_values()`, then twice `array_flip()` will be slower than just using
 On top of that, those functions made for arrays, there is no support for other iterable types like Traversable,
 Iterators and Generators.
 
-When using a lazy library such as the one I wrote, you can use any kind of iterable types, by default.
+When using my library, you can use any kind of iterable types, by default. In the following examples, I will use
+a Generator, because it's convenient in this particular example.
 
 ```php
 <?php
@@ -217,11 +218,12 @@ $array = $collection->all();
 
 And it turns out that this behavior is absolutely logic, I just wasn't used to it yet.
 
-As a lazy collection is like a stream, elements are not evaluated all at once, but one by one.
+You can notice that flipping twice a lazy collection returns the original collection, completely unaltered!
 
-This is something that someone using a lazy collection should pay attention to.
+Think of a lazy collection as a stream, elements are not evaluated all at once, but one by one.
 
-This is also a good test to see if a library is really a lazy or not.
+This is something that someone using a lazy collection should pay attention to and this is also a good test to see if a
+library is really lazy or not.
 
 # Oddity #2
 
