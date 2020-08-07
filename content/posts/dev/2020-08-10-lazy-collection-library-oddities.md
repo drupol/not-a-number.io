@@ -9,7 +9,7 @@ tags:
 title: Lazy collection oddities
 ---
 
-A year ago I started to write [a lazy collection library]({{< ref "2019-09-09-summer-vacations-are-over" >}}) for PHP.
+A year ago, I started to write [a lazy collection library]({{< ref "2019-09-09-summer-vacations-are-over" >}}) for PHP.
 
 I haven't written a specific article about it despite the fact that I would have wanted to, mostly by lack of time.
 
@@ -39,6 +39,8 @@ collections.
 
 This post is not about how to use my library, but merely about the oddities that I wasn't expecting to find while
 coding it.
+
+I have summarized here only a few, there are more, but these are the 3 that I recall the most.
 
 # Oddity #1
 
@@ -133,11 +135,11 @@ $filteredWithArrayUnique = array_unique($input);
 Ok, all of this are great but it doesn't bring any added values to PHP, and on top of that, there's a lot of chance that
 using `array_values()`, then twice `array_flip()` will be slower than just using `array_unique()`.
 
-On top of that, those functions made for arrays, there is no support for other iterable types like Traversable,
+Furthermore, those functions are made for arrays, there is no support for other iterable types like Traversable,
 Iterators and Generators.
 
-When using my library, you can use any kind of iterable types, by default. In the following examples, I will use
-a Generator, because it's convenient in this particular example.
+With [loophp/collection](https://github.com/loophp/collection), you can use any kind of iterable types, by default.
+In the following examples, I will use a Generator, because it's convenient in this particular example.
 
 ```php
 <?php
@@ -216,6 +218,8 @@ $array = $collection->all();
 
 **WOW !** (_That was my first reaction._) **#Facepalm** (_That was my second reaction_)
 
+I've always been used to use regular array in PHP and predict the result and I wasn't expecting such a result, at first.
+
 And it turns out that this behavior is absolutely logic, I just wasn't used to it yet.
 
 You can notice that flipping twice a lazy collection returns the original collection, completely unaltered!
@@ -240,6 +244,7 @@ When using a lazy collection library, using any kind of keys is possible.
 
 ```php
 <?php
+
 $input = static function () {
     yield ['a'] => 'a';
     yield new \StdClass() => 'b';
@@ -249,12 +254,13 @@ $input = static function () {
 $collection = Collection::fromIterable($input());
 
 foreach ($collection as $k => $v) {
-    var_dump($k);
-    var_dump($v);
+  // $k = ['a'], $v = 'a'  
+  // $k = StdClass, $v = 'b'  
+  // $k = true, $v = 'c'  
 }
 ```
 
-This collection library let you use any kind of type for keys: integer, string, objects, arrays, ... anything!
+This collection library let you use any kind of type for keys: _scalar_, _objects_, _arrays_,... _anything_!
 
 This library could be a valid replacement for [\SplObjectStorage][SplObjectStorage] but with much more features.
 
@@ -278,9 +284,8 @@ $input = static function(): \Generator {
 };
 
 $collection = Collection::fromIterable($input())
-    ->sort();
-
-print_r($collection->all());
+    ->sort()
+    ->all();
 
 // [
 //   'a' => 'a',
@@ -290,15 +295,17 @@ print_r($collection->all());
 // ]
 ```
 
-At first sight, it looks like the sort() is a *degenerative* operation.
+At first sight, it looks like the `sort()` is a *degenerative* operation.
 It seems that it has lost some values during the process.
-The input had `6` items, the output has `4`.
+The input had `6` items, the output has `4`. But this is wrong.
 
 Actually, the problem comes from the `all()` operation.
 The `all()` operation is basically a shortcut to `iterator_to_array()`.
 
-In order to highlight the issue, I will **normalize** the result. Normalizing the collection will replace keys with
-integers.
+When converting the collection into an array, values having same keys are lost during the process.
+
+In order to circumvent the issue, you can **normalize** the result. Normalizing the collection will replace keys with
+integers, without duplicates.
 
 ```php
 <?php
@@ -314,9 +321,8 @@ $input = static function(): \Generator {
 
 $collection = Collection::fromIterable($input())
     ->sort()
-    ->normalize();
-
-print_r($collection->all());
+    ->normalize()
+    ->all();
 
 // [
 //   0 => 'a',
@@ -358,7 +364,7 @@ foreach ($collection as $key => $value) {
 }
 ```
 
-There is an alternative, probably better:
+But there is another alternative, probably better:
 
 ```php
 <?php
@@ -374,9 +380,8 @@ $input = static function(): \Generator {
 
 $collection = Collection::fromIterable($input())
     ->sort()
-    ->wrap();
-
-print_r($collection->all());
+    ->wrap()
+    ->all();
 
 // [
 //   0 => ['a' => 'a'],
@@ -388,9 +393,7 @@ print_r($collection->all());
 // ]
 ```
 
-By using the wrap operation at the end, we make sure to not lose any values when converting into a regular array.
-
-The `wrap()` operation has also its opposite: `unwrap()`.
+By using the `wrap()` operation at the end, we make sure to not lose any values when converting into a regular array.
 
 When you use the `sort()` operation, it relies on the [ArrayIterator::uasort()](https://www.php.net/manual/en/arrayiterator.uasort.php) underneath.
 But the `sort()` operation has all the logic to wrap all values prior and then unwrap them once they are sorted.
