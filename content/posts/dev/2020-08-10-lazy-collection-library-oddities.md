@@ -139,7 +139,7 @@ Furthermore, those functions are made for arrays, there is no support for other 
 Iterators and Generators.
 
 With [loophp/collection](https://github.com/loophp/collection), you can use any kind of iterable types, by default.
-In the following examples, I will use a Generator, because it's convenient in this particular example.
+In the following examples, I will use a `Generator`, because it's convenient in this particular example.
 
 ```php
 <?php
@@ -175,7 +175,7 @@ $array = $collection->all();
 // ]
 ```
 
-If you do the flip() operation twice, what would be the result? Let's try... 
+If you do the `flip()` operation twice, what would be the result? Let's try... 
 
 ```php
 <?php
@@ -262,7 +262,8 @@ foreach ($collection as $k => $v) {
 
 This collection library let you use any kind of type for keys: _scalar_, _objects_, _arrays_,... _anything_!
 
-This library could be a valid replacement for [\SplObjectStorage][SplObjectStorage] but with much more features.
+This library could be a valid replacement for [\SplObjectStorage](https://www.php.net/manual/en/class.splobjectstorage.php)
+but with much more features.
 
 This way of working opens up new perspectives, another ways of handling data, different ways to think about data
 structure.
