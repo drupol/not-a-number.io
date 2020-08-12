@@ -268,7 +268,7 @@ but with much more features.
 This way of working opens up new perspectives, another ways of handling data, different ways to think about data
 structure.
 
-# Oddity #2
+# Oddity #3
 
 Have you thought about how to sort a lazy collection when it contains duplicated keys ?
 
