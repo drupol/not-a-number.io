@@ -118,7 +118,7 @@ As you may have noticed, there are multiple times the letter `a`, at index `0` a
 
 The same process is applied for each remaining array values.
 
-From there, we can deduct that:
+From there, we can deduce that:
 
 ```php
 <?php
@@ -128,7 +128,7 @@ $input = ['a', 'b', 'c', 'a', 'd', 'b'];
 $filteredWithArrayFlip = array_values(array_flip(array_flip($input)));
 $filteredWithArrayUnique = array_unique($input);
 
-// We can deduct that:
+// We can deduce that:
 // $filteredWithArrayFlip === $filteredWithArrayUnique;
 ```
 
@@ -265,8 +265,12 @@ This collection library let you use any kind of type for keys: _scalar_, _object
 This library could be a valid replacement for [\SplObjectStorage](https://www.php.net/manual/en/class.splobjectstorage.php)
 but with much more features.
 
-This way of working opens up new perspectives, another ways of handling data, different ways to think about data
-structure.
+To some extent, this way of working opens up new perspectives and new paradigms.
+
+Another ways of handling data, different ways to think about their structure and how to mangle them.
+
+See this particular [thread #31761](https://github.com/laravel/framework/issues/31761) on the Laravel project,
+there is also some good information there.
 
 # Oddity #3
 
@@ -396,7 +400,24 @@ $collection = Collection::fromIterable($input())
 
 By using the `wrap()` operation at the end, we make sure to not lose any values when converting into a regular array.
 
-When you use the `sort()` operation, it relies on the [ArrayIterator::uasort()](https://www.php.net/manual/en/arrayiterator.uasort.php) underneath.
+When you use the [`sort()` operation](https://github.com/loophp/collection/blob/master/src/Operation/Sort.php), it relies on the [ArrayIterator::uasort()](https://www.php.net/manual/en/arrayiterator.uasort.php) underneath.
 But the `sort()` operation has all the logic to wrap all values prior and then unwrap them once they are sorted.
 
 That was something hard to figure out at first, which in the end seemed completely logic.
+
+# What's next?
+
+Now that I'm acquainted with that non-exhaustive list of oddities, I still have some work to do.
+
+What I'm trying to achieve with [loophp/collection](https://github.com/loophp/collection) is to focus on the algorithms.
+
+[loophp/collection](https://github.com/loophp/collection) contains a list of [Operation](https://github.com/loophp/collection/tree/master/src/Operation) and [Transformation](https://github.com/loophp/collection/tree/master/src/Transformation) classes.
+
+Those classes are basically classes wrapping a function that does something on the original collection.
+Operations returns a Generator, Transformation returns usually a simple value.
+
+My todo list for the next major version of the library:
+
+* Get rid of Transformation and use Operation exclusively (_work in progress in [PR #12](https://github.com/loophp/collection/pull/12)_)
+* Try to reach a better typing coverage,
+* Provide a better documentation with real life examples of use for each Operation. 
