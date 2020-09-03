@@ -51,7 +51,7 @@ to that problem !
 Finding how Prime numbers are distributed across Naturals is one of the [Millenium Prize problems][millenium prizes],
 if you find it too easy, you can pick another one. Cheers.
 
-### How about in PHP ?
+## How about in PHP ?
 
 I know that PHP is not the best language for this thing, but I wanted to try.
 
@@ -96,7 +96,7 @@ foreach ($primes as $p) {
 
 It's not as nice as Python, but it does the job.
 
-## Benchmarking ?
+## Benchmarking
 
 I also started to check how I could optimize the algorithm and make further research on it.
 
@@ -147,8 +147,6 @@ guess I will found out sooner or later.
 
 If you feel like helping me and do a deep dive, feel free to clone the repo and try it out by yourself,
 you'll see, it's fun !
-
-
 
 [bartosz website]: https://bartoszmilewski.com/
 [Category theory for programmers]: https://github.com/hmemcpy/milewski-ctfp-pdf
