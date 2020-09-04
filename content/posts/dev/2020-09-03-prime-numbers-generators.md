@@ -6,21 +6,23 @@ image_copyrights: Image from Pol Dellaiera
 tags:
   - php
   - prime numbers
+  - python
+  - iterator
 title: Prime numbers generation
 ---
 
 # It all started from a book
 
 I was reading the Open Source book from [Bartosz Milewski][bartosz website]'s '[Category Theory for Programmers][Category theory for programmers]' when I saw something about
-Prime numbers:
+[Prime numbers][prime number wikipedia]:
 
-`A more interesting example is a coalgebra that produces a list of
-primes. The trick is to use an infinite list as a carrier. Our starting
-seed will be the list [2..]. The next seed will be the tail
-of this list with all multiples of 2 removed. It's a list of odd numbers
-starting with 3. In the next step, we'll take the tail of this list and
-remove all multiples of 3, and so on. You might recognize the makings of
-the sieve of Eratosthenes.`
+> A more interesting example is a coalgebra that produces a list of
+> primes. The trick is to use an infinite list as a carrier. Our starting
+> seed will be the list [2..]. The next seed will be the tail
+> of this list with all multiples of 2 removed. It's a list of odd numbers
+> starting with 3. In the next step, we'll take the tail of this list and
+> remove all multiples of 3, and so on. You might recognize the makings of
+> the sieve of Eratosthenes.
 
 In Python language, it would be written as such:
 
@@ -43,7 +45,7 @@ How beautiful it is, isn't it ?
 I really like the simplicity of this algorithm, which is [**2000 years old**][sieve of eratosthenes].
 
 It's crazy to think that such an algorithm and finding a formula to find Prime numbers is always on the wildest thoughts
-of every scientists in the world.
+of every scientist in the world.
 
 _Oh you didn't get the memo_ ? Let me remind it to you then... you can win 1 million dollars if you found the solution
 to that problem !
@@ -53,13 +55,15 @@ if you find it too easy, you can pick another one. Cheers.
 
 ## How about in PHP ?
 
-I know that PHP is not the best language for this thing, but I wanted to try.
+I just did a huge refactoring in [loophp/collection][loophp/collection github] and I know that PHP is not the best
+language for this thing, but I wanted to try, you know, just to check if this is possible and compare it with the
+Python syntax.
 
-I guess it would be possible to write such thing in PHP, but I had no idea on how to do it at first.
+At first, I had no idea on how to do it at first. I was stunned by the beauty of this algorithm and surprised to have
+never seen it before.
 
-A quick look on Github has led me to some inspiration, and I started to code something.
-
-After two days of searching, I came up with this:
+A quick look on Github has led me to some inspiration, and I started to code something and only after two days of
+searching, I came up with this:
 
 ```php
 <?php 
@@ -94,25 +98,23 @@ foreach ($primes as $p) {
 }
 ```
 
-It's not as nice as Python, but it does the job.
+It's not as nice as Python, but it does the job. Unfortunately, it fails quite rather quickly when XDebug is enabled.
 
 ## Benchmarking
 
-I also started to check how I could optimize the algorithm and make further research on it.
+I also started to investigate how I could optimize the algorithm and made further research on it.
 
 It turns out that this is erroneously called the "[Sieve of Eratosthenes][sieve of eratosthenes]".
-It should have been called the "_Sieve of Trial Division_".
+It should have been called the "_[Sieve of Trial Division][trial division wikipedia]_".
 
 That algorithm as it is now, is very suboptimal, because it's not "[postponed][postponed sieve]".
 Any candidate number need only be tested by Primes not above its square root.
-Implementing this will give an immense speedup and/because it'll greatly [minimize the stack usage][minimize the stack usage].
+Implementing this will give an huge speedup and/because it'll greatly [minimize the stack usage][minimize the stack usage].
 
-Even if those lines are applied to Python code, it's perfectly valid for PHP as well.
-
-In order to check the efficiency of this algorithm compared to a better version, I started to make a benchmarking tool.
+In order to check the efficiency of this algorithm compared to a better version, I scaffolded a benchmarking tool.
 
 As most of my work is Open Source, I quickly spawned a [Github repository][github repository] and created some
-benchmarks.
+benchmarks, using the great [PHP Bench][phpbench/phpbench github].
 
 I implemented three different algorithms, they are almost the same with one difference:
 
@@ -137,16 +139,19 @@ is: `static fn (int $a): bool => (0 !== ($a % $primeNumber))`. Basically this is
 
 `static fn (int $a): bool => (($primeNumber ** 2) > $a) || (0 !== ($a % $primeNumber))`
 
-Any candidate number (`$a`) need only be tested by Primes not above its square root.
+There are two conditions in this callback.
+
+* First condition checks for: any candidate number (`$a`) need only be tested by Primes not above its square root.
+* Second condition checks for: the rest of the division of `$a` by the prime number is different from zero.
 
 **Primes3** implements a custom [CallbackFilterIterator][CallbackFilterIterator] where the [accept method][accept method]
 is overridden with the same filter callback as in **Primes2**.
 
-And to my amazement, the algorithm **Primes3** is the fastest. I still don't get why it's faster than **Primes2**, but I
+To my amazement, the algorithm **Primes3** is the fastest. I still don't get why it's faster than **Primes2**, but I
 guess I will found out sooner or later.
 
-If you feel like helping me and do a deep dive, feel free to clone the repo and try it out by yourself,
-you'll see, it's fun !
+If you feel like helping me and do a deep dive, feel free to [clone the repo][github repository] and try it out by
+yourself, you'll see, it's fun !
 
 [bartosz website]: https://bartoszmilewski.com/
 [Category theory for programmers]: https://github.com/hmemcpy/milewski-ctfp-pdf
@@ -157,3 +162,7 @@ you'll see, it's fun !
 [github repository]: https://github.com/drupol/primes-bench/
 [CallbackFilterIterator]: https://www.php.net/manual/en/class.callbackfilteriterator.php
 [accept method]: https://www.php.net/manual/en/callbackfilteriterator.accept.php
+[trial division wikipedia]: https://en.wikipedia.org/wiki/Trial_division
+[prime number wikipedia]: https://en.wikipedia.org/wiki/Prime_number
+[loophp/collection github]: https://github.com/loophp/collection/
+[phpbench/phpbench github]: https://github.com/phpbench/phpbench
