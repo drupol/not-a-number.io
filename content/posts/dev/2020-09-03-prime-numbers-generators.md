@@ -11,7 +11,7 @@ tags:
 title: Prime numbers generation
 ---
 
-# It all started from a book
+## It all started from a book
 
 I was reading the Open Source book from [Bartosz Milewski][bartosz website]'s '[Category Theory for Programmers][Category theory for programmers]' when I saw something about
 [Prime numbers][prime number wikipedia]:
@@ -53,7 +53,7 @@ to that problem !
 Finding how Prime numbers are distributed across Naturals is one of the [Millenium Prize problems][millenium prizes],
 if you find it too easy, you can pick another one. Cheers.
 
-## How about in PHP ?
+### How about in PHP ?
 
 I just did a huge refactoring in [loophp/collection][loophp/collection github] and I know that PHP is not the best
 language for this thing, but I wanted to try, you know, just to check if this is possible and compare it with the
@@ -100,7 +100,7 @@ foreach ($primes as $p) {
 
 It's not as nice as Python, but it does the job. Unfortunately, it fails quite rather quickly when XDebug is enabled.
 
-## Benchmarking
+### Benchmarking
 
 I also started to investigate how I could optimize the algorithm and made further research on it.
 
@@ -133,22 +133,32 @@ I implemented three different algorithms, they are almost the same with one diff
 ```
 
 **Primes1** is the basic algorithm based on [CallbackFilterIterator][CallbackFilterIterator] where the filter callback
-is: `static fn (int $a): bool => (0 !== ($a % $primeNumber))`. Basically this is just a sieve of trial division.
+is: 
+
+```
+static fn (int $a): bool => (0 !== ($a % $primeNumber))
+```
+
+Basically this is just a sieve of trial division.
 
 **Primes2** is the same as **Primes1** but the filter callback is updated to: 
 
-`static fn (int $a): bool => (($primeNumber ** 2) > $a) || (0 !== ($a % $primeNumber))`
+```
+static fn (int $a): bool => (($primeNumber ** 2) > $a) || (0 !== ($a % $primeNumber))
+```
 
-There are two conditions in this callback.
+There are two conditions in this callback:
 
-* First condition checks for: any candidate number (`$a`) need only be tested by Primes not above its square root.
-* Second condition checks for: the rest of the division of `$a` by the prime number is different from zero.
+1. Any candidate number (`$a`) need only be tested by Primes not above its square root.
+2. The rest of the division of `$a` by the prime number is different from zero.
 
 **Primes3** implements a custom [CallbackFilterIterator][CallbackFilterIterator] where the [accept method][accept method]
 is overridden with the same filter callback as in **Primes2**.
 
 To my amazement, the algorithm **Primes3** is the fastest. I still don't get why it's faster than **Primes2**, but I
 guess I will found out sooner or later.
+
+It would be nice to add more algorithms and see how they behave.
 
 If you feel like helping me and do a deep dive, feel free to [clone the repo][github repository] and try it out by
 yourself, you'll see, it's fun !
