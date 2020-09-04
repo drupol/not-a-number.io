@@ -90,10 +90,9 @@ I requested [feedback](https://github.com/peridot-php/leo/issues/29) on the libr
 
 As I restarted to take the train to go to work, I had some time ahead to work on this and I added some features. The first feature I added in DynamicObjects is the memoization:
 
-<blockquote class="blockquote text-justify">
-In computing, memoization is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
-<footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Memoization">Wikipedia</a></cite></footer>
-</blockquote>
+From [Wikipedia](https://en.wikipedia.org/wiki/Memoization):
+> In computing, memoization is an optimization technique used primarily to speed up computer programs by storing the
+> results of expensive function calls and returning the cached result when the same inputs occur again.
 
 I first started to include the functionality "_as-is_" in DynamicObjects and then, just like before, I made a package out of it: [PHP Memoize](https://github.com/drupol/memoize).
 

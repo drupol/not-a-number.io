@@ -22,13 +22,11 @@ This article will explain what are traits and will try to propose, without prete
 
 <!--break-->
 
-Let's start with the definition of a trait.
+Let's start with the [definition of a trait](http://php.net/manual/en/language.oop5.traits.php).
 
-<blockquote class="blockquote text-justify">
-Traits are a mechanism for code reuse in single inheritance languages such as PHP.
-A Trait is intended to reduce some limitations of single inheritance by enabling a developer to reuse sets of methods freely in several independent classes living in different class hierarchies.
-<footer class="blockquote-footer"><cite><a href="http://php.net/manual/en/language.oop5.traits.php">From php.net</a></cite></footer>
-</blockquote>
+> Traits are a mechanism for code reuse in single inheritance languages such as PHP.
+> A Trait is intended to reduce some limitations of single inheritance by enabling a developer to reuse sets of methods
+> freely in several independent classes living in different class hierarchies.
 
 When designing a software or a library, we are often busy thinking on how to make it work properly and how it could do the job as expected.
 This is already a good part of the job.
@@ -43,10 +41,9 @@ Sometimes, it's possible that you'd wish your class to inherit from multiple cla
 
 Of course, inheritance with multiple classes can be hard to work with, it adds complexity and has issues like the [Diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem).
 
-<blockquote class="blockquote text-justify">
-The "diamond problem" (sometimes referred to as the "deadly diamond of death") is an ambiguity that arises when two classes B and C inherit from A, and class D inherits from both B and C. If there is a method in A that B and C have overridden, and D does not override it, then which version of the method does D inherit: that of B, or that of C? 
-<footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem">From wikipedia</a></cite></footer>
-</blockquote>
+> The "diamond problem" (sometimes referred to as the "deadly diamond of death") is an ambiguity that arises when two
+> classes B and C inherit from A, and class D inherits from both B and C. If there is a method in A that B and C have 
+> overridden, and D does not override it, then which version of the method does D inherit: that of B, or that of C? 
 
 But obviously, PHP is not concerned by this.
 

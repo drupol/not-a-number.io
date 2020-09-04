@@ -25,11 +25,9 @@ The goal of having such an amount of skills contained in one single place, is to
 
 [EU-FOSSA](https://ec.europa.eu/info/news/eu-fossa-bug-bounties-full-force-2019-apr-05_en) stands for EU-Free and Open Source Software Auditing project, a project which is managed by the European Commission's Directorate General for Informatics, the [DIGIT](https://ec.europa.eu/info/departments/informatics_en).
 
-<blockquote class="blockquote text-justify">
-The EU-FOSSA project is organising in parallel a bug bounty for the PHP Symfony software.
-Hackers can get rewards of up to EUR 15.000 for critical bugs they find.
-There is even a 20% bonus added to the prize if the hackers provide a fix for the bug they report.
-</blockquote>
+> The EU-FOSSA project is organising in parallel a bug bounty for the PHP Symfony software.
+> Hackers can get rewards of up to EUR 15.000 for critical bugs they find.
+> There is even a 20% bonus added to the prize if the hackers provide a fix for the bug they report.
 
 While the security was the focus during this weekend, [API Platform](https://api-platform.com/) and [Symfony framework](https://symfony.com/) was the main topic of this first successful hackathon.
 

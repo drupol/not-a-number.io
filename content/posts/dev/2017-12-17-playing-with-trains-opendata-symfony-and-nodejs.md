@@ -144,11 +144,9 @@ Unfortunately, that information is not provided by the train company neither by 
 
 After some discussion with [Pieter from iRail](https://twitter.com/pietercolpaert), we decided to extensively use [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page).
 
-<blockquote class="blockquote">
-Wikidata is a free and open knowledge base that can be read and edited by both humans and machines.
-It acts as central storage for the structured data of its Wikimedia sister projects including Wikipedia, Wikivoyage, Wikisource, and others.
-The content of Wikidata is available under a free license, exported using standard formats, and can be interlinked to other open data sets on the linked data web.
-</blockquote>
+> Wikidata is a free and open knowledge base that can be read and edited by both humans and machines.
+> It acts as central storage for the structured data of its Wikimedia sister projects including Wikipedia, Wikivoyage, Wikisource, and others.
+> The content of Wikidata is available under a free license, exported using standard formats, and can be interlinked to other open data sets on the linked data web.
 
 As every Belgium train station are in Wikipedia and thus Wikidata, I started to add line information to these stations.
 

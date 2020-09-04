@@ -16,15 +16,13 @@ But before going further, let me remind you what are the differences between per
 
 <!--break-->
 
-<blockquote class="blockquote text-justify">
-The notion of permutation relates to the act of arranging all the members of a set into some sequence or order.
-<footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Permutation">Wikipedia</a></cite></footer>
-</blockquote>
 
-<blockquote class="blockquote text-justify">
-A combination is a way of selecting items from a collection, such that, unlike permutations, the order of selection does not matter.
-<footer class="blockquote-footer"><cite><a href="https://en.wikipedia.org/wiki/Combination">Wikipedia</a></cite></footer>
-</blockquote>
+Definition of Permutation from [Wikipedia](https://en.wikipedia.org/wiki/Permutation):
+> The notion of permutation relates to the act of arranging all the members of a set into some sequence or order.
+
+Definition of Combination from [Wikipedia](https://en.wikipedia.org/wiki/Combination):
+> A combination is a way of selecting items from a collection, such that, unlike permutations, the order of selection
+> does not matter.
 
 The formula to find the number of **permutations** of $$ n $$ items among $$ r $$ items is:
  
@@ -74,10 +72,11 @@ And if you have to store huge results arrays, you might end up with the infamous
 
 This is why in order to avoid those errors, I only used [PHP Generators](https://secure.php.net/manual/en/language.generators.overview.php) and [Iterators](https://secure.php.net/manual/en/class.iterator.php) in PHPermutations.
 
-<blockquote class="blockquote text-justify">
-A generator allows you to write code that uses foreach to iterate over a set of data without needing to build an array in memory, which may cause you to exceed a memory limit, or require a considerable amount of processing time to generate. Instead, you can write a generator function, which is the same as a normal function, except that instead of returning once, a generator can yield as many times as it needs to in order to provide the values to be iterated over.
-<footer class="blockquote-footer"><cite><a href="https://secure.php.net/manual/en/language.generators.overview.php">php.net</a></cite></footer>
-</blockquote>
+From [PHP.net](https://secure.php.net/manual/en/language.generators.overview.php):
+> A generator allows you to write code that uses foreach to iterate over a set of data without needing to build an
+> array in memory, which may cause you to exceed a memory limit, or require a considerable amount of processing time to
+> generate. Instead, you can write a generator function, which is the same as a normal function, except that instead of 
+> returning once, a generator can yield as many times as it needs to in order to provide the values to be iterated over.
 
 Moreover, the notable difference with other combinatorics library is that you can use an extra parameter $$ r $$ (_the length_), that allows you to
 compute permutations and combinations of any particular size.
