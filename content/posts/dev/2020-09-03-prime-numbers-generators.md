@@ -118,9 +118,9 @@ benchmarks, using the great [PHP Bench][phpbench/phpbench github].
 
 I implemented three different algorithms, they are almost the same with one difference:
 
-* **Primes1**: Simple Sieve of Trial Division
-* **Primes2**: Sieve of Trial Division + Postponed (first try)
-* **Primes3**: Sieve of Trial Division + Postponed (second try)
+* **Primes1**: Simple Sieve of Trial Division ([source][source primes1])
+* **Primes2**: Sieve of Trial Division + Postponed (first try) ([source][source primes2])
+* **Primes3**: Sieve of Trial Division + Postponed (second try) ([source][source primes3])
 
 ```
 +-------------+--------------+--------------+------------+------------+-------+
@@ -176,3 +176,6 @@ yourself, you'll see, it's fun !
 [prime number wikipedia]: https://en.wikipedia.org/wiki/Prime_number
 [loophp/collection github]: https://github.com/loophp/collection/
 [phpbench/phpbench github]: https://github.com/phpbench/phpbench
+[source primes1]: https://github.com/drupol/primes-bench/blob/master/src/Primes.php
+[source primes2]: https://github.com/drupol/primes-bench/blob/master/src/Primes2.php
+[source primes3]: https://github.com/drupol/primes-bench/blob/master/src/Primes3.php
