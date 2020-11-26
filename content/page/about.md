@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: A little about me
-images: 
+images:
   - images/logo.png
 draft: false
 ---
@@ -14,9 +14,11 @@ new things related to IT: *I do things*.
 I currently work at [the European Commission](https://ec.europa.eu) in Brussels
 and I'm always ready for new and exciting challenges.
 
-Full stack developer, I used to work with Drupal since more than 10 years.
-First as a hobby, then as a contributor, then as a service provider.
-I maintain [a couple of modules](https://drupal.org/u/pol), teach Drupal to some
+Linux and Freebsd afficionado, full stack developer, I used to work with PHP
+since more than 10 years.
+I started with Drupal. First as a hobby, then as a contributor, then as a service
+provider and finally as a core maintainer.
+I still maintain [a couple of modules](https://drupal.org/u/pol), teach Drupal to some
 organisations and do some specific development upon requests.
 
 In 2019, after [resigning from being Drupal core maintainer](https://www.drupal.org/project/drupal/issues/3089877),
@@ -31,7 +33,7 @@ non-paranoid and friendly people.
 
 I love {{< abbr title="Science, technology, engineering, and mathematics" >}}STEM{{< /abbr >}}
 a lot and especially Mathematics, that explains why I'm so fascinated by numbers
-and the way Nature uses them. 
+and the way Nature uses them.
 
 I'm fond of graphical visualisations of data, my favorites are the one from [Jason Davies](https://www.jasondavies.com/)
 ([His bl.ocks](https://bl.ocks.org/jasondavies)) and [Mike Bostock](https://bost.ocks.org/mike/) ([His bl.ocks](https://bl.ocks.org/mbostock)).
@@ -49,8 +51,8 @@ I'm learning music and piano!
 I love photography and I learned by myself most of the secrets of a reflex
 camera, just for fun.
 I do swim a lot and I also really like riding my mountain bike.
-Biking is also why I'm an heavy user and contributor of [OpenStreetMap](https://www.openstreetmap.org/)
-since more than a decade.
+Biking is also one of the reason why I'm an heavy user and contributor
+of [OpenStreetMap](https://www.openstreetmap.org/) since more than a decade.
 
 Oh, and I couldn't finish this bio without having a word about my cats Izumi &
 Nakano! They are the happiest cats in the world and Izumi is the first cat to
