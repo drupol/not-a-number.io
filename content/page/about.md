@@ -40,7 +40,7 @@ stop sharing each of his [tweet](https://twitter.com/datagenetics).
 work on open-source projects with a team of true, passionate, open-minded,
 non-paranoid and friendly people.
 
-rI don't have any regret in my career at all, but if I had a chance to restart
+I don't have any regret in my career at all, but if I had a chance to restart
 it, I would most probably study Mathematics in depth and still do programming,
 as those two sciences are tightly linked together.
 I would also have liked to work in a university and teach students. I kinda miss
