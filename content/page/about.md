@@ -27,10 +27,6 @@ working more on packages that are not tied to any framework.
 You can follow my work on [Packagist](https://packagist.org/packages/drupol/)
 or [Drupol's Github](https://github.com/drupol/) or [Loophp's Github](https://github.com/loophp/).
 
-"_The best is the enemy of the good_", therefore my dream workplace would be to
-work on open-source projects with a team of true, passionate, open-minded,
-non-paranoid and friendly people.
-
 I love {{< abbr title="Science, technology, engineering, and mathematics" >}}STEM{{< /abbr >}}
 a lot and especially Mathematics, that explains why I'm so fascinated by numbers
 and the way Nature uses them.
@@ -40,7 +36,11 @@ I'm fond of graphical visualisations of data, my favorites are the one from [Jas
 I also really like the [Nick Berry's blog](http://datagenetics.com/), I can't
 stop sharing each of his [tweet](https://twitter.com/datagenetics).
 
-I don't have any regret in my career at all, but if I had a chance to restart
+"_The best is the enemy of the good_", therefore my dream workplace would be to
+work on open-source projects with a team of true, passionate, open-minded,
+non-paranoid and friendly people.
+
+rI don't have any regret in my career at all, but if I had a chance to restart
 it, I would most probably study Mathematics in depth and still do programming,
 as those two sciences are tightly linked together.
 I would also have liked to work in a university and teach students. I kinda miss
