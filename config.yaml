@@ -22,6 +22,9 @@ menu:
     - name: Bookshelf
       url: /bookshelf
 
+    - name: CV
+      url: https://github.com/drupol/cv/releases/latest/download/cv.pdf
+
 author:
   name: "Pol Dellaiera"
 
