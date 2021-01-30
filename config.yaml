@@ -5,6 +5,7 @@ theme:
   - hugo-notice
   - hugo-loremipsum
   - hugo-theme-bootstrap4-blog
+  - hugo-redirect
 paginate: 10
 summaryLength: 50
 googleAnalytics: UA-97356033-1
@@ -23,7 +24,7 @@ menu:
       url: /bookshelf
 
     - name: CV
-      url: https://github.com/drupol/cv/releases/latest/download/cv.pdf
+      url: cv
 
 author:
   name: "Pol Dellaiera"
