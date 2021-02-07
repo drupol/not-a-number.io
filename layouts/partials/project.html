@@ -1,9 +1,21 @@
 <tr>
-  <td><a class="text-decoration-none" href="{{ .repository }}">{{ .title }}</a></td>
-  <td><img src="https://img.shields.io/packagist/dt/{{ .composer }}.svg?style=flat-square" alt="{{ .title }}" class="card-img" /></td>
+  <td>
+    <a class="text-decoration-none" href="{{ .repository }}">{{ .title }}</a>
+  </td>
+  <td>
+    {{ if .image }}
+    <img src="{{ .image }}" alt="{{ .title }}"/>
+    {{ end }}
+  </td>
   <td>
     {{ if .description }}
     <p>{{ .description | markdownify }}</p>
     {{ end }}
+    <p class="keywords">
+      <span class="badge bg-primary">{{ .type }}</span>
+    {{ range .keywords }}
+      <span class="badge bg-secondary">{{ . }}</span>
+    {{ end }}
+    </p>
   </td>
 </tr>

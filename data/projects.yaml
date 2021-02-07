@@ -1,90 +1,185 @@
+- composer: ecphp/cas-lib
+  title: "PHP CAS Library"
+  description: CAS Lib, a standard library for CAS authentication.
+  type: PHP Library
+  repository: https://github.com/ecphp/cas-lib
+  image: https://img.shields.io/packagist/dt/ecphp/cas-lib.svg?style=flat-square
+  keywords:
+    - CAS
+    - European Commission
+- composer: ecphp/cas-bundle
+  title: "CAS bundle"
+  description: CAS Bundle, a standard Symfony bundle for authentication using CAS protocol.
+  type: Symfony bundle
+  repository: https://github.com/ecphp/cas-bundle
+  image: https://img.shields.io/packagist/dt/ecphp/cas-bundle.svg?style=flat-square
+  keywords:
+    - CAS
+    - European Commission
+- composer: ecphp/eu-login-bundle
+  title: "EU Login bundle"
+  description: EU Login bundle, a standard Symfony bundle to authenticate users against EU Login.
+  type: Symfony bundle
+  repository: https://github.com/ecphp/eu-login-bundle
+  image: https://img.shields.io/packagist/dt/ecphp/eu-login-bundle.svg?style=flat-square
+  keywords:
+    - ECAS
+    - European Commission
 - composer: loophp/collection
   title: "PHP Collection"
   description: A (memory) friendly, easy, lazy and modular collection class.
   type: PHP Library
   repository: https://github.com/loophp/collection
+  image: https://img.shields.io/packagist/dt/loophp/collection.svg?style=flat-square
+  keywords:
+    - Iterators
 - composer: loophp/phptree
   title: "PHPTree"
   description: An implementation of tree data structure.
   type: PHP Library
   repository: https://github.com/loophp/phptree
+  image: https://img.shields.io/packagist/dt/loophp/phptree.svg?style=flat-square
+  keywords:
+    - tree
 - composer: loophp/phptree-ast-generator
   title: "PHPTree AST generator"
   description: Generates AST of a PHP script in DOT (Graphviz) or Image (PNG, JPG, SVG) formats.
   type: PHP Library
   repository: https://github.com/loophp/phptree-ast-generator
+  keywords:
+    - AST
 - composer: loophp/combinator
   title: "PHP Combinators"
   description: A curated list of combinators.
   type: PHP Library
   repository: https://github.com/loophp/combinator
+  image: https://img.shields.io/packagist/dt/loophp/combinator.svg?style=flat-square
+  keywords:
+    - Combinators
+- composer: loophp/church-encoding
+  title: "PHP Church encoding"
+  description: Church encoding in PHP
+  type: PHP Library
+  repository: https://github.com/loophp/church-encoding
+  keywords:
+    - Functional programming
+    - Educational
 - composer: loophp/mock-soapclient
   title: "PHP Mock SoapClient"
   description: A fake and predictable SOAP client, useful for your unit tests.
   type: PHP Library
   repository: https://github.com/loophp/mock-soapclient
+  image: https://img.shields.io/packagist/dt/loophp/mock-soapclient.svg?style=flat-square
+  keywords:
+    - SOAP
+    - Tests
 - composer: loophp/nanobench
   title: "PHP Nanobench"
   description: A simple and lightweight benchmarking tool for PHP.
   type: PHP Library
   repository: https://github.com/loophp/nanobench
+  image: https://img.shields.io/packagist/dt/loophp/nanobench.svg?style=flat-square
+  keywords:
+    - Benchmark
 - composer: loophp/unaltered-psr-http-message-bridge-bundle
   title: Unaltered PSR HTTP Message Bridge Bundle
   description: A drop-in replacement for symfony/psr-http-message-bridge, that does not alter query parameters.
-  type: PHP Library
+  type: Symfony bundle
   repository: https://github.com/loophp/unaltered-psr-http-message-bridge-bundle
+  image: https://img.shields.io/packagist/dt/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square
+  keywords:
+    - PSR
 - composer: loophp/tin
   title: Taxpayer Identification Number (TIN) Validator
   description: Provide validation tools for Taxpayer Identification Number
   type: PHP Library
   repository: https://github.com/loophp/tin
+  image: https://img.shields.io/packagist/dt/loophp/tin.svg?style=flat-square
 - composer: loophp/phpspec-time
   title: PHPSpec Time extension
   description: A PHPSpec extension providing matchers for measuring time in tests.
   type: PHP Library
   repository: https://github.com/loophp/phpspec-time
+  image: https://img.shields.io/packagist/dt/loophp/phpspec-time.svg?style=flat-square
+  keywords:
+    - PHPSpec
+    - Tests
 - composer: drupol/phposinfo
   title: PHP OS Info
   description: Try to guess the host operating system.
   type: PHP Library
   repository: https://github.com/drupol/phposinfo
+  image: https://img.shields.io/packagist/dt/drupol/phposinfo.svg?style=flat-square
+  keywords:
+    - OS
 - composer: drupol/phpermutations
   title: PHP Permutations
   description: Generators and iterators, permutations and combinations.
   type: PHP Library
   repository: https://github.com/drupol/phpermutations
+  image: https://img.shields.io/packagist/dt/drupol/phpermutations.svg?style=flat-square
+  keywords:
+    - Combinatorics
 - composer: drupol/phpartition
   title: PHP Partition
   description: Partition problem for balanced arrays splitting made easy.
   type: PHP Library
   repository: https://github.com/drupol/phpartition
+  image: https://img.shields.io/packagist/dt/drupol/phpartition.svg?style=flat-square
+  keywords:
+    - Partition
 - composer: drupol/composer-packages
   title: Composer Packages
   description: Composer plugin for getting information about installed packages in your project.
-  type: PHP Library
+  type: Composer plugin
   repository: https://github.com/drupol/composer-packages
+  image: https://img.shields.io/packagist/dt/drupol/composer-packages.svg?style=flat-square
 - composer: drupol/php-conventions
   title: PHP Conventions
   description: PHP conventions based on Grumphp tasks.
   type: PHP Library
   repository: https://github.com/drupol/php-conventions
+  image: https://img.shields.io/packagist/dt/drupol/php-conventions.svg?style=flat-square
+  keywords:
+    - Code style
+    - Grumphp
 - composer: drupol/phpcsfixer-configs-php
   title: PHP PHP-CS-Fixer configs
   description: Base PHP CS Fixer configurations.
   type: PHP Library
   repository: https://github.com/drupol/phpcsfixer-configs-php
+  image: https://img.shields.io/packagist/dt/drupol/phpcsfixer-configs-php.svg?style=flat-square
+  keywords:
+    - PHP CS Fixer
 - composer: drupol/phpmerkle
   title: PHP Merkle
   description: A fast and dynamic Merkle tree implementation.
   type: PHP Library
   repository: https://github.com/drupol/phpmerkle
+  image: https://img.shields.io/packagist/dt/drupol/phpmerkle.svg?style=flat-square
+  keywords:
+    - Tree
+    - Merkle
 - composer: drupol/phpspec-annotation
   title: PHPSpec Annotation extention
   description: PHPSpec extension that allows you to use annotated methods for tests.
   type: PHP Library
   repository: https://github.com/drupol/phpspec-annotation
+  image: https://img.shields.io/packagist/dt/drupol/phpspec-annotation.svg?style=flat-square
+  keywords:
+    - PHPSpec
 - composer: drupol/phingbehattask
   title: Phing Behat task.
   description: Behat task for Phing.
   type: PHP Library
   repository: https://github.com/drupol/phingbehattask
+  image: https://img.shields.io/packagist/dt/drupol/phingbehattask.svg?style=flat-square
+  keywords:
+    - Phing plugin
+- title: Dock Latex
+  description: A multi-platform Docker-based LaTeX workspace for a quickstart and easy hands on.
+  type: Command line tool
+  repository: https://github.com/loophp/DockLatex
+  keywords:
+    - Docker
+    - LaTeX
