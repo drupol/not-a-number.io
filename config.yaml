@@ -19,12 +19,19 @@ menu:
   navbar:
     - name: About
       url: /about
+      weight: 10
+
+    - name: Projects
+      url: /projects
+      weight: 20
 
     - name: Bookshelf
       url: /bookshelf
+      weight: 30
 
     - name: CV
-      url: cv
+      url: /cv
+      weight: 40
 
 author:
   name: "Pol Dellaiera"

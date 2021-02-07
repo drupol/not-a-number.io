@@ -1,0 +1,14 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Downloads</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+{{ range $.Site.Data.projects }}
+  {{ partial "project.html" . }}
+{{ end }}
+  </tbody>
+</table>

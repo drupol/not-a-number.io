@@ -1,0 +1,90 @@
+- composer: loophp/collection
+  title: "PHP Collection"
+  description: A (memory) friendly, easy, lazy and modular collection class.
+  type: PHP Library
+  repository: https://github.com/loophp/collection
+- composer: loophp/phptree
+  title: "PHPTree"
+  description: An implementation of tree data structure.
+  type: PHP Library
+  repository: https://github.com/loophp/phptree
+- composer: loophp/phptree-ast-generator
+  title: "PHPTree AST generator"
+  description: Generates AST of a PHP script in DOT (Graphviz) or Image (PNG, JPG, SVG) formats.
+  type: PHP Library
+  repository: https://github.com/loophp/phptree-ast-generator
+- composer: loophp/combinator
+  title: "PHP Combinators"
+  description: A curated list of combinators.
+  type: PHP Library
+  repository: https://github.com/loophp/combinator
+- composer: loophp/mock-soapclient
+  title: "PHP Mock SoapClient"
+  description: A fake and predictable SOAP client, useful for your unit tests.
+  type: PHP Library
+  repository: https://github.com/loophp/mock-soapclient
+- composer: loophp/nanobench
+  title: "PHP Nanobench"
+  description: A simple and lightweight benchmarking tool for PHP.
+  type: PHP Library
+  repository: https://github.com/loophp/nanobench
+- composer: loophp/unaltered-psr-http-message-bridge-bundle
+  title: Unaltered PSR HTTP Message Bridge Bundle
+  description: A drop-in replacement for symfony/psr-http-message-bridge, that does not alter query parameters.
+  type: PHP Library
+  repository: https://github.com/loophp/unaltered-psr-http-message-bridge-bundle
+- composer: loophp/tin
+  title: Taxpayer Identification Number (TIN) Validator
+  description: Provide validation tools for Taxpayer Identification Number
+  type: PHP Library
+  repository: https://github.com/loophp/tin
+- composer: loophp/phpspec-time
+  title: PHPSpec Time extension
+  description: A PHPSpec extension providing matchers for measuring time in tests.
+  type: PHP Library
+  repository: https://github.com/loophp/phpspec-time
+- composer: drupol/phposinfo
+  title: PHP OS Info
+  description: Try to guess the host operating system.
+  type: PHP Library
+  repository: https://github.com/drupol/phposinfo
+- composer: drupol/phpermutations
+  title: PHP Permutations
+  description: Generators and iterators, permutations and combinations.
+  type: PHP Library
+  repository: https://github.com/drupol/phpermutations
+- composer: drupol/phpartition
+  title: PHP Partition
+  description: Partition problem for balanced arrays splitting made easy.
+  type: PHP Library
+  repository: https://github.com/drupol/phpartition
+- composer: drupol/composer-packages
+  title: Composer Packages
+  description: Composer plugin for getting information about installed packages in your project.
+  type: PHP Library
+  repository: https://github.com/drupol/composer-packages
+- composer: drupol/php-conventions
+  title: PHP Conventions
+  description: PHP conventions based on Grumphp tasks.
+  type: PHP Library
+  repository: https://github.com/drupol/php-conventions
+- composer: drupol/phpcsfixer-configs-php
+  title: PHP PHP-CS-Fixer configs
+  description: Base PHP CS Fixer configurations.
+  type: PHP Library
+  repository: https://github.com/drupol/phpcsfixer-configs-php
+- composer: drupol/phpmerkle
+  title: PHP Merkle
+  description: A fast and dynamic Merkle tree implementation.
+  type: PHP Library
+  repository: https://github.com/drupol/phpmerkle
+- composer: drupol/phpspec-annotation
+  title: PHPSpec Annotation extention
+  description: PHPSpec extension that allows you to use annotated methods for tests.
+  type: PHP Library
+  repository: https://github.com/drupol/phpspec-annotation
+- composer: drupol/phingbehattask
+  title: Phing Behat task.
+  description: Behat task for Phing.
+  type: PHP Library
+  repository: https://github.com/drupol/phingbehattask
