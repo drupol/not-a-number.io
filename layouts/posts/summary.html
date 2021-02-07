@@ -1,12 +1,12 @@
 {{ $dateFormat := default "Mon Jan 2, 2006" (index .Site.Params "date_format") }}
 <div class="card mb-4">
   <div class="card-header">
-    <h2 class="card-title mb-0"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+    <h2 class="card-title mb-0"><a class="text-decoration-none" href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
   </div>
 
   <div class="card-body">
     <p class="card-text">{{ .Summary }}</p>
-    <p class="text-right"><a href="{{ .Permalink }}" class="card-link">{{ i18n "readMore" }} <i class="fa fa-arrow-circle-right"></i></a></p>
+    <p class="text-right"><a href="{{ .Permalink }}" class="text-decoration-none card-link">{{ i18n "readMore" }} <i class="fa fa-arrow-circle-right"></i></a></p>
   </div>
 
   <div class="card-footer text-muted small">

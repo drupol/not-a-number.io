@@ -1,6 +1,6 @@
 {{- $address := .address -}}
 {{- $protocol := "mailto" -}}
-{{- $class := .class -}}
+{{- $class := "text-decoration-none" -}}
 {{- $displaytext := .display -}}
 {{- $parts := split $address "@" -}}
 {{- $user := (index $parts 0) -}}

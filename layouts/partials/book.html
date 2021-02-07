@@ -19,7 +19,7 @@
             <dd class="col-sm-8">{{ delimit .tags ", " }}</dd>
             {{ end }}
             <dt class="col-sm-4">Link</dt>
-            <dd class="col-sm-8"><a href="https://openlibrary.org/search?q={{ .isbn }}">OpenLibrary</a></dd>
+            <dd class="col-sm-8"><a class="text-decoration-none" ref="https://openlibrary.org/search?q={{ .isbn }}">OpenLibrary</a></dd>
           </dl>
           {{ if .description }}
           <p>{{ .description | markdownify }}</p>

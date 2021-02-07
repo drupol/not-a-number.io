@@ -17,8 +17,8 @@
   <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
   {{- end -}}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  {{ $styles := resources.Get "css/style.css" | minify}}
   {{ $styles := resources.Get "css/github.css" | minify}}
+  {{ $styles := resources.Get "css/style.css" | minify}}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
   <script src="https://kit.fontawesome.com/15d1d1a2ce.js" crossorigin="anonymous"></script>

@@ -9,9 +9,9 @@
         <summary><i class="fas fa-search mr-1"></i>Last commit</summary>
         <dl class="row">
             <dt class="col-sm-2"><i class="fas fa-bars mr-1"></i></dt>
-            <dd class="col-sm-10"><pre>{{ .GitInfo.Subject }}</pre></dd>
+            <dd class="col-sm-10"><p class="text-monospace">{{ .GitInfo.Subject }}</p></dd>
             <dt class="col-sm-2"><i class="fas fa-code-branch mr-1"></i></dt>
-            <dd class="col-sm-10"><pre><a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></pre></dd>
+            <dd class="col-sm-10"><p class="text-monospace"><a class="text-decoration-none" href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p></dd>
         </dl>
       </details>
     </div>
@@ -31,12 +31,12 @@
       <h6 class="card-subtitle mb-2 text-muted">Get in touch with me</h6>
 
       <ol class="list-unstyled">
-        <li><a href="https://keybase.io/poldellaiera"><i class="fab fa-keybase mr-1" aria-hidden="true"></i>On Keybase</a></li>
-        <li><a href="https://t.me/drupol"><i class="fab fa-telegram mr-1" aria-hidden="true"></i>On Telegram</a></li>
-        <li><a href="https://github.com/drupol"><i class="fab fa-github mr-1" aria-hidden="true"></i>On GitHub</a></li>
-        <li><a href="https://packagist.org/packages/drupol/"><i class="fas fa-link mr-1" aria-hidden="true"></i>On Packagist</a></li>
-        <li><a href="https://twitter.com/drupol"><i class="fab fa-twitter mr-1" aria-hidden="true"></i>On Twitter</a></li>
-        <li><a href="https://www.linkedin.com/in/poldellaiera/"><i class="fab fa-linkedin mr-1" aria-hidden="true"></i>On LinkedIn</a></li>
+        <li><a class="text-decoration-none" href="https://keybase.io/poldellaiera"><i class="fab fa-keybase mr-1" aria-hidden="true"></i>On Keybase</a></li>
+        <li><a class="text-decoration-none" href="https://t.me/drupol"><i class="fab fa-telegram mr-1" aria-hidden="true"></i>On Telegram</a></li>
+        <li><a class="text-decoration-none" href="https://github.com/drupol"><i class="fab fa-github mr-1" aria-hidden="true"></i>On GitHub</a></li>
+        <li><a class="text-decoration-none" href="https://packagist.org/packages/drupol/"><i class="fas fa-link mr-1" aria-hidden="true"></i>On Packagist</a></li>
+        <li><a class="text-decoration-none" href="https://twitter.com/drupol"><i class="fab fa-twitter mr-1" aria-hidden="true"></i>On Twitter</a></li>
+        <li><a class="text-decoration-none" href="https://www.linkedin.com/in/poldellaiera/"><i class="fab fa-linkedin mr-1" aria-hidden="true"></i>On LinkedIn</a></li>
         <li>{{ partial "cloakemail" (dict "address" .Site.Params.authoremail "display" "<i class='far fa-envelope mr-1' aria-hidden='true'></i>By email") }}</li>
       </ol>
     </div>
@@ -53,9 +53,9 @@
   <div class="card mb-2 text-justify">
     <div class="card-body text-muted bg-light">
       {{ if and (.GitInfo) (.IsPage) }}
-      <p class="small text-right mb-0"><i class="fas fa-code-branch mr-1"></i><a href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
+      <p class="small text-right mb-0"><i class="fas fa-code-branch mr-1"></i><a class="text-decoration-none" href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
       {{ end }}
-      <p class="small text-right mb-0">Made with <a href="https://gohugo.io">Hugo</a>.</p>
+      <p class="small text-right mb-0">Made with <a class="text-decoration-none" href="https://gohugo.io">Hugo</a>.</p>
       <p class="small text-right mb-0"><i class="fas fa-copyright"></i> 2017 {{ .Site.Title }}</p>
     </div>
   </div>
