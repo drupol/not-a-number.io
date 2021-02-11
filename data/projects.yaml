@@ -1,3 +1,13 @@
+- composer: ecphp/api-gw-authentication-bundle
+  title: "API Gateway Authentication bundle"
+  description: Authenticate requests from European Commission corporate service _API Gateway_.
+  type: Symfony bundle
+  repository: https://github.com/ecphp/api-gw-authentication-bundle
+  image: https://img.shields.io/packagist/dt/ecphp/api-gw-authentication-bundle.svg?style=flat-square
+  keywords:
+    - European Commission
+    - API Gateway
+    - JWT
 - composer: ecphp/cas-lib
   title: "PHP CAS Library"
   description: CAS Lib, a standard library for CAS authentication.
