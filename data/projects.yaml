@@ -193,3 +193,26 @@
   keywords:
     - Docker
     - LaTeX
+- title: Doctrine OCI8
+  description: Doctrine's OCI8 (Oracle) driver with cursor support.
+  type: PHP Library
+  repository: https://github.com/ecphp/doctrine-oci8
+  image: https://img.shields.io/packagist/dt/ecphp/doctrine-oci8.svg?style=flat-square
+  keywords:
+    - database
+    - doctrine
+    - oracle
+    - oci
+    - cursor
+    - oci8
+- title: Doctrine OCI8 bundle
+  description: Doctrine OCI8 (Oracle) bundle.
+  type: Symfony bundle
+  repository: https://github.com/ecphp/doctrine-oci8-bundle
+  image: https://img.shields.io/packagist/dt/ecphp/doctrine-oci8-bundle.svg?style=flat-square
+  keywords:
+    - symfony
+    - bundle
+    - oracle
+    - oci
+    - oci8
