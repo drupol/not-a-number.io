@@ -205,14 +205,11 @@
     - oci
     - cursor
     - oci8
-- title: Doctrine OCI8 bundle
-  description: Doctrine OCI8 (Oracle) bundle.
+- title: Reverse Proxy Helper Bundle
+  description: Helper bundle, configure the request headers from a given base URL.
   type: Symfony bundle
-  repository: https://github.com/ecphp/doctrine-oci8-bundle
-  image: https://img.shields.io/packagist/dt/ecphp/doctrine-oci8-bundle.svg?style=flat-square
+  repository: https://github.com/ecphp/reverse-proxy-helper-bundle
+  image: https://img.shields.io/packagist/dt/ecphp/reverse-proxy-helper-bundle.svg?style=flat-square
   keywords:
-    - symfony
-    - bundle
-    - oracle
-    - oci
-    - oci8
+    - reverse-proxy
+    - headers
