@@ -56,6 +56,7 @@
   description: Generates AST of a PHP script in DOT (Graphviz) or Image (PNG, JPG, SVG) formats.
   type: PHP Library
   repository: https://github.com/loophp/phptree-ast-generator
+  image: https://img.shields.io/packagist/dt/loophp/phptree-ast-generator.svg?style=flat-square
   keywords:
     - AST
 - composer: loophp/combinator
