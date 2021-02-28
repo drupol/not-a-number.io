@@ -71,6 +71,7 @@
   description: Church encoding in PHP
   type: PHP Library
   repository: https://github.com/loophp/church-encoding
+  image: https://img.shields.io/packagist/dt/loophp/church-encoding.svg?style=flat-square
   keywords:
     - Functional programming
     - Educational
