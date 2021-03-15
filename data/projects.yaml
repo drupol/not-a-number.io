@@ -215,3 +215,11 @@
   keywords:
     - reverse-proxy
     - headers
+- title: FPT
+  description: Functional Programming Toolbox 
+  type: PHP Library
+  repository: https://github.com/loophp/fpt
+  image: https://img.shields.io/packagist/dt/loophp/fpt.svg?style=flat-square
+  keywords:
+    - functional-programming
+    - toolbox
