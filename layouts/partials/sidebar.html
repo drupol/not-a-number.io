@@ -9,7 +9,7 @@
         <summary><i class="fas fa-search mr-1"></i>Last commit</summary>
         <dl class="row">
             <dt class="col-sm-2"><i class="fas fa-bars mr-1"></i></dt>
-            <dd class="col-sm-10"><p class="text-monospace">{{ .GitInfo.Subject }}</p></dd>
+            <dd class="col-sm-10"><pre>{{ .GitInfo.Subject }}</pre></dd>
             <dt class="col-sm-2"><i class="fas fa-code-branch mr-1"></i></dt>
             <dd class="col-sm-10"><p class="text-monospace"><a class="text-decoration-none" href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p></dd>
         </dl>
