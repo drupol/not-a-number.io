@@ -6,7 +6,7 @@
 
   <div class="card-body">
     <p class="card-text">{{ .Summary }}</p>
-    <p class="text-right"><a href="{{ .Permalink }}" class="text-decoration-none card-link">{{ i18n "readMore" }} <i class="fa fa-arrow-circle-right"></i></a></p>
+    <p class="text-end"><a href="{{ .Permalink }}" class="text-decoration-none card-link">{{ i18n "readMore" }} <i class="fa fa-arrow-circle-right"></i></a></p>
   </div>
 
   <div class="card-footer text-muted small">
@@ -14,7 +14,7 @@
       <div class="col-6 text-left text-nowrap">
         <p class="mb-0"><i class="fa fa-tags mr-1"></i>Tags: {{ delimit .Params.tags ", " }}</p>
       </div>
-      <div class="col-6 text-right">
+      <div class="col-6 text-end">
         <p class="mb-0"><i class="fa fa-calendar mr-1"></i><time {{ .Date.Format "2006-01-02T15:04:05Z07:00" | printf "datetime=%q" | safeHTMLAttr }}>{{ .Date.Format $dateFormat }}</time></p>
       </div>
     </div>

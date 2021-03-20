@@ -4,7 +4,6 @@ title: Not a Number
 theme:
   - hugo-notice
   - hugo-loremipsum
-  - hugo-theme-bootstrap4-blog
   - hugo-redirect
 paginate: 10
 summaryLength: 50
@@ -49,7 +48,7 @@ params:
     Welcome to my repository of non-convergent suite of random letters.
     Here, you may contemplate the variation of 26 letters and some other weird characters.
   header_visible: true
-  date_format: '02 Jan 2006'
+  date_format: "Mon Jan 02, 2006"
   sharingicons: true
   truncate: true
   DefaultContentLanguage: en

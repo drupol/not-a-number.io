@@ -51,24 +51,13 @@
 {{ end }}
 
 {{ define "main" }}
+{{ $dateFormat := default "Mon Jan 2, 2006" (index .Site.Params "date_format") }}
 
-<article class="markdown-body">
-  <header class="mb-2">
-    <h1 class="text-justify">{{ .Title | markdownify }}</h1>
-    {{ partial "post-meta.html" . }}
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+    <p class="blog-post-meta"><time {{ .Date.Format "2006-01-02T15:04:05Z07:00" | printf "datetime=%q" | safeHTMLAttr }}>{{ .Date.Format $dateFormat }}</time> {{ i18n "authoredBy" }} {{ .Params.author | default .Site.Params.author }}{{ if or (.Params.categories) (.Params.tags) }} {{ i18n "postedIn" }} {{ partial "meta-terms.html" . }}{{ end }}</p>
   </header>
-
-  {{ if .Params.images }}
-    <div class="media">
-      <figure class="figure">
-        <img itemprop="image" src="{{ index .Params.images 0 }}" class="figure-img img-fluid rounded mb-0" alt="{{ .Title }}"/>
-        {{ if .Params.image_copyrights }}
-        <figcaption class="figure-caption text-end text-muted">{{ .Params.image_copyrights | markdownify }}</figcaption>
-        {{ end }}
-      </figure>
-    </div>
-  {{ end }}
-
   {{ .Content }}
 
   {{ if .IsTranslated }}
@@ -82,13 +71,22 @@
   </ul>
   {{ end }}
 
-  {{ if (.Site.DisqusShortname) }}
+  {{ if or (ne ($.Param "sharingicons") false) (.Site.DisqusShortname) }}
   <hr>
-
   <footer>
-    {{ template "_internal/disqus.html" . }}
+
+  {{ if (ne ($.Param "sharingicons") false) }}
+  {{ partial "sharing-icons.html" . }}
+  {{ end }}
+
+  {{ if and (.Site.DisqusShortname) (ne .Params.comments false) }}
+  {{ template "_internal/disqus.html" . }}
+  {{ end }}
   </footer>
   {{ end }}
 
-</article>
+</article> <!-- /.blog-post -->
+
 {{ end }}
+
+{{- /* vim: set ts=2 sw=2 et: */}}

@@ -53,10 +53,10 @@
   <div class="card mb-2 text-justify">
     <div class="card-body text-muted bg-light">
       {{ if and (.GitInfo) (.IsPage) }}
-      <p class="small text-right mb-0"><i class="fas fa-code-branch mr-1"></i><a class="text-decoration-none" href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
+      <p class="small text-end mb-0"><i class="fas fa-code-branch mr-1"></i><a class="text-decoration-none" href="https://github.com/drupol/not-a-number.io/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></p>
       {{ end }}
-      <p class="small text-right mb-0">Made with <a class="text-decoration-none" href="https://gohugo.io">Hugo</a>.</p>
-      <p class="small text-right mb-0"><i class="fas fa-copyright"></i> 2017 {{ .Site.Title }}</p>
+      <p class="small text-end mb-0">Made with <a class="text-decoration-none" href="https://gohugo.io">Hugo</a>.</p>
+      <p class="small text-end mb-0"><i class="fas fa-copyright"></i> 2017 {{ .Site.Title }}</p>
     </div>
   </div>
 </aside>

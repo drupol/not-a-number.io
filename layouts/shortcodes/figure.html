@@ -11,7 +11,7 @@ alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plai
 /> <!-- Closing img tag -->
 {{- if .Get "link" }}</a>{{ end -}}
 {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
-<figcaption class="figure-caption text-right">
+<figcaption class="figure-caption text-end">
     {{ with (.Get "title") -}}
     <h4>{{ . }}</h4>
     {{- end -}}

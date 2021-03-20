@@ -72,3 +72,9 @@
 # Related posts
 - id: seeAlso
   translation: "See also"
+
+- id: postedOnDate
+  translation: "Posted on"
+
+- id: lastModified
+  translation: "Modified on"

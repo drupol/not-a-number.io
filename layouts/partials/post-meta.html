@@ -1,21 +1,33 @@
 <span class="text-muted text-justify small">
-  {{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
-  {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
-  <i class="fas fa-calendar mr-1"></i>{{ $datestr | i18n "postedOnDate"}}
-  {{ if ne $datestr $lastmodstr }}
-    &nbsp;{{ $lastmodstr | i18n "lastModified"  }}
+  {{ $lastmodstr := default (i18n "dateFormat") .Site.Params.date_format | .Lastmod.Format }}
+  {{ $datestr := default (i18n "dateFormat") .Site.Params.date_format | .PublishDate.Format }}
+
+  {{ if and (ne .Type "page") (.Date) }}
+    {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
+    {{ if eq .Site.LanguageCode "fr"}}
+      {{ $datestr = delimit ( slice .Date.Day " " (index $.Site.Data.mois (printf "%d" .Date.Month)) " " .Date.Year ) " " }}
+    {{ end }}
+    <i class="fas fa-calendar mr-1"></i>&nbsp;<time>{{ i18n "postedOnDate" }} {{ $datestr }} </time>
   {{ end }}
+
+  {{ if .Lastmod}}
+    {{ if ne $datestr $lastmodstr }}
+    {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
+    &nbsp;|&nbsp;<time>{{ i18n "lastModified" }} {{ $datestr }}</time>
+  {{ end}}
+  {{ end}}
+
   {{ if .Site.Params.readingTime }}
-    &nbsp;|&nbsp;<i class="fas fa-clock mr-1"></i>{{ i18n "readingTime"}}{{ .ReadingTime }}&nbsp;{{ i18n "readTime" }}
+    &nbsp;|&nbsp;<i class="fas fa-clock mr-1"></i>&nbsp;{{ i18n "readingTime"}}{{ .ReadingTime }}&nbsp;{{ i18n "readTime" }}
   {{ end }}
   {{ if .Site.Params.wordCount }}
-    &nbsp;|&nbsp;<i class="fas fa-book mr-1"></i>{{ .WordCount }}&nbsp;{{ i18n "words" }}
+    &nbsp;|&nbsp;<i class="fas fa-book mr-1"></i>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
   {{ end }}
   {{ if not .Site.Params.hideAuthor }}
     {{ if .Params.author }}
-      &nbsp;|&nbsp;<i class="fas fa-user mr-1"></i>{{ .Params.author | safeHTML }}
+      &nbsp;|&nbsp;<i class="fas fa-user mr-1"></i>&nbsp;{{ .Params.author | safeHTML }}
     {{ else }}
-      &nbsp;|&nbsp;<i class="fas fa-user mr-1"></i>{{ .Site.Author.name | safeHTML }}
+      &nbsp;|&nbsp;<i class="fas fa-user mr-1"></i>&nbsp;{{ .Site.Author.name | safeHTML }}
     {{ end }}
   {{ end }}
   {{- if .Site.Params.staticman -}}
