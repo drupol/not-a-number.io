@@ -84,3 +84,6 @@
 
 - id: paginatorNext
   translation: Next
+
+- id: share
+  translation: Share
