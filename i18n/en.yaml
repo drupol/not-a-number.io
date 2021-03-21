@@ -78,3 +78,9 @@
 
 - id: lastModified
   translation: "Modified on"
+
+- id: paginatorPrevious
+  translation: Previous
+
+- id: paginatorNext
+  translation: Next
