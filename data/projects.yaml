@@ -216,10 +216,20 @@
     - reverse-proxy
     - headers
 - title: FPT
-  description: Functional Programming Toolbox 
+  description: Functional Programming Toolbox
   type: PHP Library
   repository: https://github.com/loophp/fpt
   image: https://img.shields.io/packagist/dt/loophp/fpt.svg?style=flat-square
   keywords:
     - functional-programming
     - toolbox
+- title: YAROC
+  description: "YAROC: Yet Another Random.Org Client."
+  type: PHP Library
+  repository: https://github.com/drupol/yaroc
+  image: https://img.shields.io/packagist/dt/drupol/yaroc.svg?style=flat-square
+  keywords:
+    - random
+    - client
+    - random.org
+    - RNG
