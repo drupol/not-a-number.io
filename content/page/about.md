@@ -60,4 +60,4 @@ have its own name in Drupal core thanks to [a patch I did some times ago](https:
 
 Feel free to get in touch with me, check out the links on the sidebar.
 
-My public key fingerprint: `55A6 7A31 0629 AAD1 364A EB22 3266 8369 1C32 50DB`.
+My public key fingerprint: `32FD 39BF C270 CBD0 AE66  193C 9D18 D367 BC2D 0FBB`.
