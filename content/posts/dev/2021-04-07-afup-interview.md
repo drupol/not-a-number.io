@@ -155,10 +155,8 @@ This blog post is the english translation of this interview.
     function is called *binary* and we must succeed in transforming it
     into a function called *unary*.
 
-    ::: {.center}
     *But how is this possible? To be carried out, this function will
     always need 2 arguments!*
-    :::
 
     The *curryfication* of this function would therefore amount to
     creating a new function *unary* which admits the first argument
