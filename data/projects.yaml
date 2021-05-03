@@ -233,3 +233,22 @@
     - client
     - random.org
     - RNG
+- title: Go Unfloc Yourself
+  description: "Adds a specific header to every response to disable Google's usage of your site in it's FLoC tracking method."
+  type: Symfony bundle
+  repository: https://github.com/loophp/go-unfloc-yourself-bundle
+  image: https://img.shields.io/packagist/dt/loophp/go-unflock-yourself-bundle.svg?style=flat-square
+  keywords:
+    - tracking
+    - google
+    - ad
+    - floc
+- title: GrumPHP License Task
+  description: "Provide the license task for GrumPHP."
+  type: PHP Library
+  repository: https://github.com/loophp/grumphp-license-task
+  image: https://img.shields.io/packagist/dt/loophp/grumphp-license-task.svg?style=flat-square
+  keywords:
+    - grumphp
+    - license
+    - plugin
