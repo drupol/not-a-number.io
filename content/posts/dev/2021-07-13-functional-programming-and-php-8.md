@@ -89,7 +89,7 @@ Another example with `array_map`:
 ```php
 
 // Define a simple callback.
-$add1 = static fn (int $value): int => $value + 1;
+$add1 = fn (int $value): int => $value + 1;
 
 // Create a curried version of core PHP function "array_map"
 // (optional parameters are not even taken in account)
@@ -120,12 +120,12 @@ of using *currification* with PHP before version 8.
 The idea is to create simple callbacks that *stiched* together creates
 a new function to filter out even numbers from a list of numbers.
 
-Basically, it's a filter application and [array_filter][14] should do the job.
+Basically, it's a filter application and [`array_filter`][14] should do the job.
 
 ```php
 
 // Define a simple callback
-$odd = static fn (int $value): bool => 1 === $value % 2;
+$odd = fn (int $value): bool => 1 === $value % 2;
 
 // Create a curried version of core PHP function "array_filter"
 // (optional parameters are not even taken in account)
@@ -136,10 +136,9 @@ $filterOdd = $array_filter($odd); // This won't work.
 
 ```
 
-Unfortunately, such example won't work because the signature of the
-`array_filter` is `array_filter(array, callable): array`.
-
-The first argument **must** be an `array`, the second a `callable`.
+Unfortunately, such example won't work because `array_filter`'s signature
+is `array_filter(array, callable): array`. The first argument **must** be
+an `array`, the second a `callable`.
 
 A way to fix this would be to do the following:
 
