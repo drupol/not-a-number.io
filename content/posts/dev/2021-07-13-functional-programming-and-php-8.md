@@ -9,7 +9,7 @@ tags:
 title: Functional programming and PHP 8
 ---
 
-PHP [8.0][0] has been released since half a year now and [8.1][1] is just around the corner.
+PHP [8.0][0] has been released since half a year now and [8.1][0] is just around the corner.
 
 My day to day version of PHP is 7.4 and I like it. It has very nice features and I really
 like the performance improvements that were made.
@@ -319,8 +319,7 @@ so far.
 Using these new stuff from PHP 8 allowed me to remove a bunch of code and I can't wait
 to do that in my other projects!
 
-[0]: http://google.com
-[1]: http://google.com
+[0]: https://php.watch/versions
 [2]: https://github.com/loophp/collection
 [3]: https://event.afup.org/afupday2021-interview-pol-dellaiera/
 [4]: https://www.youtube.com/watch?v=Kp47f8dtqoo
