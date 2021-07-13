@@ -314,7 +314,7 @@ already.
 The [FPT][6] library is being updated to only support [PHP 8][21] and it's going well
 so far.
 
-```35 files changed, 231 insertions(+), 656 deletions(-)```
+``` 37 files changed, 233 insertions(+), 689 deletions(-)```
 
 Using these new stuff from PHP 8 allowed me to remove a bunch of code and I can't wait
 to do that in my other projects!
