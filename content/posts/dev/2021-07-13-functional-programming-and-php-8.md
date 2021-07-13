@@ -160,8 +160,7 @@ $filterOdd([1,2,3]); // [1, 3]
 
 ```
 
-But this implies rewriting from the ground the curried `$array_filter` function
-and we cannot therefore use the `FPT::curry()` method.
+As we cannot use `FPT::curry()`, we have to rewrite the curried `$array_filter` function.
 
 Sometimes parameters needs to be injected from the right to the left, sometimes
 from the left to the right and sometimes they need to be injected in a complete
