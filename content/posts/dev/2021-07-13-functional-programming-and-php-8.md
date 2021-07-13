@@ -290,19 +290,21 @@ $newExplode('a-b-c-d-e'); // ['a', 'b', 'c-d-e']
 
 ## And PHP 8.1 then?
 
-In every mainstream language, we can see that the trend is moving toward functional.
+Lately and in every mainstream programming languages, we can see that the
+trend is slowly moving towards functional programming.
 
 And PHP follow that trend, baby step by baby step.
 
-We can see that there's a couple of RFCs that are coming and are functional
-programming oriented.
+We can see that there's a couple of [RFCs][20] that are coming and are definitely
+functional programming oriented.
 
 The last one is in date is [Partial function application][15] which was sadly not adopted.
-Another one here: https://wiki.php.net/rfc/first_class_callable_syntax
-And another one: https://wiki.php.net/rfc/pipe-operator-v2
+Another one here: [First class callable syntax][19]
+And another one: [Pipe operator][18]
+and the last one (*already in PHP 8.0!*) with the [match expression][17].
 
 PHP 8.1 is around the corner and I guess that the future of PHP has bright days,
-especially if more functional programming features will be added!
+especially if more functional programming features is going to added!
 
 [0]: http://google.com
 [1]: http://google.com
@@ -321,3 +323,7 @@ especially if more functional programming features will be added!
 [14]: https://php.net/array_filter
 [15]: https://wiki.php.net/rfc/partial_function_application
 [16]: https://packagist.org/?query=curry
+[17]: https://wiki.php.net/rfc/match_expression_v2
+[18]: https://wiki.php.net/rfc/pipe-operator-v2
+[19]: https://wiki.php.net/rfc/first_class_callable_syntax
+[20]: https://wiki.php.net/rfc
