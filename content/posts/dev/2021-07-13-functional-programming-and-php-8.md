@@ -306,6 +306,19 @@ and the last one (*already in PHP 8.0!*) with the [match expression][17].
 PHP 8.1 is around the corner and I guess that the future of PHP has bright days,
 especially if more functional programming features is going to added!
 
+## Conclusion
+
+It's been a week that I'm working with PHP 8 and I just don't want to look back
+already.
+
+The [FPT][6] library is being updated to only support [PHP 8][21] and it's going well
+so far.
+
+```35 files changed, 231 insertions(+), 656 deletions(-)```
+
+Using these new stuff from PHP 8 allowed me to remove a bunch of code and I can't wait
+to do that in my other projects!
+
 [0]: http://google.com
 [1]: http://google.com
 [2]: https://github.com/loophp/collection
@@ -327,3 +340,4 @@ especially if more functional programming features is going to added!
 [18]: https://wiki.php.net/rfc/pipe-operator-v2
 [19]: https://wiki.php.net/rfc/first_class_callable_syntax
 [20]: https://wiki.php.net/rfc
+[21]: https://github.com/loophp/fpt/pull/12
