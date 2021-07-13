@@ -103,7 +103,7 @@ $arrayAdd1([1,2,3]); // [2, 3, 4]
 
 ```
 
-Basically using that concept has some benefits listed here:
+Using such concept has some benefits:
 
 * Easier composition of new functions,
 * **D**on't **R**epeat **Y**ourself
@@ -172,7 +172,7 @@ cover all the cases! It's simply not realistic. (*On top of that, we would have
 to also handle the required and optional parameters, and it would be an
 impossible task to cover all the use cases.*)
 
-And this is why PHP libraries implementing a Curry application, you will often
+And this is why [PHP libraries implementing curry and partial applications][16], you will often
 find `CurryLeft` and `CurryRight` to partially solve that problem.
 
 ## After PHP 8
@@ -201,7 +201,7 @@ array_filter(callback: $odd, array: $input); // [1, 3]
 Thanks to that amazing feature, it is now possible to provide a new Curry
 application which is a bit more generic and fit for practically all use-cases.
 
-With that "named parameters" feature, such a new Curry application could provide
+With that "named parameters" feature, such a new *curry* application could provide
 the following features and user experience:
 
 ```php
@@ -230,8 +230,8 @@ In this example, the optional parameters are not taken in account, but we could!
 
 Indeed, some PHP functions have a different amount of parameters and required parameters.
 
-With [`explode`][7], it has 2 required parameters and 3 parameters in total, which means
-that 1 parameter is optional and most probably has a default value.
+With [`explode`][7], it has two required parameters and three parameters in total, which means
+that one parameter is optional and most probably has a default value.
 
 Our new Curry function need to be able to deal with that because such things are very
 common in PHP.
@@ -322,3 +322,4 @@ especially if more functional programming features will be added!
 [13]: https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list
 [14]: https://php.net/array_filter
 [15]: https://wiki.php.net/rfc/partial_function_application
+[16]: https://packagist.org/?query=curry
