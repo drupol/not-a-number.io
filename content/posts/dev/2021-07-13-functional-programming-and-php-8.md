@@ -27,7 +27,7 @@ It started because I wanted to have a better understanding on having custom coll
 in a project, but also to understand the lazy concept that we can meet here and there.
 
 I wrote a [blog post][10] about it, also gave a talk during the [AFUP Days][3], find the talk
-in french [here][4] and the slides [here][5].
+[here][4] and the slides [here][5].
 
 After two years into functional programming with PHP, I noticed that `loophp/collection`
 was using basic and common concepts and I wanted to abstract them in a small library
@@ -37,8 +37,13 @@ a custom Collection. This is how I started to write [FPT][6] (**F**unctional **P
 The goal of that very specific library is to provide a stateless classes of
 functional programming primitives, tailored in and for PHP.
 
-`loophp/collection` is heavily using *currying* and *partial* applications in order to avoid
+`loophp/collection` is heavily using *currying* applications in order to avoid
 creating local variables and optimize things to the maximum.
+
+*Currying* is the process of converting a function that takes multiple arguments into a function
+that takes them one at a time.
+Each time the function is called it only accepts one argument and returns a function that takes
+one argument until all arguments are passed.
 
 However, it turns out that it's not that easy to satisfy every use case when designing them.
 
@@ -109,7 +114,7 @@ Using such concept has some benefits:
 * **D**on't **R**epeat **Y**ourself
 * Reusability,
 * Promote [*function-first, data-last*][12] concept,
-* Foster [tacit programming (point-free)][11].
+* Foster [tacit programming (point-free)][11] and [ETA-reduction][22]
 
 (*I guess I could add more benefits and expand them with a couple of lines
 of explanation, but this is not the purpose of this blog post*)
@@ -170,7 +175,7 @@ cover all the cases! It's simply not realistic. (*On top of that, we would have
 to also handle the required and optional parameters, and it would be an
 impossible task to cover all the use cases.*)
 
-And this is why [PHP libraries implementing curry and partial applications][16], you will often
+And this is why [PHP libraries implementing curry applications][16], you will often
 find `CurryLeft` and `CurryRight` to partially solve that problem.
 
 ## After PHP 8
@@ -340,3 +345,4 @@ to do that in my other projects!
 [19]: https://wiki.php.net/rfc/first_class_callable_syntax
 [20]: https://wiki.php.net/rfc
 [21]: https://github.com/loophp/fpt/pull/12
+[22]: https://wiki.haskell.org/Eta_conversion
