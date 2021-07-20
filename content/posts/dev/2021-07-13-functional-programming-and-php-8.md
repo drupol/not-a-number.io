@@ -87,7 +87,7 @@ The concept of *currification* of a function is a very powerful concept.
 I think this a very important concept in functional programming, if not the most important.
 
 At first it doesn't seems very useful, but the more you use it, the more you'll
-like it and understand the benefit of it.
+like it and understand the benefits.
 
 Another example with `array_map`:
 
@@ -177,6 +177,36 @@ impossible task to cover all the use cases.*)
 
 And this is why [PHP libraries implementing curry applications][16], you will often
 find `CurryLeft` and `CurryRight` to partially solve that problem.
+
+One way to fix it would be to create an extra function that would *flip* the parameters
+of a function as such:
+
+```php
+
+// Define a simple callback
+$odd = fn (int $value): bool => 1 === $value % 2;
+
+// Generic flip/reverse all parameters of a n-ary callable.
+$flip = fn (callable $callable): Closure => fn (...$params): mixed => $callable(...array_reverse($params));
+
+// Create a curried version of core PHP function "array_filter"
+// (optional parameters are not even taken in account)
+$array_filter = FPT::curry()($flip('array_filter'), 2); // The parameter 2 must be added here.
+
+// Create a new function which takes an array as input.
+$filterOdd = $array_filter($odd);
+
+// Filter out even numbers
+$filterOdd([1,2,3]); // [1, 3]
+
+```
+
+This will work but using a generic ```$flip``` function having a variadic parameter ```$params``` prevent
+the automatic detection of the amount of parameters to use in ```FTP::Curry()```, this is the reason
+why we have to add it manually.
+
+This is not the best solution according to me because the relevant code is becoming too much verbose.
+To some extent, it's also not the best performance wise.
 
 ## After PHP 8
 
@@ -310,6 +340,9 @@ and the last one (*already in PHP 8.0!*) with the [match expression][17].
 
 PHP 8.1 is around the corner and I guess that the future of PHP has bright days,
 especially if more functional programming features is going to added!
+
+More functional programming in PHP means a stricter typed code, a bump into reusability,
+lesser code to write, using better concepts, paradigms and design patterns.
 
 ## Conclusion
 
