@@ -342,7 +342,8 @@ PHP 8.1 is around the corner and I guess that the future of PHP has bright days,
 especially if more functional programming features is going to added!
 
 More functional programming in PHP means a stricter typed code, a bump into reusability,
-lesser code to write, using better concepts, paradigms and design patterns.
+lesser code to write, better concepts, paradigms and design patterns where
+the foundations has been proved theoretically by mathematics.
 
 ## Conclusion
 
