@@ -32,6 +32,10 @@ menu:
       url: /cv
       weight: 40
 
+    - name: Sponsor me
+      url: /sponsor
+      weight: 50
+
 author:
   name: "Pol Dellaiera"
 
