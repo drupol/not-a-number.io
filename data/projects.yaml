@@ -252,3 +252,17 @@
     - grumphp
     - license
     - plugin
+- title: WOPI Lib
+  description: "A standard and framework agnostic PHP library to facilitate the implementation of the WOPI protocol."
+  type: PHP Library
+  repository: https://github.com/Champs-Libres/wopi-lib
+  image: https://img.shields.io/packagist/dt/champs-libres/wopi-lib.svg?style=flat-square
+  keywords:
+    - wopi
+- title: WOPI Bundle
+  description: "A bundle providing routes and glue code between Symfony and a WOPI connector."
+  type: Symfony bundle
+  repository: https://github.com/Champs-Libres/wopi-bundle
+  image: https://img.shields.io/packagist/dt/champs-libres/wopi-bundle.svg?style=flat-square
+  keywords:
+    - wopi
