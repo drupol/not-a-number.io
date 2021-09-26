@@ -24,17 +24,18 @@ menu:
       url: /projects
       weight: 20
 
+    - name: Sponsor my work
+      url: /sponsor
+      weight: 30
+
     - name: Bookshelf
       url: /bookshelf
-      weight: 30
+      weight: 40
 
     - name: CV
       url: /cv
-      weight: 40
-
-    - name: Sponsor me
-      url: /sponsor
       weight: 50
+
 
 author:
   name: "Pol Dellaiera"
