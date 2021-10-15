@@ -82,13 +82,10 @@
   </ul>
   {{ end }}
 
-  {{ if (.Site.DisqusShortname) }}
   <hr>
 
   <footer>
-    {{ template "_internal/disqus.html" . }}
+    {{ template "partials/giscus.html" . }}
   </footer>
-  {{ end }}
-
 </article>
 {{ end }}
