@@ -3,7 +3,7 @@ publish = "public"
 command = "hugo -b $URL --gc --minify --themesDir themes/"
 
 [build.environment]
-HUGO_VERSION = "0.88.1"
+HUGO_VERSION = "0.91.1"
 
 [context.deploy-preview]
 command = "hugo -b ${DEPLOY_PRIME_URL} -F"
