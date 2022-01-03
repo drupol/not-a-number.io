@@ -1,0 +1,5 @@
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">
+{{- if and (ge .Level 1) (le .Level 6) }}{{" " -}}
+<a title="Permalink to this headline" class="headerlink text-decoration-none" href="#{{ .Anchor | safeURL }}">{{- .Text | safeHTML -}}</a>
+{{- end -}}
+</h{{ .Level }}>

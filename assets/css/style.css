@@ -31,3 +31,32 @@ blockquote.twitter-tweet a:hover,
 blockquote.twitter-tweet a:focus {
   text-decoration: underline;
 }
+
+h1:hover a, h2:hover a, h3:hover a, h4:hover a {
+  visibility: visible;
+}
+
+.headerlink {
+  position: relative;
+  color: black;
+}
+
+.headerlink:hover {
+  color: black;
+}
+
+.headerlink:hover:before {
+  animation: fade-in .2s both;
+  opacity: 1;
+}
+
+.headerlink:before {
+  animation: fade-out .2s both;
+  content: "#";
+  font-size: 1.1em;
+  font-weight: 400;
+  left: -0.8em;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+}
