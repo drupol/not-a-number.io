@@ -15,9 +15,9 @@ title: Happy new year!
 I'll summarize the previous year using different binoculars or point of view,
 here they are:
 
-* Open-source: Stuff related to open-source contributions
-* Work: Stuff related to work
-* Random: Stuff related to Nixos
+* **Open-source**: Stuff related to open-source contributions
+* **Work**: Stuff related to work
+* **Random**: Stuff related to Nixos
 
 This post might be a bit longer than usual, hang on tight!
 
@@ -98,13 +98,14 @@ is now faster and clearer.
 However in order to do that, I had to make sure that it was possible to compare
 two types of iterables.
 
-There is currently no PHPUnit assertions to assert that two iterables are *the same*.
-This is why a PHPUnit plugin had to be created prior [loophp/phpunit-iterable-assertions][22], which provides PHPUnit assertions to verify
-that two iterables are *the same*.
+However, there is currently no PHPUnit assertions to assert that two iterables
+are *the same*. This is why [loophp/phpunit-iterable-assertions][22] was written.
+This is a PHPUnit plugin which provides new assertions to assert that two
+iterables are *the same*.
 
-Verifying that two iterables are the same means that for each item in both iterables,
-key and value are the same.
-Also, the two iterables should have the same amount of items.
+Asserting that two iterables are the same means that for each item in both
+iterables, key and value are the same.
+Also, the iterables should have the same amount of items.
 
 Creating such a PHPUnit plugin requires the use of a very special iterator, a [`ClosureIterator`][90].
 The `ClosureIterator` iterator is also the heart of [loophp/collection][16].
@@ -113,29 +114,32 @@ package [loophp/iterators][24] containing the "*missing*" PHP iterator and a
 couple of others. That package is now a dependency of [loophp/collection][16]
 and [loophp/phpunit-iterable-assertions][22], no more duplicated code!
 
-While writing that package, I found something very cool.
+While writing that package, I found something very cool that I want to share.
 
 Every PHP developers are (*or should be?*) aware that SPL Generators are not "*rewindable*".
 Once they are consumed, it's not possible to loop over them once again.
 And sometimes it would be very useful if we could!
 
-Think about making database queries, you want to make the query once,
-and loop over the result set more than once, without doing more than
-one query.
+Think about making database queries, in order to go easy on the memory and
+instead of *shoving* the whole resultset containing millions of record
+in an array, you use an Generator, yielding result by result upon user request,
+through a loop. Sadly, you can only iterate it once. If you want to iterate
+a second time, you'll have to make a new query. Which is very bad.
 
-One way to do that would be to cache results in a local cache and use it.
+One way to fix that would be to cache results in a local cache and use it.
 This means the caching implementation must be done in "*userland*".
 Using custom code for that means that it will most probably have an impact
 on performance. Imagine it could be done in PHP, **natively**!
 
-Enter [`CachingIterator`][26], and underrated native PHP iterator.
+Enter [`CachingIterator`][26], and *underrated* native PHP iterator.
 
 Thanks to this core iterator, I built a very fast and stateless
 [`IteratorAggregate`][28] that uses an existing iterator, of any kind and
 do the caching.
 
 In order to compare the performance of that very special iterator,
-I did benchmarks with [phpbench/phpbench][30] against [azjezz/psl][32], a *state-of-the-art* PHP package aiming to ease PHP developers against
+I did benchmarks with [phpbench/phpbench][30] against [azjezz/psl][32],
+a *state-of-the-art* PHP package aiming to ease PHP developers against
 all the kind of inconsistencies in PHP.
 It provides many good things and is actively maintained.
 
@@ -148,7 +152,7 @@ And the benchmarks are amazing, it's blazing fast!
 * [azjezz/psl iterator implementation][34]: Iterator keys **are not** ignored
 
 Of course, results have to be mitigated because the
-[azjezz/psl iterator implementation][34] implements a userland
+[azjezz/psl iterator implementation][34] implements a *userland*
 stateful iterator implementing [`Countable`][36] and [`SeekableIterator`][38]
 interfaces and thus, does a bit more than [my current implementation][40]
 which is based on [`Generator`][42]... which is also stateful, but directly
@@ -187,7 +191,7 @@ released:
 As those package are the first in the PHP world, I was invited to talk about
 these new things during [the COOL Days][64]. It was a very nice experience.
 
-### Random stuff
+### Miscellaneous
 
 *The other day* while working with Symfony, I noticed that the Symfony
 container was not creating aliases for services having interface(s).
