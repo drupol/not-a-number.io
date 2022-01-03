@@ -229,6 +229,18 @@ The future at European Commission is bright and I'm looking forward to it!
 
 ## Random
 
+### This blog
+
+In October, I switched from Disqus to [Giscus][92], a comments system powered by
+GitHub Discussions. Let visitors leave comments and reactions on your website via
+Github.
+
+I love the Github simplicity and as soon as I saw this amazing project, I
+switched to it. It's lighter and faster. Sad things, I lost all the existing
+comments made with the previous comments system.
+
+### My laptop
+
 It's been now a couple of month that I'm using [Nixos][68] as a daily driver.
 
 After being more than 10 years running [Gentoo][70], I decided to give a try to
@@ -332,3 +344,4 @@ I wish you all a super nice and creative year, full of happiness, joy and... cod
 [86]: https://github.com/NixOS/nixpkgs
 [88]: https://en.wikipedia.org/wiki/Monad_(functional_programming)
 [90]: https://github.com/loophp/iterators/blob/main/src/ClosureIterator.php
+[92]: https://giscus.app/
