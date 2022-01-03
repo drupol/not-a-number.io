@@ -32,10 +32,6 @@ blockquote.twitter-tweet a:focus {
   text-decoration: underline;
 }
 
-h1:hover a, h2:hover a, h3:hover a, h4:hover a {
-  visibility: visible;
-}
-
 .headerlink {
   position: relative;
   color: black;
