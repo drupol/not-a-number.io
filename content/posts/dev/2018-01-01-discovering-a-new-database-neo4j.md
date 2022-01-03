@@ -1,6 +1,6 @@
 ---
 date: 2018-01-01
-images: 
+images:
   - /images/rho_ophiucus_widefield.jpeg
 image_copyrights: Image by [Rogelio Bernal Andreo](https://commons.wikimedia.org/wiki/File:Rho_Ophiucus_Widefield.jpg).
 tags:
@@ -35,11 +35,11 @@ It's a lot of data, [a lot of contributions](https://www.wikidata.org/wiki/Speci
 In order to test if I could use those data in a practical way, I built a small script that returns the list of stations that I would pass if I want to go from Station A to Station B.
 A [BFS algorithm](https://en.wikipedia.org/wiki/Breadth-first_search) is used to find the path in between the two stations.
 
-{{< tweet 947045643360628737 >}}
+{{< tweet user="drupol" id="947045643360628737" >}}
 
 Then a reply of this tweet from [Christophe "ikwattro" Willemsen](https://twitter.com/ikwattro), a twitter friend of mine, [lit the spark](https://www.youtube.com/watch?v=LLpIMRowndg).
 
-{{< tweet 947049048602759169 >}}
+{{< tweet user="ikwattro" id="947049048602759169" >}}
 
 To be honest, I was curious because of its tweets and dedication to [Neo4J](https://neo4j.com/) since I know him but I never had the opportunity or the need to use it... until now.
 
@@ -149,7 +149,7 @@ Imagine what we could do if we had an ultra complete Belgian railway dataset... 
 
 And if you start to think deeper about it, you will see that graphs are everywhere in your everyday life. They are a vital part of our online lives, powering everything from social media sites to the retail recommendations on e-shops, online dating sites... and so much more.
 
-I really think that I will start to use it more and more, 
+I really think that I will start to use it more and more,
 
 _I guess overall interest in the graphs will continue to grow. The real-time nature of a graph database makes it an excellent platform for unlocking business value from data relationships, which simply can’t be carried out on traditional SQL or most NoSQL databases.
 The uses and applications for graph databases seem endless, and it’s exciting to consider what innovations they will continue to power as the world unlocks the value of data relationships._ ([source](https://neo4j.com/news/graph-databases-becoming-part-everyday-life/))
