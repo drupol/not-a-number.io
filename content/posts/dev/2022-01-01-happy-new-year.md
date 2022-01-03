@@ -34,7 +34,8 @@ continued learning functional programming by myself.
 One of my personal happiest achievement in 2021 was to understand the
 fundamentals and basics of [monads][88] (*or hopefully I believe I understand them*).
 
-Understanding monads is a goal that I had in mind since quite a long time, without having the time to really understand them.
+Understanding monads is a goal that I had in mind since quite a long time,
+without having the time to really understand them.
 
 There's a lot of literature and videos about monads on the Internet,
 and now that I understand them a bit better, I can safely say that there is
@@ -188,13 +189,13 @@ these new things during [the COOL Days][64]. It was a very nice experience.
 
 ### Random stuff
 
-I was working with Symfony "*the other day*" and I noticed that the Symfony
+*The other day* while working with Symfony, I noticed that the Symfony
 container was not creating aliases for services having interface(s).
 
-At first sight, it seems logic. We don't want to have the container full
-of aliases that we won't never use. However, I like the idea of having
-aliases of my services so I could inject them based on the parameter name
-everywhere without effort.
+That is indeed the default behavior and at first sight, it seems logic.
+We don't want to have the container full of aliases that we won't never use.
+However, I like the idea of having aliases of my services so I could inject
+them based on the parameter name, everywhere and without effort.
 
 I was so curious that I opened [a proposal on Symfony][58] and created a proof
 of concept bundle [loophp/service-alias-autoregister-bundle][60]. The thread
@@ -229,15 +230,15 @@ It's been now a couple of month that I'm using [Nixos][68] as a daily driver.
 After being more than 10 years running [Gentoo][70], I decided to give a try to
 something else.
 
-The main reason is that my laptop, a good old Lenovo x260, was extremely slow
+The main reason is that my laptop, a "*good old*" Lenovo x260, was extremely slow
 on Gentoo. I couldn't find why but I think it was related to the default Gentoo
 kernel which is not really tailored for desktop but merely for servers... and to
-be completely honest, after a couple of bad recompiling the kernel and risking
-to break the bootloader every time was no more an option for me.
+be completely honest, after a couple of bad experiences while recompiling
+the kernel, I was a bit fed up.
 
 So, I was about to order a new Lenovo X13 Gen 2 when I tried Nixos... and I'm
-still using my laptop today. And even if I would
-like to buy the Lenovo X13 gen 2, but it's no more available in Belgium.
+still using my "*good old*" laptop today. And even if I change my mind and
+want to buy the Lenovo X13 gen 2... it's no more available in Belgium.
 
 It turns out that I'm definitely in love with Nixos. It's clean, clear and damn fast.
 
@@ -256,8 +257,8 @@ It provides a development environment for PHP, with all the required tools.
 You can choose with which version of PHP you want to work with from PHP 5.6 to 8.1,
 and a few seconds later, you're ready to hack!
 
-Since Nixos and these tools are built with reproductibility in mind,
-they have to be updated from time to time.
+Since Nixos and these tools are built with reproductibility in mind, the
+"*flake.lock file*" have to be updated from time to time.
 I created a project that allows you to let [Dependabot][78], a Github bot, update
 your project automatically through pull-requests.
 That project is used in all my projects having a [flake file][80], and are updated
