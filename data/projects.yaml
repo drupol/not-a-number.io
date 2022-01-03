@@ -266,3 +266,39 @@
   image: https://img.shields.io/packagist/dt/champs-libres/wopi-bundle.svg?style=flat-square
   keywords:
     - wopi
+- title: PHP Iterators
+  description: "The missing PHP iterators."
+  type: PHP Library
+  repository: https://github.com/loophp/iterators
+  image: https://img.shields.io/packagist/dt/loophp/iterators.svg?style=flat-square
+  keywords:
+    - iterators
+- title: Repository Monadic Helper
+  description: "Monadic Doctrine repositories helper classes and services."
+  type: PHP Library
+  repository: https://github.com/loophp/repository-monadic-helper
+  image: https://img.shields.io/packagist/dt/loophp/repository-monadic-helper.svg?style=flat-square
+  keywords:
+    - doctrine
+    - monad
+- title: PHPUnit Iterable Assertions
+  description: "Iterable assertions for PHPUnit."
+  type: PHP Library
+  repository: https://github.com/loophp/phpunit-iterable-assertions
+  image: https://img.shields.io/packagist/dt/loophp/phpunit-iterable-assertions.svg?style=flat-square
+  keywords:
+    - phpunit
+    - assertions
+    - iterable
+- title: Nix shell
+  description: "Nix shells for PHP development."
+  type: Nix environment
+  repository: https://github.com/loophp/nix-shell
+  image: https://img.shields.io/packagist/dt/loophp/nix-shell.svg?style=flat-square
+  keywords:
+    - shell
+    - nix
+    - php
+
+
+
