@@ -53,10 +53,7 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a {
 .headerlink:before {
   animation: fade-out .2s both;
   content: "#";
-  font-size: 1.1em;
-  font-weight: 400;
-  left: -0.8em;
+  left: -0.75em;
   opacity: 0;
   position: absolute;
-  top: -1px;
 }
