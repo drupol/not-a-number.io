@@ -41,9 +41,7 @@ and now that I understand them a bit better, I can safely say that there is
 actually not any single tutorial that I would recommend to anyone willing to
 learn them, without actually scaring them.
 
-Do you remember the infamous definition:
-
-"A monad is just a monoid in the category of endofunctors" ?
+Do you remember the infamous definition: "*A monad is just a monoid in the category of endofunctors*" ?
 
 Me neither!
 
