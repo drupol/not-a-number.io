@@ -15,9 +15,9 @@ title: Happy new year!
 I'll summarize the previous year using different binoculars or point of view,
 here they are:
 
-* Open-source
-* Work
-* Random
+* Open-source: Stuff related to open-source contributions
+* Work: Stuff related to work
+* Random: Stuff related to Nixos
 
 This post might be a bit longer than usual, hang on tight!
 
@@ -118,7 +118,7 @@ While writing that package, I found something very cool.
 
 Every PHP developers are (*or should be?*) aware that SPL Generators are not "*rewindable*".
 Once they are consumed, it's not possible to loop over them once again.
-And for some reasons, sometimes it would be very useful if we could!
+And sometimes it would be very useful if we could!
 
 Think about making database queries, you want to make the query once,
 and loop over the result set more than once, without doing more than
@@ -232,20 +232,26 @@ After being more than 10 years running [Gentoo][70], I decided to give a try to
 something else.
 
 The main reason is that my laptop, a good old Lenovo x260, was extremely slow
-on Gentoo. I couldn't find the reason. I was about to order a new Lenovo X13 Gen 2
-when I tried Nixos... and I'm still using my x260 nowadays. And even if I would
-like to buy the X13, for some reason, it's not available in Belgium.
+on Gentoo. I couldn't find why but I think it was related to the default Gentoo
+kernel which is not really tailored for desktop but merely for servers... and to
+be completely honest, after a couple of bad recompiling the kernel and risking
+to break the bootloader every time was no more an option for me.
+
+So, I was about to order a new Lenovo X13 Gen 2 when I tried Nixos... and I'm
+still using my laptop today. And even if I would
+like to buy the Lenovo X13 gen 2, but it's no more available in Belgium.
 
 It turns out that I'm definitely in love with Nixos. It's clean, clear and damn fast.
 
-Learning it is not an easy thing because the documentation is not the best part
-of the *distro*, but once you get the hang of it, it's amazing.
+Learning Nixos and the Nix language is not an easy thing because the documentation
+is sadly not the best part of the *distro*, but once you get the hang of it,
+it's amazing.
 
-Everything is done on Github, in one single repository: [NixOS/nixpkgs][86].
+Everything is done on Github, in **one** single repository: [NixOS/nixpkgs][86].
 
 I started to hack my first package "Symfony CLI" for Nixos and I successfully, not
 without pain, submitted [my first Nixos PR][72]. And by the way, at the time the
-Symfony CLI command line tool was closed source and [it has been open-sourced][74]!
+Symfony CLI command line tool was closed source and now [it has been open-sourced][74]!
 
 I also built a tool that I'm now using by default everyday: [loophp/nix-shell][76].
 It provides a development environment for PHP, with all the required tools.
@@ -259,13 +265,14 @@ your project automatically through pull-requests.
 That project is used in all my projects having a [flake file][80], and are updated
 automatically, find it here: [loophp/flake-lock-update-workflow][82].
 
-Flakes is the big upcoming feature for Nixos, it's not fully stable yet, but
+[Flakes][80] is the big upcoming feature for Nixos, it's not fully stable yet, but
 it's pretty usable everyday.
 Just like a `composer.lock` file in a PHP application, flakes create a `flake.lock`
-file in a project. It allows users to be aligned with the software version and
+file in a project. It allows users to be aligned with the software versions and
 make sure that anyone can reproduce the same environment anywhere.
 
-In that state of mind, I published my laptop configuration at [drupol/nixos-x260][84]. If for some reason, my laptop dies, I can spawn a new one
+In that state of mind, I published my laptop configuration at [drupol/nixos-x260][84].
+If for some reason my laptop dies, I can spawn a new one
 with the same configuration in less than one hour. Of course, personal files would
 not be restored, but hopefully I do have backups somewhere else!
 
