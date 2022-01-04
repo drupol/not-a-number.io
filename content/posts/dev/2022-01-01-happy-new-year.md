@@ -195,6 +195,7 @@ released:
 
 * [champs-libres/wopi-lib][54]: A standard and framework agnostic PHP library to facilitate the implementation of the WOPI protocol.
 * [champs-libres/wopi-bundle][56]: A bundle providing routes and glue code between Symfony and a WOPI connector.
+* [drupol/wopi-app][106]: A Symfony application for demo, available at [https://wopi-app.herokuapp.com/][104].
 
 As those package are the first in the PHP world, I was invited to talk about
 these new things during [the COOL Days][64]. It was a very nice experience.
@@ -368,3 +369,5 @@ I wish you all a super nice and creative year, full of happiness, joy and... cod
 [98]: https://twitter.com/BartoszMilewski
 [100]: https://github.com/Crell/aoc2021/
 [102]: https://github.com/BartoszMilewski/AoC2021/
+[104]: https://wopi-app.herokuapp.com/
+[106]: https://github.com/drupol/wopi-app/
