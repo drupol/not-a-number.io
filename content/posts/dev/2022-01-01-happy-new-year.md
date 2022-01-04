@@ -12,14 +12,13 @@ title: Happy new year!
 
 2022 has just started and I'll take the opportunity to summarize what happened in 2021.
 
-I'll summarize the previous year using different binoculars or point of view,
-here they are:
+I will use different binoculars or point of view, here they are:
 
 * **Open-source**: Stuff related to open-source contributions
 * **Work**: Stuff related to work
 * **Random**: Stuff related to Nixos
 
-This post might be a bit longer than usual, hang on tight!
+This post might be a bit longer than usual, fear not and hang on tight!
 
 <!--break-->
 
@@ -64,7 +63,8 @@ from [Marco Perone][8].
 
 I chose this package because Marco is involved into functional programming (FP),
 PHP and has a strong background in mathematics. Besides his great teaching skills
-and patience, he understand not only the code, but most of the mathematical background needed for implementing monads.
+and patience, he understand not only the code, but most of the mathematical
+background needed for implementing monads.
 He's also the organiser of [Functional Fest][10],
 a group of FP enthusiasts hosting regular conferences with awesome
 guests and speakers.
@@ -216,6 +216,16 @@ has been very interesting and it opened my eyes.
 I doubt that this bundle will ever be used now, but I'll leave it on
 Github, maybe it might give ideas to some other people later.
 
+On another subject, I haven't participated to [Advent Of Code][94] because
+of some many things going on at the same time. However, I followed it
+actively. I believe that even without participating it is a very good exercise
+to read the challenges and the different solutions. For my part, I followed
+[Larry Garfield][96] and [Bartosz Milewski][98].
+Larry was using PHP with a complete functional approach while Bartosz used
+Haskell. It was super interesting to see the approach of both developers
+and their solutions to each challenge. Find their Advent Of Code repository
+[here][100] and [here][102] respectively. Hats off!
+
 ## Work
 
 Life's at work has been also affected and working from home is the
@@ -353,3 +363,8 @@ I wish you all a super nice and creative year, full of happiness, joy and... cod
 [88]: https://en.wikipedia.org/wiki/Monad_(functional_programming)
 [90]: https://github.com/loophp/iterators/blob/main/src/ClosureIterator.php
 [92]: https://giscus.app/
+[94]: https://adventofcode.com/2021
+[96]: https://peakd.com/hive-168588/@crell/aoc2021-review
+[98]: https://twitter.com/BartoszMilewski
+[100]: https://github.com/Crell/aoc2021/
+[102]: https://github.com/BartoszMilewski/AoC2021/
