@@ -83,9 +83,17 @@ based on [marcosh/lamphpda][7].
 ### loophp/collection
 
 My other project [loophp/collection][16] is still being actively maintained,
+and I was quite surprised when I saw that the project was about to reach the
+five hundred stars milestone, just before New Year's Eve !
+
+{{< tweet user="drupol" id="1476149761573113856" >}}
+
+And we did it, just in time !
+
+{{< tweet user="drupol" id="1476270775128756225" >}}
+
 The version 6 is currently stable and there is already a couple of things
 going on for the next major release, the version 7.
-
 Besides the usual new features, optimizations and bugfixes, the most important
 change for me is that I got rid of PHPSpec and completely replaced it with
 [PHPUnit][18], see the monster [PR][20].
