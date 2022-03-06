@@ -12,7 +12,7 @@
       packages = {
         hugo = pkgs.stdenvNoCC.mkDerivation rec {
           name = "hugo-dev-${pkgs.hugo.version}";
-          buildInputs = [ pkgs.hugo ];
+          buildInputs = [ pkgs.hugo pkgs.pandoc ];
         };
       };
       defaultPackage = packages.hugo;
