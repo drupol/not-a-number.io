@@ -16,22 +16,8 @@
       hugo-server = pkgs.writeScriptBin "hugo-server" ''
         ${pkgs.hugo}/bin/hugo server --enableGitInfo --forceSyncStatic -F
       '';
-    in {
-      # nix shell
-      packages = {
-        default = pkgs.buildEnv {
-          name = "hugo-dev-${pkgs.hugo.version}";
 
-          paths = [
-            pkgs.hugo
-            pkgs.pandoc
-          ];
-        };
-      };
-
-      # nix develop
-      devShells = {
-        default = pkgs.buildEnv {
+      dev-env = pkgs.buildEnv {
           name = "hugo-dev-${pkgs.hugo.version}";
 
           paths = [
@@ -40,8 +26,18 @@
             pkgs.pandoc
           ];
         };
+    in {
+      # nix shell
+      packages = {
+        default = dev-env;
       };
 
+      # nix develop
+      devShells = {
+        default = dev-env;
+      };
+
+      # nix run
       apps = {
         default = {
           type = "app";
