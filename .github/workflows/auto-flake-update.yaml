@@ -1,0 +1,11 @@
+name: 'Auto update flake lock file'
+
+on:
+  # Uncomment this to enable manuel triggering
+  # workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1' # Every Monday at midnight, see https://crontab.guru/ for more examples
+
+jobs:
+  AutoUpdateFlakeLock:
+    uses: loophp/flake-lock-update-workflow/.github/workflows/auto-upgrade-flakes.yaml@main
