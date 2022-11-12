@@ -34,7 +34,14 @@
 
       # nix develop
       devShells = {
-        default = dev-env;
+        default = pkgs.stdenvNoCC.mkDerivation {
+          name = "hugo-devshell";
+          buildInputs = [
+            hugo-server
+            pkgs.hugo
+            pkgs.pandoc
+          ];
+        };
       };
 
       # nix run

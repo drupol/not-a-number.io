@@ -1,3 +1,4 @@
+/.direnv/
 /public/
 /.idea/
 /.hugo_build.lock
