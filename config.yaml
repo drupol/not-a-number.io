@@ -7,7 +7,7 @@ theme:
   - hugo-redirect
 paginate: 10
 summaryLength: 50
-googleAnalytics: UA-97356033-1
+googleAnalytics: G-7PNPX0VZXC
 disqusShortname: drupol
 enableGitInfo: true
 permalinks:
