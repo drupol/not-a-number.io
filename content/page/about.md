@@ -31,8 +31,7 @@ them.
 
 I'm fond of graphical visualisations of data, my favorites are the one
 from [Jason Davies] ([His bl.ocks]) and [Mike Bostock] ([His
-bl.ocks][1]). I also really like the [Nick Berry's blog], I can't stop
-sharing each of his [tweet].
+bl.ocks][1]). I also really like the sorely missed [Nick Berry's blog].
 
 "*The best is the enemy of the good*", therefore my dream workplace
 would be to work on open-source projects with a team of true,
@@ -72,6 +71,5 @@ My public key fingerprint:
   [Mike Bostock]: https://bost.ocks.org/mike/
   [1]: https://bl.ocks.org/mbostock
   [Nick Berry's blog]: http://datagenetics.com/
-  [tweet]: https://twitter.com/datagenetics
   [OpenStreetMap]: https://www.openstreetmap.org/
   [a patch I did some times ago]: https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_system_theme_engine_info/7.x
