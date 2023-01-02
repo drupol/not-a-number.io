@@ -1,3 +1,9 @@
+- title: "Homo Deus"
+  isbn: "9789400407237"
+  purchase: 2022
+- title: "Computer Networking: A Top-Down Approach"
+  isbn: "9780133594140"
+  purchase: 2022
 - title: "Learn You a Haskell for Great Good!: A Beginner's Guide"
   isbn: "9781593272838"
   purchase: 2020
