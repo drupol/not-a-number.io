@@ -58,3 +58,6 @@ params:
   truncate: true
   DefaultContentLanguage: en
   github: drupol
+
+ignoreErrors:
+  - "error-remote-getjson"
