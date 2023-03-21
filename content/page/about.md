@@ -5,71 +5,64 @@ images:
   - images/logo.png
 draft: false
 ---
-My job title is *Senior analyst* but it means all and nothing at the
-same time.
 
-More specifically, I'm a curious guy who loves his work and likes to
-discover new things related to I.T.: *I do things*.
+As a highly curious individual, I am passionate about my work in Information Technology (IT) and enjoy discovering new
+aspects of the field. Currently, I am employed at [European Commission] in Brussels, where I am always eager to tackle
+new and exciting challenges.
 
-I currently work at [the European Commission] in Brussels and I'm always
-ready for new and exciting challenges.
+As a Linux and FreeBSD enthusiast, I have worked as a full-stack developer with over a decade of experience in PHP. My
+journey with Drupal began as a hobby, and I progressed to being a [contributor], service provider, and eventually, a
+core maintainer.
 
-Linux and Freebsd aficionado, full stack developer, I used to work with
-PHP since more than 10 years. I started with Drupal. First as a hobby,
-then as a contributor, then as a service provider and finally as a core
-maintainer.
+In 2019, I [made the decision to resign as a Drupal core maintainer] and reorient my career towards working with
+Symfony. My focus now lies on developing packages that are framework-independent. You can follow my work on [Packagist],
+[Drupol's Github] or [Loophp's Github].
 
-In 2019, after [resigning from being Drupal core maintainer], I
-re-oriented my career and I'm now working with Symfony instead. I will
-be working more on packages that are not tied to any framework. You can
-follow my work on [Packagist] or [Drupol's Github] or [Loophp's Github].
+My love for Science, Technology, Engineering, and Mathematics (STEM) is rooted in a deep fascination for Mathematics,
+especially numbers and how nature utilizes them. Data visualization is another passion of mine, with my favorite works
+coming from [Jason Davies] and [Mike Bostock]. I also hold great admiration for the late [Nick Berry's blog].
 
-I love {{< abbr title="Science, Technology, Engineering, Mathematics" >}}
-STEM{{< /abbr >}} a lot and especially Mathematics,
-that explains why I'm so fascinated by numbers and the way Nature uses
-them.
+I envision my ideal workplace as one that fosters open-source projects and is filled with passionate, open-minded,
+non-paranoid and friendly teammates.
 
-I'm fond of graphical visualisations of data, my favorites are the one
-from [Jason Davies] ([His bl.ocks]) and [Mike Bostock] ([His
-bl.ocks][1]). I also really like the sorely missed [Nick Berry's blog].
+Although I harbor no regrets regarding my career choices, reflecting on the possibility of starting anew presents an
+interesting thought experiment. If given the chance to restart my career, I would undoubtedly immerse myself in the
+study of Mathematics and Information Technology (IT). Both disciplines share a deep connection that is particularly
+evident in programming, where mathematical concepts underpin numerous computational processes. By delving deeper into
+these fields, I could further enhance my programming skills and uncover novel approaches to problem-solving.
 
-"*The best is the enemy of the good*", therefore my dream workplace
-would be to work on open-source projects with a team of true,
-passionate, open-minded, non-paranoid and friendly people.
+Additionally, I have always been drawn to the prospect of working in an academic environment, where the pursuit of
+knowledge and the exchange of ideas are the driving forces. As a university lecturer or researcher, I could share my
+passion for Mathematics and IT with students, inspiring them to explore and innovate within these exciting domains. I
+would also have the opportunity to engage in continuous learning, collaborating with fellow academics to advance our
+collective understanding of these subjects.
 
-I don't have any regret in my career at all, but if I had a chance to
-restart it, I would most probably study Mathematics and I.T. in depth
-and still do programming, as those two sciences are tightly linked
-together. I would also have liked to work in a university and teach
-students. I kinda miss the school atmosphere.
+There is something truly special about the atmosphere in a university setting. The vibrancy of intellectual curiosity,
+the sense of community, and the camaraderie among both students and faculty members create an environment that fosters
+growth and collaboration. I cannot help but feel nostalgic for those days when I was immersed in academia, surrounded by
+the energy and enthusiasm of those committed to the pursuit of knowledge.
 
-Besides my work and the geek stuff, I'm currently fulfilling a
-childhood dream, I'm learning music and piano! I love photography and I
-learned by myself most of the secrets of a reflex camera, just for fun.
-I do swim a lot and I also really like riding my mountain bike. Biking
-is also one of the reason why I'm an heavy user and contributor of
-[OpenStreetMap] since more than a decade.
+Outside of my professional and technical interests, I am currently living a childhood dream by learning music and piano.
+I also enjoy photography, having self-taught the intricacies of a reflex camera. In addition, I am an avid swimmer and
+mountain biker, which has led to my extensive involvement with [OpenStreetMap] as a user and contributor for over a
+decade.
 
-Oh, and I couldn't finish this bio without having a word about my cats
-Izumi & Nakano! They are the happiest cats in the world and Izumi is the
-first cat to have its own name in Drupal core thanks to [a patch I did
-some times ago].
+Lastly, I must mention my beloved cats, Izumi and Nakano. They are the happiest felines in the world, with Izumi even
+having a mention in Drupal core, thanks to [a patch] I submitted some time ago.
 
-Feel free to get in touch with me, check out the links on the sidebar.
+Please feel free to reach out and connect with me via the links in the sidebar.
 
-My public key fingerprint:
-`85F3 72DF 4AF3 EF13 ED34  72A3 0AAF 2901 E804 0715`.
+My public key fingerprint: 85F3 72DF 4AF3 EF13 ED34 72A3 0AAF 2901 E804 0715.
 
-  [the European Commission]: https://ec.europa.eu
-  [a couple of modules]: https://drupal.org/u/pol
-  [resigning from being Drupal core maintainer]: https://www.drupal.org/project/drupal/issues/3089877
-  [Packagist]: https://packagist.org/packages/drupol/
-  [Drupol's Github]: https://github.com/drupol/
-  [Loophp's Github]: https://github.com/loophp/
-  [Jason Davies]: https://www.jasondavies.com/
-  [His bl.ocks]: https://bl.ocks.org/jasondavies
-  [Mike Bostock]: https://bost.ocks.org/mike/
-  [1]: https://bl.ocks.org/mbostock
-  [Nick Berry's blog]: http://datagenetics.com/
-  [OpenStreetMap]: https://www.openstreetmap.org/
-  [a patch I did some times ago]: https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_system_theme_engine_info/7.x
+[european commission]: https://ec.europa.eu
+[contributor]: https://drupal.org/u/pol
+[made the decision to resign as a drupal core maintainer]: https://www.drupal.org/project/drupal/issues/3089877
+[packagist]: https://packagist.org/packages/drupol/
+[drupol's github]: https://github.com/drupol/
+[loophp's github]: https://github.com/loophp/
+[jason davies]: https://www.jasondavies.com/
+[mike bostock]: https://bost.ocks.org/mike/
+[nick berry's blog]: http://datagenetics.com/
+[openstreetmap]: https://www.openstreetmap.org/
+[a patch]:
+  https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_system_theme_engine_info/7.x
