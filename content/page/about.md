@@ -14,16 +14,28 @@ As a Linux and FreeBSD enthusiast, I have worked as a full-stack developer with 
 journey with Drupal began as a hobby, and I progressed to being a [contributor], service provider, and eventually, a
 core maintainer.
 
-In 2019, I [made the decision to resign as a Drupal core maintainer] and reorient my career towards working with
-Symfony. My focus now lies on developing packages that are framework-independent. You can follow my work on [Packagist],
-[Drupol's Github] or [Loophp's Github].
+In 2019, after careful consideration and a desire for new challenges, I [made the decision to resign as a Drupal core
+maintainer] and shifted my career focus towards working with Symfony, a popular PHP web application framework. This
+transition has allowed me to concentrate on creating framework-independent packages, broadening the scope of my work and
+fostering innovation in the field of software development.
+
+My passion for functional programming has also led me to become an avid user and contributor to the [NixOS] operating
+system. NixOS is a unique, Linux-based operating system built on top of the Nix package manager, which offers several
+advantages, such as customizable configurations and a strong focus on reproducibility. By contributing to the NixOS
+community, I strive to enhance the system's capabilities and help make it an even more powerful and flexible solution
+for developers and users alike.
+
+If you are interested in following my work or staying up-to-date with my latest projects and contributions, I invite you
+to check out my profiles on [Packagist], [Drupol's Github], [Loophp's Github] and [code.europa.eu]. These platforms
+showcase my commitment to developing high-quality, versatile software solutions and my ongoing involvement in the
+open-source community, where collaboration and knowledge-sharing are highly valued.
 
 My love for Science, Technology, Engineering, and Mathematics (STEM) is rooted in a deep fascination for Mathematics,
 especially numbers and how nature utilizes them. Data visualization is another passion of mine, with my favorite works
 coming from [Jason Davies] and [Mike Bostock]. I also hold great admiration for the late [Nick Berry's blog].
 
-I envision my ideal workplace as one that fosters open-source projects and is filled with passionate, open-minded,
-non-paranoid and friendly teammates.
+I envision my ideal workplace as one that fosters **open-source projects** and is filled with **passionate**,
+**open-minded**, **non-paranoid** and **friendly** teammates.
 
 Although I harbor no regrets regarding my career choices, reflecting on the possibility of starting anew presents an
 interesting thought experiment. If given the chance to restart my career, I would undoubtedly immerse myself in the
@@ -52,7 +64,7 @@ having a mention in Drupal core, thanks to [a patch] I submitted some time ago.
 
 Please feel free to reach out and connect with me via the links in the sidebar.
 
-My public key fingerprint: 85F3 72DF 4AF3 EF13 ED34 72A3 0AAF 2901 E804 0715.
+My public key fingerprint: `85F3 72DF 4AF3 EF13 ED34 72A3 0AAF 2901 E804 0715`.
 
 [european commission]: https://ec.europa.eu
 [contributor]: https://drupal.org/u/pol
@@ -66,3 +78,5 @@ My public key fingerprint: 85F3 72DF 4AF3 EF13 ED34 72A3 0AAF 2901 E804 0715.
 [openstreetmap]: https://www.openstreetmap.org/
 [a patch]:
   https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_system_theme_engine_info/7.x
+[nixos]: https://nixos.org
+[code.europa.eu]: https://code.europa.eu/pol/
