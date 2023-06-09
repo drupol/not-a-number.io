@@ -65,6 +65,9 @@ decade.
 Lastly, I must mention my beloved cats, Izumi and Nakano. They are the happiest felines in the world, with Izumi even
 having a mention in Drupal core, thanks to [a patch] I submitted some time ago.
 
+Please feel free to reach out and connect with me via the links in the sidebar, my public key fingerprint is:
+`85F3 72DF 4AF3 EF13 ED34 72A3 0AAF 2901 E804 0715`.
+
 [the European Commission]: https://ec.europa.eu
 [European Commission]: https://ec.europa.eu
 [contributor]: https://drupal.org/u/pol
