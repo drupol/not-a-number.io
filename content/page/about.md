@@ -6,8 +6,7 @@ images:
 draft: false
 ---
 
-My job title is *Senior analyst* but it means all and nothing at the
-same time.
+My job title is _Senior analyst_ but it means all and nothing at the same time.
 
 As a highly curious individual, I am passionate about my work in Information Technology (IT) and enjoy discovering new
 aspects of the field. Currently, I am employed at [European Commission] in Brussels, where I am always eager to tackle
@@ -26,7 +25,9 @@ My passion for functional programming has also led me to become an avid user and
 system. NixOS is a unique, Linux-based operating system built on top of the Nix package manager, which offers several
 advantages, such as customizable configurations and a strong focus on reproducibility. By contributing to the NixOS
 community, I strive to enhance the system's capabilities and help make it an even more powerful and flexible solution
-for developers and users alike.
+for developers and users alike. Recently, I've been promoted [NixOS committer][nixpkgs committer]. The [NixOS
+repository][NixOS repository] being one of the most active repository on Github, it's a great honor for me to be part of
+it.
 
 If you are interested in following my work or staying up-to-date with my latest projects and contributions, I invite you
 to check out my profiles on [Packagist], [Drupol's Github], [Loophp's Github] and [code.europa.eu]. These platforms
@@ -46,15 +47,10 @@ study of Mathematics and Information Technology (IT). Both disciplines share a d
 evident in programming, where mathematical concepts underpin numerous computational processes. By delving deeper into
 these fields, I could further enhance my programming skills and uncover novel approaches to problem-solving.
 
-Besides my work and the geek stuff, I'm currently fulfilling a
-childhood dream, I'm learning music and piano! I love photography and I
-learned by myself most of the secrets of a reflex camera, just for fun.
-I do swim a lot and I also really like riding my mountain bike. Biking
-is also one of the reason why I'm an heavy user and contributor of
-[OpenStreetMap] since more than a decade. Recently, I've been promoted [NixOS
-committer][nixpkgs committer]. The [NixOS repository][NixOS repository] being
-one of the most active repository on Github, it's a great honor for me to be
-part of it.
+Besides my work and the geek stuff, I'm currently fulfilling a childhood dream, I'm learning music and piano! I love
+photography and I learned by myself most of the secrets of a reflex camera, just for fun. I do swim a lot and I also
+really like riding my mountain bike. Biking is also one of the reason why I'm an heavy user and contributor of
+[OpenStreetMap] since more than a decade.
 
 There is something truly special about the atmosphere in a university setting. The vibrancy of intellectual curiosity,
 the sense of community, and the camaraderie among both students and faculty members create an environment that fosters
@@ -70,8 +66,10 @@ Lastly, I must mention my beloved cats, Izumi and Nakano. They are the happiest 
 having a mention in Drupal core, thanks to [a patch] I submitted some time ago.
 
 [the European Commission]: https://ec.europa.eu
+[European Commission]: https://ec.europa.eu
+[contributor]: https://drupal.org/u/pol
 [a couple of modules]: https://drupal.org/u/pol
-[resigning from being Drupal core maintainer]: https://www.drupal.org/project/drupal/issues/3089877
+[made the decision to resign as a drupal core maintainer]: https://www.drupal.org/project/drupal/issues/3089877
 [Packagist]: https://packagist.org/packages/drupol/
 [Drupol's Github]: https://github.com/drupol/
 [Loophp's Github]: https://github.com/loophp/
@@ -81,6 +79,9 @@ having a mention in Drupal core, thanks to [a patch] I submitted some time ago.
 [1]: https://bl.ocks.org/mbostock
 [Nick Berry's blog]: http://datagenetics.com/
 [OpenStreetMap]: https://www.openstreetmap.org/
-[a patch I did some times ago]: https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_system_theme_engine_info/7.x
+[a patch]:
+  https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_system_theme_engine_info/7.x
 [nixpkgs committer]: https://github.com/orgs/NixOS/teams/nixpkgs-committers?query=drupol
 [NixOS repository]: https://github.com/NixOS
+[nixos]: https://nixos.org
+[code.europa.eu]: https://code.europa.eu/pol/
