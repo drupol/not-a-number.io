@@ -25,6 +25,7 @@
             hugo-server
             pkgs.hugo
             pkgs.pandoc
+            (pkgs.aspellWithDicts (d: [d.fr d.en d.en-science d.en-computers]))
           ];
         };
       };
