@@ -52,7 +52,7 @@ Here are some of the projects where I've requested the addition of a `composer.l
 - [bobthecow/psysh#767](https://github.com/bobthecow/psysh/issues/767)
 - [PHP-CS-Fixer/PHP-CS-Fixer#7590](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues/7590)
 
-If you've appreciate my contribution, I warmly invite you to consider
+If you've appreciate my open-sourcecontributions, I warmly invite you to consider
 [sponsoring my work](https://github.com/sponsors/drupol).
 
 During this year, I've been invited to gave a talk at the [International PHP conference](https://phpconference.com/) in
