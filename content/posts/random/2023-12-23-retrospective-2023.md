@@ -61,9 +61,9 @@ of Nix in the PHP ecosystem
 Overall, 2023 has been filled with positive experiences. I've had the pleasure of meeting for the first time wonderful
 people at SymfonyCon Brussels, as these photos attest.
 
-{{< figure src="/images/PXL_20231207_115848241-01.jpeg" caption="From right to left: [Sebastian](https://github.com/sebastian/), [Jordi](https://github.com/seldaek/), Stephan, [Nils](https://github.com/naderman/), [Theo](https://github.com/tfidry/) and [Ondřej](https://github.com/ondrejmirtes)" width=1024 >}}
+{{< figure src="/images/PXL_20231207_115848241-01.jpeg" caption="From right to left: [Sebastian](https://github.com/sebastianbergmann), [Jordi](https://github.com/seldaek), Stephan, [Nils](https://github.com/naderman), [Theo](https://github.com/theofidry) and [Ondřej](https://github.com/ondrejmirtes)" width=1024 >}}
 
-{{< figure src="/images/PXL_20231208_123132050.jpg" caption="[Toon](https://github.com/veewee/) and me" width=1024 >}}
+{{< figure src="/images/PXL_20231208_123132050.jpg" caption="[Toon](https://github.com/veewee) and me" width=1024 >}}
 
 Finally meeting people I've interacted with through GitHub issues and pull requests was a highlight. The relational
 aspect of the conference was incredibly engaging, perhaps even more so than the talks themselves.
