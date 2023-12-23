@@ -63,10 +63,10 @@ people at SymfonyCon Brussels, as these photos attest.
 
 {{< figure src="/images/PXL_20231207_115848241-01.jpeg" caption="From right to left: [Sebastian](https://github.com/sebastianbergmann), [Jordi](https://github.com/seldaek), Stephan, [Nils](https://github.com/naderman), [Theo](https://github.com/theofidry) and [Ondřej](https://github.com/ondrejmirtes)" width=1024 >}}
 
-{{< figure src="/images/PXL_20231208_123132050.jpg" caption="[Toon](https://github.com/veewee) and me" width=1024 >}}
-
 Finally meeting people I've interacted with through GitHub issues and pull requests was a highlight. The relational
 aspect of the conference was incredibly engaging, perhaps even more so than the talks themselves.
+
+{{< figure src="/images/PXL_20231208_123132050.jpg" caption="[Toon](https://github.com/veewee) and me" width=1024 >}}
 
 2023 was also a year of significant change for me. I deleted my Twitter and Reddit accounts, slowly trying to
 significantly reduce my online presence and footprint. I've grown fond of using Lemmy and Mastodon, which I find to be
@@ -79,31 +79,34 @@ Cats has been part of my life since my childhood, when I was living with my pare
 mostly house cats, we were in love with Siamese and their very distinctive character. When I moved in the first time, I
 was living alone, I was missing the presence of a cat, so I wanted to adopt one, but since the house didn't had a
 garden, I didn't do it. Then I moved into an appartement, still no garden. However, in 2014, a twist of fate led me to
-an advertisement for an [Havana brown](https://en.wikipedia.org/wiki/Havana_Brown). I visited the breeder out of mere
+an advertisement for an [Havana Brown](https://en.wikipedia.org/wiki/Havana_Brown). I visited the breeder out of mere
 curiosity, with no intention of bringing home a cat. The house was lively with dogs, other cats, and children. Amidst
 the chaos, I noticed a small, furry creature serenely sitting in front of the fireplace, observing its surroundings with
-keen interest. When the owner placed the little one in my arms, Izumi gazed up at me, and in that moment, I knew he was
-meant to be mine.
+indifferent interest. When the owner placed the little one in my arms, Izumi gazed up at me, and in that moment, I knew
+he was meant to be mine.
 
 {{< figure src="/images/2014-03-12.jpg" caption="Izumi, the first days at home" width=1024 >}}
 
-Izumi was no ordinary cat. He was profoundly attached to me, following me everywhere, sharing my bed, and eagerly
-awaiting my return home. He enjoyed car rides and could recognize familiar destinations. He was more than a pet. He was
-my shadow, my friend, my confident. He was always there in the most difficult moments of my life, his wisdow was
-something I'll never forget. Time has passed, I moved in and out and since then I moved into a house with a garden and
-... a house without at least two cats is not a house! So, I adopted Nakano, a friend for Izumi. They became inseparable.
+Izumi was no ordinary cat. He was profoundly attached to me, following me everywhere, talking with me, sharing my bed
+(_at least when I was single_), and eagerly awaiting my return home, the bond between us was strong. He enjoyed car
+rides and could recognize familiar destinations. He was more than a pet. He was my shadow, my friend, my confident. He
+was always there in the most difficult moments of my life, his wisdow was something I'll never forget. Time has passed,
+I moved in and out and since then I moved into a house with a garden and what would be a house with a garden without at
+least two cats? So, I adopted Nakano, a friend for Izumi. After a week of grimacing, they became totally inseparable.
 
 {{< figure src="/images/IMG_20180107_122839.jpg" caption="Izumi and Nakano" width=1024 >}}
 
 In mid-December, Izumi began to show signs of illness. I promptly took him to the vet, only to receive the
 heart-wrenching news that his kidneys were irreparably damaged. The shock and devastation hit me suddenly... everything
 unfolded so quickly. The vet's prognosis was grim, indicating that he wouldn't see the new year. I was totally
-unprepared. Unprepared for the loss, unprepared to see him in pain.
+unprepared. Unprepared to see him in pain, unprepared to say goodbye. We were and still are devastated.
 
 He underwent treatment at the vet for three days, connected to a drip, but his condition showed no signs of improvement.
-With a heavy heart, I decided to bring him home, to spend his final days in a familiar and loving environment. The
-uncertainty of how much time he has left weighs on me, but I am committed to ensuring his remaining time is as
-comfortable and serene as possible.
+With a heavy heart, I decided to bring him home, to spend his last days in a familiar and loving environment. The
+uncertainty of how much time he has left weighs on me, it's unfair, but I am committed to ensuring his remaining time is
+as comfortable and serene as possible.
+
+{{< center >}}
 
 ```
 Rest in peace, gentle companion of my way,
@@ -114,7 +117,12 @@ And in a realm where all spirits are free,
 I hold onto the hope, we will meet again, just wait and see.
 ```
 
+{{< /center >}}
+
+{{< figure src="/images/PXL_20230906_162735514.jpg" caption="Izumi" width=1024 >}}
+
 I am grateful for the time I've had with Izumi. He has been a constant source of wisdom, joy and comfort. I don't know
-how much time we have left together, but all I know is that my end of year will not be as joyful as I had hoped.
+how much time we have left together, but all I know is that my end of year will not be as joyful as I had hoped. It
+hurts so much...
 
 See you next year... maybe.
