@@ -98,8 +98,8 @@ meant to be mine.
 Izumi was no ordinary cat. He was profoundly attached to me, following me everywhere, sharing my bed, and eagerly
 awaiting my return home. He enjoyed car rides and could recognize familiar destinations. He was more than a pet. He was
 my shadow, my friend, my confident. He was always there in the most difficult moments of my life, his wisdow was
-something I'll never forget.Time has passed, I moved and since then I moved into a house with a garden and ... a house
-without at least two cats is not a house! So, I adopted Nakano, a friend for Izumi. They became inseparable.
+something I'll never forget. Time has passed, I moved in and out and since then I moved into a house with a garden and
+... a house without at least two cats is not a house! So, I adopted Nakano, a friend for Izumi. They became inseparable.
 
 ![Izumi and Nakano](/images/IMG_20180107_122839.jpg)
 
