@@ -13,9 +13,7 @@ filled with numerous projects and a wealth of learning opportunities.
 
 Throughout the year, I've contributed to 38 open-source projects, resulting in 357 merged pull requests.
 
-![oss-contribs](/images/retrospective-2023-stats.svg)
-
-(the statistics were made using [oss-contribs](https://github.com/staabm/oss-contribs))
+{{< figure src="/images/retrospective-2023-stats.svg" caption="the statistics were made using [oss-contribs](https://github.com/staabm/oss-contribs)" width=1024 >}}
 
 I am quite pleased with the volume of contributions I've made. There's been a significant increase in merged PRs since I
 began contributing to NixOS, a Linux distribution I strongly recommend exploring if you haven't already.
@@ -63,13 +61,9 @@ of Nix in the PHP ecosystem
 Overall, 2023 has been filled with positive experiences. I've had the pleasure of meeting for the first time wonderful
 people at SymfonyCon Brussels, as these photos attest.
 
-![SymfonyCon Brussels](/images/PXL_20231207_115848241-01.jpeg)
+{{< figure src="/images/PXL_20231207_115848241-01.jpeg" caption="From right to left: [Sebastian](https://github.com/sebastian/), [Jordi](https://github.com/seldaek/), Stephan, [Nils](https://github.com/naderman/), [Theo](https://github.com/tfidry/) and [Ondřej](https://github.com/ondrejmirtes)" width=1024 >}}
 
-(_Image: Sebastian, Jordi, Stephan, Nils, Theo, Ondrej_)
-
-![SymfonyCon Brussels](/images/PXL_20231208_123132050.jpg)
-
-(_Image: Toon and me_)
+{{< figure src="/images/PXL_20231208_123132050.jpg" caption="[Toon](https://github.com/veewee/) and me" width=1024 >}}
 
 Finally meeting people I've interacted with through GitHub issues and pull requests was a highlight. The relational
 aspect of the conference was incredibly engaging, perhaps even more so than the talks themselves.
@@ -91,9 +85,7 @@ the chaos, I noticed a small, furry creature serenely sitting in front of the fi
 keen interest. When the owner placed the little one in my arms, Izumi gazed up at me, and in that moment, I knew he was
 meant to be mine.
 
-![Izumi - the first days](/images/2014-03-12.jpg)
-
-(_Image: Izumi, the first days at home_)
+{{< figure src="/images/2014-03-12.jpg" caption="Izumi, the first days at home" width=1024 >}}
 
 Izumi was no ordinary cat. He was profoundly attached to me, following me everywhere, sharing my bed, and eagerly
 awaiting my return home. He enjoyed car rides and could recognize familiar destinations. He was more than a pet. He was
@@ -101,9 +93,7 @@ my shadow, my friend, my confident. He was always there in the most difficult mo
 something I'll never forget. Time has passed, I moved in and out and since then I moved into a house with a garden and
 ... a house without at least two cats is not a house! So, I adopted Nakano, a friend for Izumi. They became inseparable.
 
-![Izumi and Nakano](/images/IMG_20180107_122839.jpg)
-
-(_Image: Izumi and Nakano_)
+{{< figure src="/images/IMG_20180107_122839.jpg" caption="Izumi and Nakano" width=1024 >}}
 
 In mid-December, Izumi began to show signs of illness. I promptly took him to the vet, only to receive the
 heart-wrenching news that his kidneys were irreparably damaged. The shock and devastation hit me suddenly... everything
