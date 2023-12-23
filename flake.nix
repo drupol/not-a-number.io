@@ -1,42 +1,42 @@
 {
-  description = "Hugo dev";
+  description = "Hugo website ";
 
   inputs = {
-    nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
-    flake-utils.url = github:numtide/flake-utils;
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    systems.url = "github:nix-systems/default";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-    let
-      pkgs = import nixpkgs {
-        inherit system;
-      };
+  outputs = inputs @ { self, flake-parts, ... }: flake-parts.lib.mkFlake { inherit inputs; } {
+    systems = import inputs.systems;
 
-      hugo-server = pkgs.writeScriptBin "hugo-server" ''
-        ${pkgs.hugo}/bin/hugo server --enableGitInfo --forceSyncStatic -F
-      '';
-    in {
-      # nix develop
-      devShells = {
-        default = pkgs.stdenvNoCC.mkDerivation {
-          name = "hugo-devshell";
-          buildInputs = [
-            hugo-server
-            pkgs.hugo
-            pkgs.pandoc
-            (pkgs.aspellWithDicts (d: [d.fr d.en d.en-science d.en-computers]))
-          ];
+    perSystem = { config, self', inputs', pkgs, system, lib, ... }:
+      let
+        hugo-server = pkgs.writeScriptBin "hugo-server" ''
+          ${lib.getExe pkgs.hugo} server --enableGitInfo --forceSyncStatic -F
+        '';
+      in
+      {
+        # nix develop
+        devShells = {
+          default = pkgs.stdenvNoCC.mkDerivation {
+            name = "hugo-devshell";
+            buildInputs = [
+              hugo-server
+              pkgs.hugo
+              pkgs.pandoc
+              (pkgs.aspellWithDicts (d: [ d.fr d.en d.en-science d.en-computers ]))
+            ];
+          };
         };
-      };
 
-      # nix run
-      apps = {
-        default = {
-          type = "app";
-          program = "${hugo-server}/bin/hugo-server";
+        # nix run
+        apps = {
+          default = {
+            type = "app";
+            program = lib.getExe hugo-server;
+          };
         };
-      };
 
-    });
+      };
+  };
 }
