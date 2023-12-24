@@ -62,15 +62,15 @@ of Nix in the PHP ecosystem
 Overall, 2023 has been filled with positive experiences. I've had the pleasure of meeting for the first time wonderful
 people at [SymfonyCon Brussels](https://live.symfony.com/2023-brussels-con/), as these photos attest.
 
-{{< figure src="/images/PXL_20231207_115848241-01.jpeg" caption="From right to left: [Sebastian](https://github.com/sebastianbergmann), [Jordi](https://github.com/seldaek), Stephan, [Nils](https://github.com/naderman), [Theo](https://github.com/theofidry) and [Ondřej](https://github.com/ondrejmirtes)" width=1024 >}}
+{{< figure src="/images/PXL_20231207_115848241-01.jpeg" caption="From right to left: [Sebastian](https://github.com/sebastianbergmann), [Jordi](https://github.com/seldaek), [Stephan](https://github.com/glaubinix), [Nils](https://github.com/naderman), [Theo](https://github.com/theofidry) and [Ondřej](https://github.com/ondrejmirtes)" width=1024 >}}
 
 Finally meeting people I've interacted with through GitHub issues and pull requests was a highlight. The relational
 aspect of the conference was incredibly engaging, perhaps even more so than the talks themselves.
 
 {{< figure src="/images/PXL_20231208_123132050.jpg" caption="[Toon](https://github.com/veewee) and me" width=1024 >}}
 
-2023 was also a year of significant change for me. Alongside reducing my digital footprint by stepping away from
-Twitter and Reddit, I've quietly reevaluated the circles I engage with. I've grown fond of using Lemmy and Mastodon,
+2023 was also a year of significant change for me. Alongside reducing my digital footprint by leaving Twitter and
+Reddit, I've quietly reevaluated the circles I engage with in real life. I've grown fond of using Lemmy and Mastodon,
 which I find to be excellent platforms.
 
 Unfortunately, the year didn't conclude as positively as I had hoped. It is with profound sadness that I share my
@@ -91,9 +91,10 @@ he was meant to be mine.
 Izumi was no ordinary cat. He was profoundly attached to me, following me everywhere, talking with me, sharing my bed
 (_at least when I was single_), and eagerly awaiting my return home, the bond between us was strong. He enjoyed car
 rides and could recognize familiar destinations. He was more than a pet. He was my shadow, my friend, my confident. He
-was always there in the most difficult moments of my life, his wisdow was something I'll never forget. Time has passed,
-I moved in and out and since then I moved into a house with a garden and what would be a house with a garden without at
-least two cats? So, I adopted Nakano, a friend for Izumi. After a week of grimacing, they became totally inseparable.
+was always there in the most difficult moments of my life, his contagious wisdom was something I'll never forget. Time
+has passed, I moved in and out and since then I moved into a house with a garden and what would be a house with a garden
+without at least two cats? So, I adopted Nakano, a friend for Izumi. After a week of grimacing, they became totally
+inseparable.
 
 {{< figure src="/images/IMG_20180107_122839.jpg" caption="Izumi and Nakano" width=1024 >}}
 
