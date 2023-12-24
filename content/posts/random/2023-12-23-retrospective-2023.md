@@ -13,7 +13,7 @@ filled with numerous projects and a wealth of learning opportunities.
 
 Throughout the year, I've contributed to 38 open-source projects, resulting in 357 merged pull requests.
 
-{{< figure src="/images/retrospective-2023-stats.svg" caption="the statistics were made using [oss-contribs](https://github.com/staabm/oss-contribs)" width=1024 >}}
+{{< figure src="/images/retrospective-2023-stats.svg" caption="statistics made using [oss-contribs](https://github.com/staabm/oss-contribs)" width=1024 >}}
 
 I am quite pleased with the volume of contributions I've made. There's been a significant increase in merged PRs since I
 began contributing to [NixOS](https://nixos.org), a Linux distribution I strongly recommend exploring if you haven't
@@ -22,9 +22,9 @@ already.
 One of my most notable achievements in 2023 was the introduction of a new PHP builder for the Nix package manager
 ([NixOS/nixpkgs#225401](https://github.com/NixOS/nixpkgs/pull/225401)) after a couple of months of work. Initiated on
 the 9th of April and merged on the 14th of September, this builder aims to simplify the deployment and distribution of
-PHP applications in Nix. It provides a reproducible, minimal-footprint environment with few dependencies. Moreover, it
-allows for the construction of applications with specific PHP versions, extensions, and dependencies, paving the way for
-a more reliable method of delivering PHP applications in Nix.
+PHP applications in Nix, it a reproducible way. Moreover, it allows for the construction of applications with specific
+PHP versions, extensions, and dependencies, paving the way for a more reliable method of delivering PHP applications in
+Nix.
 
 To accomplish this, I delved deeply into Nix, learning about its language and internals. A custom Composer plugin was
 developed, available at
@@ -51,8 +51,8 @@ Here are some of the projects where I've requested the addition of a `composer.l
 - [bobthecow/psysh#767](https://github.com/bobthecow/psysh/issues/767)
 - [PHP-CS-Fixer/PHP-CS-Fixer#7590](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues/7590)
 
-If you've appreciate my open-sourcecontributions, I warmly invite you to consider
-[sponsoring my work](https://github.com/sponsors/drupol).
+{{< notice >}} If you've appreciate my open-sourcecontributions, I warmly invite you to consider
+[sponsoring my work](https://github.com/sponsors/drupol). {{< /notice >}}
 
 During this year, I've been invited to gave a talk at the [International PHP conference](https://phpconference.com/) in
 Munich. The [talk](https://phpconference.com/web-development/leveraging-nix-php-ecosystem/) focused on the integration
@@ -123,8 +123,8 @@ I hold onto the hope, we will meet again, just wait and see.
 
 {{< figure src="/images/PXL_20230906_162735514.jpg" caption="Izumi" width=1024 >}}
 
-I am grateful for the time I've had with Izumi. He has been a constant source of wisdom, joy and comfort. I don't know
-how much time we have left together, but all I know is that my end of year will not be as joyful as I had hoped. It
-hurts so much...
+I am grateful for the time we've had with Izumi, he has been cherished from day one. He has been a constant source of
+wisdom, joy and comfort. I don't know how much time we have left together, but all I know is that my end of year will
+not be as joyful as I had hoped. It hurts so much...
 
 See you next year... maybe.
