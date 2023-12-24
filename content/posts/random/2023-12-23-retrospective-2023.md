@@ -51,10 +51,8 @@ Here are some of the projects where I've requested the addition of a `composer.l
 - [bobthecow/psysh#767](https://github.com/bobthecow/psysh/issues/767)
 - [PHP-CS-Fixer/PHP-CS-Fixer#7590](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues/7590)
 
-{{< notice >}}
-If you appreciate my open-source contributions and influence, I warmly invite you to consider
-[sponsoring my work](https://github.com/sponsors/drupol), this would greatly help me.
-{{< /notice >}}
+{{< notice >}} If you appreciate my open-source contributions and influence, I warmly invite you to consider
+[sponsoring my work](https://not-a-number.io/sponsor), this would greatly help me. {{< /notice >}}
 
 During this year, I've been invited to gave a talk at the [International PHP conference](https://phpconference.com/) in
 Munich. The [talk](https://phpconference.com/web-development/leveraging-nix-php-ecosystem/) focused on the integration
@@ -98,7 +96,7 @@ has passed, I moved in and out and since then I moved into a house with a garden
 without at least two cats? So, I adopted Nakano, a friend for Izumi. After a week of grimacing, they became totally
 inseparable.
 
-{{< figure src="/images/IMG_20180107_122839.jpg" caption="Izumi and Nakano" width=1024 >}}
+{{< figure src="/images/IMG_20180107_122839.jpg" caption="Izumi and Nakano, the inseparables" width=1024 >}}
 
 In mid-December, Izumi began to show signs of illness. I promptly took him to the vet, only to receive the
 heart-wrenching news that his kidneys were irreparably damaged. The shock and devastation hit me suddenly... everything
@@ -125,8 +123,11 @@ I hold onto the hope, we will meet again, just wait and see.
 
 {{< figure src="/images/PXL_20230906_162735514.jpg" caption="Izumi" width=1024 >}}
 
-I am grateful for the time we've had with Izumi, he has been cherished from day one. He has been a constant source of
-wisdom, joy and comfort. I don't know how much time we have left together, but all I know is that my end of year will
-not be as joyful as I had hoped. It hurts so much...
-
-See you next year... maybe.
+As I navigate the difficult waters of grief, I am reminded that the bond we shared with Izumi was one of life's true
+gifts. He was not just cherished from the very beginning but also a profound source of wisdom, joy, and an immeasurable
+amount of love. His affection was a constant, comforting presence, weaving through each day, enriching every moment we
+spent together. While the future is uncertain and the pain of loss cuts deep, I carry forward the love he so freely
+gave. As this year closes, I brace for a season less bright without his light, yet I hold onto the hope and resilience
+that his love instilled in me. Here's to the journey we shared, to the love that will forever remain, and to the paths
+yet to be discovered in the new year. Maybe, just maybe, they'll be a little kinder, a little gentler, with the memory
+of Izumi's unwavering love lighting the way.
