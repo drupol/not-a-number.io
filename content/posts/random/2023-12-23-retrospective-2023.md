@@ -100,10 +100,10 @@ inseparable.
 
 {{< figure src="/images/IMG_20180107_122839.jpg" caption="Izumi and Nakano, the inseparables" width=1024 >}}
 
-In mid-December, Izumi drastically lost weight began to show signs of illness. I promptly took him to the vet, only to
-receive the heart-wrenching news that his kidneys were irreparably damaged. The shock and devastation hit me suddenly...
-everything unfolded so quickly. The vet's prognosis was grim, indicating that he wouldn't see the new year. I was
-totally unprepared. Unprepared to see him in pain, unprepared to say goodbye. We were and still are devastated.
+In mid-December, Izumi began to show signs of illness and lost weight drastically. I promptly took him to the vet, only
+to receive the heart-wrenching news that his kidneys were irreparably damaged. The shock and devastation hit me
+suddenly... everything unfolded so quickly. The vet's prognosis was grim, indicating that he wouldn't see the new year.
+I was totally unprepared. Unprepared to see him in pain, unprepared to say goodbye. We were and still are devastated.
 
 He underwent treatment at the vet for three days, connected to a drip, but his condition showed no signs of improvement.
 With a heavy heart, I decided to bring him home, to spend his last days in a familiar and loving environment. The
