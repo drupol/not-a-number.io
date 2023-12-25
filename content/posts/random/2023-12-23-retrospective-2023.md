@@ -86,7 +86,7 @@ an advertisement for an [Havana Brown](https://en.wikipedia.org/wiki/Havana_Brow
 curiosity, with no intention of bringing home a cat. The house was lively with dogs, cats and children. Amidst the
 chaos, I noticed a small, furry creature majestically lying on a cushion right in front of the fireplace, observing its
 surroundings in total indifference. When the owner placed the little one in my arms, Izumi gazed up at me, and in that
-moment, I knew he was meant to be mine.
+moment, I knew I wouldn't be returning home alone.
 
 {{< figure src="/images/2014-03-12.jpg" caption="Izumi, the first days at home" width=1024 >}}
 
