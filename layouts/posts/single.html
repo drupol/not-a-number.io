@@ -69,7 +69,9 @@
     </div>
   {{ end }}
 
-  {{ .Content }}
+  <div class="text-justify">
+    {{ .Content }}
+  </div>
 
   {{ if .IsTranslated }}
   <h4>{{ i18n "translations" }}</h4>

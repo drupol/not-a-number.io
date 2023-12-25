@@ -51,3 +51,7 @@ blockquote.twitter-tweet a:focus {
   content: "#";
   opacity: 0;
 }
+
+.text-justify {
+  text-align: justify;
+}
