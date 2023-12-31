@@ -122,6 +122,9 @@ that his love instilled in me. Here's to the journey we shared, to the love that
 yet to be discovered in the new year. Maybe, just maybe, they'll be a little kinder, a little gentler, with the memory
 of Izumi's unwavering love lighting the way, as a shinning star.
 
+On the morning of the last day of the year, Izumi gently passed away in my arms, purring peacefully while looking at me
+just as he did the first time we met.
+
 {{< center >}}
 
 ```
