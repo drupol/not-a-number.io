@@ -122,10 +122,10 @@ that his love instilled in me. Here's to the journey we shared, to the love that
 yet to be discovered in the new year. Maybe, just maybe, they'll be a little kinder, a little gentler, with the memory
 of Izumi's unwavering love lighting the way, as a shinning star.
 
-On the morning of the last day of the year, Izumi gently passed away in my arms, purring peacefully while looking at me
-just like the very first time...
+On the afternoon of the last day of the year, Izumi gently passed away in my arms, purring peacefully while looking at
+me just like the very first time...
 
-{{< figure src="/images/PXL_20231231_131527197.jpg" caption="Izumi" width=1024 >}}
+{{< figure src="/images/PXL_20231231_131527197.jpg" caption="Izumi" width=1024 caption="The last photo of Izumi (2013.03.11 - 2023.12.31)" >}}
 
 {{< center >}}
 
