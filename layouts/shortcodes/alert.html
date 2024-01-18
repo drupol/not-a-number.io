@@ -1,0 +1,12 @@
+{{/* Available type: primary, secondary, success, danger, warning, info, light, dark */}}
+{{- $alertType := .Get "type" | default "primary" -}}
+{{- $header := .Get "header" | default "" -}}
+{{- $id := .Get "id" | default "" -}}
+{{/* Workaround markdownify inconsistency for single/multiple paragraphs */}}
+{{- $raw := (markdownify .Inner | chomp) -}}
+{{- $block := findRE "(?is)^<(?:address|article|aside|blockquote|canvas|dd|div|dl|dt|fieldset|figcaption|figure|footer|form|h(?:1|2|3|4|5|6)|header|hgroup|hr|li|main|nav|noscript|ol|output|p|pre|section|table|tfoot|ul|video)\\b" $raw 1 -}}
+{{/* Count how many times we've called this shortcode and load the css if it's the first time */}}
+<div class="alert alert-{{ $alertType }}" {{ with $id -}}id="{{ $id }}"{{- end }} role="alert">
+{{- with $header -}}<h4 class="alert-header">{{ $header }}</h4>{{- end -}}
+{{- if or $block (not $raw) }}{{ $raw }}{{ else }}<p>{{ $raw }}</p>{{ end -}}
+</div>

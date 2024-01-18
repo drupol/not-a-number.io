@@ -1,0 +1,14 @@
+{{/* Available styles and borders: primary, secondary, success, danger, warning, info, light, dark */}}
+{{- $style := .Get "style" | default "primary" -}}
+{{- $header := .Get "header" | default "" -}}
+{{- $footer := .Get "footer" | default "" -}}
+{{- $border := .Get "border" | default "" -}}
+{{- $raw := (markdownify .Inner | chomp) -}}
+{{- $block := findRE "(?is)^<(?:address|article|aside|blockquote|canvas|dd|div|dl|dt|fieldset|figcaption|figure|footer|form|h(?:1|2|3|4|5|6)|header|hgroup|hr|li|main|nav|noscript|ol|output|p|pre|section|table|tfoot|ul|video)\\b" $raw 1 -}}
+<div class="card text-bg-{{ $style }} {{ with $border -}}border-{{- $border -}}{{- end -}}">
+{{- with $header -}}<div class="card-header">{{ $header }}</div>{{- end -}}
+<div class="card-body">
+{{- if or $block (not $raw) }}<p class="card-text">{{ $raw }}</p>{{ else }}<p>{{ $raw }}</p>{{ end -}}
+</div>
+{{- with $footer -}}<div class="card-footer">{{ $footer }}</div>{{- end -}}
+</div>
