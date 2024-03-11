@@ -43,27 +43,21 @@ I envision my ideal workplace as one that fosters **open-source projects** and i
 
 Although I harbor no regrets regarding my career choices, reflecting on the possibility of starting anew presents an
 interesting thought experiment. If given the chance to restart my career, I would undoubtedly immerse myself in the
-study of Mathematics and Information Technology (IT). Both disciplines share a deep connection that is particularly
-evident in programming, where mathematical concepts underpin numerous computational processes. By delving deeper into
-these fields, I could further enhance my programming skills and uncover novel approaches to problem-solving.
+study of Mathematics and Information Technology (IT), and work in a university. Both disciplines share a deep connection
+that is particularly evident in programming, where mathematical concepts underpin numerous computational processes. By
+delving deeper into these fields, I could further enhance my programming skills and uncover novel approaches to
+problem-solving. There is something truly special about the atmosphere in a university. The vibrancy of intellectual
+curiosity, the sense of community, and the camaraderie among both students and faculty members create an environment
+that fosters growth and collaboration. I cannot help but feel nostalgic for those days when I was immersed in academia,
+surrounded by the energy and enthusiasm of those committed to the pursuit of knowledge.
 
 Besides my work and the geek stuff, I'm currently fulfilling a childhood dream, I'm learning music and piano! I love
 photography and I learned by myself most of the secrets of a reflex camera, just for fun. I do swim a lot and I also
 really like riding my mountain bike. Biking is also one of the reason why I'm an heavy user and contributor of
 [OpenStreetMap] since more than a decade.
 
-There is something truly special about the atmosphere in a university setting. The vibrancy of intellectual curiosity,
-the sense of community, and the camaraderie among both students and faculty members create an environment that fosters
-growth and collaboration. I cannot help but feel nostalgic for those days when I was immersed in academia, surrounded by
-the energy and enthusiasm of those committed to the pursuit of knowledge.
-
-Outside of my professional and technical interests, I am currently living a childhood dream by learning music and piano.
-I also enjoy photography, having self-taught the intricacies of a reflex camera. In addition, I am an avid swimmer and
-mountain biker, which has led to my extensive involvement with [OpenStreetMap] as a user and contributor for over a
-decade.
-
-Lastly, I must mention my beloved cats, Izumi and Nakano. They are the happiest felines in the world, with Izumi even
-having a mention in Drupal core, thanks to [a patch] I submitted some time ago.
+Lastly, I must mention my beloved cats, Nakano and remember the late Izumi. With Izumi even having a mention in Drupal
+core, thanks to [a patch] I submitted some time ago.
 
 Please feel free to reach out and connect with me via the links in the sidebar, my public key fingerprint is:
 `85F3 72DF 4AF3 EF13 ED34 72A3 0AAF 2901 E804 0715`.
