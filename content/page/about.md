@@ -10,7 +10,9 @@ My job title is _Senior analyst_ but it means all and nothing at the same time.
 
 As a highly curious individual, I am passionate about my work in Information Technology (IT) and enjoy discovering new
 aspects of the field. Currently, I am employed at [European Commission] in Brussels, where I am always eager to tackle
-new and exciting challenges.
+new and exciting challenges. Twenty years after completing my bachelor's degree in Computer Sciences, I decided to
+return to school during the Covid pandemic and to pursue a master's degree in the same field at [UMons University]. My
+thesis is about "Reproducibility in Software Engineering" can be found at https://doi.org/10.5281/zenodo.12666899.
 
 As a Linux and FreeBSD enthusiast, I have worked as a full-stack developer with over a decade of experience in PHP. My
 journey with Drupal began as a hobby, and I progressed to being a [contributor], service provider, and eventually, a
@@ -82,3 +84,4 @@ Please feel free to reach out and connect with me via the links in the sidebar, 
 [NixOS repository]: https://github.com/NixOS
 [nixos]: https://nixos.org
 [code.europa.eu]: https://code.europa.eu/pol/
+[UMons university]: https://web.umons.ac.be/
