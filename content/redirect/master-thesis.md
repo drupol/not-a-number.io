@@ -3,7 +3,7 @@
 # url to "/old_blog" and redirect_to to "/blog" below
 type = "redirect"
 url = "/master-thesis"
-redirect_to = "https://github.com/drupol/master-thesis/releases/latest/"
+redirect_to = "https://doi.org/10.5281/zenodo.12666899"
 redirect_enabled = true
 private = true
 +++
