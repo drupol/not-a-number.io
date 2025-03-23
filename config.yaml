@@ -1,18 +1,19 @@
-baseURL: 'https://not-a-number.io/'
+baseURL: "https://not-a-number.io/"
 languageCode: en-us
 title: Not a Number
 theme:
   - hugo-notice
   - hugo-loremipsum
   - hugo-redirect
-paginate: 10
 summaryLength: 50
-googleAnalytics: G-7PNPX0VZXC
 disqusShortname: drupol
 enableGitInfo: true
 permalinks:
-  posts: '/:year/:title'
-  page: '/:slug/'
+  posts: "/:year/:title"
+  page: "/:slug/"
+
+pagination:
+  pagerSize: 10
 
 menu:
   navbar:
@@ -36,10 +37,6 @@ menu:
       url: /cv
       weight: 50
 
-
-author:
-  name: "Pol Dellaiera"
-
 params:
   author: Pol Dellaiera
   authoremail: pol.dellaiera@protonmail.com
@@ -61,3 +58,6 @@ params:
 
 ignoreErrors:
   - "error-remote-getjson"
+
+params.google.analytics:
+  id: "G-7PNPX0VZXC"

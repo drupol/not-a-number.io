@@ -49,9 +49,7 @@
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
 
-  {{- if .Site.GoogleAnalytics }}
-    {{ template "_internal/google_analytics.html" . }}
-  {{- end}}
+  {{- partialCached "analytics.html" . -}}
 
   {{ partial "head-custom.html" . }}
 </head>

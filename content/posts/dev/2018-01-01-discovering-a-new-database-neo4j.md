@@ -35,11 +35,9 @@ It's a lot of data, [a lot of contributions](https://www.wikidata.org/wiki/Speci
 In order to test if I could use those data in a practical way, I built a small script that returns the list of stations that I would pass if I want to go from Station A to Station B.
 A [BFS algorithm](https://en.wikipedia.org/wiki/Breadth-first_search) is used to find the path in between the two stations.
 
-{{< tweet user="drupol" id="947045643360628737" >}}
-
 Then a reply of this tweet from [Christophe "ikwattro" Willemsen](https://twitter.com/ikwattro), a twitter friend of mine, [lit the spark](https://www.youtube.com/watch?v=LLpIMRowndg).
 
-{{< tweet user="ikwattro" id="947049048602759169" >}}
+{{< x user="ikwattro" id="947049048602759169" >}}
 
 To be honest, I was curious because of its tweets and dedication to [Neo4J](https://neo4j.com/) since I know him but I never had the opportunity or the need to use it... until now.
 

@@ -86,11 +86,7 @@ My other project [loophp/collection][16] is still being actively maintained,
 and I was quite surprised when I saw that the project was about to reach the
 five hundred stars milestone, just before New Year's Eve !
 
-{{< tweet user="drupol" id="1476149761573113856" >}}
-
 And we did it, just in time !
-
-{{< tweet user="drupol" id="1476270775128756225" >}}
 
 The version 6 is currently stable and there is already a couple of things
 going on for the next major release, the version 7.
@@ -234,7 +230,7 @@ default rule for now on.
 
 Despite that, we made quite a bunch of nice things, especially this one:
 
-{{< tweet user="EU_DIGIT" id="1459147953461940226" >}}
+{{< x user="EU_DIGIT" id="1459147953461940226" >}}
 
 This session has been given at work and published on Github in open-source at
 [ecphp/session--composition-and-inheritance][66]. Anyone can now contribute to
@@ -242,7 +238,7 @@ the content of the presentation.
 
 There will be more and more initiative like this one in the future thanks to
 
-{{< tweet user="EU_DIGIT" id="1468550654792814593" >}}
+{{< x user="EU_DIGIT" id="1468550654792814593" >}}
 
 The future at European Commission is bright and I'm looking forward to it!
 
