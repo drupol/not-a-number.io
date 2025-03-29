@@ -61,3 +61,18 @@ ignoreErrors:
 
 params.google.analytics:
   id: "G-7PNPX0VZXC"
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    parser:
+      attribute:
+        block: true
+    extensions:
+      extras:
+        mark:
+          enable: true
+        subscript:
+          enable: true
+        superscript:
+          enable: true
