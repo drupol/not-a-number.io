@@ -156,8 +156,14 @@ This shift enables:
 
 ## How It Works
 
+This project is built using [`flake.parts`](https://flake.parts), a modular and composable framework for structuring Nix
+flakes. Unlike traditional monolithic flake setups, `flake.parts` allows me to break down the configuration into
+logical, reusable parts, each focused on a specific concern (e.g., formatting, NixOS modules, Home Manager modules).
+This keeps the flake configuration clean and scalable, and more importantly, promotes maintainability, extensibility,
+and collaboration.
+
 The first step is enabling the [`modules` feature](https://flake.parts/options/flake-parts-modules.html) in
-`flake-parts`, which allows you to define and aggregate modular custom configurations.
+[`flake.parts`](https://flake.parts/), which allows you to define and aggregate modular custom configurations.
 
 I define two types of modules:
 
@@ -166,10 +172,10 @@ I define two types of modules:
   running Home Manager
 
 Together with [`vic/import-tree`](https://github.com/vic/import-tree), these modules are automatically discovered and
-loaded. They are then aggregated by `flake-parts` into a single attribute set, which is used to build the final
+loaded. They are then aggregated by `flake.parts` into a single attribute set, which is used to build the final
 configuration.
 
-For example, here is a custom flake-parts module. It defines the fonts configuration for both the `dev` and `desktop`
+For example, here is a custom `flake.parts` module. It defines the fonts configuration for both the `dev` and `desktop`
 features. No Home Manager configuration is defined here.
 
 ```nix
@@ -271,11 +277,12 @@ in
 }
 ```
 
-Importantly, the file that declares this logic is itself also a `flake-parts` module! Every file in the project becomes
-a reusable building block, regardless of its location or filename. One of the major advantages of this approach is that
-it enables the definition of multiple configurations within the same file. I can now declare both NixOS and Home Manager
-modules side by side, and they will be automatically discovered and loaded without additional wiring. Although I do not
-currently take full advantage of this, the flexibility is built-in and could prove valuable in future scenarios.
+Importantly, the file that declares this logic is itself also a [`flake.parts`](ttps://flake.parts/) module! Every file
+in the project becomes a reusable building block, regardless of its location or filename. One of the major advantages of
+this approach is that it enables the definition of multiple configurations within the same file. I can now declare both
+NixOS and Home Manager modules side by side, and they will be automatically discovered and loaded without additional
+wiring. Although I do not currently take full advantage of this, the flexibility is built-in and could prove valuable in
+future scenarios.
 
 To go one step further, it would be ideal to define a list of features for each machine and have both the system and
 home configurations automatically assemble themselves accordingly. Look no further ! This is precisely the role of the
