@@ -73,7 +73,7 @@ Unlike traditional Linux distributions where system configuration often involves
 - Rebuild any machine from scratch with a single command
 - Share and reuse configuration across machines
 - Track every change in version control
-- Avoid "it works on my machine" problems entirely
+- Avoid "_it works on my machine_" problems entirely
 
 This repository isn't just a bunch of
 "{{<abbr title="Normally used to denote hidden files for configuration">}}dotfiles{{</abbr>}}", it is the **source of
@@ -150,8 +150,9 @@ require?"
 This shift enables:
 
 - A feature like desktop support, VPN, SSH, or AI services to be implemented once as a reusable module
-- All modules to live under a unified `modules/` directory, loaded automatically, no manual glue logic
-- System declarations to remain per host, but most logic is now shared, reused, and easily maintained
+- All modules to live under a unified `modules/` directory, loaded automatically, once, no manual glue logic
+- System declarations can possibly remain per host like the previous pattern, but most logic is now shared, reused, and
+  easily maintained
 
 ## How It Works
 
