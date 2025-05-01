@@ -31,7 +31,7 @@ But eventually, the moment came. I decided to start over. From scratch. No more 
 
 ## The Case for Declarative Infrastructure
 
-{{< figure src="/images/Screenshot_20250501_093909.png" caption="Source: Dellaiera, P. (2024). Reproducibility in Software Engineering. https://doi.org/10.5281/zenodo.13894231" class="img-fluid" >}}
+{{< figure src="/images/Screenshot_20250501_093909.png" caption="Source: Dellaiera, P. (2024). Reproducibility in Software Engineering. https://doi.org/10.5281/zenodo.12666898" class="img-fluid" >}}
 
 When it comes to managing systems at scale, not all approaches are created equal. Over time, three primary models of
 configuration management have emerged. Each of them with their strengths, limitations, and implications for
