@@ -391,7 +391,14 @@ spread across multiple files.
    work to be done, particularly around completing the migration of older configurations to the new modular model. I
    have several ideas in mind for improvements, but they will require time and careful implementation.
 
-2. Expose Home Manager configurations for composability
+2. Simplify the user interface for defining a host machine
+
+   The current interface for defining a host machine is still a bit clunky, relying on a custom function
+   (`loadNixosAndHmModuleForUser`). I would like to simplify it further, making it easier to define a machine and its
+   features. This could involve creating a more user-friendly syntax or abstraction layer that hides some of the
+   complexity of the underlying implementation.
+
+3. Expose Home Manager configurations for composability
 
    One area I would like to explore further is how to expose individual Home Manager modules so they can be composed
    into reusable profiles. This would allow for the creation of more complex, user-specific setups without duplicating
@@ -399,14 +406,14 @@ spread across multiple files.
    technically possible, but I haven't yet figured out the right approach. This definitely warrants deeper
    investigation.
 
-3. Create a Nix starter template to help newcomers to adopt this approach.
+4. Create a Nix starter template to help newcomers to adopt this approach.
 
    I would like to build a lightweight, beginner-friendly template to help others adopt this modular approach to
    managing NixOS and Home Manager configurations. The goal is to offer a clean starting point that does not overwhelm
    new users, while promoting good practices and reducing the learning curve. It is a small contribution that could have
    a meaningful impact for those just getting started.
 
-4. Rename the project
+5. Rename the project
 
    The current name `drupol/nixos-x260` no longer reflects the scope or intent of the repository. It originated with my
    Lenovo ThinkPad X260, but the project has evolved far beyond a single machine. I would like to choose a name that
