@@ -1,0 +1,29 @@
+[presets.ruff-format]
+language = "python"
+command = ["ruff", "format", "-"]
+
+[presets.nixfmt]
+language = "nix"
+command = ["nixfmt"]
+
+[presets.php]
+language = "php"
+# php-cs-fixer does not support STDIN, so we use a temporary file
+command = [
+  "sh",
+  "-c",
+  "php-cs-fixer fix -q --rules=@PSR12 {file}; cat {file}"
+]
+input_mode = "file"
+
+[presets.rust]
+language = "rust"
+command = ["rustfmt"]
+
+[presets.typstyle]
+language = "typst"
+command = ["typstyle"]
+
+[presets.latex]
+language = "latex"
+command = ["tex-fmt", "--stdin"]

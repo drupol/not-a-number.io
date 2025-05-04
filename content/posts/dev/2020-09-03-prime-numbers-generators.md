@@ -31,13 +31,15 @@ def naturals(n):
     yield n
     yield from naturals(n + 1)
 
+
 def sieve(s):
     n = next(s)
     yield n
-    yield from sieve(i for i in s if i%n!=0)
+    yield from sieve(i for i in s if i % n != 0)
+
 
 for i in sieve(naturals(2)):
-    print(i) # 2, 3, 5, 7, 11, 13, 17, 19, ... 
+    print(i)  # 2, 3, 5, 7, 11, 13, 17, 19, ...
 ```
 
 How beautiful it is, isn't it ?

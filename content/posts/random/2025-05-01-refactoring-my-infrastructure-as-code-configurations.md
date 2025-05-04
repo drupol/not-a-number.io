@@ -181,26 +181,30 @@ features. No Home Manager configuration is defined here.
 ```nix
 {
   flake.modules = {
-    nixos.dev = { pkgs, ... }: {
-      fonts.packages = with pkgs; [
-        dina-font
-        monaspace
-      ];
-    };
+    nixos.dev =
+      { pkgs, ... }:
+      {
+        fonts.packages = with pkgs; [
+          dina-font
+          monaspace
+        ];
+      };
 
-    nixos.desktop = { pkgs, ... }: {
-      fonts.packages = with pkgs; [
-        aporetic
-      ];
+    nixos.desktop =
+      { pkgs, ... }:
+      {
+        fonts.packages = with pkgs; [
+          aporetic
+        ];
 
-      fonts.fontconfig = {
-        defaultFonts = {
-          monospace = [ "Aporetic Sans Mono" ];
-          sansSerif = [ "Aporetic Sans Mono" ];
-          serif = [ "Aporetic Sans Mono" ];
+        fonts.fontconfig = {
+          defaultFonts = {
+            monospace = [ "Aporetic Sans Mono" ];
+            sansSerif = [ "Aporetic Sans Mono" ];
+            serif = [ "Aporetic Sans Mono" ];
+          };
         };
       };
-    };
   };
 }
 ```
@@ -211,14 +215,16 @@ NixOS configuration.
 ```nix
 {
   flake.modules = {
-    homeManager.dev = {pkgs, ...}: {
-      home.packages = with pkgs; [
-        go
-        php
-        python3
-        rustc
-      ];
-    };
+    homeManager.dev =
+      { pkgs, ... }:
+      {
+        home.packages = with pkgs; [
+          go
+          php
+          python3
+          rustc
+        ];
+      };
 
     homeManager.desktop = {
       programs.firefox.enable = true;
@@ -345,7 +351,9 @@ let
   ];
 in
 {
-  flake.modules.nixos."nixosConfigurations/x13" = config.flake.lib.loadNixosAndHmModuleForUser config modules "pol";
+  flake.modules.nixos."nixosConfigurations/x13" =
+    config.flake.lib.loadNixosAndHmModuleForUser config modules
+      "pol";
 }
 ```
 
@@ -380,7 +388,7 @@ spread across multiple files.
 - Ongoing and time-consuming migration
 
   Migrating the existing host-centric setup to the new functionally-driven model has been a slow and occasionally
-  painful process. Not everything has been ported yet, and some machines are still waiting for their facter.json files
+  painful process. Not everything has been ported yet, and some machines are still waiting for their `facter.json` files
   to be generated. I am progressing gradually as I need those systems, but it is definitely a long-term effort.
 
 ## Future Work
