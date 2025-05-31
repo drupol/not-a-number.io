@@ -283,7 +283,7 @@ in
 }
 ```
 
-Importantly, the file that declares this logic is itself also a [`flake.parts`](ttps://flake.parts/) module! Every file
+Importantly, the file that declares this logic is itself also a [`flake.parts`](https://flake.parts/) module! Every file
 in the project becomes a reusable building block, regardless of its location or filename. One of the major advantages of
 this approach is that it enables the definition of multiple configurations within the same file. I can now declare both
 NixOS and Home Manager modules side by side, and they will be automatically discovered and loaded without additional
@@ -426,6 +426,9 @@ spread across multiple files.
    The current name `drupol/nixos-x260` no longer reflects the scope or intent of the repository. It originated with my
    Lenovo ThinkPad X260, but the project has evolved far beyond a single machine. I would like to choose a name that
    better represents its purpose.
+
+   Edit: The repository renaming has been done a few days after the blog post was written. The new name is
+   [`drupol/nixos-infra`](https://github.com/drupol/infra).
 
 ## Inspiration
 
