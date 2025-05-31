@@ -428,7 +428,7 @@ spread across multiple files.
    better represents its purpose.
 
    Edit: The repository renaming has been done a few days after the blog post was written. The new name is
-   [`drupol/nixos-infra`](https://github.com/drupol/infra).
+   [`drupol/infra`](https://github.com/drupol/infra).
 
 ## Inspiration
 
