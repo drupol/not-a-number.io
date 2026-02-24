@@ -1,47 +1,15 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     systems.url = "github:nix-systems/default";
+    pkgs-by-name-for-flake-parts.url = "github:drupol/pkgs-by-name-for-flake-parts";
+    import-tree.url = "github:vic/import-tree";
+    make-shell.url = "github:nicknovitski/make-shell";
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
   outputs =
-    inputs@{ ... }:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = import inputs.systems;
-
-      perSystem =
-        { pkgs, lib, ... }:
-        let
-          hugo-server = pkgs.writeScriptBin "hugo-server" ''
-            ${lib.getExe pkgs.hugo} server --enableGitInfo --forceSyncStatic -F
-          '';
-        in
-        {
-          # nix develop
-          devShells = {
-            default = pkgs.mkShellNoCC {
-              packages = [
-                hugo-server
-                pkgs.hugo
-                pkgs.pandoc
-                (pkgs.aspellWithDicts (d: [
-                  d.fr
-                  d.en
-                  d.en-computers
-                ]))
-              ];
-            };
-          };
-
-          # nix run
-          apps = {
-            default = {
-              type = "app";
-              program = lib.getExe hugo-server;
-            };
-          };
-
-        };
-    };
+    inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./nix/imports);
 }
