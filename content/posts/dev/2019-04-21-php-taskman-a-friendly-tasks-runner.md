@@ -1,6 +1,6 @@
 ---
 date: 2019-04-21
-images: 
+images:
   - /images/IMG_20190318_122301-01.jpeg
 image_copyrights: Image from Pol Dellaiera
 tags:
@@ -9,11 +9,15 @@ tags:
   - console
 title: Taskman, a friendly tasks runner
 ---
-It's been 2 months now that I left aside my regular work with Drupal 8 and switched back to [Atomium development]({{< ref "2017-07-10-a-word-about-atomium" >}}) for Drupal 7.
 
-I will soon publish another post on all the new stuff that has been made there, but for now, I will focus on a side project I've been doing.
+It's been 2 months now that I left aside my regular work with Drupal 8 and switched back to [Atomium
+development]({{< ref "2017-07-10-a-word-about-atomium" >}}) for Drupal 7.
 
-Started as a proof-of-concept a couple of weeks ago, Taskman is tasks runner based on [Robo](https://robo.li/), extendable at will through YAML files.
+I will soon publish another post on all the new stuff that has been made there, but for now, I will focus on a side
+project I've been doing.
+
+Started as a proof-of-concept a couple of weeks ago, Taskman is tasks runner based on [Robo](https://robo.li/),
+extendable at will through YAML files.
 
 It has been inspired by what's already existing so far, but not tied to Drupal or whatsoever.
 
@@ -21,13 +25,16 @@ It has been inspired by what's already existing so far, but not tied to Drupal o
 
 ## History
 
-[Taskman](https://packagist.org/packages/phptaskman/core) is a tasks runner written in PHP, for PHP. It's based on Robo, a PHP framework widely used in many communities.
+[Taskman](https://packagist.org/packages/phptaskman/core) is a tasks runner written in PHP, for PHP. It's based on Robo,
+a PHP framework widely used in many communities.
 
-Robo is a console application that list all the available commands that a user can run. Those commands contains tasks that are executed one after the other.
+Robo is a console application that list all the available commands that a user can run. Those commands contains tasks
+that are executed one after the other.
 
 When shipping a `Robofile.php` file in your projects, Robo will provide new commands based on what's inside it.
 
-I invite you to read [the documentation](https://robo.li/extending/) if you want to know more on how to extend it or use it as a framework, just like Taskman does.
+I invite you to read [the documentation](https://robo.li/extending/) if you want to know more on how to extend it or use
+it as a framework, just like Taskman does.
 
 The only downside of Robo is that you need to code if you want to provides commands and tasks.
 
@@ -92,7 +99,8 @@ Available commands:
 
 Taskman includes a mechanism to automatically detects configuration files in the dependencies of your project.
 
-That means that you could have a PHP package that contains only a YAML file with your custom commands, Taskman will find it _automagically_.
+That means that you could have a PHP package that contains only a YAML file with your custom commands, Taskman will find
+it _automagically_.
 
 ## (Almost) real life example
 
@@ -115,7 +123,8 @@ This YAML files provides a single command that contains variables.
 
 If for some reason those variables are not the one you expect, you can still override them manually.
 
-To override manually those variables, you have to create a file `taskman.yml` which should not be committed to your project and ideally added to `.gitignore`.
+To override manually those variables, you have to create a file `taskman.yml` which should not be committed to your
+project and ideally added to `.gitignore`.
 
 That file could be:
 
@@ -129,9 +138,11 @@ It's also possible to define more advanced commands, but the documentation is no
 
 ## Testing framework
 
-I've always been using PHPSpec for unit testing, here Taskman is a kind of plugin for Robo, so I've decided to use [Codeception](https://codeception.com/), mostly for functional tests.
+I've always been using PHPSpec for unit testing, here Taskman is a kind of plugin for Robo, so I've decided to use
+[Codeception](https://codeception.com/), mostly for functional tests.
 
-As I don't want to do tests for the Robo plugin stuff (_it's already done in Robo_), simple and functional tests using Codeception was a good choice, I really enjoyed doing it.
+As I don't want to do tests for the Robo plugin stuff (_it's already done in Robo_), simple and functional tests using
+Codeception was a good choice, I really enjoyed doing it.
 
 I really liked the ease of testing console application, see it by yourself:
 
@@ -148,14 +159,19 @@ $I->canSeeFileFound('../../../_output/vendor/bin/taskman');
 $I->runShellCommand('../../../_output/vendor/bin/taskman');
 ```
 
-During the making of these, I also noticed that [Composer doesn't allow you to symlink the package source inside it](https://github.com/composer/composer/commit/f85a4a2f5135d813a14c8042ff7bcf1261de11fc).
+During the making of these, I also noticed that
+[Composer doesn't allow you to symlink the package source inside it](https://github.com/composer/composer/commit/f85a4a2f5135d813a14c8042ff7bcf1261de11fc).
 
-While trying to get around this by writing my own composer plugin, I found this [socialengine/composer-symlinker](https://packagist.org/packages/socialengine/composer-symlinker) which is exactly doing what I was looking for, this really helped me for the tests.
+While trying to get around this by writing my own composer plugin, I found this
+[socialengine/composer-symlinker](https://packagist.org/packages/socialengine/composer-symlinker) which is exactly doing
+what I was looking for, this really helped me for the tests.
 
 ## Future development
 
 I have quite a few ideas to improve Taskman, but as they are not yet mature, I cannot really implement them.
 
-One of the first idea was to get rid of the Taskman executable (`./vendor/bin/taskman`) and use exclusively the Robo executable (`./vendor/bin/robo`).
+One of the first idea was to get rid of the Taskman executable (`./vendor/bin/taskman`) and use exclusively the Robo
+executable (`./vendor/bin/robo`).
 
-After some discussions with [Greg Anderson](https://github.com/greg-1-anderson), it would be possible to do it using [CGR](https://github.com/consolidation/cgr), but I still need to look deeper into it.
+After some discussions with [Greg Anderson](https://github.com/greg-1-anderson), it would be possible to do it using
+[CGR](https://github.com/consolidation/cgr), but I still need to look deeper into it.

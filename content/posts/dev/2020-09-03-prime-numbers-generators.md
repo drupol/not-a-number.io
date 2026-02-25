@@ -1,6 +1,6 @@
 ---
 date: 2020-09-03
-images: 
+images:
   - /images/milky-way.jpg
 image_copyrights: Image from Pol Dellaiera
 tags:
@@ -13,16 +13,13 @@ title: Prime numbers generation
 
 ## It all started from a book
 
-I was reading the Open Source book from [Bartosz Milewski][bartosz website]'s '[Category Theory for Programmers][Category theory for programmers]' when I saw something about
-[Prime numbers][prime number wikipedia]:
+I was reading the Open Source book from [Bartosz Milewski][bartosz website]'s '[Category Theory for
+Programmers][Category theory for programmers]' when I saw something about [Prime numbers][prime number wikipedia]:
 
-> A more interesting example is a coalgebra that produces a list of
-> primes. The trick is to use an infinite list as a carrier. Our starting
-> seed will be the list [2..]. The next seed will be the tail
-> of this list with all multiples of 2 removed. It's a list of odd numbers
-> starting with 3. In the next step, we'll take the tail of this list and
-> remove all multiples of 3, and so on. You might recognize the makings of
-> the sieve of Eratosthenes.
+> A more interesting example is a coalgebra that produces a list of primes. The trick is to use an infinite list as a
+> carrier. Our starting seed will be the list [2..]. The next seed will be the tail of this list with all multiples of 2
+> removed. It's a list of odd numbers starting with 3. In the next step, we'll take the tail of this list and remove all
+> multiples of 3, and so on. You might recognize the makings of the sieve of Eratosthenes.
 
 In Python language, it would be written as such:
 
@@ -52,14 +49,14 @@ of every scientist in the world.
 _Oh you didn't get the memo_ ? Let me remind it to you then... you can win 1 million dollars if you found the solution
 to that problem !
 
-Finding how Prime numbers are distributed across Naturals is one of the [Millenium Prize problems][millenium prizes],
-if you find it too easy, you can pick another one. Cheers.
+Finding how Prime numbers are distributed across Naturals is one of the [Millenium Prize problems][millenium prizes], if
+you find it too easy, you can pick another one. Cheers.
 
 ### How about in PHP ?
 
 I just did a huge refactoring in [loophp/collection][loophp/collection github] and I know that PHP is not the best
-language for this thing, but I wanted to try, you know, just to check if this is possible and compare it with the
-Python syntax.
+language for this thing, but I wanted to try, you know, just to check if this is possible and compare it with the Python
+syntax.
 
 At first, I had no idea on how to do it at first. I was stunned by the beauty of this algorithm and surprised to have
 never seen it before.
@@ -68,7 +65,7 @@ A quick look on Github has led me to some inspiration, and I started to code som
 searching, I came up with this:
 
 ```php
-<?php 
+<?php
 
 function primesGenerator(\Iterator $iterator): \Generator
 {
@@ -106,12 +103,12 @@ It's not as nice as Python, but it does the job. Unfortunately, it fails quite r
 
 I also started to investigate how I could optimize the algorithm and made further research on it.
 
-It turns out that this is erroneously called the "[Sieve of Eratosthenes][sieve of eratosthenes]".
-It should have been called the "_[Sieve of Trial Division][trial division wikipedia]_".
+It turns out that this is erroneously called the "[Sieve of Eratosthenes][sieve of eratosthenes]". It should have been
+called the "_[Sieve of Trial Division][trial division wikipedia]_".
 
-That algorithm as it is now, is very suboptimal, because it's not "[postponed][postponed sieve]".
-Any candidate number need only be tested by Primes not above its square root.
-Implementing this will give an huge speedup and/because it'll greatly [minimize the stack usage][minimize the stack usage].
+That algorithm as it is now, is very suboptimal, because it's not "[postponed][postponed sieve]". Any candidate number
+need only be tested by Primes not above its square root. Implementing this will give an huge speedup and/because it'll
+greatly [minimize the stack usage][minimize the stack usage].
 
 In order to check the efficiency of this algorithm compared to a better version, I scaffolded a benchmarking tool.
 
@@ -120,9 +117,9 @@ benchmarks, using the great [PHP Bench][phpbench/phpbench github].
 
 I implemented three different algorithms, they are almost the same with one difference:
 
-* **Primes1**: Simple Sieve of Trial Division ([source][source primes1])
-* **Primes2**: Sieve of Trial Division + Postponed (first try) ([source][source primes2])
-* **Primes3**: Sieve of Trial Division + Postponed (second try) ([source][source primes3])
+- **Primes1**: Simple Sieve of Trial Division ([source][source primes1])
+- **Primes2**: Sieve of Trial Division + Postponed (first try) ([source][source primes2])
+- **Primes3**: Sieve of Trial Division + Postponed (second try) ([source][source primes3])
 
 ```
 +-------------+--------------+--------------+------------+------------+-------+
@@ -135,7 +132,7 @@ I implemented three different algorithms, they are almost the same with one diff
 ```
 
 **Primes1** is the basic algorithm based on [CallbackFilterIterator][CallbackFilterIterator] where the filter callback
-is: 
+is:
 
 ```
 static fn (int $a): bool => (0 !== ($a % $primeNumber))
@@ -143,7 +140,7 @@ static fn (int $a): bool => (0 !== ($a % $primeNumber))
 
 Basically this is just a sieve of trial division.
 
-**Primes2** is the same as **Primes1** but the filter callback is updated to: 
+**Primes2** is the same as **Primes1** but the filter callback is updated to:
 
 ```
 static fn (int $a): bool => (($primeNumber ** 2) > $a) || (0 !== ($a % $primeNumber))
@@ -154,8 +151,8 @@ There are two conditions in this callback:
 1. Any candidate number (`$a`) need only be tested by Primes not above its square root.
 2. The rest of the division of `$a` by the prime number is different from zero.
 
-**Primes3** implements a custom [CallbackFilterIterator][CallbackFilterIterator] where the [accept method][accept method]
-is overridden with the same filter callback as in **Primes2**.
+**Primes3** implements a custom [CallbackFilterIterator][CallbackFilterIterator] where the [accept
+method][accept method] is overridden with the same filter callback as in **Primes2**.
 
 To my amazement, the algorithm **Primes3** is the fastest. I still don't get why it's faster than **Primes2**, but I
 guess I will found out sooner or later.

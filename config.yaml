@@ -11,32 +11,25 @@ enableGitInfo: true
 permalinks:
   posts: "/:year/:title"
   page: "/:slug/"
-
 pagination:
   pagerSize: 10
-
 menu:
   navbar:
     - name: About
       url: /about
       weight: 10
-
     - name: Projects
       url: /projects
       weight: 20
-
     - name: Sponsor my work
       url: /sponsor
       weight: 30
-
     - name: Bookshelf
       url: /bookshelf
       weight: 40
-
     - name: CV
       url: /cv
       weight: 50
-
 params:
   author: Pol Dellaiera
   authoremail: pol.dellaiera@protonmail.com
@@ -55,13 +48,10 @@ params:
   truncate: true
   DefaultContentLanguage: en
   github: drupol
-
 ignoreErrors:
   - "error-remote-getjson"
-
 params.google.analytics:
   id: "G-7PNPX0VZXC"
-
 markup:
   defaultMarkdownHandler: goldmark
   goldmark:

@@ -1,6 +1,6 @@
 ---
 date: 2020-08-10
-images: 
+images:
   - /images/IMG_20200718_211804-01.jpeg
 image_copyrights: Image from Pol Dellaiera
 tags:
@@ -13,39 +13,41 @@ A year ago, I started to write [a lazy collection library]({{< ref "2019-09-09-s
 
 I haven't written a specific article about it despite the fact that I would have wanted to, mostly by lack of time.
 
-Almost a year ago and 318 commits later, I published [the release 2.0.0](https://github.com/loophp/collection/releases/tag/2.0.0) last week.
+Almost a year ago and 318 commits later, I published
+[the release 2.0.0](https://github.com/loophp/collection/releases/tag/2.0.0) last week.
 
 <!--break-->
 
-It all started a year ago, when I came across a [pull request made against the Laravel framework](https://github.com/laravel/framework/pull/29415).
+It all started a year ago, when I came across a
+[pull request made against the Laravel framework](https://github.com/laravel/framework/pull/29415).
 
 Writing a lazy collection library was something that I had in mind, and that pull request has revived my motivation to
 write one. After understanding what was happening in that pull request, I started to write my own library.
 
 There were already [some collection libraries in PHP](https://packagist.org/?query=collection&tags=collection), but I
-wanted to do something more complete, fully tested and  typed, with a good documentation.
+wanted to do something more complete, fully tested and typed, with a good documentation.
 
 I did countless iterations because I was not happy of the result and I felt that I could improve and optimize things.
 
 Writing such library also put me on the path of functional programming even more, and I also lost quite a lot of time
 learning new things from that amazing field.
 
-So far, writing this package has been my greatest source of personal learning in the programming world.
-It opened my eyes to a lot of things that I had no idea before.
+So far, writing this package has been my greatest source of personal learning in the programming world. It opened my
+eyes to a lot of things that I had no idea before.
 
 I suggest to the readers to also read [this post](https://josephsilber.com/posts/2020/07/29/lazy-collections-in-laravel)
 from **Joseph Silber**, the author of the Laravel pull request, it's a great and probably the best article about lazy
 collections.
 
-This post is not about how to use my library, but merely about the oddities that I wasn't expecting to find while
-coding it.
+This post is not about how to use my library, but merely about the oddities that I wasn't expecting to find while coding
+it.
 
 I have summarized here only a few, there are more, but these are the 3 that I recall the most.
 
 # Oddity #1
 
-There are some question on StackOverflow on how to "dedup" (deduplicate) an array.
-Basically it means: "_How to remove duplicated values from an array_".
+There are some question on StackOverflow on how to "dedup" (deduplicate) an array. Basically it means: "_How to remove
+duplicated values from an array_".
 
 There are many ways to do that, the most trivial example is with [array_unique()](https://php.net/array-unique).
 
@@ -112,9 +114,9 @@ $filtered = array_flip($filtered);
 // ]
 ```
 
-The first call to `array_flip()` will exchange keys with values and vice versa.
-As you may have noticed, there are multiple times the letter `a`, at index `0` and `3`.
-`array_flip()` will then use the latest known key for letter `a` in the input array: `3`.
+The first call to `array_flip()` will exchange keys with values and vice versa. As you may have noticed, there are
+multiple times the letter `a`, at index `0` and `3`. `array_flip()` will then use the latest known key for letter `a` in
+the input array: `3`.
 
 The same process is applied for each remaining array values.
 
@@ -138,8 +140,8 @@ using `array_values()`, then twice `array_flip()` will be slower than just using
 Furthermore, those functions are made for arrays, there is no support for other iterable types like Traversable,
 Iterators and Generators.
 
-With [loophp/collection](https://github.com/loophp/collection), you can use any kind of iterable types, by default.
-In the following examples, I will use a `Generator`, because it's convenient in this particular example.
+With [loophp/collection](https://github.com/loophp/collection), you can use any kind of iterable types, by default. In
+the following examples, I will use a `Generator`, because it's convenient in this particular example.
 
 ```php
 <?php
@@ -175,7 +177,7 @@ $array = $collection->all();
 // ]
 ```
 
-If you do the `flip()` operation twice, what would be the result? Let's try... 
+If you do the `flip()` operation twice, what would be the result? Let's try...
 
 ```php
 <?php
@@ -236,7 +238,8 @@ As you all may know, keys in arrays are either integers or strings.
 I don't know if you ever needed such things in your project, but sometimes it would be nice to be able to use any kind
 of type as keys in an array.
 
-It is possible in PHP since version 5.1, by using the [\SplObjectStorage](https://www.php.net/manual/en/class.splobjectstorage.php) class.
+It is possible in PHP since version 5.1, by using the
+[\SplObjectStorage](https://www.php.net/manual/en/class.splobjectstorage.php) class.
 
 However, it is still not possible with regular arrays, and it will not be possible anytime soon.
 
@@ -254,23 +257,23 @@ $input = static function () {
 $collection = Collection::fromIterable($input());
 
 foreach ($collection as $k => $v) {
-  // $k = ['a'], $v = 'a'  
-  // $k = StdClass, $v = 'b'  
-  // $k = true, $v = 'c'  
+  // $k = ['a'], $v = 'a'
+  // $k = StdClass, $v = 'b'
+  // $k = true, $v = 'c'
 }
 ```
 
 This collection library let you use any kind of type for keys: _scalar_, _objects_, _arrays_,... _anything_!
 
-This library could be a valid replacement for [\SplObjectStorage](https://www.php.net/manual/en/class.splobjectstorage.php)
-but with much more features.
+This library could be a valid replacement for
+[\SplObjectStorage](https://www.php.net/manual/en/class.splobjectstorage.php) but with much more features.
 
 To some extent, this way of working opens up new perspectives and new paradigms.
 
 Another ways of handling data, different ways to think about their structure and how to mangle them.
 
-See this particular [thread #31761](https://github.com/laravel/framework/issues/31761) on the Laravel project,
-there is also some good information there.
+See this particular [thread #31761](https://github.com/laravel/framework/issues/31761) on the Laravel project, there is
+also some good information there.
 
 # Oddity #3
 
@@ -300,12 +303,11 @@ $collection = Collection::fromIterable($input())
 // ]
 ```
 
-At first sight, it looks like the `sort()` is a *degenerative* operation.
-It seems that it has lost some values during the process.
-The input had `6` items, the output has `4`. But this is wrong.
+At first sight, it looks like the `sort()` is a _degenerative_ operation. It seems that it has lost some values during
+the process. The input had `6` items, the output has `4`. But this is wrong.
 
-Actually, the problem comes from the `all()` operation.
-The `all()` operation is basically a shortcut to `iterator_to_array()`.
+Actually, the problem comes from the `all()` operation. The `all()` operation is basically a shortcut to
+`iterator_to_array()`.
 
 When converting the collection into an array, values having same keys are lost during the process.
 
@@ -400,8 +402,9 @@ $collection = Collection::fromIterable($input())
 
 By using the `wrap()` operation at the end, we make sure to not lose any values when converting into a regular array.
 
-When you use the [`sort()` operation](https://github.com/loophp/collection/blob/master/src/Operation/Sort.php), it relies on the [ArrayIterator::uasort()](https://www.php.net/manual/en/arrayiterator.uasort.php) underneath.
-But the `sort()` operation has all the logic to wrap all values prior and then unwrap them once they are sorted.
+When you use the [`sort()` operation](https://github.com/loophp/collection/blob/master/src/Operation/Sort.php), it
+relies on the [ArrayIterator::uasort()](https://www.php.net/manual/en/arrayiterator.uasort.php) underneath. But the
+`sort()` operation has all the logic to wrap all values prior and then unwrap them once they are sorted.
 
 That was something hard to figure out at first, which in the end seemed completely logic.
 
@@ -411,13 +414,16 @@ Now that I'm acquainted with that non-exhaustive list of oddities, I still have 
 
 What I'm trying to achieve with [loophp/collection](https://github.com/loophp/collection) is to focus on the algorithms.
 
-[loophp/collection](https://github.com/loophp/collection) contains a list of [Operation](https://github.com/loophp/collection/tree/master/src/Operation) and [Transformation](https://github.com/loophp/collection/tree/master/src/Transformation) classes.
+[loophp/collection](https://github.com/loophp/collection) contains a list of
+[Operation](https://github.com/loophp/collection/tree/master/src/Operation) and
+[Transformation](https://github.com/loophp/collection/tree/master/src/Transformation) classes.
 
-Those classes are basically classes wrapping a function that does something on the original collection.
-Operations returns a Generator, Transformation returns usually a simple value.
+Those classes are basically classes wrapping a function that does something on the original collection. Operations
+returns a Generator, Transformation returns usually a simple value.
 
 My todo list for the next major version of the library:
 
-* Get rid of Transformation and use Operation exclusively (_work in progress in [PR #12](https://github.com/loophp/collection/pull/12)_)
-* Try to reach a better typing coverage,
-* Provide a better documentation with real life examples of use for each Operation. 
+- Get rid of Transformation and use Operation exclusively (_work in progress in
+  [PR #12](https://github.com/loophp/collection/pull/12)_)
+- Try to reach a better typing coverage,
+- Provide a better documentation with real life examples of use for each Operation.

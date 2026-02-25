@@ -11,55 +11,43 @@ tags:
 title: AFUP interview
 ---
 
-I will soon give a talk at [AFUP](https://event.afup.org/afup-day-2021/afup-day-2021-lille/programme/)
-regarding the [loophp/collection](https://github.com/loophp/collection) library that I built.
+I will soon give a talk at [AFUP](https://event.afup.org/afup-day-2021/afup-day-2021-lille/programme/) regarding the
+[loophp/collection](https://github.com/loophp/collection) library that I built.
 
-I've been asked to make an [interview](https://event.afup.org/afupday2021-interview-pol-dellaiera/)
-and I had to reply to some questions.
+I've been asked to make an [interview](https://event.afup.org/afupday2021-interview-pol-dellaiera/) and I had to reply
+to some questions.
 
 This blog post is the english translation of this interview.
 
-1.  **When we read \"Lazy Collection\", we think \"Doctrine
-    Collection\". Could you tell us more why your library
+1.  **When we read \"Lazy Collection\", we think \"Doctrine Collection\". Could you tell us more why your library
     loophp/collection is different?**
 
-    The package `doctrine/collections` is one of the reason I started to
-    get interest into collections. However, the real trigger was a *pull
-    request* from [Joseph
-    Silber](https://github.com/laravel/framework/pull/29415) on the
-    Laravel framework, le 5 Août 2019. I carefully analysed and tested
-    it and I started to write my own library, mainly to to learn, test
-    and have a better understanding on the new concepts, I also improved
-    some of them.
+    The package `doctrine/collections` is one of the reason I started to get interest into collections. However, the
+    real trigger was a _pull request_ from [Joseph Silber](https://github.com/laravel/framework/pull/29415) on the
+    Laravel framework, le 5 Août 2019. I carefully analysed and tested it and I started to write my own library, mainly
+    to to learn, test and have a better understanding on the new concepts, I also improved some of them.
 
     That said, it's true, collections libraries, there are
-    [many](https://packagist.org/?query=collection&type=library&tags=collection)
-    and at every sauce, and *curry* sauce is quite uncommon!
+    [many](https://packagist.org/?query=collection&type=library&tags=collection) and at every sauce, and _curry_ sauce
+    is quite uncommon!
 
-    The library provided by Doctrine is mainly used by Doctrine. The
-    result of a `SELECT` SQL query are ofen *wrapped* with an instance
-    of that collection.
+    The library provided by Doctrine is mainly used by Doctrine. The result of a `SELECT` SQL query are ofen _wrapped_
+    with an instance of that collection.
 
-    This allows, among some other things, to easily apply filtering,
-    sorting functions and so on. This is very practical because the
-    result of a query is an object, an instance of the collection, and
-    therefore there is an easy way to see the methods which are attached
-    to it, for example, with the IDE and thus to manipulate the data.
+    This allows, among some other things, to easily apply filtering, sorting functions and so on. This is very practical
+    because the result of a query is an object, an instance of the collection, and therefore there is an easy way to see
+    the methods which are attached to it, for example, with the IDE and thus to manipulate the data.
 
-    To come back to your original question now, `doctrine/collections`
-    is not *lazy* and therefore very different from `loophp/collection`.
+    To come back to your original question now, `doctrine/collections` is not _lazy_ and therefore very different from
+    `loophp/collection`.
 
-    Each method call is executed instantly regardless of the size of the
-    initial data set. Without counting the layer which manages the
-    `expressions`, we could practically reduce this library to a
-    *simple* array manipulation utility.
+    Each method call is executed instantly regardless of the size of the initial data set. Without counting the layer
+    which manages the `expressions`, we could practically reduce this library to a _simple_ array manipulation utility.
 
-    And so yes, there is therefore a fundamental difference between
-    `doctrine/collections` and `loophp/collection`.
+    And so yes, there is therefore a fundamental difference between `doctrine/collections` and `loophp/collection`.
 
-    Example, following a request from a service or a database, we
-    retrieve in the collection `$collection` millions of digital
-    identifiers.
+    Example, following a request from a service or a database, we retrieve in the collection `$collection` millions of
+    digital identifiers.
 
         $results = $collection
             ->filter(fn (int $int) => 0 === $int % 2) // Filter even identifiers
@@ -70,8 +58,7 @@ This blog post is the english translation of this interview.
         foreach ($results as $v) {} // Iterate the results
 
     This snippet will:
-
-    1.  Before starting the *foreach* loop,
+    1.  Before starting the _foreach_ loop,
 
     2.  Traverse the collection to filter it based on its parity,
 
@@ -91,9 +78,8 @@ This blog post is the english translation of this interview.
 
     10. Iterate.
 
-    Now, let's do the same with a *lazy* collection instance.
-
-    1.  Do nothing before starting the *foreach* loop,
+    Now, let's do the same with a _lazy_ collection instance.
+    1.  Do nothing before starting the _foreach_ loop,
 
     2.  As soon as the iteration starts\...,
 
@@ -105,70 +91,54 @@ This blog post is the english translation of this interview.
 
     6.  Iterate.
 
-    The fundamental difference is clearly highlighted here. With a
-    traditional collection, the data collection will be traversed
-    several times, and intermediate variables will be created while with
-    a *lazy* collection, the data will only be traversed once and no
-    intermediate variable will be created.
+    The fundamental difference is clearly highlighted here. With a traditional collection, the data collection will be
+    traversed several times, and intermediate variables will be created while with a _lazy_ collection, the data will
+    only be traversed once and no intermediate variable will be created.
 
-    To put it simply, a *lazy* code will be more lenient with the use of
-    allocated memory than with a traditional code.
+    To put it simply, a _lazy_ code will be more lenient with the use of allocated memory than with a traditional code.
 
-    To conclude, a traditional collection will favor a **consecutive**
-    execution while a *lazy* collection, a **transversal** execution.
+    To conclude, a traditional collection will favor a **consecutive** execution while a _lazy_ collection, a
+    **transversal** execution.
 
-    It is thus among others this technique which is used in
-    `loophp/collection`.
+    It is thus among others this technique which is used in `loophp/collection`.
 
-    The result of one or more operations is
-    *executed/compiled/performed/call-it-whatever-you-want* only when we
-    iterate over the results, never before (*except for a few exceptions
-    out of context*).
+    The result of one or more operations is _executed/compiled/performed/call-it-whatever-you-want_ only when we iterate
+    over the results, never before (_except for a few exceptions out of context_).
 
-    So that's why the adjective *lazy* takes on its full meaning,
-    everything is always done at the *last moment*, a bit like me when I
-    had to study, always at the last minute!
+    So that's why the adjective _lazy_ takes on its full meaning, everything is always done at the _last moment_, a bit
+    like me when I had to study, always at the last minute!
 
-    Hence also the fact that regardless of the volume of initial data,
-    the library will only take care of a small part at a time and will
-    stop only when it has finished going through them.
+    Hence also the fact that regardless of the volume of initial data, the library will only take care of a small part
+    at a time and will stop only when it has finished going through them.
 
-    Finally, to quickly get back to Doctrine, maybe one day there will
-    be a way to inject the possibility of using another collection
-    library\... *who knows*?
+    Finally, to quickly get back to Doctrine, maybe one day there will be a way to inject the possibility of using
+    another collection library\... _who knows_?
 
-2.  **We at AFUP love curry, sweet, smoked \... sorry? What? Ah! Is
-    curry a style of writing code? Can you explain to us what this style
-    is?**
+2.  **We at AFUP love curry, sweet, smoked \... sorry? What? Ah! Is curry a style of writing code? Can you explain to us
+    what this style is?**
 
     I love curry too, both in my dishes and in the code, if not more!
 
-    The term comes from the name of the American mathematician Haskell
-    Curry, yes, Haskell like the programming language!
+    The term comes from the name of the American mathematician Haskell Curry, yes, Haskell like the programming
+    language!
 
-    The following definition explains it very well: The *curryfication*
-    is the transformation of a function with **multiple** arguments to a
-    function with **one** argument (*unary function*) which returns a
-    function on the rest of the arguments.
+    The following definition explains it very well: The _curryfication_ is the transformation of a function with
+    **multiple** arguments to a function with **one** argument (_unary function_) which returns a function on the rest
+    of the arguments.
 
-    Let's take a trivial example: the `implode ()` function. This
-    function is called *binary* and we must succeed in transforming it
-    into a function called *unary*.
+    Let's take a trivial example: the `implode ()` function. This function is called _binary_ and we must succeed in
+    transforming it into a function called _unary_.
 
-    *But how is this possible? To be carried out, this function will
-    always need 2 arguments!*
+    _But how is this possible? To be carried out, this function will always need 2 arguments!_
 
-    The *curryfication* of this function would therefore amount to
-    creating a new function *unary* which admits the first argument
-    `$separator`, which in turns, returns a function which admits the
-    second argument `$strings` and which in turns returns the final
-    result. Example:
+    The _curryfication_ of this function would therefore amount to creating a new function _unary_ which admits the
+    first argument `$separator`, which in turns, returns a function which admits the second argument `$strings` and
+    which in turns returns the final result. Example:
 
         $implode = fn(string $separator) => fn(array $strings) => \implode($separator, $strings);
 
-    And voila! We can now easily create as many *unary* functions as we
-    want. For example, we want a function that *implode* with a hyphen
-    or a comma:
+    And voila! We can now easily create as many _unary_ functions as we want. For example, we want a function that
+    _implode_ with a hyphen or a comma:
 
         $implodeWithDash = $implode('-');
         $implodeWithComma = $implode(',');
@@ -179,89 +149,66 @@ This blog post is the english translation of this interview.
         $implodeWithDash($input); // a-b-c
         $implodeWithComma($input); // a,b,c
 
-    That said, nothing prevents us from also using our new `$implode`
-    function like a traditional one:
+    That said, nothing prevents us from also using our new `$implode` function like a traditional one:
 
         $implode(';')(['g','h','i']); // g;h;i
 
-    The advantage of this technique invented in the 70s (*not so old!*)
-    makes it easier to compose operations developed using several other
-    functions. It also makes it easier to rewrite code, write less code
-    as well as write less imperative and more declarative code, more
-    functional programming oriented.
+    The advantage of this technique invented in the 70s (_not so old!_) makes it easier to compose operations developed
+    using several other functions. It also makes it easier to rewrite code, write less code as well as write less
+    imperative and more declarative code, more functional programming oriented.
 
-    Now, to come back in the context that matters to us today, namely
-    the *lazy* collections and more especially `loophp/collection`.
+    Now, to come back in the context that matters to us today, namely the _lazy_ collections and more especially
+    `loophp/collection`.
 
-    I have used this technique almost everywhere. Indeed, when you pass
-    arguments in the class constructor, there is a good chance that
-    these arguments will be kept in memory via properties. And so, in
-    order to reduce the memory footprint and reduce the size of the
-    code, I *spiced up* my code using the *curryfication*.
+    I have used this technique almost everywhere. Indeed, when you pass arguments in the class constructor, there is a
+    good chance that these arguments will be kept in memory via properties. And so, in order to reduce the memory
+    footprint and reduce the size of the code, I _spiced up_ my code using the _curryfication_.
 
-    It taught me a lot of things and the greatest gift was being
-    interested in functional programming, it opened me up eyes on a
-    myriad of fabulous concepts. This is how I started learning the
-    *Haskell* language, and I was able to put into practice concepts
-    that are generally used in functional languages with contribution in
-    the PHP code, and in particular in `loophp/collection`.
+    It taught me a lot of things and the greatest gift was being interested in functional programming, it opened me up
+    eyes on a myriad of fabulous concepts. This is how I started learning the _Haskell_ language, and I was able to put
+    into practice concepts that are generally used in functional languages with contribution in the PHP code, and in
+    particular in `loophp/collection`.
 
-    Implicitly, I was more efficient in my way of programming, of using
-    the *function-first, data-last* technique or to discover tacit
-    programming (or *point-free-style*).
+    Implicitly, I was more efficient in my way of programming, of using the _function-first, data-last_ technique or to
+    discover tacit programming (or _point-free-style_).
 
-    The use of these techniques allowed me to be very strict at the
-    typing level and thus facilitate the static analysis.
+    The use of these techniques allowed me to be very strict at the typing level and thus facilitate the static
+    analysis.
 
-3.  **Pol, you are Belgian: can you tell us about the community of
-    developers in Belgium? Do you have the equivalent of AFUP,
-    opportunities to meet?**
+3.  **Pol, you are Belgian: can you tell us about the community of developers in Belgium? Do you have the equivalent of
+    AFUP, opportunities to meet?**
 
-    Indeed, I am Belgian with Italian origin and I consider myself a
-    European. It's probably my work environment at the European
-    Commission which has accentuated this way of seeing things. From
-    what I remember I already felt it like that from a young age, my
-    parents did their job well.
+    Indeed, I am Belgian with Italian origin and I consider myself a European. It's probably my work environment at the
+    European Commission which has accentuated this way of seeing things. From what I remember I already felt it like
+    that from a young age, my parents did their job well.
 
-    At the start of my career, I got involved a lot in the Drupal
-    community for which I do not contribute any longer. I went to the
-    four corners of the planet to attend conferences and workshops.
+    At the start of my career, I got involved a lot in the Drupal community for which I do not contribute any longer. I
+    went to the four corners of the planet to attend conferences and workshops.
 
-    Very recently and for multiple reasons, I reoriented my career in
-    order to focus on a more *corporate* and professional use of PHP,
-    without Drupal. I do not regret my choice, except that I miss my old
-    colleagues, especially in this atypical time.
+    Very recently and for multiple reasons, I reoriented my career in order to focus on a more _corporate_ and
+    professional use of PHP, without Drupal. I do not regret my choice, except that I miss my old colleagues, especially
+    in this atypical time.
 
-    Belgium is full of PHP devs and generally they are never without a
-    job! Many of them work at the European Commission, there is a lot of
-    activity around Drupal. Coming from these regions, I know almost all
-    of them and I greet them warmly!
+    Belgium is full of PHP devs and generally they are never without a job! Many of them work at the European
+    Commission, there is a lot of activity around Drupal. Coming from these regions, I know almost all of them and I
+    greet them warmly!
 
-    For the gender distribution, the world of development seems to be a
-    world of men, the only *female* developers I know can be counted on
-    the fingers of one hand, I greet them also at the same time!
+    For the gender distribution, the world of development seems to be a world of men, the only _female_ developers I
+    know can be counted on the fingers of one hand, I greet them also at the same time!
 
-    From a strictly personal point of view, I have never felt any
-    discomfort from anyone regarding the gender, I have the impression
-    that so few women are present because of old ways and customs.
-    Changes in mentalities are still to be made to get out of the
-    preconceived patterns of the past. Even if a lot of effort has been
-    made, the water will still have to flow under the bridges, to erase
-    the prejudices and deconstruct in some heads that women, just like
-    men, can be what they want and not only good at the tasks that have
-    always been assigned to them since the dawn of time. And of course,
-    this is also true for men who wish to get into trades mainly
-    represented by women such as nurses, nursery nurses and so on.
+    From a strictly personal point of view, I have never felt any discomfort from anyone regarding the gender, I have
+    the impression that so few women are present because of old ways and customs. Changes in mentalities are still to be
+    made to get out of the preconceived patterns of the past. Even if a lot of effort has been made, the water will
+    still have to flow under the bridges, to erase the prejudices and deconstruct in some heads that women, just like
+    men, can be what they want and not only good at the tasks that have always been assigned to them since the dawn of
+    time. And of course, this is also true for men who wish to get into trades mainly represented by women such as
+    nurses, nursery nurses and so on.
 
-    Regarding a community similar to AFUP, I only know [PHP
-    Benelux](https://www.phpbenelux.eu/) and I attend meetings
-    regularly. I must admit that I am very envious of the effervescence
-    and communities that I can see in your country.
+    Regarding a community similar to AFUP, I only know [PHP Benelux](https://www.phpbenelux.eu/) and I attend meetings
+    regularly. I must admit that I am very envious of the effervescence and communities that I can see in your country.
 
-    And finally, about 6 years ago and I decided to relocate and I
-    completely stopped traveling and getting involved so much to try in
-    order to devote myself to my renovation projects.
+    And finally, about 6 years ago and I decided to relocate and I completely stopped traveling and getting involved so
+    much to try in order to devote myself to my renovation projects.
 
-    Since then, I slowly take the fold, hence my submission of a
-    presentation or I thank you already for having it chosen, I can't
-    wait to present it to you all.
+    Since then, I slowly take the fold, hence my submission of a presentation or I thank you already for having it
+    chosen, I can't wait to present it to you all.
