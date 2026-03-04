@@ -1,9 +1,9 @@
 [build]
 publish = "public"
-command = "hugo -b $URL --gc --minify --themesDir themes/"
+command = "hugo --buildDrafts -b $URL --gc --minify --themesDir themes/"
 
 [build.environment]
 HUGO_VERSION = "0.155.0"
 
 [context.deploy-preview]
-command = "hugo -b ${DEPLOY_PRIME_URL} -F"
+command = "hugo --buildDrafts -b ${DEPLOY_PRIME_URL} -F"
