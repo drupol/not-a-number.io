@@ -13,7 +13,7 @@
           with pkgs;
           let
             hugo-server = pkgs.writeScriptBin "hugo-server" ''
-              ${lib.getExe pkgs.hugo} server --enableGitInfo --forceSyncStatic -F
+              ${lib.getExe pkgs.hugo} server --buildDrafts --enableGitInfo --forceSyncStatic -F
             '';
           in
           [
