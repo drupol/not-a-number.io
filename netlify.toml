@@ -3,7 +3,7 @@ publish = "public"
 command = "hugo --buildDrafts -b $URL --gc --minify --themesDir themes/"
 
 [build.environment]
-HUGO_VERSION = "0.157.0"
+HUGO_VERSION = "0.155.0"
 
 [context.deploy-preview]
 command = "hugo --buildDrafts -b ${DEPLOY_PRIME_URL} -F"
