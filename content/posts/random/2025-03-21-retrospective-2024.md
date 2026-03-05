@@ -20,7 +20,7 @@ source available (On [Github](https://github.com/drupol/master-thesis), on
 [Codeberg](https://codeberg.org/p1ld7a/master-thesis)). Since then, it has received several minor contributions from the
 community, which is great to see. The **best highlight**? I was invited to deliver both theoretical and practical
 sessions for students, focusing on software deployment and, of course, reproducibility. That marked the beginning of my
-formal collaboration with the [university team](https://web.umons.ac.be/evol/en/home/) as a scientific volunteer,
+formal collaboration with the [university](https://informatique-umons.be/genlog/) as a scientific volunteer in the Software Engineering team,
 something I am particularly proud of.
 
 ## Open Source, still going strong
