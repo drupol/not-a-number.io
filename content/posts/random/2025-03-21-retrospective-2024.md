@@ -5,7 +5,7 @@ tags:
 title: Retrospective 2024
 images:
   - /images/PXL_20240120_092646597.jpg
-draft: true
+draft: false
 ---
 
 Last year was quite something, I went through a lot, both personally and professionally.
