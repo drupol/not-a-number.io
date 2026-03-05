@@ -155,8 +155,7 @@ over dependencies, offered isolation from host systems, and improved team collab
 significantly easier**, as new team members could set up a fully functional development environment in minutes, without
 having to worry about system-specific configurations. We were quickly able to spin up everything we needed, including
 the database, code interpreter and all essential tools, on any Linux or macOS machine. Nix gracefully **blasted to
-smithereens** an entire class of problems we had previously faced (_and brought some new ones we didn't had before as
-smithereens\*\* an entire class of problems we had previously faced (\_and brought some new ones we didn't have before
+smithereens** an entire class of problems we had previously faced (_and brought some new ones we didn't have before
 as well !_), and I am genuinely pleased with the outcome.
 
 #### Enhancing code quality and maintainability
