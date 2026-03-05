@@ -99,8 +99,7 @@ root@note ~# uptime
 The entire infrastructure is version-controlled in a private Git repository, maintained collaboratively. Updating it is
 as simple as bumping the `flake.lock` file and deploying via [`deploy-rs`](https://github.com/serokell/deploy-rs).
 Everything is managed within a single repository: dependencies are pinned, deployments are ~~boring and predictable~~
-fully bit-per-bit reproducible, upgrades are atomic and rollbacks effortless. It is as close to a dream setup as it
-gets, effortless. It is as close to a dream setup as it gets, a level of transparency, security and control which is not
+fully bit-per-bit reproducible, upgrades are atomic and rollbacks effortless. It is as close to a dream setup as it gets, a level of transparency, security and control which is not
 achieved anywhere else at work.
 
 Another project, [`developer-profile`](https://code.europa.eu/ecphp/devs-profile/), continues to grow. Originally a
