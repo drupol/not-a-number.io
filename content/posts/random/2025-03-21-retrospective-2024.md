@@ -14,9 +14,9 @@ To begin with, the first six months of 2024 were intense: juggling work, school,
 [thesis](https://doi.org/10.5281/zenodo.13894231) simultaneously.
 
 In June, my 3-year journey at [the university](https://web.umons.ac.be) came to a successful end. With my Master's
-degree in Computer Science finally in hand and one fewer frustration. I defended
-[My thesis](https://doi.org/10.5281/zenodo.12666898) on the 12th June 2024, and shortly afterwards, I made the full
-source available (On [Github](https://github.com/drupol/master-thesis), on
+degree in Computer Science finally in hand and one fewer frustration, I defended
+[my thesis](https://doi.org/10.5281/zenodo.12666898) on the 12th June 2024, and shortly afterwards, I made the full
+source available (on [GitHub](https://github.com/drupol/master-thesis), on
 [Codeberg](https://codeberg.org/p1ld7a/master-thesis)). Since then, it has received several minor contributions from the
 community, which is great to see. The **best highlight**? I was invited to deliver both theoretical and practical
 sessions for students, focusing on software deployment and, of course, reproducibility. That marked the beginning of my
@@ -29,7 +29,7 @@ My involvement in open source continued to grow. In 2024, I contributed to 44 di
 [2023]({{< ref "2023-12-23-retrospective-2023" >}})), with 419 pull requests merged (compared to 357 in
 [2023]({{< ref "2023-12-23-retrospective-2023" >}})).
 
-{{< figure src="/images/retrospective-2024-stats.svg" caption="Statistics made using [oss-contribs](https://github.com/staabm/oss-contribs)" width=1024 >}}
+{{< figure src="/images/retrospective-2024-stats.svg" caption="Statistics generated using [oss-contribs](https://github.com/staabm/oss-contribs)" width=1024 >}}
 
 I am still using [Typst](https://typst.app), and I can confidently say it has completely replaced LaTeX for me. I even
 [migrated](https://github.com/drupol/cv/commit/601ea18cfc119e9572c1f11a76db2164f1c8b8f5) my
@@ -54,7 +54,7 @@ Development Competency Centre" team I had been part of for nearly 5 years was sh
 
 During my time there, I contributed in various capacities: helping DGs transition from
 [ColdFusion](https://en.wikipedia.org/wiki/Adobe_ColdFusion) to [PHP](https://en.wikipedia.org/wiki/PHP), delivering
-[internal technical sessions](https://code.europa.eu/ecphp/sessions), analysing and setting-up solutions to unify
+[internal technical sessions](https://code.europa.eu/ecphp/sessions), analysing and setting up solutions to unify
 development environments, setting up servers "in the cloud" and developing foundational tools for all PHP teams.
 [Symfony](https://symfony.com/) was our go-to framework though some teams made other choices, which was perfectly fine,
 showcasing the flexibility inherent in open source and after all, it was still PHP.
@@ -68,7 +68,7 @@ only on standardised abstractions through interfaces (Thanks [PSR](https://www.p
 library to be integrated into any PHP project, regardless of the framework, by requiring the _consumer of the library_
 to implement these standard interfaces. This approach **shifts the responsibility** for the concrete implementation
 details and integration security **to the end user**, where it belongs, while the library focuses on providing a robust,
-standard-compliant core.
+standards-compliant core.
 
 Alongside these efforts, I also contributed improvements and bug fixes to several of the open source projects we
 depended on, **giving back** to the ecosystem that made our work possible.
@@ -80,7 +80,7 @@ Open source demands more **rigour**, but it pays off. As the saying goes:
 
 Open sourcing encourages **better software**, more thoughtful abstractions and clearer documentation. While many of my
 colleagues are not yet familiar with building and contributing to open source, I have had the opportunity to guide some
-of them. As a result, `cas-lib` now includes support for some other PHP framework.
+of them. As a result, `cas-lib` now includes support for other PHP frameworks.
 
 I also managed versioning for the PHP packages, a not so pleasant task I seriously underestimated, even with
 [Semantic Versioning](https://semver.org/). In total, we open-sourced 16 projects, something I remain genuinely proud
@@ -197,15 +197,14 @@ maturity.
 
 Over the year, I have realised that being a software engineer is not just about writing code (_and so on..._), but
 rather **choosing the right tools**, the right libraries and the right pattern **for a given algorithm or project**. It
-is not really about picking PHP, Python or whatever, but about understanding the constraints and goals of the task at
-hand and, and ultimately **making the right choice**.
+is not really about picking PHP, Python or whatever, but about understanding the constraints and goals of the task at hand and, ultimately **making the right choice**.
 
 A major part of making that right choice is dispelling a common software engineering illusion: **the belief that
 adopting a new framework or library will magically erase technical debt**.
 
 Before adopting a shiny new tool (or library, or framework, or technology), our projects usually look something like
 this: a solid chunk of business value weighed down by a clear, predictable block of homegrown technical debt (e.g.,
-spaghetti code, missing tests, reinvented the wheel, lack of automatisation, etc etc).
+spaghetti code, missing tests, reinvented the wheel, lack of automation, etc etc).
 
 {{< figure src="/images/Untitled-2025-11-17-2024a.svg" caption="The before: A clear view of our own custom-made technical debt." >}}
 
@@ -255,7 +254,7 @@ that support that vision.
 
 Public institutions, in my view, have a responsibility to lead (_it is time to lead by example_) by example, not just by
 complying with regulations like the CRA, but by embracing the spirit of them. This means investing in open technologies,
-making software choices that prioritise transparency, autonomy, sustainability and **avoid vendor-locking at all cost**,
+making software choices that prioritise transparency, autonomy, sustainability and **avoid vendor lock-in at all costs**,
 supporting reproducible and verifiable systems. This is not just a present-day concern... it is a battle that has been
 fought (and arguably lost) before. A recent paper by [Nora von Ingersleben-Seip](https://www.noravoningersleben.com/),
 ["How the European Union Fell Out of Love with Open-Source Software" (2025)](https://ideas.repec.org/p/aiw/wpaper/39.html),
@@ -281,7 +280,7 @@ things could genuinely improve.
 
 A clear example of this lack of future-proof vision was the abrupt shutdown of the PHP team I was working in. Around
 2019, we were encouraged to adopt PHP, which was, at the time, the officially recommended language for web applications.
-Many of my colleagues were unfamiliar with it, but they took the time to learn, they were even offered trainings and
+Many of my colleagues were unfamiliar with it, but they took the time to learn, they were even offered training and
 gradually migrated their legacy applications. It was not without difficulty, but they succeeded, supported by my team
 throughout the process. However, the decision to shut down our team was made, and the consequences were clearly not
 fully considered. Over the years, I had developed a substantial collection of tools and infrastructure that were widely
@@ -375,9 +374,9 @@ overengineered, underdocumented, and reinvented from scratch in each project, ul
 [bus factor](https://en.wikipedia.org/w/index.php?title=Bus_factor&oldid=1289359475). This _fragmentation_ leads to
 duplicated effort, increased maintenance costs and inconsistent practices across institutions, ultimately working
 **against the goal of long-term sustainability and collaboration**. Internally, DGs, including the central IT
-department, share almost nothing of what it builds and often develop similar tools or components (e.g., multiple check
-in/out applications, multiple chatbots instances, too many Gitlab instances, ...) in parallel. This presents a
-significant opportunity for further harmonization and resource optimization, which could be better achieved through
+department, share almost nothing of what they build and often develop similar tools or components (e.g., multiple check
+in/out applications, multiple chatbot instances, too many Gitlab instances, ...) in parallel. This presents a
+significant opportunity for further harmonisation and resource optimisation, which could be better achieved through
 improved coordination and shared efforts.
 
 {{< alert >}}
@@ -429,7 +428,7 @@ still believe it is possible, and I hope to see public institutions move more de
 
 {{< alert type="warning" header="Disclaimer" >}}
 
-1. This article has been published in February 2026 and immediatelly removed after less than an hour. I actually thanks
+1. This article was published in February 2026 and immediately removed after less than an hour. I actually thank
    the person who alerted me about it. I reworked it and published it again, hopefully for good this time.
 2. The views expressed in this post are my own and do not necessarily reflect those of my employer or any institution I
    am affiliated with. This reflection is based on personal experience and observations.
