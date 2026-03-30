@@ -1,0 +1,78 @@
+baseURL = "https://not-a-number.io/"
+languageCode = "en-us"
+title = "Not a Number"
+theme = [ "hugo-notice", "hugo-loremipsum", "hugo-redirect" ]
+summaryLength = 50
+disqusShortname = "drupol"
+enableGitInfo = true
+ignoreErrors = [ "error-remote-getjson" ]
+
+[permalinks]
+posts = "/:year/:title"
+page = "/:slug/"
+
+[pagination]
+pagerSize = 10
+
+[[menu.navbar]]
+name = "About"
+url = "/about"
+weight = 10
+
+[[menu.navbar]]
+name = "Projects"
+url = "/projects"
+weight = 20
+
+[[menu.navbar]]
+name = "Sponsor my work"
+url = "/sponsor"
+weight = 30
+
+[[menu.navbar]]
+name = "Bookshelf"
+url = "/bookshelf"
+weight = 40
+
+[[menu.navbar]]
+name = "CV"
+url = "/cv"
+weight = 50
+
+[params]
+author = "Pol Dellaiera"
+authoremail = "pol.dellaiera@protonmail.com"
+tagline = "NaN"
+logo = "/static/logo.svg"
+favicon = "/static/logo.svg"
+readingTime = true
+wordCount = true
+hideAuthor = true
+description = """
+Welcome to my unique repository of divergent sequences of random characters.
+Here, you may contemplate the endless variations of 26 letters and some special characters.
+"""
+header_visible = true
+date_format = "Mon Jan 02, 2006"
+sharingicons = true
+truncate = true
+DefaultContentLanguage = "en"
+github = "drupol"
+
+  [params."google.analytics"]
+  id = "G-7PNPX0VZXC"
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+[markup.goldmark.parser.attribute]
+block = true
+
+[markup.goldmark.extensions.extras.mark]
+enable = true
+
+[markup.goldmark.extensions.extras.subscript]
+enable = true
+
+[markup.goldmark.extensions.extras.superscript]
+enable = true
