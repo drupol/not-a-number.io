@@ -152,7 +152,7 @@ In practice, this is where the friction begins.
 
 If we evaluate the configuration above, we hit an immediate snag:
 
-```console
+```console {lineNos=inline}
 $ nix build .#nixosConfigurations.igloo.config.system.build.toplevel
 
 error: The option `home-manager.users.alice.home.stateVersion' was accessed but
@@ -238,7 +238,7 @@ issue, leading to more complex and less intuitive models.
 With a host and 1 user, forwarding host-selected aspects to users is trivial. The evaluation behaves exactly as
 expected:
 
-```console
+```console {lineNos=inline}
 nix-repl> nixosConfigurations.igloo.config.home-manager.users.alice.home.stateVersion
 "25.11"
 
@@ -308,7 +308,7 @@ The graph topology now looks like this:
 
 But evaluation now fails with:
 
-```console
+```console {lineNos=inline}
 error: The option `boot.kernelPackages' is defined multiple times while it's expected to be unique.
 
 Definition values:

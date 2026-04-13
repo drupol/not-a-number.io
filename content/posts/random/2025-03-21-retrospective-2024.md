@@ -20,8 +20,8 @@ source available (on [GitHub](https://github.com/drupol/master-thesis), on
 [Codeberg](https://codeberg.org/p1ld7a/master-thesis)). Since then, it has received several minor contributions from the
 community, which is great to see. The **best highlight**? I was invited to deliver both theoretical and practical
 sessions for students, focusing on software deployment and, of course, reproducibility. That marked the beginning of my
-formal collaboration with the [university](https://informatique-umons.be/genlog/) as a scientific volunteer in the Software Engineering team,
-something I am particularly proud of.
+formal collaboration with the [university](https://informatique-umons.be/genlog/) as a scientific volunteer in the
+Software Engineering team, something I am particularly proud of.
 
 ## Open Source, still going strong
 
@@ -91,7 +91,7 @@ At the same time, I built and maintained the [OSPO](https://en.wikipedia.org/wik
 infrastructure running [NixOS](https://nixos.org/). Our note-taking server has been up and running without interruption
 for more than 2 years now:
 
-```console
+```console {lineNos=inline}
 root@note ~# uptime
  16:51:01  up 817 days  3:46,  1 user,  load average: 0.00, 0.00, 0.00
 ```
@@ -99,8 +99,8 @@ root@note ~# uptime
 The entire infrastructure is version-controlled in a private Git repository, maintained collaboratively. Updating it is
 as simple as bumping the `flake.lock` file and deploying via [`deploy-rs`](https://github.com/serokell/deploy-rs).
 Everything is managed within a single repository: dependencies are pinned, deployments are ~~boring and predictable~~
-fully bit-per-bit reproducible, upgrades are atomic and rollbacks effortless. It is as close to a dream setup as it gets, a level of transparency, security and control which is not
-achieved anywhere else at work.
+fully bit-per-bit reproducible, upgrades are atomic and rollbacks effortless. It is as close to a dream setup as it
+gets, a level of transparency, security and control which is not achieved anywhere else at work.
 
 Another project, [`developer-profile`](https://code.europa.eu/ecphp/devs-profile/), continues to grow. Originally a
 proof of concept, it was
@@ -155,8 +155,8 @@ over dependencies, offered isolation from host systems, and improved team collab
 significantly easier**, as new team members could set up a fully functional development environment in minutes, without
 having to worry about system-specific configurations. We were quickly able to spin up everything we needed, including
 the database, code interpreter and all essential tools, on any Linux or macOS machine. Nix gracefully **blasted to
-smithereens** an entire class of problems we had previously faced (_and brought some new ones we didn't have before
-as well !_), and I am genuinely pleased with the outcome.
+smithereens** an entire class of problems we had previously faced (_and brought some new ones we didn't have before as
+well !_), and I am genuinely pleased with the outcome.
 
 #### Enhancing code quality and maintainability
 
@@ -197,7 +197,8 @@ maturity.
 
 Over the year, I have realised that being a software engineer is not just about writing code (_and so on..._), but
 rather **choosing the right tools**, the right libraries and the right pattern **for a given algorithm or project**. It
-is not really about picking PHP, Python or whatever, but about understanding the constraints and goals of the task at hand and, ultimately **making the right choice**.
+is not really about picking PHP, Python or whatever, but about understanding the constraints and goals of the task at
+hand and, ultimately **making the right choice**.
 
 A major part of making that right choice is dispelling a common software engineering illusion: **the belief that
 adopting a new framework or library will magically erase technical debt**.
@@ -254,9 +255,10 @@ that support that vision.
 
 Public institutions, in my view, have a responsibility to lead (_it is time to lead by example_) by example, not just by
 complying with regulations like the CRA, but by embracing the spirit of them. This means investing in open technologies,
-making software choices that prioritise transparency, autonomy, sustainability and **avoid vendor lock-in at all costs**,
-supporting reproducible and verifiable systems. This is not just a present-day concern... it is a battle that has been
-fought (and arguably lost) before. A recent paper by [Nora von Ingersleben-Seip](https://www.noravoningersleben.com/),
+making software choices that prioritise transparency, autonomy, sustainability and **avoid vendor lock-in at all
+costs**, supporting reproducible and verifiable systems. This is not just a present-day concern... it is a battle that
+has been fought (and arguably lost) before. A recent paper by
+[Nora von Ingersleben-Seip](https://www.noravoningersleben.com/),
 ["How the European Union Fell Out of Love with Open-Source Software" (2025)](https://ideas.repec.org/p/aiw/wpaper/39.html),
 details how the EU's strong, pro-sovereignty stance on open source in 2004 was reversed by 2010 due to intense lobbying
 from proprietary incumbents. The paper is a sobering reminder that the push for digital sovereignty is constantly at
@@ -428,8 +430,8 @@ still believe it is possible, and I hope to see public institutions move more de
 
 {{< alert type="warning" header="Disclaimer" >}}
 
-1. This article was published in February 2026 and immediately removed after less than an hour. I actually thank
-   the person who alerted me about it. I reworked it and published it again, hopefully for good this time.
+1. This article was published in February 2026 and immediately removed after less than an hour. I actually thank the
+   person who alerted me about it. I reworked it and published it again, hopefully for good this time.
 2. The views expressed in this post are my own and do not necessarily reflect those of my employer or any institution I
    am affiliated with. This reflection is based on personal experience and observations.
 3. I used a very old refurbished server hosted in my basement to fix the typos of this text using different open-source

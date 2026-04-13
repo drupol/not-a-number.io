@@ -65,6 +65,9 @@ github = "drupol"
 [markup]
 defaultMarkdownHandler = "goldmark"
 
+[markup.highlight]
+style = "github"
+
 [markup.goldmark.parser.attribute]
 block = true
 
