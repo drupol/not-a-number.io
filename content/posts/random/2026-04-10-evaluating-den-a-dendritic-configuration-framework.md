@@ -49,7 +49,7 @@ configuration domains**. At first glance, this is exactly what Den enables.
 
 To illustrate the problem, let's look at a minimal example.
 
-```goat
+```goat {caption="Topology of a simple dendritic configuration with 1 host, 1 user and 2 aspects"}
                                 +-------------------+
                                 |   Host (igloo)    |
                                 |     - nixos       |
@@ -76,7 +76,7 @@ To illustrate the problem, let's look at a minimal example.
 
 This is not my actual configuration, but a simplified version that captures the essence of the issue.
 
-```nix
+```nix {lineNos=inline}
 {
   lib,
   den,
@@ -193,7 +193,7 @@ Fear not ! Den anticipates this and provides a mechanism to establish a
 Basically, this means that the `base` and `desktop` aspects included in the `igloo` host aspect will now be forwarded to
 the users of that host, making the `homeManager` configuration available to `alice` as expected:
 
-```goat
+```goat {caption="Topology of the configuration with mutual provider forwarding ('to-users' relationship)"}
                                     +------------------+
                                     |   Host (igloo)   |
                                     |     - nixos      |
@@ -277,7 +277,7 @@ the `igloo` host:
 
 The graph topology now looks like this:
 
-```goat
+```goat {caption="Topology of the configuration with 1 host, 2 users and 2 aspects, including mutual provider forwarding"}
                                         +-------------------+
                                         |   Host (igloo)    |
                                         |     - nixos       |
@@ -338,7 +338,7 @@ host-level option can collide when cardinality moves from 1->1 to 1->N.
 
 Visually, the evaluation graph looks like this:
 
-```goat
+```goat {caption="Evaluation graph with 1 host, 2 users and 2 aspects, showing the collision of host-level options when forwarded to multiple users"}
                +--------------+
                | Host (Igloo) |
                +--------------+
@@ -349,13 +349,14 @@ Visually, the evaluation graph looks like this:
   +--------------+          +--------------+
   | User (Alice) |          |  User (Bob)  |
   +--------------+          +--------------+
-              ^                ^
-               \              /
-                \            /
-                 \          /
-           +----------------------+
-           | Aspect (Base,Desktop)|
-           +----------------------+
+      ^      ^                 ^       ^
+      |      '-----------.     |       |
+      |          .-------|-----'       |
+      |          |       |             |
+      |          |       |             |
+    +---------------+ +------------------+
+    | Aspect (Base) | | Aspect (Desktop) |
+    +---------------+ +------------------+
 ```
 
 The host (cardinality of 1) receives the identical configuration twice from the users (cardinality of N), creating a
@@ -364,7 +365,7 @@ collision.
 To fix this, we must make ownership boundaries explicit by splitting the mixed aspect into dedicated host and user
 variants, as follows:
 
-```goat
+```goat {caption="Topology of the configuration with explicit ownership boundaries (split aspects) to resolve the 1->N collision"}
                                                 +----------------+
                                                 | Host (igloo)   |
                                                 |   - nixos      |
@@ -395,7 +396,7 @@ variants, as follows:
 
 And the complete corresponding configuration now looks like this:
 
-```nix
+```nix {lineNos=inline}
 {
   den,
   lib,
