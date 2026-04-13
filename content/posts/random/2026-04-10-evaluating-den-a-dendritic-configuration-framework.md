@@ -54,9 +54,9 @@ To illustrate the problem, let's look at a minimal example.
                                 |   Host (igloo)    |
                                 |     - nixos       |
                                 +-------------------+
-                                  |       |       |
+                       includes   |       |       |   includes
                     .-------------'       |       '-------------.
-           includes |                owns |            includes |
+                    |                owns |                     |
                     v                     v                     v
           +---------------+       +---------------+       +------------------+
           | Aspect (base) |       |  User Aspect  |       | Aspect (desktop) |
@@ -198,9 +198,9 @@ the users of that host, making the `homeManager` configuration available to `ali
                                     |   Host (igloo)   |
                                     |     - nixos      |
                                     +------------------+
-                                      |      |       |
+                       includes       |      |       |     includes
                    .------------------'      |       '------------------.
-          includes |                    owns |                 includes |
+                   |                    owns |                          |
                    v                         v                          v
   +------------------+              +------------------+              +------------------+
   |  Aspect (base)   |              |   User Aspect    |              | Aspect (desktop) |
@@ -343,16 +343,16 @@ Visually, the evaluation graph looks like this:
                | Host (Igloo) |
                +--------------+
                  ^          ^
-                /            \
-               /              \
-              /                \
-  +--------------+          +--------------+
-  | User (Alice) |          |  User (Bob)  |
-  +--------------+          +--------------+
+                 |          |
+                 |          |
+                 |          |
+    +--------------+      +--------------+
+    | User (Alice) |      |  User (Bob)  |
+    +--------------+      +--------------+
       ^      ^                 ^       ^
       |      '-----------.     |       |
+      |                  |     |       |
       |          .-------|-----'       |
-      |          |       |             |
       |          |       |             |
     +---------------+ +------------------+
     | Aspect (Base) | | Aspect (Desktop) |
