@@ -110,7 +110,10 @@ This is not my actual configuration, but a simplified version that captures the 
 
     nixos = {
       boot.loader.grub.enable = false;
-      fileSystems."/".device = "/dev/null";
+      fileSystems."/" = {
+        device = "/dev/null";
+        fsType = "none";
+      };
     };
   };
 
@@ -440,7 +443,10 @@ And the complete corresponding configuration now looks like this:
 
     nixos = {
       boot.loader.grub.enable = false;
-      fileSystems."/".device = "/dev/null";
+      fileSystems."/" = {
+        device = "/dev/null";
+        fsType = "none";
+      };
     };
   };
 
