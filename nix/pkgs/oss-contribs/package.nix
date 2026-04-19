@@ -4,7 +4,7 @@
   php82,
 }:
 
-php82.buildComposerProject2 (finalAttrs: {
+php82.buildComposerProject2 (_finalAttrs: {
   pname = "oss-contribs";
   version = "0.2";
 

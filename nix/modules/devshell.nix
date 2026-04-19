@@ -20,6 +20,13 @@
           just
           hugo
           pandoc
+          mcp-server-fetch
+          mcp-server-filesystem
+          mcp-server-git
+          mcp-server-memory
+          mcp-server-sequential-thinking
+          mcp-server-time
+          github-mcp-server
           (aspellWithDicts (d: [
             d.fr
             d.en
