@@ -532,7 +532,7 @@ when reconciling host-level (`nixos`) and user-level (`homeManager`) boundaries 
 
 My [previous rewrite]({{< ref "2025-05-01-refactoring-my-infrastructure-as-code-configurations" >}}) taught me to pivot
 from _host-first_ to _feature-first_. Den confirms this is the right direction and provides superior building blocks to
-achieve it, for sure 😎 !
+achieve it, [for sure 😎 !](https://www.youtube.com/watch?v=zOQI49l6hfo)
 
 At the same time, it made a deeper truth highly visible:
 
