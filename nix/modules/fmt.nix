@@ -22,17 +22,9 @@
           no-cache = true;
           on-unmatched = "warn";
           formatter = {
-            "json-sort-cli" = {
-              command = "${lib.getExe pkgs.bash}";
-              options = [
-                "-euc"
-                ''
-                  for file in "$@"; do
-                    ${lib.getExe pkgs.json-sort-cli} $file --insert-final-newline true --autofix || true
-                  done
-                ''
-                "--" # bash swallows the second argument when using -c
-              ];
+            "json-sort" = {
+              command = lib.getExe pkgs.json-sort;
+              options = [ "--fix" ];
               includes = [ "*.json" ];
             };
             prettier = {
