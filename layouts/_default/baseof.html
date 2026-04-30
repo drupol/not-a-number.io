@@ -35,6 +35,8 @@
   <script src="{{ $scripts.Permalink }}" crossorigin="anonymous"></script>
   {{ $scripts := resources.Get "js/shuffle.js" | minify}}
   <script src="{{ $scripts.Permalink }}" crossorigin="anonymous"></script>
+  {{ $scripts := resources.Get "js/glitch.js" | minify}}
+  <script src="{{ $scripts.Permalink }}" crossorigin="anonymous"></script>
 
   </body>
 

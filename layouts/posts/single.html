@@ -54,14 +54,14 @@
 
 <article class="markdown-body">
   <header class="mb-2">
-    <h1 class="text-justify">{{ .Title | markdownify }}</h1>
+    <h1 class="text-justify glitch-once">{{ .Title | markdownify }}</h1>
     {{ partial "post-meta.html" . }}
   </header>
 
   {{ if .Params.images }}
     <div class="media">
       <figure class="figure">
-        <img itemprop="image" src="{{ index .Params.images 0 }}" class="figure-img img-fluid rounded mb-0" alt="{{ .Title }}"/>
+        <img itemprop="image" src="{{ index .Params.images 0 }}" class="figure-img img-fluid rounded mb-0 glitch" alt="{{ .Title }}"/>
         {{ if .Params.image_copyrights }}
         <figcaption class="figure-caption text-end text-muted">{{ .Params.image_copyrights | markdownify }}</figcaption>
         {{ end }}
