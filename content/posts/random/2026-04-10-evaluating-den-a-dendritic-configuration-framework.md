@@ -54,20 +54,19 @@ To illustrate the problem, let's look at a minimal example.
                                 |   Host (igloo)    |
                                 |     - nixos       |
                                 +-------------------+
+                                  ^       ^       ^
                        includes   |       |       |   includes
                     .-------------'       |       '-------------.
                     |                owns |                     |
-                    v                     v                     v
           +---------------+       +---------------+       +------------------+
           | Aspect (base) |       |  User Aspect  |       | Aspect (desktop) |
           | - nixos       |       |    (alice)    |       | - nixos          |
           | - homeManager |       +---------------+       | - homeManager    |
-          +---------------+         |           |         +------------------+
+          +---------------+         ^           ^         +------------------+
                                     |           |
                          includes   |           |   includes
                       .-------------'           '-------------.
                       |                                       |
-                      v                                       v
              +-----------------+                 +-----------------+
              | Built-in Aspect |                 | Built-in Aspect |
              |   define-user   |                 |   primary-user  |
@@ -201,20 +200,19 @@ the users of that host, making the `homeManager` configuration available to `ali
                                     |   Host (igloo)   |
                                     |     - nixos      |
                                     +------------------+
+                                      ^      ^       ^
                        includes       |      |       |     includes
                    .------------------'      |       '------------------.
                    |                    owns |                          |
-                   v                         v                          v
   +------------------+              +------------------+              +------------------+
   |  Aspect (base)   |              |   User Aspect    |              | Aspect (desktop) |
   | - nixos          |              |     (alice)      |              | - nixos          |
   | - homeManager    |------------->|                  |<-------------| - homeManager    |
   +------------------+   to-users   +------------------+   to-users   +------------------+
-                                      |              |
+                                      ^              ^
                            includes   |              |   includes
                       .---------------'              '---------------.
                       |                                              |
-                      v                                              v
             +-----------------+                            +-----------------+
             | Built-in Aspect |                            | Built-in Aspect |
             |   define-user   |                            |  primary-user   |
@@ -285,16 +283,17 @@ The graph topology now looks like this:
                                         |   Host (igloo)    |
                                         |     - nixos       |
                                         +-------------------+
+                                          ^       ^       ^
                       includes            |       |       |         includes
                   .-----------------------'       |       '----------------------.
                   |                          owns |                              |
                   |                       .-------+-------.                      |
-                  v                       |               |                      v
-  +------------------+                    v               v                    +------------------+
+                  |                       |               |                      |
+  +------------------+                    |               |                    +------------------+
   |  Aspect (base)   | to-users  +--------------+   +--------------+  to-users | Aspect (desktop) |
   | - nixos          |---------->| User (alice) |   |  User (bob)  |<----------| - nixos          |
   | - homeManager    |-.         +--------------+   +--------------+   .-------| - homeManager    |
-  +------------------+ |              |       ^       ^   |            |       +------------------+
+  +------------------+ |              ^       ^       ^   ^            |       +------------------+
                        | to-users     |       |       |   |            |
                        '--------------|-------|-------'   |            |
                                       |       |           |  to-users  |
@@ -302,7 +301,7 @@ The graph topology now looks like this:
                                       |                   |
                              .--------+--------.          |
                    includes  |                 |          | includes
-                             v                 v          v
+                             |                 |          |
                   +-----------------+      +-----------------+
                   | Built-in Aspect |      | Built-in Aspect |
                   |  primary-user   |      |   define-user   |
@@ -373,25 +372,26 @@ variants, as follows:
                                                 | Host (igloo)   |
                                                 |   - nixos      |
                                                 +----------------+
+                                                   ^  ^  ^  ^  ^
                         to-users                   |  |  |  |  |                 to-users
           .----------------------------------------'  |  |  |  '-------------------------------------.
           |                       includes            |  |  |        includes                        |
           |                 .-------------------------'  |  '------------------------.               |
           |                 |                            |                           |               |
-          |                 v                     .------+------.                    v               |
+          |                 |                     .------+------.                    |               |
           |       +-----------------+             |     owns    |            +--------------------+  |
-          |       |Aspect(base-host)|             v             v            |Aspect(desktop-host)|  |
+          |       |Aspect(base-host)|             |             |            |Aspect(desktop-host)|  |
           |       | - nixos         |    +--------------+ +--------------+   | - nixos            |  |
           |       +-----------------+    | User (alice) | |  User (bob)  |   +--------------------+  |
-          v                              +--------------+ +--------------+                           v
-  +-----------------+                       ^      |  ^     ^      |   ^                       +--------------------+
-  |Aspect(base-user)|-----------------------'      |  |     |      |   '-----------------------|Aspect(desktop-user)|
-  | - homeManager   |                              |  '-----|------|---------------------------| - homeManager      |
-  |                 |------------------------------|--------'      |                           |                    |
-  +-----------------+                              |               |                           +--------------------+
-                                           .-------+--------.      |
-                                  includes |                |      | includes
-                                           v                v      v
+          |                              +--------------+ +--------------+                           |
+  +-----------------+                       ^  ^   ^  ^     ^      ^   ^                       +--------------------+
+  |Aspect(base-user)|-----------------------'  |   |  |     |      |   '-----------------------|Aspect(desktop-user)|
+  | - homeManager   |                          |   |  '-----|------|---------------------------| - homeManager      |
+  |                 |--------------------------|---|--------'      |                           |                    |
+  +-----------------+                          |   |               |                           +--------------------+
+                                               |   '--------.      |
+                                               | includes   |      | includes
+                                               |            |      |
                                 +------------------+    +------------------+
                                 | Built-in Aspect  |    | Built-in Aspect  |
                                 |   primary-user   |    |   define-user    |
