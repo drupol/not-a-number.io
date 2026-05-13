@@ -78,8 +78,7 @@ Please feel free to reach out and connect with me via the links in the sidebar, 
 [1]: https://bl.ocks.org/mbostock
 [Nick Berry's blog]: http://datagenetics.com/
 [OpenStreetMap]: https://www.openstreetmap.org/
-[a patch]:
-  https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_system_theme_engine_info/7.x
+[a patch]: https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_system_theme_engine_info/7.x
 [nixpkgs committer]: https://github.com/orgs/NixOS/teams/nixpkgs-committers?query=drupol
 [NixOS repository]: https://github.com/NixOS
 [nixos]: https://nixos.org
