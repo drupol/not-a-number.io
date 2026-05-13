@@ -9,11 +9,7 @@ command = ["nixfmt"]
 [presets.php]
 language = "php"
 # php-cs-fixer does not support STDIN, so we use a temporary file
-command = [
-  "sh",
-  "-c",
-  "php-cs-fixer fix -q --rules=@PSR12 {file}; cat {file}"
-]
+command = ["sh", "-c", "php-cs-fixer fix -q --rules=@PSR12 {file}; cat {file}"]
 input_mode = "file"
 
 [presets.rust]

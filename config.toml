@@ -1,11 +1,11 @@
 baseURL = "https://not-a-number.io/"
 languageCode = "en-us"
 title = "Not a Number"
-theme = [ "hugo-notice", "hugo-loremipsum", "hugo-redirect" ]
+theme = ["hugo-notice", "hugo-loremipsum", "hugo-redirect"]
 summaryLength = 50
 disqusShortname = "drupol"
 enableGitInfo = true
-ignoreErrors = [ "error-remote-getjson" ]
+ignoreErrors = ["error-remote-getjson"]
 
 [permalinks]
 posts = "/:year/:title"
@@ -59,8 +59,8 @@ truncate = true
 DefaultContentLanguage = "en"
 github = "drupol"
 
-  [params."google.analytics"]
-  id = "G-7PNPX0VZXC"
+[params."google.analytics"]
+id = "G-7PNPX0VZXC"
 
 [markup]
 defaultMarkdownHandler = "goldmark"

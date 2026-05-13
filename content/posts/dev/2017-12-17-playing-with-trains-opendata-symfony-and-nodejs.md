@@ -2,7 +2,8 @@
 date: 2017-12-17
 images:
   - /images/Santa_Claus_waiting_for_a_train_IM1203.JPG
-image_copyrights: Image by [Annely Salo](https://commons.wikimedia.org/wiki/File:Santa_Claus_waiting_for_a_train_IM1203.JPG).
+image_copyrights:
+  Image by [Annely Salo](https://commons.wikimedia.org/wiki/File:Santa_Claus_waiting_for_a_train_IM1203.JPG).
 tags:
   - php
   - symfony
