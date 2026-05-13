@@ -14,7 +14,10 @@
         programs = {
           deadnix.enable = true;
           jsonfmt.enable = true;
-          nixfmt.enable = true;
+          nixfmt = {
+            enable = true;
+            package = pkgs.nixfmt-rs;
+          };
           oxfmt.enable = true;
           yamlfmt.enable = true;
         };
