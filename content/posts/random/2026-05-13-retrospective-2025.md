@@ -213,7 +213,10 @@ could have been spent on documentation, the website, or pull-request reviews. I 
 point in the [`Anduril's threat is existential`] thread: no matter how much time people spend trying to persuade each
 other about non-technical questions, the basic reality of open source remains hard to escape. These conversations may
 sometimes be necessary, but they are not free. They ask for time, attention, restraint, and emotional energy from
-contributors who often came to the project to build and maintain software.
+contributors who often came to the project to build and maintain software. They also ask even more from people who are
+not writing in their native language. For me, doing all of this in English, while my native language is French, added a
+constant extra layer of effort: choosing words carefully, avoiding misunderstandings, checking tone, and trying to stay
+precise while already tired from the emotional strain of the situation.
 
 The same pattern showed up around symbolic project branding. The [`NixOS/nixos-homepage#1775`] discussion started from a
 simple question that several people had raised in one form or another, and for which some were treated very harshly,
@@ -279,13 +282,31 @@ representative of the Nix project as a whole. Those conversations did not solve 
 me that the community is not reducible to its worst threads.
 
 After NixCon, in [`NixOS/branding#33`], I materialised the proposal by adding Ukrainian branding derivations. Even
-there, I had to address rumours about why the proposal existed in the first place. That is precisely the kind of thing I
-mean: once a project starts making symbolic gestures without a clear process, contributors can end up spending a
-surprising amount of time explaining motives, defending consistency, and maintaining conversations that are not about
-the software itself.
+there, I had to address rumours about why the proposal existed in the first place. As of 2026, that PR is still open and
+has not been merged. I had private contact with the marketing team about it, including contributors I appreciate a lot,
+and they invited me not to pursue that PR in the branding repository, but in another which is yet to be created. The
+reasoning was understandable: a national-flag variant can be interpreted as support for a state or government rather
+than only for people affected by war, it may create difficult precedent questions around other national flags and
+conflicts, it risks dividing contributors along national lines, and it would add maintenance pressure for a potentially
+open-ended set of variants.
+
+I can understand that position, and I do not want to turn the branding repository into a battlefield for symbolic
+gestures. Still, the lack of consistency is a bit unfortunate, especially when similar pull requests, such as the
+[`NixOS/branding#11`] trans flag variant, had previously been merged without the same level of public discussion or
+process. In hindsight, and from the later private discussion I had about it, the mistake was probably not the existence
+of that variant itself, but merging it too quickly, before the project had taken the time to discuss branding advice,
+consultation, and a clear policy for what official variants mean, who decides them, and how similar requests should be
+handled later. That is precisely the kind of thing I mean: **once a project starts making symbolic gestures without a
+clear process, contributors can end up spending a surprising amount of time explaining motives, defending consistency,
+and maintaining conversations that are not about the software itself**.
 
 Taken together, all of this changed my relationship with the project, but it did not make me want to abandon it. **It
 made me change the shape of my involvement**.
+
+One of the effects I had not really expected was the relational cost. These dramas made me lose friends, or at least
+people I genuinely appreciated and with whom I had shared good moments. That hurt more than the public threads
+themselves, because it made the conflict feel less like an abstract community problem and more like something that had
+entered real relationships.
 
 I kept contributing where I felt the work was concrete, useful, and aligned with why I joined the project in the first
 place: reproducibility, packaging quality, better tools, lower maintenance cost, and a more predictable contributor
@@ -538,6 +559,7 @@ fewer isolated efforts, more shared building blocks; fewer theatrical transforma
 [`markdown-code-runner`]: https://github.com/drupol/markdown-code-runner
 [`staabm/oss-contribs`]: https://github.com/staabm/oss-contribs
 [`NixOS/nixpkgs#435310`]: https://github.com/NixOS/nixpkgs/pull/435310
+[`NixOS/branding#11`]: https://github.com/NixOS/branding/pull/11
 [`NixOS/branding#33`]: https://github.com/NixOS/branding/pull/33
 [`NixOS/nixos-homepage#1830`]: https://github.com/NixOS/nixos-homepage/issues/1830
 [`NixOS/nixos-homepage#1775`]: https://github.com/NixOS/nixos-homepage/issues/1775
