@@ -445,7 +445,7 @@ Nakano less than two years later was another quiet and painful marker in the yea
 of its routines, and part of the small ordinary presence that makes daily life feel anchored. His absence stayed with me
 more than I expected.
 
-{{< figure src="/images/IMG_20200626_162159.jpg" caption="Nakano <3" width=1024 >}}
+{{< figure src="/images/IMG_20200626_162159.jpg" caption="Nakano ♥" width=1024 >}}
 
 Part of the year was also spent dealing with very concrete, local, human issues closer to home: neighbourhood tensions,
 technical nuisances, mediation, documentation, exchanges with public actors, and all the strange little situations where
