@@ -15,19 +15,19 @@
           deadnix.enable = true;
           jsonfmt.enable = true;
           nixfmt.enable = true;
-          prettier.enable = true;
+          oxfmt.enable = true;
           yamlfmt.enable = true;
         };
         settings = {
           no-cache = true;
           on-unmatched = "warn";
           formatter = {
-            "json-sort" = {
+            json-sort = {
               command = lib.getExe pkgs.json-sort;
               options = [ "--fix" ];
               includes = [ "*.json" ];
             };
-            prettier = {
+            oxfmt = {
               excludes = [ "*.html" ];
             };
           };
