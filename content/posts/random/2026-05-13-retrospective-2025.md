@@ -27,26 +27,26 @@ If there is one theme that continued to shape my year more than any other, it wa
 
 After finishing my [Master's thesis on reproducibility in software engineering] in 2024, I had the opportunity in 2025
 to continue turning that work into something more practical and more transmissible. One of the real highlights of the
-year was contributing to teaching activities at the University of Mons and helping introduce students to the topic more
-formally.
+year was contributing to teaching activities at the [University of Mons] and helping introduce students to the topic
+more formally.
 
-That meant a lot to me.
+**That meant a lot to me.**
 
 Reproducibility is one of those concepts that sounds almost too obvious to defend. Of course we should be able to
 rebuild what we build and what we ship. Of course environments should be consistent. Of course deployments should be
 predictable. Of course results should be verifiable. And yet, in practice, much of the software industry still behaves
 as though these were optional luxuries rather than the foundations of trustworthy engineering.
 
-The more I work on the subject, the more I think the problem is not technical first. It is cultural.
+The more I work on the subject, the more I think the problem is not technical first. **It is cultural**.
 
 Reproducibility demands discipline, humility, and delayed gratification. It asks teams to invest effort now so that
 someone, perhaps someone else, can understand, verify, maintain, or rebuild the system later. That is not always
 rewarded. In many environments, the incentives still favour speed, improvisation, and the comforting illusion that "it
 works on my machine" is close enough to success.
 
-It is not.
+{{< figure src="/images/fa5.jpg" caption="Picture of the office lab when reproducibility is treated as optional" width=1024 >}}
 
-{{< figure src="/images/fa5.jpg" caption="I have no idea what I am doing!" width=1024 >}}
+**Well, it is not.**
 
 A process that cannot be repeated under controlled conditions is not robust: **it is bricolage** (_fricklerhandwerk_ in
 german if you prefer). A build that only works in one CI runner configured through tribal knowledge is not reliable. A
@@ -68,7 +68,9 @@ these topics deserve a far more central place in software engineering education.
 They sometimes learn algorithms, architecture, and a bit of testing, which is also good. But the practical reality of
 deploying and operating systems that are maintainable, verifiable, and reproducible often remains oddly peripheral.
 
-That gap matters.
+{{< figure src="/images/Screenshot_20260515_085400.png" caption="Well-deserved stickers distribution after getting hands-on with the often-overlooked realities of software engineering" width=1024 >}}
+
+**That gap matters.**
 
 Because in the real world, a large part of software engineering is not about writing new code at all. It is about
 understanding constraints, choosing tools carefully, reducing accidental complexity, documenting decisions, managing
@@ -77,8 +79,6 @@ dependencies, and making sure someone else can still operate the thing when you 
 I tried, in my own modest way, to make that visible.
 
 ## Open source as engineering discipline
-
-{{< figure src="/images/retrospective-2025-stats.svg" caption="Statistics generated using [`staabm/oss-contribs`](https://github.com/staabm/oss-contribs)" width=1024 >}}
 
 Open source continued to take an important place in 2025, as it has for a long time now. But more and more, I see it not
 just as a model of distribution or collaboration, but as a discipline in itself.
@@ -99,7 +99,7 @@ partly because I found the Python ecosystem useful but increasingly messy.
 
 It became a small command-line tool that processes Markdown files, detects code blocks, executes them via configurable
 commands, and optionally rewrites the document with the results. A fairly simple idea on paper. But, as is often the
-case, the "simple" tools end up being the ones that force you to think properly.
+case, the "_simple_" tools end up being the ones that force you to think properly.
 
 Working on it pushed me to improve the design several times: parsing, placeholder substitution, command execution, error
 accumulation, multi-threading, test coverage, AST-based rewriting, configuration design, and the general tension between
@@ -110,6 +110,8 @@ The most satisfying part was that it did not remain only a personal learning exe
 adopted in the Nix documentation through [`NixOS/nixpkgs#397142`], and all Nix code in the manuals could then be
 formatted consistently with the Nix formatter. That is exactly the kind of outcome I like in tooling: a small, specific
 program that quietly removes a class of inconsistency from a project.
+
+{{< figure src="/images/retrospective-2025-stats.svg" caption="Statistics generated using [`staabm/oss-contribs`](https://github.com/staabm/oss-contribs)" width=1024 >}}
 
 In numbers, the year was still very active, but in a slightly different way than the previous one. I had 405 pull
 requests merged on GitHub in 2025, making it my second-highest year after the 422 merged pull requests of 2024. The
@@ -130,18 +132,14 @@ share of those contributions was maintenance work: package updates, refactorings
 for newer Nix idioms, dependency reductions, and security-related updates. It is the kind of work that rarely looks
 spectacular from the outside, but which quietly improves the ecosystem for everyone who depends on it.
 
-Later in the year, I also worked on other small tools at work, including a Bash utility to validate whether a Git branch
-keeps a linear history. That, too, came from a very ordinary but very persistent frustration: too many teams still treat
-Git history as expendable clutter instead of shared technical documentation. I care about commits being readable. I care
-about branches making sense. I care about pull requests being understandable without archaeological excavation. These
-details matter more than people sometimes admit.
-
 More broadly, 2025 reinforced my taste for tools that privilege explicitness over ~~magic~~ implicitness, composition
 over hidden behaviour, and boring predictability over fashionable cleverness.
 
 ## Nixpkgs as maintenance (free) work
 
 Around 75% of my open-source contributions this year happened in [`NixOS/nixpkgs`], with [315 merged pull requests].
+
+{{< figure src="/images/Screenshot_20260515_090111.png" caption="Last year's Github activity" width=1024 >}}
 
 Some of it continued the work I had started around PHP packaging. I kept improving the PHP builders through changes such
 as support for `lib.extendMkDerivation` ([`NixOS/nixpkgs#385830`]), DRY improvements, various fixes and later a broader
@@ -169,7 +167,7 @@ Technically, I still believe Nix is one of the most important pieces of software
 there did not weaken. If anything, the more I work on reproducibility, supply chains, deployment, and long-term
 maintenance, the more obvious the value of Nix becomes.
 
-The community side, however, became much harder to ignore.
+**The community side, however, became much harder to ignore.**
 
 Over the last few years, and very visibly again in 2025, the Nix project went through repeated governance and community
 crises: lack of leadership, conflicts around sponsorship, the role of companies connected to the military-industrial
@@ -187,14 +185,20 @@ violence, whether verbal or institutional. Some conflicts require boundaries, an
 a community is not repaired by making escalation its default language. It takes time, patience, restraint, and the slow
 rebuilding of trust between people who still have to share the same project after the thread is closed.
 
+{{< notice >}}
+
 There is something important to say here, and it also applies to anyone I interact with online without knowing them in
-real life. I will be blunt: I do not care about your private life. I do not care where you are living or about your
-sexual orientation, your personal identity, your kinks, or whether you wear cat ears in your spare time. What matters to
-me, in the context of an online project, is whether we can make the project successful together for everybody who
-depends on it and contributes to it, and hopefully useful to humanity as a whole. That is also why I usually avoid
-sharing too much details about my own private life online. I firmly believe that the details of my personal life or
-kinks are nobody else's business, and I do not think a software project benefits from forcing that kind of intimacy into
-its technical spaces.
+real life. I will be blunt: I do not care where you are living or about your sexual orientation, gender or your personal
+identity, your kinks, or whether you wear cat ears in your spare time, or even your beliefs. By "_I do not care_", I do
+not mean contempt, dismissal, or indifference to people. I mean that those things are not mine to judge, inspect, or
+turn into conditions for collaboration. I do not need access to someone's private life in order to treat them decently
+or work with them seriously. What matters to me, in the context of an online project, is whether we can make the project
+successful together for everybody who depends on it and contributes to it, and hopefully useful to humanity as a whole.
+That is also why I usually avoid sharing too many details about my own private life online. I firmly believe that those
+details are nobody else's business, and I do not think a software project benefits from forcing that kind of intimacy
+into its technical spaces.
+
+{{< /notice >}}
 
 I am not going to relitigate every episode in detail. That would not be useful, and I am not interested in turning this
 retrospective into a timeline of grievances. But I cannot pretend it had no effect on me.
@@ -303,10 +307,14 @@ and maintaining conversations that are not about the software itself**.
 Taken together, all of this changed my relationship with the project, but it did not make me want to abandon it. **It
 made me change the shape of my involvement**.
 
+{{< notice >}}
+
 One of the effects I had not really expected was the relational cost. These dramas made me lose friends, or at least
 people I genuinely appreciated and with whom I had shared good moments. That hurt more than the public threads
 themselves, because it made the conflict feel less like an abstract community problem and more like something that had
 entered real relationships.
+
+{{< /notice >}}
 
 I kept contributing where I felt the work was concrete, useful, and aligned with why I joined the project in the first
 place: reproducibility, packaging quality, better tools, lower maintenance cost, and a more predictable contributor
@@ -355,7 +363,7 @@ governed dependency swamps, that feels refreshing... and challenging, that the l
 Professionally, 2025 continued some of the familiar patterns that had already become visible in 2024 and that I
 described in the previous [Retrospective 2024]({{< ref "2025-03-21-retrospective-2024" >}}).
 
-**It was also the year when, afer 10 years, I finally left [DIGIT] to join [DG EAC]**.
+**It was also the year when, after 10 years, I finally left [DIGIT] to join [DG EAC]**.
 
 Leaving [DIGIT] was not just a change of acronym or office. It felt like closing a chapter that had become increasingly
 difficult to inhabit in a healthy way. I had learnt a lot there, and I do not want to reduce the experience to
@@ -409,6 +417,8 @@ This concern only grew stronger as questions around supply chains, SBOMs, depend
 we actually know what we are running, how it was built, what it depends on, and whether we could rebuild or replace it
 if needed ?_
 
+{{< figure src="/images/Screenshot_20260515_091016.png" caption="Flash (Zootopia), the sole remaining Civil Servant who actually remembers how the legacy application works" width=1024 >}}
+
 Too often, the honest answer remains: **not really**.
 
 And this is where open source, reproducibility, and declarative infrastructure start to converge in a very practical
@@ -435,6 +445,8 @@ One concrete expression of that was organising the first [BeNix meetup in Nivell
 intentionally small and friendly: a few short presentations, pizza, drinks, open discussion, and enough room for both
 curious beginners and more experienced Nix users. The venue was kindly offered by [Le Phare], which made the whole thing
 feel local in the best possible sense.
+
+{{< figure src="/images/Screenshot_20260515_091653.png" caption="The venue, before the talks, the pizza and the conversations" width=1024 >}}
 
 That evening mattered to me because it made the Nix community feel concrete again. I like in-person meetups precisely
 for that reason: they show you the real community, the one made of people who show up, listen, ask questions, help each
@@ -533,7 +545,7 @@ fewer isolated efforts, more shared building blocks; fewer theatrical transforma
 
 **And, ideally, just a little less nonsense disguised as innovation**.
 
-{{< alert type="warning" header="Disclaimer" >}}
+{{< notice info "Disclaimer" >}}
 
 1. The views expressed in this post are my own and do not necessarily reflect those of my employer or any institution I
    am affiliated with. This reflection is based on personal experience and observations.
@@ -544,7 +556,7 @@ fewer isolated efforts, more shared building blocks; fewer theatrical transforma
    US layout. I understand this may be disappointing to purists and I apologise in advance to anyone who believes real
    writing must be done manually, preferably with a goose feather and no autocomplete.
 
-{{< /alert >}}
+{{< /notice >}}
 
 [`NixOS/nixpkgs`]: https://github.com/NixOS/nixpkgs
 [`trix`]: https://github.com/aanderse/trix
@@ -580,3 +592,4 @@ fewer isolated efforts, more shared building blocks; fewer theatrical transforma
 [Nixpkgs manual]: https://nixos.org/nixpkgs/manual/
 [NixOS manual]: https://nixos.org/nixos/manual/
 [Rapperswil-Jona, Switzerland]: https://www.openstreetmap.org/query?lat=47.223383&lon=8.816531#map=19/47.223456/8.816644
+[University of Mons]: https://en.wikipedia.org/wiki/University_of_Mons
