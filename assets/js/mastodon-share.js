@@ -1,12 +1,28 @@
 // Source: https://github.com/codepo8/mastodon-share/
 let key = "mastodon-instance";
 let instance = localStorage.getItem(key);
+instance = null === instance ? "" : instance;
 
 const button = document.querySelector(".mastodon-share");
 
 const refreshlink = (instance) => {
-  button.href = `https://${instance}/share?text=${encodeURIComponent(document.title)}%0A${encodeURIComponent(location.href)}`;
+  let url = isValidUrl(instance);
+  if (!url) {
+    url = "https://" + instance;
+  } else {
+    url = instance;
+  }
+  button.href = `${url}/share?text=${encodeURIComponent(document.title)}%0A${encodeURIComponent(location.href)}`;
 };
+
+function isValidUrl(string) {
+  try {
+    new URL(string);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
 
 if (button) {
   let prompt = button.dataset.prompt || "Please tell me your Mastodon instance";
