@@ -35,7 +35,9 @@ If I was going to do this properly, I needed to extend the Meshtastic network. T
 build my own relay node. Here's the kit I ended up putting together:
 
 - A [MikroTik 868 Omni Antenna](https://mikrotik.com/product/868_omni_antenna)
-- A RAK4631 core module sitting nicely on a
+- A
+  [RAK4631](https://store.rakwireless.com/products/wisblock-core-module-rak4631?_pos=1&_sid=309676b3c&_ss=r&variant=43884035080390)
+  core module sitting nicely on a
   [RAK19003 base board](https://store.rakwireless.com/products/wisblock-meshtastic-starter-kit?_pos=1&_sid=309676b3c&_ss=r&variant=43884035080390)
 - An environment sensor [RAK1906](https://store.rakwireless.com/products/rak1906-bme680-environment-sensor) to monitor
   the temperature, humidity, pressure, and air quality
@@ -90,8 +92,8 @@ Reticulum is a mesh network after all, and the more nodes there are, the better 
 So I decided to buy a new set of things:
 
 - A
-  [RAK4631 core module](https://store.rakwireless.com/products/wisblock-core-module-rak4631?_pos=1&_sid=309676b3c&_ss=r&variant=43884035080390)
-  sitting on a
+  [RAK4631](https://store.rakwireless.com/products/wisblock-core-module-rak4631?_pos=1&_sid=309676b3c&_ss=r&variant=43884035080390)
+  core module sitting on a
   [RAK19007 base board](https://store.rakwireless.com/products/wisblock-meshtastic-starter-kit?_pos=1&_sid=309676b3c&_ss=r&variant=43884034621638)
 - An ethernet module [RAK13800](https://store.rakwireless.com/products/rak13800-wisblock-ethernet-interface) and its PoE
   module [RAK19018](https://store.rakwireless.com/products/rak19018-poe-module-for-rak13800)
