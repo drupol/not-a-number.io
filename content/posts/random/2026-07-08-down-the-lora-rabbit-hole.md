@@ -169,16 +169,15 @@ I have always believed that if you are going to use open-source projects heavily
 you can. Since Nix is my daily driver, I focused my efforts there.
 
 For Meshtastic, I introduced [firmware builds](https://github.com/NixOS/nixpkgs/pull/465275). It is also now entirely
-possible to build the firmware straight from source ([see PR #466509](https://github.com/NixOS/nixpkgs/pull/466509)).
+possible to build the firmware straight from source ([#466509](https://github.com/NixOS/nixpkgs/pull/466509)).
 
 For Reticulum, the work is ongoing but very exciting. I currently have two new modules (rnsd and lxmd) in the works
-([see PR #530406](https://github.com/NixOS/nixpkgs/pull/530406)). Introducing these modules required the introduction of
-a [new formatter for Nix code](https://github.com/NixOS/nixpkgs/pull/531952) so that the configuration files for
-Reticulum (using [`configobj`](https://configobj.readthedocs.io/) format) could be generated from Nix code. It was a
-very exciting development, as it was the first time I had to write a custom formatter for Nix code. Lastly, I have also
-contributed by adding various tools and implementations of Reticulum like
-[Reticulated](https://github.com/NixOS/nixpkgs/pull/532198), [Leviculum](https://github.com/NixOS/nixpkgs/pull/531781),
-[Reticulum-go](https://github.com/NixOS/nixpkgs/pull/527991),
+([#530406](https://github.com/NixOS/nixpkgs/pull/530406)). Introducing these modules required the introduction of a
+[new formatter for Nix code](https://github.com/NixOS/nixpkgs/pull/531952) so that the configuration files for Reticulum
+(using [`configobj`](https://configobj.readthedocs.io/) format) could be generated from Nix code. It was a very exciting
+development, as it was the first time I had to write a custom formatter for Nix code. Lastly, I have also contributed by
+adding various tools and implementations of Reticulum like [Reticulated](https://github.com/NixOS/nixpkgs/pull/532198),
+[Leviculum](https://github.com/NixOS/nixpkgs/pull/531781), [Reticulum-go](https://github.com/NixOS/nixpkgs/pull/527991),
 [rs-reticulum](https://github.com/NixOS/nixpkgs/pull/529207), [rs-lxmf](https://github.com/NixOS/nixpkgs/pull/530244),
 [lxmf-rs](https://github.com/NixOS/nixpkgs/pull/529099), ...
 
