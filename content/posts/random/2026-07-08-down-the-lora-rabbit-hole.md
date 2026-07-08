@@ -102,6 +102,8 @@ So I decided to buy a new set of things:
 - A
   [Unify enclosure without solar panel](https://store.rakwireless.com/products/unify-enclosure-ip67-150x100x45mm-with-pre-mounted-m8-5-pin-and-rp-sma-antenna-ip-rated-connectors?index=93&variant=42861623738566)
 - A couple of 10000mAh batteries to increase the uptime of the node during the gloomy Belgian weather
+- Another [window suction mount](https://hexaspot.com/products/velux-window-suction-mount), I have 2 Velux windows, so I
+  can have 2 nodes up and running at the same time !
 
 I initially bought these devices because I had seen ethernet support land in a
 [PR](https://github.com/attermann/microReticulum_Firmware/pull/48). Sadly, the PR has been closed and I am unable to use
