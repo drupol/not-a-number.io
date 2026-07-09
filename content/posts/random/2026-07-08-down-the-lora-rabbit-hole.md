@@ -66,11 +66,16 @@ been running flawlessly for weeks now.
 
 ## Falling into the Reticulum Abyss
 
-As if Meshtastic wasn't enough to keep me occupied, I stumbled upon the [Reticulum project](https://reticulum.network/).
-And... oh boy, that was an absolute game-changer. It is a proper bottomless pit of fascinating tech.
+As if [Meshtastic](https://meshtastic.org/) wasn't enough to keep me occupied, I stumbled upon the
+[Reticulum project](https://reticulum.network/). And... oh boy, that was an absolute game-changer. It is a proper
+bottomless pit of fascinating tech.
 
-I have been buying and mounting devices left, right, and centre, running tests everywhere I can. It has been an absolute
-blast getting to grips with how it all routes and communicates.
+While Meshtastic is a great project, it is a bit limited in its scope. Reticulum, on the other hand, is a full-fledged
+mesh networking stack that can be used to build all sorts of applications. As an example, Reticulum can be used and have
+the same feature set as Meshtastic. The possibilities are endless, and I am having a blast exploring them.
+
+I have been buying and mounting devices left, right, and centre, and running tests everywhere I can. It has been a
+fascinating process to understand how everything routes and communicates.
 
 {{< figure src="/images/Screenshot_20260708_081342.png" caption="A RAK19003, two RAK19007 and a RAK13800 module (ethernet)" width=1024 >}}
 
@@ -87,8 +92,8 @@ proper configuration is enough to contribute to the network. Once you have a nod
 Reticulum network. This allows you to send and receive messages from other Reticulum nodes. The `lxmd` daemon is also a
 great way to test your Reticulum node and see if it is working properly.
 
-As if all of this were not enough, I decided to build a public LoRa gateway to contribute to the Reticulum network.
-Reticulum is a mesh network after all, and the more nodes there are, the better the network becomes! :D
+As if all of this were not enough, I decided to build a public LoRa and TCP gateway to contribute to the Reticulum
+network. Reticulum is a mesh network after all, and the more nodes there are, the better the network becomes ! :D
 
 So I decided to buy a new set of things:
 
@@ -129,12 +134,12 @@ Network Stack daemon) operating it.
 
 That said, there is an alternative firmware called
 [`microReticulum`](https://github.com/attermann/microReticulum_Firmware), which lets you run an autonomous RNode on a
-microcontroller without relying on an external `rnsd` instance. It is promising, and it is the option I use most often.
-Once deployed on your hardware, it removes the need for a separate daemon, since the daemon runs directly on the chip.
-This is similar in spirit to how Meshtastic works, though the architecture is not exactly the same. A
-`microReticulum`-powered node can be used as a regular RNode, but it can also be configured in TNC mode (transport
-mode), where it autonomously routes packets for other Reticulum nodes on the LoRa mesh and can bridge that mesh to the
-wider Reticulum network through an internet-connected gateway.
+microcontroller without relying on an external `rnsd` instance. It is a promising approach, my favorite, and it is the
+one I use by default. Once deployed on your hardware, it removes the need for a separate daemon, because the Reticulum
+stack runs directly on the chip. This is similar in spirit to how Meshtastic works, though the architecture is not
+exactly the same. A `microReticulum`-powered node can be used as a regular RNode, but it can also be configured in TNC
+mode (transport mode), where it autonomously routes packets for other Reticulum nodes on the LoRa mesh and can bridge
+that mesh to the wider Reticulum network through an internet-connected gateway.
 
 One of the biggest frustrations I had was seeing a bit of smoke come out of one of my RAK boards just after plugging in
 the new 10000mAh battery. I was so excited to see my Reticulum node up and running that I did not check the polarity of
