@@ -168,9 +168,10 @@ My wish list for the future of Reticulum is a more unified ecosystem: an alterna
 language, a more coherent set of applications for communicating over Reticulum, and a clearer path for contributing to
 the core project. Open source should give users the freedom to choose the implementation that best suits their needs,
 but not at the expense of the project's overall health. I do not really know the details behind why the
-[GitHub repository for Reticulum](https://github.com/markqvist/Reticulum) is no longer open to contributions, but I hope
-that, in the future, it will become easier to contribute to the project and help it grow while keeping the core stable,
-secure, and aligned with the vision of its original author, [Mark Qvist](https://github.com/markqvist).
+[GitHub repository for Reticulum](https://github.com/markqvist/Reticulum) is
+[no longer open to contributions](https://unsigned.io/articles/2025_12_28_Carrier_Switch.html), but I hope that, in the
+future, it will become easier to contribute to the project and help it grow while keeping the core stable, secure, and
+aligned with the vision of its original author, [Mark Qvist](https://github.com/markqvist).
 
 I also hope for broader hardware support, especially for the
 [RAK13800](https://store.rakwireless.com/products/rak13800-wisblock-ethernet-interface) ethernet module and the
