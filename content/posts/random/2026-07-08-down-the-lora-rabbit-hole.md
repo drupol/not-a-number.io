@@ -10,10 +10,11 @@ draft: false
 ---
 
 It all started quite innocently, during a NixOS meetup last year. A friend of mine (_Hello Theo!_) showed off his new
-[SenseCap Tracker T1000E](https://meshtastic.org/docs/hardware/devices/seeed-studio/sensecap/card-tracker/), and that
-was it ! My curiosity was well and truly piqued. I have been exploring the world of
-[LoRa](https://en.wikipedia.org/wiki/LoRa) networks ever since, and what a journey it has been. I thought it was a good
-time to write down my experiences, so here's a look at how a curiosity turned into some kind of full-blown obsession.
+[SenseCap Tracker T1000E](https://meshtastic.org/docs/hardware/devices/seeed-studio/sensecap/card-tracker/) running
+[Meshtastic](https://meshtastic.org/), and that was it ! My curiosity was well and truly piqued. I have been exploring
+the world of [LoRa](https://en.wikipedia.org/wiki/LoRa) and "off-grid" networks ever since, and what a journey it has
+been. I thought it was a good time to write down my experiences, so here's a look at how a curiosity turned into some
+kind of full-blown obsession.
 
 <!--break-->
 
