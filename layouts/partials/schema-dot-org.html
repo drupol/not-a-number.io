@@ -46,11 +46,11 @@
   {{ else }}
   {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": {{ .Site.Title }},
+  "@type": "Person",
+  "name": {{ .Site.Params.author }},
   "url": {{ .Site.BaseURL }},
   "sameAs": [
-  "https://twitter.com/{{ .Site.Params.twitter }}",
+  "https://mathstodon.xyz/@Pol",
   "https://github.com/{{ .Site.Params.github }}"
   ]
   }

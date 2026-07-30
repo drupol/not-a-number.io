@@ -1,6 +1,11 @@
 <figure{{ with .Get "class" }} class="figure {{ . }}"{{ else }} class="figure"{{ end }}>
 {{- if .Get "link" -}}
-<a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+{{- $target := .Get "target" -}}
+{{- $rel := .Get "rel" -}}
+{{- if and (eq $target "_blank") (not $rel) -}}
+  {{- $rel = "noreferrer noopener" -}}
+{{- end -}}
+<a href="{{ .Get "link" }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $rel }} rel="{{ . }}"{{ end }}>
 {{- end }}
 <img class="figure-img img-fluid img-thumbnail" src="{{ .Get "src" }}"
 {{- if or (.Get "alt") (.Get "caption") }}

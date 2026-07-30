@@ -1,5 +1,5 @@
 baseURL = "https://not-a-number.io/"
-languageCode = "en-us"
+locale = "en-US"
 title = "Not a Number"
 theme = ["hugo-notice", "hugo-loremipsum", "hugo-redirect"]
 summaryLength = 50
@@ -43,14 +43,13 @@ weight = 50
 author = "Pol Dellaiera"
 authoremail = "pol.dellaiera@protonmail.com"
 tagline = "NaN"
-logo = "/static/logo.svg"
-favicon = "/static/logo.svg"
+logo = "/images/logo.svg"
+favicon = "/images/logo.svg"
 readingTime = true
 wordCount = true
 hideAuthor = true
 description = """
-Welcome to my unique repository of divergent sequences of random characters.
-Here, you may contemplate the endless variations of 26 letters and some special characters.
+Personal writing and open-source notes by Pol Dellaiera, focused on reproducible software, Nix, PHP, systems, and the occasional mathematical detour.
 """
 header_visible = true
 date_format = "Mon Jan 02, 2006"

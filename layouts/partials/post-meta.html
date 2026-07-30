@@ -4,8 +4,8 @@
 
   {{ if and (ne .Type "page") (.Date) }}
     {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
-    {{ if eq .Site.LanguageCode "fr"}}
-      {{ $datestr = delimit ( slice .Date.Day " " (index $.Site.Data.mois (printf "%d" .Date.Month)) " " .Date.Year ) " " }}
+    {{ if eq .Site.Language.Locale "fr"}}
+      {{ $datestr = delimit ( slice .Date.Day " " (index hugo.Data.mois (printf "%d" .Date.Month)) " " .Date.Year ) " " }}
     {{ end }}
     <i class="fas fa-calendar mr-1"></i>&nbsp;<time>{{ i18n "postedOnDate" }} {{ $datestr }} </time>
   {{ end }}
@@ -33,8 +33,8 @@
   {{- if .Site.Params.staticman -}}
     &nbsp;|&nbsp;<i class="fas fa-comment mr-1"></i>
     {{ $slug := replace .RelPermalink "/" "" }}
-    {{ if .Site.Data.comments }}
-      {{ $comments := index $.Site.Data.comments $slug }}
+    {{ if hugo.Data.comments }}
+      {{ $comments := index hugo.Data.comments $slug }}
       {{ if $comments }}
         {{ if gt (len $comments) 1  }}
           {{ len $comments  }} {{ i18n "moreComment" }}

@@ -141,8 +141,8 @@ The new version adopts a fundamentally different approach: **the configuration i
 hostnames**. It is a shift in the axis of composition, essentially an **inversion of configuration control**. What may
 seem like a subtle change at first has profound implications for flexibility, reuse, and maintainability.
 
-{{< figure src="/images/old-config.svg" caption="" class="img-fluid" >}} ->
-{{< figure src="/images/new-config.svg" caption="" class="img-fluid" >}}
+{{< figure src="/images/old-config.svg" alt="Old host-oriented configuration structure" caption="" class="img-fluid" >}} ->
+{{< figure src="/images/new-config.svg" alt="New feature-oriented configuration structure" caption="" class="img-fluid" >}}
 
 Instead of asking "what does the `<insert-machine-name-here>` need?", I now ask "which features does this machine
 require?"

@@ -3,8 +3,7 @@ date: "2017-07-10"
 images:
   - /images/atomium.jpg
 image_copyrights:
-  Image by <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Atomium_Brussels_-_panoramio_(4).jpg">Niels
-  Mickers</a>.
+  Image by [Niels Mickers](https://commons.wikimedia.org/wiki/File:Atomium_Brussels_-_panoramio_(4).jpg).
 subtitle: A new Drupal 7 base theme
 tags:
   - drupal

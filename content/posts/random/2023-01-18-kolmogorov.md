@@ -23,7 +23,7 @@ essential in balancing model complexity with its explanatory power. The ideal mo
 minimizes the combined description length of the model and the data. This principle is not only pivotal in guiding model
 selection but also reflects the deeper mathematical underpinnings of Kolmogorov complexity.
 
-{{< figure src="/images/Screenshot_20240113_235324.png" width="512" class="w-100 text-center" >}}
+{{< figure src="/images/Screenshot_20240113_235324.png" alt="A short PHP program generating a repeated string" width="512" class="w-100 text-center" >}}
 
 Kolmogorov complexity is about the shortest possible description of an object within a given computational model. It
 focuses on the simplest, most concise representation of data that a computer can use to reconstruct the original object.
@@ -35,7 +35,7 @@ shorter program capable of achieving the same result. This uncomputability aspec
 layer of fascination. It underscores a fundamental limitation in our ability to fully comprehend data representation's
 simplicity, highlighting the provisional nature of our knowledge in data analysis and machine learning.
 
-{{< figure src="/images/Screenshot_20240114_112557.png" width="512" class="w-100 text-center" >}}
+{{< figure src="/images/Screenshot_20240114_112557.png" alt="A concise PHP example illustrating low Kolmogorov complexity" width="512" class="w-100 text-center" >}}
 
 Contrary to what Mortal Kombat fans might think, Kolmogorov complexity isn’t named after a final boss but after the
 renowned Russian mathematician [Andrey Kolmogorov](https://fr.wikipedia.org/wiki/Andre%C3%AF_Kolmogorov), Kolmogorov
@@ -107,7 +107,7 @@ succinctness of their descriptions. The shorter the description required, the le
 seen with the first two strings. Conversely, a string requiring a more extensive explanation, due to lack of regular
 patterns, is deemed more random, as with this very last example.
 
-{{< figure src="/images/Screenshot_20240113_234749.jpg" width="512" class="w-100 text-center" >}}
+{{< figure src="/images/Screenshot_20240113_234749.jpg" alt="A PHP program containing the full target string" width="512" class="w-100 text-center" >}}
 
 The Kolmogorov complexity is not just about the subject itself but also about the language and tools used for its
 description. Different programming languages or descriptive frameworks might have varying levels of conciseness for the
@@ -124,7 +124,7 @@ An intriguing aspect of Kolmogorov complexity lies in its inherent uncertainty. 
 possibility that a shorter description for a given string may be discovered in a near or far future. Since the
 Kolmogorov complexity is uncomputable, there's no definitive way to prove that a shorter description does not exist.
 
-{{< figure src="/images/tim-and-eric-mind-blown.jpg" width="512" class="w-100 text-center" >}}
+{{< figure src="/images/tim-and-eric-mind-blown.jpg" alt="Mind blown reaction image" width="512" class="w-100 text-center" >}}
 
 Knowing this, we can safely say that Kolmogorov complexity establishes an upper limit of complexity but not a lower one.
 When we write a program to generate a particular output, this program serves as definitive evidence that the sequence's

@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-{{ range $.Site.Data.projects }}
+{{ range hugo.Data.projects }}
   {{ partial "project.html" . }}
 {{ end }}
   </tbody>

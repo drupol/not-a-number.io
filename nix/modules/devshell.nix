@@ -19,6 +19,7 @@
           gnuplot
           just
           hugo
+          lychee
           pandoc
           mcp-server-fetch
           mcp-server-filesystem
