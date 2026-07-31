@@ -1,0 +1,34 @@
+diff --git a/layouts/_default/single.html b/layouts/_default/single.html
+index b769c9de5d..502ec77107 100644
+--- a/layouts/_default/single.html
++++ b/layouts/_default/single.html
+@@ -21,7 +25,7 @@
+     {{ end }}
+
+     {{/* Header */}}
+-    <header id="single_header" class="mt-5 max-w-prose">
++    <header id="single_header" class="mt-5 max-w-full">
+       {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
+         {{ partial "breadcrumbs.html" . }}
+       {{ end }}
+@@ -51,9 +52,9 @@
+       {{ end }}
+
+
+-      <div class="min-w-0 min-h-0 max-w-fit">
++      <div class="min-w-0 min-h-0 max-w-full">
+         {{ partial "series/series.html" . }}
+-        <div class="article-content max-w-prose mb-20">
++        <div class="article-content max-w-full mb-20">
+           {{ .Content }}
+           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
+           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}
+@@ -86,7 +87,7 @@
+     </section>
+
+     {{/* Footer */}}
+-    <footer class="pt-8 max-w-prose print:hidden">
++    <footer class="pt-8 max-w-full print:hidden">
+       {{ partial "article-pagination.html" . }}
+       {{ partial "article-comments.html" . }}
+     </footer>

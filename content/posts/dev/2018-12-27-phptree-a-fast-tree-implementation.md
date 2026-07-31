@@ -1,12 +1,14 @@
 ---
 date: 2018-12-27
-images:
-  - /images/green-nature-tree-91153.jpg
-image_copyrights: Image from [pexels.com](https://www.pexels.com/photo/wood-light-nature-forest-91153/)
+featureimage: images/green-nature-tree-91153.jpg
+featureimagecaption: Image from [pexels.com](https://www.pexels.com/photo/wood-light-nature-forest-91153/)
 tags:
   - php
   - tree
   - data structure
+  - Graph Theory
+  - trie
+  - benchmark
 title: PHPTree, a fast tree implementation
 ---
 

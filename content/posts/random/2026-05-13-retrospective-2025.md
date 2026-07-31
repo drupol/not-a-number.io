@@ -2,10 +2,14 @@
 date: 2026-05-13
 tags:
   - retrospective
+  - open-source
+  - reproducibility
+  - nix
+  - rust
+  - community
 title: Retrospective 2025
-images:
-  - /images/PXL_20250906_173345772.PANO.jpg
-image_copyrights: Zurich, viewed from Üetliberg
+featureimage: images/PXL_20250906_173345772.PANO.jpg
+featureimagecaption: Zurich, viewed from Üetliberg
 draft: false
 ---
 
@@ -185,7 +189,7 @@ violence, whether verbal or institutional. Some conflicts require boundaries, an
 a community is not repaired by making escalation its default language. It takes time, patience, restraint, and the slow
 rebuilding of trust between people who still have to share the same project after the thread is closed.
 
-{{< notice >}}
+{{< alert >}}
 
 There is something important to say here, and it also applies to anyone I interact with online without knowing them in
 real life. I will be blunt: I do not care where you are living or about your sexual orientation, gender or your personal
@@ -198,7 +202,7 @@ That is also why I usually avoid sharing too many details about my own private l
 details are nobody else's business, and I do not think a software project benefits from forcing that kind of intimacy
 into its technical spaces.
 
-{{< /notice >}}
+{{< /alert >}}
 
 I am not going to relitigate every episode in detail. That would not be useful, and I am not interested in turning this
 retrospective into a timeline of grievances. But I cannot pretend it had no effect on me.
@@ -307,14 +311,14 @@ and maintaining conversations that are not about the software itself**.
 Taken together, all of this changed my relationship with the project, but it did not make me want to abandon it. **It
 made me change the shape of my involvement**.
 
-{{< notice >}}
+{{< alert >}}
 
 One of the effects I had not really expected was the relational cost. These dramas made me lose friends, or at least
 people I genuinely appreciated and with whom I had shared good moments. That hurt more than the public threads
 themselves, because it made the conflict feel less like an abstract community problem and more like something that had
 entered real relationships.
 
-{{< /notice >}}
+{{< /alert >}}
 
 I kept contributing where I felt the work was concrete, useful, and aligned with why I joined the project in the first
 place: reproducibility, packaging quality, better tools, lower maintenance cost, and a more predictable contributor
@@ -545,7 +549,7 @@ fewer isolated efforts, more shared building blocks; fewer theatrical transforma
 
 **And, ideally, just a little less nonsense disguised as innovation**.
 
-{{< notice info "Disclaimer" >}}
+{{< alert >}}
 
 1. The views expressed in this post are my own and do not necessarily reflect those of my employer or any institution I
    am affiliated with. This reflection is based on personal experience and observations.
@@ -556,7 +560,7 @@ fewer isolated efforts, more shared building blocks; fewer theatrical transforma
    US layout. I understand this may be disappointing to purists and I apologise in advance to anyone who believes real
    writing must be done manually, preferably with a goose feather and no autocomplete.
 
-{{< /notice >}}
+{{< /alert >}}
 
 [`NixOS/nixpkgs`]: https://github.com/NixOS/nixpkgs
 [`trix`]: https://github.com/aanderse/trix

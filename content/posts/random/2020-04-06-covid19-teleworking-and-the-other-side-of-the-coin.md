@@ -1,11 +1,14 @@
 ---
 date: 2020-04-06
-images:
-  - /images/e19-empty.jpg
-image_copyrights: Belgian E19 motorway, on a Sunday morning in April 2019.
+featureimage: images/e19-empty.jpg
+featureimagecaption: Belgian E19 motorway, on a Sunday morning in April 2019.
 tags:
   - random
   - work
+  - covid
+  - telework
+  - Work From Home
+  - society
 title: COVID19, teleworking and the other side of the coin
 ---
 

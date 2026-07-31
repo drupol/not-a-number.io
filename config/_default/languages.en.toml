@@ -1,0 +1,96 @@
+disabled = false
+locale = "en-US"
+label = "English"
+weight = 1
+title = "Not A Number"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "/images/new-logo-inverted.svg"
+  secondaryLogo = "/images/new-logo.svg"
+  description = "Not A Number is a personal blog about technology, programming, and other topics of interest."
+  copyright = "© { year } Not A Number"
+
+[params.author]
+name = "Pol Dellaiera"
+email = "pol.dellaiera@protonmail.com"
+image = "images/image.png"
+headline = "Software Engineer, Open Source Contributor, Technology Enthusiast"
+bio = "Pol Dellaiera is a software engineer and technology enthusiast with a passion for programming, open-source software, and innovative technologies. With years of experience in the tech industry, Pol has developed a deep understanding of various programming languages, frameworks, and tools. He enjoys sharing his knowledge through writing, speaking at conferences, and contributing to open-source projects. In his free time, Pol explores new technologies, experiments with coding projects, and engages with the tech community to stay updated on the latest trends and advancements."
+links = [
+     { email = "mailto:pol.dellaiera@protonmail.com" },
+     { github = "https://github.com/drupol" },
+     { linkedin = "https://linkedin.com/in/poldellaiera" },
+     { mastodon = "https://mathstodon.xyz/@Pol" },
+     { matrix = "https://matrix.to/#/@drupol:matrix.org" },
+     { orcid = "https://orcid.org/0009-0008-7972-7160" },
+     { link = "lxmf://b2e101f8b8d8c776ea4597a330661628" },
+     { rss = "/index.xml" },
+]
+
+# [params.author]
+#   name = "Your name here"
+#   email = "youremail@example.com"
+#   image = "img/blowfish_logo.png"
+#   imageQuality = 96
+#   headline = "I'm only human"
+#   bio = "A little bit about you"
+#   links = [
+#     { email = "mailto:hello@your_domain.com" },
+#     { link = "https://link-to-some-website.com/" },
+#     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
+#     { apple = "https://www.apple.com" },
+#     { blogger = "https://username.blogspot.com/" },
+#     { bluesky = "https://bsky.app/profile/username" },
+#     { codepen = "https://codepen.io/username" },
+#     { dev = "https://dev.to/username" },
+#     { discord = "https://discord.gg/invitecode" },
+#     { dribbble = "https://dribbble.com/username" },
+#     { facebook = "https://facebook.com/username" },
+#     { flickr = "https://www.flickr.com/photos/username/" },
+#     { foursquare = "https://foursquare.com/username" },
+#     { github = "https://github.com/username" },
+#     { gitlab = "https://gitlab.com/username" },
+#     { google = "https://www.google.com/" },
+#     { hashnode = "https://username.hashnode.dev" },
+#     { instagram = "https://instagram.com/username" },
+#     { itch-io = "https://username.itch.io" },
+#     { keybase = "https://keybase.io/username" },
+#     { keyoxide = "https://keyoxide.org/URI" },
+#     { kickstarter = "https://www.kickstarter.com/profile/username" },
+#     { lastfm = "https://lastfm.com/user/username" },
+#     { linkedin = "https://linkedin.com/in/username" },
+#     { mastodon = "https://mastodon.instance/@username" },
+#     { matrix = "https://matrix.to/#/URI" },
+#     { medium = "https://medium.com/username" },
+#     { microsoft = "https://www.microsoft.com/" },
+#     { orcid = "https://orcid.org/userid" },
+#     { patreon = "https://www.patreon.com/username" },
+#     { pinterest = "https://pinterest.com/username" },
+#     { reddit = "https://reddit.com/user/username" },
+#     { researchgate = "https://www.researchgate.net/profile/username" },
+#     { signal = "https://signal.me/#eu/userid" },
+#     { slack = "https://workspace.url/team/userid" },
+#     { snapchat = "https://snapchat.com/add/username" },
+#     { soundcloud = "https://soundcloud.com/username" },
+#     { spotify = "https://open.spotify.com/user/userid" },
+#     { stack-overflow = "https://stackoverflow.com/users/userid/username" },
+#     { steam = "https://steamcommunity.com/profiles/userid" },
+#     { strava = "https://www.strava.com/athletes/username" },
+#     { telegram = "https://t.me/username" },
+#     { threads = "https://www.threads.net/@username" },
+#     { tiktok = "https://tiktok.com/@username" },
+#     { tumblr = "https://username.tumblr.com" },
+#     { twitch = "https://twitch.tv/username" },
+#     { untappd = "https://untappd.com/user/username" },
+#     { twitter = "https://twitter.com/username" },
+#     { x-twitter = "https://twitter.com/username" },
+#     { whatsapp = "https://wa.me/phone-number" },
+#     { youtube = "https://youtube.com/username" },
+#     { ko-fi = "https://ko-fi.com/username" },
+#     { codeberg = "https://codeberg.org/username"},
+#     { printables = "https://www.printables.com/@username"},
+#   ]

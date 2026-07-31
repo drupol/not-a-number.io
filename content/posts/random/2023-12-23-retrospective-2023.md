@@ -1,10 +1,13 @@
 ---
 date: 2023-12-23
-images:
-  - /images/PXL_20230819_140619216.jpg
-image_copyrights: Izumi, my friend
+featureimage: images/PXL_20230819_140619216.jpg
+featureimagecaption: Izumi, my friend
 tags:
   - retrospective
+  - open-source
+  - php
+  - nix
+  - reproducibility
 title: Retrospective 2023
 ---
 
@@ -46,8 +49,8 @@ identical builds. Here are some of the projects where I've requested the additio
 - [PHP-CS-Fixer/PHP-CS-Fixer#7590](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues/7590)
 - [vimeo/psalm#10446](https://github.com/vimeo/psalm/issues/10446)
 
-{{< notice >}}If you appreciate my open-source contributions and influence, I warmly invite you to consider
-[sponsoring my work](https://not-a-number.io/sponsor), this would greatly help me.{{< /notice >}}
+{{< alert >}}If you appreciate my open-source contributions and influence, I warmly invite you to consider
+[sponsoring my work](https://not-a-number.io/sponsor), this would greatly help me.{{< /alert >}}
 
 During this year, I've been invited to gave a talk at the [International PHP conference](https://phpconference.com/) in
 Munich. The [talk](https://phpconference.com/web-development/leveraging-nix-php-ecosystem/) focused on the integration

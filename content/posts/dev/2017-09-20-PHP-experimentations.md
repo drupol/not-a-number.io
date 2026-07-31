@@ -1,12 +1,16 @@
 ---
 date: 2017-09-20
-images:
-  - /images/6053042920_f5d01173fb_b.jpg
-image_copyrights: Image from [FlickR](https://www.flickr.com/photos/myfuturedotcom/6053042920).
+featureimage: images/6053042920_f5d01173fb_b.jpg
+featureimagecaption: Image from [FlickR](https://www.flickr.com/photos/myfuturedotcom/6053042920).
 tags:
   - php
   - novelties
   - experiments
+  - drupal
+  - memoization
+  - psr
+  - testing
+  - open-source
 title: PHP experimentations
 ---
 

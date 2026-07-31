@@ -1,0 +1,18 @@
+{{ $commit := getenv "HUGO_LAST_COMMIT" | default "" }}
+{{ if not $commit }}
+  {{ with site.Home.GitInfo }}
+    {{ $commit = .Hash }}
+  {{ end }}
+{{ end }}
+
+{{ if $commit }}
+  <a
+    href="{{ printf "https://github.com/drupol/not-a-number.io/commit/%s" $commit }}"
+    target="_blank"
+    rel="noreferrer noopener"
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+    aria-label="Last commit: {{ substr $commit 0 7 }}"
+    title="Last commit: {{ substr $commit 0 7 }}">
+    Last commit: {{ substr $commit 0 7 }}
+  </a>
+{{ end }}

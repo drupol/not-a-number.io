@@ -1,11 +1,12 @@
 ---
 date: 2021-07-13
-images:
-  - /images/halle.jpg
-image_copyrights: Image from Pol Dellaiera
+featureimage: images/halle.jpg
+featureimagecaption: Image from Pol Dellaiera
 tags:
   - php
   - functional programming
+  - typing
+  - partial-application
 title: Functional programming and PHP 8
 ---
 

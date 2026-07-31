@@ -1,13 +1,15 @@
 ---
 date: 2019-02-21
-images:
-  - /images/IMG_20190217_111322-01.jpeg
-image_copyrights: Image from Pol Dellaiera
+featureimage: images/IMG_20190217_111322-01.jpeg
+featureimagecaption: Image from Pol Dellaiera
 tags:
   - php
   - data structure
   - inheritance
   - final
+  - oop
+  - composition
+  - Value Objects
 title: PHP, composition and inheritance
 ---
 

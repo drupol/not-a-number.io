@@ -1,12 +1,14 @@
 ---
 date: 2019-04-21
-images:
-  - /images/IMG_20190318_122301-01.jpeg
-image_copyrights: Image from Pol Dellaiera
+featureimage: images/IMG_20190318_122301-01.jpeg
+featureimagecaption: Image from Pol Dellaiera
 tags:
   - php
   - task runner
   - console
+  - robo
+  - composer
+  - automation
 title: Taskman, a friendly tasks runner
 ---
 

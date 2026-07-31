@@ -1,6 +1,7 @@
 ---
 date: 2018-07-15
-image_copyrights: ""
+featureimage: images/how-did-i-fall-into-drupal.png
+featureimagecaption: ""
 redirect_from:
   - /2018/how-i-fall-into-drupal
 subtitle: How it all began
@@ -8,6 +9,9 @@ tags:
   - drupal
   - personal
   - career
+  - open-source
+  - European Commission
+  - php
 title: How did I fall into Drupal
 ---
 

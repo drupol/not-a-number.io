@@ -34,6 +34,16 @@
             d.en-computers
           ]))
         ];
+
+        shellHook = ''
+          mkdir -p themes
+          if [ ! -e themes/blowfish ]; then
+            echo "Creating symlink for themes/blowfish..."
+            ln -snf "${config.packages.hugo-blowfish-custom}" themes/blowfish
+          else
+            echo "themes/blowfish already exists, skipping symlink creation."
+          fi
+        '';
       };
     };
 }

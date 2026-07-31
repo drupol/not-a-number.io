@@ -1,8 +1,7 @@
 ---
 date: 2017-05-01
-images:
-  - /images/my-favorite-software.jpg
-image_copyrights: Image by Pol Dellaiera.
+featureimage: images/my-favorite-software.jpg
+featureimagecaption: Image by Pol Dellaiera.
 subtitle: I just can't live without them
 tags:
   - random
@@ -10,6 +9,10 @@ tags:
   - git
   - blender
   - linux
+  - tools
+  - open-source
+  - photography
+  - graphics
 title: My favorite software
 ---
 

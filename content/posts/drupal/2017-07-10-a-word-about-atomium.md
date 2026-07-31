@@ -1,14 +1,16 @@
 ---
 date: "2017-07-10"
-images:
-  - /images/atomium.jpg
-image_copyrights:
+featureimage: images/atomium.jpg
+featureimagecaption:
   Image by [Niels Mickers](https://commons.wikimedia.org/wiki/File:Atomium_Brussels_-_panoramio_(4).jpg).
 subtitle: A new Drupal 7 base theme
 tags:
   - drupal
   - theme
   - atomic
+  - drupal
+  - theming
+  - atomium
 title: A word about Atomium
 ---
 
@@ -24,7 +26,7 @@ how the theme layer is working.
 
 ## Background
 
-Working at [European Commission](https://www.drupal.org/european-commission) with a team of fellow Drupalers, I'm in
+Working at [European Commission](https://www.drupal.org/European Commission) with a team of fellow Drupalers, I'm in
 charge of designing a new Drupal 7 base theme.
 
 The requirements were simple:
@@ -81,7 +83,7 @@ So, I tried to see how I could fix that in Atomium, how I could rewrite the "_th
 Some of you might think "_Why the hell this guy is looking after that ? Does this guy likes to suffer ?_". I just like
 to fix things properly :-)
 
-Also because [since Drupal 7.33](https://www.drupal.org/drupal-7.33-release-notes), you can debug templates and see
+Also because [since Drupal 7.33](https://www.drupal.org/drupal.33-release-notes), you can debug templates and see
 which one is used when rendering HTML components, and their corresponding templates suggestions, just by looking at the
 HTML source code... This option is also configurable within the Atomium settings, see the screenshot below.
 

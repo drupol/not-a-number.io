@@ -1,8 +1,7 @@
 ---
 date: 2017-04-12
-images:
-  - /images/6333984637_7d08596f9e_b.jpg
-image_copyrights:
+featureimage: images/6333984637_7d08596f9e_b.jpg
+featureimagecaption:
   Image by [Loughborough University Library](https://www.flickr.com/photos/loughboroughuniversitylibrary/).
 subtitle: A small story about git with an inappropriate title.
 tags:
@@ -10,6 +9,8 @@ tags:
   - rebase
   - work
   - github
+  - git
+  - collaboration
 title: Prenez un chewing-gum Emile
 ---
 

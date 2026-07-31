@@ -1,11 +1,13 @@
 ---
 date: 2020-08-10
-images:
-  - /images/IMG_20200718_211804-01.jpeg
-image_copyrights: Image from Pol Dellaiera
+featureimage: images/IMG_20200718_211804-01.jpeg
+featureimagecaption: Image from Pol Dellaiera
 tags:
   - php
   - lazy collection
+  - collections
+  - iterators
+  - functional programming
 title: Lazy collection oddities
 ---
 

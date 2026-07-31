@@ -1,12 +1,14 @@
 ---
 date: 2018-10-30
-images:
-  - /images/IMG_20181014_110212-01.jpg
-image_copyrights: Image by Pol Dellaiera
+featureimage: images/IMG_20181014_110212-01.jpg
+featureimagecaption: Image by Pol Dellaiera
 tags:
   - php
   - traits
   - coding
+  - oop
+  - solid
+  - composition
 title: How to use the PHP traits?
 ---
 

@@ -6,10 +6,11 @@ tags:
   - Nix
   - Flake Parts
   - Configuration Management
+  - refactoring
+  - software architecture
 title: Refactoring My Infrastructure As Code Configurations
-images:
-  - /images/124550633-EFFECTS.jpg
-image_copyrights: Blocks, building blocks everywhere
+featureimage: images/124550633-EFFECTS.jpg
+featureimagecaption: Blocks, building blocks everywhere
 draft: false
 ---
 

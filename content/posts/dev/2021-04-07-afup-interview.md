@@ -1,13 +1,15 @@
 ---
 date: 2021-04-07
-images:
-  - /images/daffodils.jpg
-image_copyrights: Image from Pol Dellaiera
+featureimage: images/daffodils.jpg
+featureimagecaption: Image from Pol Dellaiera
 tags:
   - php
   - prime numbers
   - python
   - iterator
+  - interview
+  - open-source
+  - php-community
 title: AFUP interview
 ---
 
