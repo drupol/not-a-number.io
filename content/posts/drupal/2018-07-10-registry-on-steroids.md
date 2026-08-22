@@ -1,12 +1,14 @@
 ---
 date: "2018-07-10"
-images:
-  - /images/puzzle.jpg
+featureimage: images/puzzle.jpg
 subtitle: The ultimate missing Drupal 7 module
 tags:
   - drupal
   - theme
   - theme registry
+  - drupal
+  - hooks
+  - preprocess
 title: Registry on steroids
 ---
 

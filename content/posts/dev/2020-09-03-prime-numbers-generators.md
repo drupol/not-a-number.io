@@ -1,13 +1,15 @@
 ---
 date: 2020-09-03
-images:
-  - /images/milky-way.jpg
-image_copyrights: Image from Pol Dellaiera
+featureimage: images/milky-way.jpg
+featureimagecaption: Image from Pol Dellaiera
 tags:
   - php
   - prime numbers
   - python
   - iterator
+  - algorithms
+  - generators
+  - benchmarking
 title: Prime numbers generation
 ---
 

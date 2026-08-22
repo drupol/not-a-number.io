@@ -1,31 +1,25 @@
-<div class="card mb-3">
-  <div class="row no-gutters">
-    <div class="col-sm-3">
-      <img src="https://covers.openlibrary.org/b/isbn/{{ .isbn }}-M.jpg" alt="{{ .title }}" class="card-img"/>
-    </div>
-    <div class="col-sm-9">
-      <div class="card-body">
-        <div class="card-title"><h3>{{ .title }}</h3></div>
-        <div class="card-body">
-          <dl class="row">
-            <dt class="col-sm-4">ISBN</dt>
-            <dd class="col-sm-8"><code>{{ .isbn }}</code></dd>
-            {{ if .purchase }}
-            <dt class="col-sm-4">Purchase date</dt>
-            <dd class="col-sm-8">{{ .purchase }}</dd>
-            {{ end }}
-            {{ if .tags }}
-            <dt class="col-sm-4">Tags</dt>
-            <dd class="col-sm-8">{{ delimit .tags ", " }}</dd>
-            {{ end }}
-            <dt class="col-sm-4">Link</dt>
-            <dd class="col-sm-8"><a class="text-decoration-none" href="https://openlibrary.org/search?q={{ .isbn }}">OpenLibrary</a></dd>
-          </dl>
-          {{ if .description }}
-          <p>{{ .description | markdownify }}</p>
-          {{ end }}
-        </div>
-      </div>
-    </div>
+<div class="flex flex-col gap-4 rounded-2xl border border-neutral-200/80 bg-white/60 p-4 shadow-sm backdrop-blur-xl sm:flex-row dark:border-neutral-800 dark:bg-neutral-900/50">
+  <div class="sm:w-1/4 sm:flex-none">
+    <img src="https://covers.openlibrary.org/b/isbn/{{ .isbn }}-M.jpg" alt="{{ .title }}" class="w-full rounded-lg object-cover"/>
+  </div>
+  <div class="flex-1">
+    <h3 class="mb-2 text-lg font-semibold">{{ .title }}</h3>
+    <dl class="grid grid-cols-4 gap-x-2 gap-y-1 text-sm">
+      <dt class="col-span-1 font-medium text-neutral-500 dark:text-neutral-400">ISBN</dt>
+      <dd class="col-span-3"><code>{{ .isbn }}</code></dd>
+      {{ if .purchase }}
+      <dt class="col-span-1 font-medium text-neutral-500 dark:text-neutral-400">Purchase date</dt>
+      <dd class="col-span-3">{{ .purchase }}</dd>
+      {{ end }}
+      {{ if .tags }}
+      <dt class="col-span-1 font-medium text-neutral-500 dark:text-neutral-400">Tags</dt>
+      <dd class="col-span-3">{{ delimit .tags ", " }}</dd>
+      {{ end }}
+      <dt class="col-span-1 font-medium text-neutral-500 dark:text-neutral-400">Link</dt>
+      <dd class="col-span-3"><a class="no-underline" href="https://openlibrary.org/search?q={{ .isbn }}">OpenLibrary</a></dd>
+    </dl>
+    {{ if .description }}
+    <p class="mt-2">{{ .description | markdownify }}</p>
+    {{ end }}
   </div>
 </div>

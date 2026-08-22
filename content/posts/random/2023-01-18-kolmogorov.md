@@ -1,14 +1,19 @@
 ---
 date: 2024-01-18
-images:
-  - /images/galleria-umberto-napoli.jpg
-image_copyrights: Gallerie Umberto, Napoli
+featureimage: images/galleria-umberto-napoli.jpg
+featureimagecaption: Gallerie Umberto, Napoli
 tags:
   - random
   - algorithm
   - complexity
+  - mathematics
+  - information theory
+  - randomness
+  - php
 title: "Understanding Kolmogorov Complexity"
 ---
+
+{{< katex >}}
 
 I often advocate for a straightforward yet effective rule: **the shortest solution that delivers the desired result is
 usually the best**. This approach, favoring concise algorithms, not only ensures efficiency but also reduces maintenance
@@ -51,7 +56,7 @@ consider the following 64-character example strings, and evaluate together their
 2. `1234567890123456789012345678901234567890123456789012345678901234`
 3. `7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069`
 
-{{< alert type="warning" >}}The 64-character strings and their corresponding PHP code are used purely for illustrative
+{{< alert >}}The 64-character strings and their corresponding PHP code are used purely for illustrative
 purposes to demonstrate the principles of Kolmogorov complexity. It is worth noting that these examples are
 intentionally simplistic and not intended to represent optimal or real-world scenarios. The choice of 64 characters
 serves as a convenient length for demonstration, making the concept approachable and understandable, even though in
@@ -113,9 +118,11 @@ The Kolmogorov complexity is not just about the subject itself but also about th
 description. Different programming languages or descriptive frameworks might have varying levels of conciseness for the
 same concept. For instance, what is succinctly expressed in one language might be more verbose in another.
 
-{{< alert style="info" >}}This can be found in the formal definition of Kolmogorov complexity:
+{{< alert >}}This can be found in the formal definition of Kolmogorov complexity:
 
-$$ K_f(x) = \min \lbrace |p|: f(p) = x \rbrace $$
+$$
+K_f(x) = \min \lbrace |p|: f(p) = x \rbrace
+$$
 
 Interpreted, this formal definition states: The Kolmogorov complexity $K$ of a string $x$, relative to a Turing machine
 $f$ (a programming language), is the length of the shortest program $p$ that outputs $x$ when run on $f$. {{< /alert >}}
@@ -140,7 +147,7 @@ of data complexity is always subject to revision and improvement. From this pers
 incompressible, meaning it cannot be described by a shorter program. Conversely, a string is compressible if it can be
 described by a shorter program.
 
-{{< alert style="info" >}}Formally, this can be defined as: $$ K_f(x) \geq |x| $$
+{{< alert >}}Formally, this can be defined as: $$ K_f(x) \geq |x| $$
 
 This means the Kolmogorov complexity relative to a Turing machine $f$ of a supposedly incompressible string $x$ is
 always greater than or equal to the length of the string itself. In other words, the Kolmogorov complexity of a true

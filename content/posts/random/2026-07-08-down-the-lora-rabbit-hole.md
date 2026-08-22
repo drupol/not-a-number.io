@@ -4,7 +4,12 @@ tags:
   - lora
   - meshtastic
   - reticulum
-  - nixos
+  - nix
+  - Off-grid Network
+  - hardware
+  - rnode
+  - lxmf
+featureimage: images/down-the-lora-rabbit-hole.png
 title: "Down the LoRa(bbit) Hole: From Meshtastic to Reticulum"
 draft: false
 ---

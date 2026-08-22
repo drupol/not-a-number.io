@@ -1,14 +1,19 @@
 ---
 date: 2017-04-13
-images:
-  - /images/Rubiks-Cube.jpg
-image_copyrights: Image by [William Warby](https://www.flickr.com/photos/wwarby/11913013374/in/photostream/).
+featureimage: images/Rubiks-Cube.jpg
+featureimagecaption: Image by [William Warby](https://www.flickr.com/photos/wwarby/11913013374/in/photostream/).
 tags:
   - php
   - combinatorics
   - library
+  - permutations
+  - combinations
+  - iterators
+  - packagist
 title: What is PHPermutations?
 ---
+
+{{< katex >}}
 
 In December 2016, I started to write a PHP library called
 [PHPermutations](https://packagist.org/packages/drupol/phpermutations) to handle permutations and combinations of an

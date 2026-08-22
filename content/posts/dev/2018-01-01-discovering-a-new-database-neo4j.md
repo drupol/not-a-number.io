@@ -1,14 +1,17 @@
 ---
 date: 2018-01-01
-images:
-  - /images/rho_ophiucus_widefield.jpeg
-image_copyrights: Image by [Rogelio Bernal Andreo](https://commons.wikimedia.org/wiki/File:Rho_Ophiucus_Widefield.jpg).
+featureimage: images/rho_ophiucus_widefield.jpeg
+featureimagecaption: Image by [Rogelio Bernal Andreo](https://commons.wikimedia.org/wiki/File:Rho_Ophiucus_Widefield.jpg).
 tags:
   - dev
   - database
   - graph
   - railway
   - opendata
+  - neo4j
+  - cypher
+  - wikidata
+  - graph-database
 title: "Discovering a new database: Neo4J"
 ---
 

@@ -1,12 +1,15 @@
 ---
 date: 2022-01-01
-images:
-  - /images/bxl-landscape.jpg
-image_copyrights: A view of Brussels
+featureimage: images/bxl-landscape.jpg
+featureimagecaption: A view of Brussels
 tags:
   - php
   - open-source
-  - nixos
+  - nix
+  - retrospective
+  - symfony
+  - wopi
+  - flakes
 title: Happy new year!
 ---
 

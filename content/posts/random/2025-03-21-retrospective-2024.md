@@ -2,9 +2,12 @@
 date: 2025-02-11
 tags:
   - retrospective
+  - open-source
+  - reproducibility
+  - thesis
+  - nix
 title: Retrospective 2024
-images:
-  - /images/PXL_20240120_092646597.jpg
+featureimage: images/PXL_20240120_092646597.jpg
 draft: false
 ---
 
@@ -127,7 +130,7 @@ a [research department](https://joint-research-centre.ec.europa.eu) about a year
 In the team, each developer worked in a distinct operating environment, which brought a diverse set of constraints and
 perspectives to the project.
 
-#### Addressing development environment inconsistencies
+### Addressing development environment inconsistencies
 
 One of the first issues I tackled was the inconsistency in development environments.
 
@@ -158,7 +161,7 @@ the database, code interpreter and all essential tools, on any Linux or macOS ma
 smithereens** an entire class of problems we had previously faced (_and brought some new ones we didn't have before as
 well !_), and I am genuinely pleased with the outcome.
 
-#### Enhancing code quality and maintainability
+### Enhancing code quality and maintainability
 
 While _developing bugs and fixing features_, I focused heavily on reducing complexity and improving reliability, by
 adding typing, refactoring, and writing more tests. A lot of code was duplicated to interact with the database through
@@ -428,7 +431,7 @@ does suggest that meaningful change will require collective effort, shared learn
 we build, govern, and sustain digital public infrastructure across the board. You think that sounds too optimistic? I
 still believe it is possible, and I hope to see public institutions move more decisively in that direction.
 
-{{< alert type="warning" header="Disclaimer" >}}
+{{< alert >}}
 
 1. This article was published in February 2026 and immediately removed after less than an hour. I actually thank the
    person who alerted me about it. I reworked it and published it again, hopefully for good this time.

@@ -1,13 +1,16 @@
 ---
 date: 2018-02-19
-images:
-  - /images/3392883329_00b509024e_b.jpg
-image_copyrights: Image by [Mr Hicks46](https://www.flickr.com/photos/teosaurio/3392883329).
+featureimage: images/3392883329_00b509024e_b.jpg
+featureimagecaption: Image by [Mr Hicks46](https://www.flickr.com/photos/teosaurio/3392883329).
 subtitle: An unexpected use of Neo4J
 tags:
   - random
   - database
   - graph
+  - neo4j
+  - graph-database
+  - numberphile
+  - mathematics
 title: Numberphile and Neo4J numbers experimentations
 ---
 

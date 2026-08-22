@@ -5,10 +5,11 @@ tags:
   - Nix
   - Den
   - Configuration Management
+  - debugging
+  - open-source
 title: "Den Framework Follow-up: Issue Fixed !"
-images:
-  - /images/PXL_20260412_084121757-EDIT.jpg
-image_copyrights: "Da-dedup... da-dedup... da-dedup, dedup, dedup... Local street tag art, April 2026"
+featureimage: images/PXL_20260412_084121757-EDIT.jpg
+featureimagecaption: "Da-dedup... da-dedup... da-dedup, dedup, dedup... Local street tag art, April 2026"
 draft: false
 ---
 

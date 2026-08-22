@@ -9,9 +9,8 @@ tags:
   - Configuration Management
   - Software Architecture
 title: "Evaluating Den - A Dendritic Configuration Framework"
-images:
-  - /images/mike-imura-pattern.png
-image_copyrights: Mike Imura's Non-Periodic pattern (https://arxiv.org/abs/2506.07638)
+featureimage: images/mike-imura-pattern.png
+featureimagecaption: Mike Imura's Non-Periodic pattern (https://arxiv.org/abs/2506.07638)
 draft: false
 ---
 
@@ -320,7 +319,7 @@ Definition values:
 Use `lib.mkForce value` or `lib.mkDefault value` to change the priority on any of these definitions.
 ```
 
-{{< alert type="info" header="Not Invented Here" >}}
+{{< alert header="Not Invented Here" >}}
 
 In software engineering, this is analogous to [the Diamond Problem](https://en.wikipedia.org/wiki/Multiple_inheritance),
 exacerbated here by a cardinality mismatch.
