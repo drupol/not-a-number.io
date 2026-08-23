@@ -83,9 +83,9 @@ So, I tried to see how I could fix that in Atomium, how I could rewrite the "_th
 Some of you might think "_Why the hell this guy is looking after that ? Does this guy likes to suffer ?_". I just like
 to fix things properly :-)
 
-Also because [since Drupal 7.33](https://www.drupal.org/drupal.33-release-notes), you can debug templates and see
-which one is used when rendering HTML components, and their corresponding templates suggestions, just by looking at the
-HTML source code... This option is also configurable within the Atomium settings, see the screenshot below.
+Also because [since Drupal 7.33](https://www.drupal.org/drupal.33-release-notes), you can debug templates and see which
+one is used when rendering HTML components, and their corresponding templates suggestions, just by looking at the HTML
+source code... This option is also configurable within the Atomium settings, see the screenshot below.
 
 But prior fixing that, I needed to find a proper folders and files structure.
 

@@ -264,32 +264,59 @@ Dear readers,
 
 I wish you all a super nice and creative year, full of happiness, joy and... coding!
 
-[0]: {{< ref "2021-07-13-functional-programming-and-php-8" >}} [2]: https://www.youtube.com/watch?v=dkZFtimgAcM [4]:
-https://www.youtube.com/watch?v=ZhuHCtR3xq8 [6]: https://twitter.com/lorentzframe [7]:
-https://github.com/marcosh/lamphpda [8]: https://marcosh.github.io/ [10]: https://www.functionalfest.it/ [12]:
-https://github.com/marcosh/lamphpda/pulls?q=is%3Apr+author%3Adrupol+ [14]:
-https://github.com/loophp/repository-monadic-helper [16]: https://github.com/loophp/collection [18]: https://phpunit.de/
-[20]: https://github.com/loophp/collection/pull/227 [22]: https://github.com/loophp/phpunit-iterable-assertions [24]:
-https://github.com/loophp/iterators [26]: https://www.php.net/cachingiterator [28]:
-https://www.php.net/iteratoraggregate [30]: https://github.com/phpbench/phpbench [32]: https://github.com/azjezz/psl
-[34]: https://github.com/azjezz/psl/blob/2.0.x/src/Psl/Iter/Iterator.php [36]: https://www.php.net/seekableiterator
-[38]: https://www.php.net/countable [40]:
-https://github.com/loophp/iterators/blob/main/src/SimpleCachingIteratorAggregate.php [42]: https://www.php.net/generator
-[44]: https://github.com/loophp/iterators/blob/main/src/CachingIteratorAggregate.php [46]: https://github.com/azjezz
-[48]: https://github.com/loophp/tin [50]: https://github.com/marcosh/lamphpda-validation [52]:
-https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/ [54]:
-https://packagist.org/packages/champs-libres/wopi-lib [56]: https://packagist.org/packages/champs-libres/wopi-bundle
-[58]: https://github.com/symfony/symfony/issues/44184 [60]: https://github.com/loophp/service-alias-autoregister-bundle
-[62]: https://www.collaboraoffice.com/ [64]:
-https://www.collaboraoffice.com/community-news/developers-day-september-30th/ [66]:
-https://github.com/ecphp/session--composition-and-inheritance/ [68]: https://nixos.org/ [70]: https://gentoo.org/ [72]:
-https://github.com/NixOS/nixpkgs/pull/126356 [74]:
-https://symfony.com/blog/announcing-the-open-sourcing-of-the-symfony-cli [76]: https://github.com/loophp/nix-shell/
-[78]: https://github.com/dependabot [80]: https://nixos.wiki/wiki/Flakes [82]:
-https://github.com/loophp/flake-lock-update-workflow [84]: https://github.com/drupol/nixos-x260 [86]:
-https://github.com/NixOS/nixpkgs [88]: https://en.wikipedia.org/wiki/Monad_(functional_programming) [90]:
-https://github.com/loophp/iterators/blob/main/src/ClosureIterator.php [92]: https://giscus.app/ [94]:
-https://adventofcode.com/2021 [96]: https://peakd.com/hive-168588/@crell/aoc2021-review [98]:
-https://twitter.com/BartoszMilewski [100]: https://github.com/Crell/aoc2021/ [102]:
-https://github.com/BartoszMilewski/AoC2021/ [104]: https://wopi-app.herokuapp.com/ [106]:
-https://github.com/drupol/wopi-app/
+[0]: {{< ref "2021-07-13-functional-programming-and-php-8" >}}
+
+[2]: https://www.youtube.com/watch?v=dkZFtimgAcM
+[4]: https://www.youtube.com/watch?v=ZhuHCtR3xq8
+[6]: https://twitter.com/lorentzframe
+[7]: https://github.com/marcosh/lamphpda
+[8]: https://marcosh.github.io/
+[10]: https://www.functionalfest.it/
+[12]: https://github.com/marcosh/lamphpda/pulls?q=is%3Apr+author%3Adrupol+
+[14]: https://github.com/loophp/repository-monadic-helper
+[16]: https://github.com/loophp/collection
+[18]: https://phpunit.de/
+[20]: https://github.com/loophp/collection/pull/227
+[22]: https://github.com/loophp/phpunit-iterable-assertions
+[24]: https://github.com/loophp/iterators
+[26]: https://www.php.net/cachingiterator
+[28]: https://www.php.net/iteratoraggregate
+[30]: https://github.com/phpbench/phpbench
+[32]: https://github.com/azjezz/psl
+[34]: https://github.com/azjezz/psl/blob/2.0.x/src/Psl/Iter/Iterator.php
+[36]: https://www.php.net/seekableiterator
+[38]: https://www.php.net/countable
+[40]: https://github.com/loophp/iterators/blob/main/src/SimpleCachingIteratorAggregate.php
+[42]: https://www.php.net/generator
+[44]: https://github.com/loophp/iterators/blob/main/src/CachingIteratorAggregate.php
+[46]: https://github.com/azjezz
+[48]: https://github.com/loophp/tin
+[50]: https://github.com/marcosh/lamphpda-validation
+[52]: https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/
+[54]: https://packagist.org/packages/champs-libres/wopi-lib
+[56]: https://packagist.org/packages/champs-libres/wopi-bundle
+[58]: https://github.com/symfony/symfony/issues/44184
+[60]: https://github.com/loophp/service-alias-autoregister-bundle
+[62]: https://www.collaboraoffice.com/
+[64]: https://www.collaboraoffice.com/community-news/developers-day-september-30th/
+[66]: https://github.com/ecphp/session--composition-and-inheritance/
+[68]: https://nixos.org/
+[70]: https://gentoo.org/
+[72]: https://github.com/NixOS/nixpkgs/pull/126356
+[74]: https://symfony.com/blog/announcing-the-open-sourcing-of-the-symfony-cli
+[76]: https://github.com/loophp/nix-shell/
+[78]: https://github.com/dependabot
+[80]: https://wiki.nixos.org/wiki/Flakes
+[82]: https://github.com/loophp/flake-lock-update-workflow
+[84]: https://github.com/drupol/nixos-x260
+[86]: https://github.com/NixOS/nixpkgs
+[88]: https://en.wikipedia.org/wiki/Monad_(functional_programming)
+[90]: https://github.com/loophp/iterators/blob/main/src/ClosureIterator.php
+[92]: https://giscus.app/
+[94]: https://adventofcode.com/2021
+[96]: https://peakd.com/hive-168588/@crell/aoc2021-review
+[98]: https://twitter.com/BartoszMilewski
+[100]: https://github.com/Crell/aoc2021/
+[102]: https://github.com/BartoszMilewski/AoC2021/
+[104]: https://wopi-app.herokuapp.com/
+[106]: https://github.com/drupol/wopi-app/

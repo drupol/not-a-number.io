@@ -406,7 +406,7 @@ potential to set an example for others.
 > pioneer in IT.
 
 Lastly, another challenge has been the divide between officials and contractors. One particularly **painful moment**
-came when a senior official publicly attributed the institution's security problems to [*sic*]
+came when a senior official publicly attributed the institution's security problems to [_sic_]
 "[stupidity by developers](https://www.politico.eu/newsletter/brussels-playbook/macron-tusk-talk-european-troops-in-ukraine/)",
 a carefully chosen phrasing that, even if unintentional, was not appropriate and demoralising. As a contractor and
 developer, it stung. I make mistakes, I fix them, I learn. We are humans, we all do. Growth happens when we support each

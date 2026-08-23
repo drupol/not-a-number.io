@@ -56,16 +56,16 @@ consider the following 64-character example strings, and evaluate together their
 2. `1234567890123456789012345678901234567890123456789012345678901234`
 3. `7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069`
 
-{{< alert >}}The 64-character strings and their corresponding PHP code are used purely for illustrative
-purposes to demonstrate the principles of Kolmogorov complexity. It is worth noting that these examples are
-intentionally simplistic and not intended to represent optimal or real-world scenarios. The choice of 64 characters
-serves as a convenient length for demonstration, making the concept approachable and understandable, even though in
-practical applications, the length and complexity of strings might significantly vary. Furthermore, while PHP may seem
-verbose in these instances, it is chosen for its simplicity and accessibility, especially for those not deeply versed in
-programming. The key takeaway is not the length of the PHP code per se, but the underlying idea of Kolmogorov
-complexity: the search for the simplest possible description or program that can generate a given output. Real-world
-applications of Kolmogorov complexity often involve much longer strings and more intricate computations, where the
-efficiency and conciseness of the description become markedly more pronounced and impactful.{{< /alert >}}
+{{< alert >}}The 64-character strings and their corresponding PHP code are used purely for illustrative purposes to
+demonstrate the principles of Kolmogorov complexity. It is worth noting that these examples are intentionally simplistic
+and not intended to represent optimal or real-world scenarios. The choice of 64 characters serves as a convenient length
+for demonstration, making the concept approachable and understandable, even though in practical applications, the length
+and complexity of strings might significantly vary. Furthermore, while PHP may seem verbose in these instances, it is
+chosen for its simplicity and accessibility, especially for those not deeply versed in programming. The key takeaway is
+not the length of the PHP code per se, but the underlying idea of Kolmogorov complexity: the search for the simplest
+possible description or program that can generate a given output. Real-world applications of Kolmogorov complexity often
+involve much longer strings and more intricate computations, where the efficiency and conciseness of the description
+become markedly more pronounced and impactful.{{< /alert >}}
 
 At a glance, the first string `1111111111111111111111111111111111111111111111111111111111111111` does not look like a
 random string. It can be succinctly described as "_64 1's in a row_", therefore it has low Kolmogorov complexity. This

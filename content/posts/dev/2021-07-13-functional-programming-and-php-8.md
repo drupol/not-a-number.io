@@ -350,10 +350,17 @@ Using these new stuff from PHP 8 allowed me to remove a bunch of code and I can'
 [8]: https://php.watch/versions/8.0/named-parameters
 [9]: https://stitcher.io/blog/new-in-php-8
 
-[10]: {{< ref "2021-04-07-afup-interview" >}} [11]: https://en.wikipedia.org/wiki/Tacit_programming [12]:
-https://www.javierchavarri.com/data-first-and-data-last-a-comparison/ [13]:
-https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list [14]: https://php.net/array_filter
-[15]: https://wiki.php.net/rfc/partial_function_application [16]: https://packagist.org/?query=curry [17]:
-https://wiki.php.net/rfc/match_expression_v2 [18]: https://wiki.php.net/rfc/pipe-operator-v2 [19]:
-https://wiki.php.net/rfc/first_class_callable_syntax [20]: https://wiki.php.net/rfc [21]:
-https://github.com/loophp/fpt/pull/12 [22]: https://wiki.haskell.org/Eta_conversion
+[10]: {{< ref "2021-04-07-afup-interview" >}}
+
+[11]: https://en.wikipedia.org/wiki/Tacit_programming
+[12]: https://www.javierchavarri.com/data-first-and-data-last-a-comparison/
+[13]: https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list
+[14]: https://php.net/array_filter
+[15]: https://wiki.php.net/rfc/partial_function_application
+[16]: https://packagist.org/?query=curry
+[17]: https://wiki.php.net/rfc/match_expression_v2
+[18]: https://wiki.php.net/rfc/pipe-operator-v2
+[19]: https://wiki.php.net/rfc/first_class_callable_syntax
+[20]: https://wiki.php.net/rfc
+[21]: https://github.com/loophp/fpt/pull/12
+[22]: https://wiki.haskell.org/Eta_conversion

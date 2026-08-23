@@ -1,7 +1,8 @@
 ---
 date: 2018-01-01
 featureimage: images/rho_ophiucus_widefield.jpeg
-featureimagecaption: Image by [Rogelio Bernal Andreo](https://commons.wikimedia.org/wiki/File:Rho_Ophiucus_Widefield.jpg).
+featureimagecaption:
+  Image by [Rogelio Bernal Andreo](https://commons.wikimedia.org/wiki/File:Rho_Ophiucus_Widefield.jpg).
 tags:
   - dev
   - database
