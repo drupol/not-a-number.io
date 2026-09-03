@@ -4,15 +4,15 @@
   ...
 }:
 
-stdenv.mkDerivation (_finalAttrs: {
+stdenv.mkDerivation (finalAttrs: {
   pname = "blowfish";
-  version = "3.4.0-unstable-2026-08-22";
+  version = "3.6.0";
 
   src = fetchFromGitHub {
     owner = "nunocoracao";
     repo = "blowfish";
-    rev = "69014f6547c918d04ca7bab2b40eb750f86c66b2";
-    hash = "sha256-PcHhtBEFCEpl4kjPt5XRb1wdRCtsqAau89dBPiCPSfE=";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-n2HPKTrUNcCgG27OYr1KkvS6NaEk+KSey8ykdB92V/Y=";
   };
 
   patches = [
