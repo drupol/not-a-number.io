@@ -71,6 +71,14 @@ beyond the scope of this post. Automation and productivity gains have accompanie
 Some had negative social consequences or made certain jobs disappear and others changed existing professions, created
 new skills and gave birth to jobs that simply didn't exist before.
 
+> There are also other important considerations that I am deliberately setting aside here: ethical and ecological
+> concerns, the non-deterministic nature of AI-generated results (even though it has been
+> [announced](https://www.youtube.com/watch?v=U9mJuUkhUzk&t=421s) 2 years ago ), the sense of pride or loss of pride
+> associated with making something oneself, the value of craft, the sheer hugeness of the systems involved, and
+> questions of solidarity. These considerations matter to me personally, and I do not mean to minimise them. I am
+> setting them aside **only** to focus on the narrower question of why the use of AI can trigger such strong reactions,
+> even when the result itself is what is being discussed.
+
 So this is genuinely an open question I keep asking myself, especially when I see the amount of time and energy spent
 arguing about the use of AI, sometimes to the point of making accusations or assumptions that, to me, seem to have very
 little evidence behind them.
