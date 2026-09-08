@@ -39,10 +39,11 @@ Now, let's transpose these situations into the current _AI era_.
    correct the result afterwards.
 
 In all 3 cases, the "_tool_" changes, but the principle seems, at least partly, quite similar to me: **I rely on a skill
-that I do not necessarily have myself in order to turn something into a concrete result**.
+that I do not necessarily have myself in order to turn something into a concrete result**. Do you think it is so bad to
+do that ?
 
-However, the tool is not the only thing that changes. The level of expertise, the relationship of trust and the way
-responsibility is assigned also change. A human professional can explain their choices, point out ambiguities and be
+However, the **tooling** is not the only thing that changes. The level of expertise, the relationship of trust and the
+way responsibility is assigned also change. A human professional can explain their choices, point out ambiguities and be
 held accountable for their work. As of today, an AI cannot do any of those things. The person using it remains
 responsible for understanding, verifying and maintaining the result.
 
@@ -73,7 +74,7 @@ new skills and gave birth to jobs that simply didn't exist before.
 
 > There are also other important considerations that I am deliberately setting aside here: ethical and ecological
 > concerns, the non-deterministic nature of AI-generated results (even though it has been
-> [announced](https://www.youtube.com/watch?v=U9mJuUkhUzk&t=421s) 2 years ago ), the sense of pride or loss of pride
+> [announced](https://www.youtube.com/watch?v=U9mJuUkhUzk&t=421s) 2 years ago), the sense of pride or loss of pride
 > associated with making something oneself, the value of craft, the sheer hugeness of the systems involved, and
 > questions of solidarity. These considerations matter to me personally, and I do not mean to minimise them. I am
 > setting them aside **only** to focus on the narrower question of why the use of AI can trigger such strong reactions,
@@ -97,5 +98,8 @@ the reactions I observe.**
 My current suspicion is that the real dividing line is not whether AI was used, but whether the person presenting the
 result can understand it, verify it and take responsibility for it. And more importantly: **at what point does the use
 of AI actually become problematic ?**
+
+My own opinion matters little here. Personal opinions, including mine, do not settle the question. What matters is
+whether the arguments hold up.
 
 Please feel free to leave a comment below and keep the discussion constructive, please.
