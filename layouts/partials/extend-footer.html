@@ -1,0 +1,9 @@
+{{ if site.Params.backgroundCanvas | default false }}
+  {{ with resources.Get "js/monotile-background.js" }}
+    {{ $script := . | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+    <script
+      defer
+      src="{{ $script.RelPermalink }}"
+      integrity="{{ $script.Data.Integrity }}"></script>
+  {{ end }}
+{{ end }}
