@@ -2,23 +2,31 @@
   const mount = document.getElementById("background-canvas");
   if (!mount) return;
 
-  mount.querySelector("img")?.remove();
-  mount.querySelector("div")?.remove();
+  mount.replaceChildren();
 
   const SVG_NS = "http://www.w3.org/2000/svg";
-  const identity = [1, 0, 0, 0, 1, 0];
-  const radius = Math.sqrt(3) / 2;
-  const spectre = [
-    [0, 0], [1, 0], [1.5, -radius],
-    [1.5 + radius, 0.5 - radius], [1.5 + radius, 1.5 - radius],
-    [2.5 + radius, 1.5 - radius], [3 + radius, 1.5], [3, 2],
-    [3 - radius, 1.5], [2.5 - radius, 1.5 + radius],
-    [1.5 - radius, 1.5 + radius], [0.5 - radius, 1.5 + radius],
-    [-radius, 1.5], [0, 1],
+  const IDENTITY = Object.freeze([1, 0, 0, 0, 1, 0]);
+  const RADIUS = Math.sqrt(3) / 2;
+
+  const SPECTRE = [
+    [0, 0],
+    [1, 0],
+    [1.5, -RADIUS],
+    [1.5 + RADIUS, 0.5 - RADIUS],
+    [1.5 + RADIUS, 1.5 - RADIUS],
+    [2.5 + RADIUS, 1.5 - RADIUS],
+    [3 + RADIUS, 1.5],
+    [3, 2],
+    [3 - RADIUS, 1.5],
+    [2.5 - RADIUS, 1.5 + RADIUS],
+    [1.5 - RADIUS, 1.5 + RADIUS],
+    [0.5 - RADIUS, 1.5 + RADIUS],
+    [-RADIUS, 1.5],
+    [0, 1],
   ];
-  const baseQuad = [spectre[3], spectre[5], spectre[7], spectre[11]];
-  const names = ["Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Phi", "Psi"];
-  const rules = {
+  const BASE_QUAD = [SPECTRE[3], SPECTRE[5], SPECTRE[7], SPECTRE[11]];
+  const NAMES = ["Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Phi", "Psi"];
+  const RULES = {
     Gamma: ["Pi", "Delta", null, "Theta", "Sigma", "Xi", "Phi", "Gamma"],
     Delta: ["Xi", "Delta", "Xi", "Phi", "Sigma", "Pi", "Phi", "Gamma"],
     Theta: ["Psi", "Delta", "Pi", "Phi", "Sigma", "Pi", "Phi", "Gamma"],
@@ -38,149 +46,168 @@
     a[3] * b[1] + a[4] * b[4],
     a[3] * b[2] + a[4] * b[5] + a[5],
   ];
-  const point = (matrix, value) => [
-    matrix[0] * value[0] + matrix[1] * value[1] + matrix[2],
-    matrix[3] * value[0] + matrix[4] * value[1] + matrix[5],
-  ];
-  const rotate = (degrees) => {
-    const angle = (degrees * Math.PI) / 180;
-    const cosine = Math.cos(angle);
-    const sine = Math.sin(angle);
-    return [cosine, -sine, 0, sine, cosine, 0];
+
+  const point = (m, v) => [m[0] * v[0] + m[1] * v[1] + m[2], m[3] * v[0] + m[4] * v[1] + m[5]];
+
+  const rotate = (deg) => {
+    const rad = (deg * Math.PI) / 180;
+    const c = Math.cos(rad);
+    const s = Math.sin(rad);
+    return [c, -s, 0, s, c, 0];
   };
+
   const translate = (x, y) => [1, 0, x, 0, 1, y];
-  const move = (from, to) => translate(to[0] - from[0], to[1] - from[1]);
+  const move = (from, to) => [1, 0, to[0] - from[0], 0, 1, to[1] - from[1]];
 
   function baseSystem() {
     const system = {};
-    names.filter((name) => name !== "Gamma").forEach((name) => {
-      system[name] = { children: [], quad: baseQuad, label: name };
-    });
+    for (let i = 0; i < NAMES.length; i++) {
+      const name = NAMES[i];
+      if (name !== "Gamma") {
+        system[name] = { children: [], quad: BASE_QUAD, label: name };
+      }
+    }
     system.Gamma = {
       children: [
-        [{ children: [], quad: baseQuad, label: "Gamma1" }, identity],
+        [{ children: [], quad: BASE_QUAD, label: "Gamma1" }, IDENTITY],
         [
-          { children: [], quad: baseQuad, label: "Gamma2" },
-          multiply(translate(spectre[8][0], spectre[8][1]), rotate(30)),
+          { children: [], quad: BASE_QUAD, label: "Gamma2" },
+          multiply(translate(SPECTRE[8][0], SPECTRE[8][1]), rotate(30)),
         ],
       ],
-      quad: baseQuad,
+      quad: BASE_QUAD,
     };
     return system;
   }
 
   function buildSupertiles(system) {
     const quad = system.Delta.quad;
-    const reflection = [-1, 0, 0, 0, 1, 0];
-    const placementSteps = [[60, 3, 1], [0, 2, 0], [60, 3, 1], [60, 3, 1],
-      [0, 2, 0], [60, 3, 1], [-120, 3, 3]];
-    const placements = [identity];
+    const REFLECTION = [-1, 0, 0, 0, 1, 0];
+    const steps = [
+      [60, 3, 1],
+      [0, 2, 0],
+      [60, 3, 1],
+      [60, 3, 1],
+      [0, 2, 0],
+      [60, 3, 1],
+      [-120, 3, 3],
+    ];
+    const placements = [IDENTITY];
     let angle = 0;
-    let rotation = identity;
+    let rotation = IDENTITY;
 
-    placementSteps.forEach(([deltaAngle, sourceVertex, targetVertex]) => {
+    for (let i = 0; i < steps.length; i++) {
+      const [deltaAngle, srcV, tgtV] = steps[i];
       if (deltaAngle) {
         angle += deltaAngle;
         rotation = rotate(angle);
       }
-      const rotatedQuad = quad.map((value) => point(rotation, value));
-      const alignment = move(
-        rotatedQuad[targetVertex],
-        point(placements[placements.length - 1], quad[sourceVertex]),
-      );
+      const rotatedQuad = quad.map((v) => point(rotation, v));
+      const alignment = move(rotatedQuad[tgtV], point(placements[placements.length - 1], quad[srcV]));
       placements.push(multiply(alignment, rotation));
-    });
+    }
 
-    const reflected = placements.map((value) => multiply(reflection, value));
+    const reflected = placements.map((v) => multiply(REFLECTION, v));
     const superQuad = [
-      point(reflected[6], quad[2]), point(reflected[5], quad[1]),
-      point(reflected[3], quad[2]), point(reflected[0], quad[1]),
+      point(reflected[6], quad[2]),
+      point(reflected[5], quad[1]),
+      point(reflected[3], quad[2]),
+      point(reflected[0], quad[1]),
     ];
-    const result = {};
 
-    names.forEach((label) => {
-      result[label] = {
-        children: rules[label]
-          .map((name, index) => name ? [system[name], reflected[index]] : null)
-          .filter(Boolean),
-        quad: superQuad,
-      };
-    });
+    const result = {};
+    for (let i = 0; i < NAMES.length; i++) {
+      const label = NAMES[i];
+      const children = [];
+      const rule = RULES[label];
+      for (let j = 0; j < rule.length; j++) {
+        const name = rule[j];
+        if (name) children.push([system[name], reflected[j]]);
+      }
+      result[label] = { children, quad: superQuad };
+    }
     return result;
   }
 
-  function collect(node, transform = identity) {
+  function collectTilesAndBounds(rootNode) {
     const tiles = [];
+    let minX = Infinity,
+      minY = Infinity,
+      maxX = -Infinity,
+      maxY = -Infinity;
+
     function walk(current, currentTransform) {
       if (current.label) {
         tiles.push([current.label, currentTransform]);
+        // Calcul des min/max directement ici
+        for (let i = 0; i < SPECTRE.length; i++) {
+          const pt = SPECTRE[i];
+          const x = currentTransform[0] * pt[0] + currentTransform[1] * pt[1] + currentTransform[2];
+          const y = currentTransform[3] * pt[0] + currentTransform[4] * pt[1] + currentTransform[5];
+          if (x < minX) minX = x;
+          if (x > maxX) maxX = x;
+          if (y < minY) minY = y;
+          if (y > maxY) maxY = y;
+        }
         return;
       }
-      current.children.forEach(([child, localTransform]) => {
+      const children = current.children;
+      for (let i = 0; i < children.length; i++) {
+        const [child, localTransform] = children[i];
         walk(child, multiply(currentTransform, localTransform));
-      });
+      }
     }
-    walk(node, transform);
-    return tiles;
+
+    walk(rootNode, IDENTITY);
+    return { tiles, bounds: [minX, minY, maxX, maxY] };
   }
 
-  function bounds(tiles) {
-    const xs = [];
-    const ys = [];
-    tiles.forEach(([, transform]) => {
-      spectre.forEach((value) => {
-        const [x, y] = point(transform, value);
-        xs.push(x);
-        ys.push(y);
-      });
-    });
-    return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)];
+  let system = baseSystem();
+  for (let depth = 0; depth < 4; depth++) {
+    system = buildSupertiles(system);
   }
 
-  function matrix(value) {
-    return `matrix(${value[0]} ${value[3]} ${value[1]} ${value[4]} ${value[2]} ${value[5]})`;
-  }
-
-  const system = (() => {
-    let current = baseSystem();
-    for (let depth = 0; depth < 4; depth += 1) current = buildSupertiles(current);
-    return current;
-  })();
-  const tiles = collect(system.Delta);
-  const [xmin, ymin, xmax, ymax] = bounds(tiles);
+  const {
+    tiles,
+    bounds: [xmin, ymin, xmax, ymax],
+  } = collectTilesAndBounds(system.Delta);
   const fullWidth = xmax - xmin;
   const fullHeight = ymax - ymin;
+
   const svg = document.createElementNS(SVG_NS, "svg");
-  const defs = document.createElementNS(SVG_NS, "defs");
-  const polygon = document.createElementNS(SVG_NS, "polygon");
-  const group = document.createElementNS(SVG_NS, "g");
-
-  polygon.setAttribute("id", "monotile");
-  polygon.setAttribute("points", spectre.map(([x, y]) => `${x},${y}`).join(" "));
-  defs.appendChild(polygon);
-  svg.appendChild(defs);
-  tiles.forEach(([label, transform]) => {
-    const use = document.createElementNS(SVG_NS, "use");
-    use.setAttribute("href", "#monotile");
-    use.setAttribute("class", label === "Gamma2" ? "tile accent" : "tile");
-    use.setAttribute("transform", matrix(transform));
-    group.appendChild(use);
-  });
-  svg.appendChild(group);
   svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
-  mount.appendChild(svg);
 
-  function resize() {
-    const aspect = window.innerWidth / window.innerHeight;
-    let width = fullHeight * 0.72 * aspect;
-    let height = fullHeight * 0.72;
-    if (width > fullWidth * 0.72) {
-      width = fullWidth * 0.72;
-      height = width / aspect;
-    }
-    svg.setAttribute("viewBox", `${(xmin + xmax - width) / 2} ${(ymin + ymax - height) / 2} ${width} ${height}`);
+  const pointsStr = SPECTRE.map(([x, y]) => `${x},${y}`).join(" ");
+  let usesHtml = "";
+  for (let i = 0; i < tiles.length; i++) {
+    const [label, t] = tiles[i];
+    const cls = label === "Gamma2" ? "tile accent" : "tile";
+    usesHtml += `<use href="#monotile" class="${cls}" transform="matrix(${t[0]} ${t[3]} ${t[1]} ${t[4]} ${t[2]} ${t[5]})" />`;
   }
 
-  resize();
-  window.addEventListener("resize", resize, { passive: true });
+  svg.innerHTML = `<defs><polygon id="monotile" points="${pointsStr}"/></defs><g>${usesHtml}</g>`;
+  mount.appendChild(svg);
+
+  let ticking = false;
+  function updateViewBox() {
+    const aspect = window.innerWidth / window.innerHeight;
+    let w = fullHeight * 0.72 * aspect;
+    let h = fullHeight * 0.72;
+    if (w > fullWidth * 0.72) {
+      w = fullWidth * 0.72;
+      h = w / aspect;
+    }
+    svg.setAttribute("viewBox", `${(xmin + xmax - w) / 2} ${(ymin + ymax - h) / 2} ${w} ${h}`);
+    ticking = false;
+  }
+
+  function onResize() {
+    if (!ticking) {
+      requestAnimationFrame(updateViewBox);
+      ticking = true;
+    }
+  }
+
+  updateViewBox();
+  window.addEventListener("resize", onResize, { passive: true });
 })();
