@@ -6,4 +6,11 @@
       src="{{ $script.RelPermalink }}"
       integrity="{{ $script.Data.Integrity }}"></script>
   {{ end }}
+  {{ with resources.Get "js/scroll-zoom.js" }}
+    {{ $script := . | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+    <script
+      defer
+      src="{{ $script.RelPermalink }}"
+      integrity="{{ $script.Data.Integrity }}"></script>
+  {{ end }}
 {{ end }}
