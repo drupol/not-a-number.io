@@ -9,23 +9,23 @@
   const RADIUS = Math.sqrt(3) / 2;
 
   const HAT = [
-    [0, 0],
-    [1, 0],
+    [0, 4 * RADIUS],
+    [0.5, 3 * RADIUS],
+    [1.5, 3 * RADIUS],
     [1.5, RADIUS],
     [3, 0],
+    [3.5, RADIUS],
     [4.5, RADIUS],
-    [4, 2 * RADIUS],
     [4.5, 3 * RADIUS],
+    [6, 4 * RADIUS],
+    [5.5, 5 * RADIUS],
+    [4.5, 5 * RADIUS],
+    [3.5, 5 * RADIUS],
     [3, 4 * RADIUS],
-    [3, 6 * RADIUS],
-    [2, 6 * RADIUS],
     [1.5, 5 * RADIUS],
-    [1, 4 * RADIUS],
-    [1.5, 3 * RADIUS],
-    [0, 2 * RADIUS],
   ];
   const BASE_QUAD = [HAT[1], HAT[3], HAT[9], HAT[13]];
-  const FLIP = [1, 0, -3, 0, -1, 6 * RADIUS];
+  const FLIP = [-0.5, -RADIUS, 6, -RADIUS, 0.5, 8 * RADIUS];
   const RULES = [
     [60, 2, 0, false],
     [120, 2, 0, false],

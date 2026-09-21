@@ -10,8 +10,6 @@ figcaption {
 #background-canvas svg {
   width: 175%;
   height: 175%;
-  position: relative;
-  right: 50%;
 }
 
 #background-canvas .tile {
