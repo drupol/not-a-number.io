@@ -8,35 +8,32 @@
   const IDENTITY = Object.freeze([1, 0, 0, 0, 1, 0]);
   const RADIUS = Math.sqrt(3) / 2;
 
-  const SPECTRE = [
+  const HAT = [
     [0, 0],
     [1, 0],
-    [1.5, -RADIUS],
-    [1.5 + RADIUS, 0.5 - RADIUS],
-    [1.5 + RADIUS, 1.5 - RADIUS],
-    [2.5 + RADIUS, 1.5 - RADIUS],
-    [3 + RADIUS, 1.5],
-    [3, 2],
-    [3 - RADIUS, 1.5],
-    [2.5 - RADIUS, 1.5 + RADIUS],
-    [1.5 - RADIUS, 1.5 + RADIUS],
-    [0.5 - RADIUS, 1.5 + RADIUS],
-    [-RADIUS, 1.5],
-    [0, 1],
+    [1.5, RADIUS],
+    [3, 0],
+    [4.5, RADIUS],
+    [4, 2 * RADIUS],
+    [4.5, 3 * RADIUS],
+    [3, 4 * RADIUS],
+    [3, 6 * RADIUS],
+    [2, 6 * RADIUS],
+    [1.5, 5 * RADIUS],
+    [1, 4 * RADIUS],
+    [1.5, 3 * RADIUS],
+    [0, 2 * RADIUS],
   ];
-  const BASE_QUAD = [SPECTRE[3], SPECTRE[5], SPECTRE[7], SPECTRE[11]];
-  const NAMES = ["Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Phi", "Psi"];
-  const RULES = {
-    Gamma: ["Pi", "Delta", null, "Theta", "Sigma", "Xi", "Phi", "Gamma"],
-    Delta: ["Xi", "Delta", "Xi", "Phi", "Sigma", "Pi", "Phi", "Gamma"],
-    Theta: ["Psi", "Delta", "Pi", "Phi", "Sigma", "Pi", "Phi", "Gamma"],
-    Lambda: ["Psi", "Delta", "Xi", "Phi", "Sigma", "Pi", "Phi", "Gamma"],
-    Xi: ["Psi", "Delta", "Pi", "Phi", "Sigma", "Psi", "Phi", "Gamma"],
-    Pi: ["Psi", "Delta", "Xi", "Phi", "Sigma", "Psi", "Phi", "Gamma"],
-    Sigma: ["Xi", "Delta", "Xi", "Phi", "Sigma", "Pi", "Lambda", "Gamma"],
-    Phi: ["Psi", "Delta", "Psi", "Phi", "Sigma", "Pi", "Phi", "Gamma"],
-    Psi: ["Psi", "Delta", "Psi", "Phi", "Sigma", "Psi", "Phi", "Gamma"],
-  };
+  const BASE_QUAD = [HAT[1], HAT[3], HAT[9], HAT[13]];
+  const FLIP = [1, 0, -3, 0, -1, 6 * RADIUS];
+  const RULES = [
+    [60, 2, 0, false],
+    [120, 2, 0, false],
+    [0, 1, 1, true],
+    [-120, 2, 2, false],
+    [-60, 2, 0, false],
+    [0, 2, 0, false],
+  ];
 
   const multiply = (a, b) => [
     a[0] * b[0] + a[1] * b[3],
@@ -60,73 +57,41 @@
   const move = (from, to) => [1, 0, to[0] - from[0], 0, 1, to[1] - from[1]];
 
   function baseSystem() {
-    const system = {};
-    for (let i = 0; i < NAMES.length; i++) {
-      const name = NAMES[i];
-      if (name !== "Gamma") {
-        system[name] = { children: [], quad: BASE_QUAD, label: name };
-      }
-    }
-    system.Gamma = {
-      children: [
-        [{ children: [], quad: BASE_QUAD, label: "Gamma1" }, IDENTITY],
-        [
-          { children: [], quad: BASE_QUAD, label: "Gamma2" },
-          multiply(translate(SPECTRE[8][0], SPECTRE[8][1]), rotate(30)),
+    return {
+      H8: { children: [[{ label: "hat" }, IDENTITY]], quad: BASE_QUAD },
+      H7: {
+        children: [
+          [{ label: "hat" }, IDENTITY],
+          [{ label: "flipped" }, FLIP],
         ],
-      ],
-      quad: BASE_QUAD,
+        quad: BASE_QUAD,
+      },
     };
-    return system;
   }
 
   function buildSupertiles(system) {
-    const quad = system.Delta.quad;
-    const REFLECTION = [-1, 0, 0, 0, 1, 0];
-    const steps = [
-      [60, 3, 1],
-      [0, 2, 0],
-      [60, 3, 1],
-      [60, 3, 1],
-      [0, 2, 0],
-      [60, 3, 1],
-      [-120, 3, 3],
-    ];
-    const placements = [IDENTITY];
-    let angle = 0;
-    let rotation = IDENTITY;
+    const h8 = system.H8;
+    const h7 = system.H7;
+    const children = [[h8, IDENTITY]];
+    const quads = [h8.quad];
 
-    for (let i = 0; i < steps.length; i++) {
-      const [deltaAngle, srcV, tgtV] = steps[i];
-      if (deltaAngle) {
-        angle += deltaAngle;
-        rotation = rotate(angle);
-      }
-      const rotatedQuad = quad.map((v) => point(rotation, v));
-      const alignment = move(rotatedQuad[tgtV], point(placements[placements.length - 1], quad[srcV]));
-      placements.push(multiply(alignment, rotation));
+    for (let i = 0; i < RULES.length; i++) {
+      const [deg, tgtV, srcV, isH7] = RULES[i];
+      const rot = deg ? rotate(deg) : IDENTITY;
+      const child = isH7 ? h7 : h8;
+      const rotQuad = child.quad.map((v) => point(rot, v));
+      const align = move(rotQuad[tgtV], quads[i][srcV]);
+      const childTransform = deg ? multiply(align, rot) : align;
+
+      children.push([child, childTransform]);
+      quads.push(child.quad.map((v) => point(childTransform, v)));
     }
 
-    const reflected = placements.map((v) => multiply(REFLECTION, v));
-    const superQuad = [
-      point(reflected[6], quad[2]),
-      point(reflected[5], quad[1]),
-      point(reflected[3], quad[2]),
-      point(reflected[0], quad[1]),
-    ];
-
-    const result = {};
-    for (let i = 0; i < NAMES.length; i++) {
-      const label = NAMES[i];
-      const children = [];
-      const rule = RULES[label];
-      for (let j = 0; j < rule.length; j++) {
-        const name = rule[j];
-        if (name) children.push([system[name], reflected[j]]);
-      }
-      result[label] = { children, quad: superQuad };
-    }
-    return result;
+    const superQuad = [quads[1][3], quads[2][0], quads[4][3], quads[6][0]];
+    return {
+      H8: { children, quad: superQuad },
+      H7: { children: children.slice(0, 6), quad: superQuad },
+    };
   }
 
   function collectTilesAndBounds(rootNode) {
@@ -140,8 +105,8 @@
       if (current.label) {
         tiles.push([current.label, currentTransform]);
         // Calcul des min/max directement ici
-        for (let i = 0; i < SPECTRE.length; i++) {
-          const pt = SPECTRE[i];
+        for (let i = 0; i < HAT.length; i++) {
+          const pt = HAT[i];
           const x = currentTransform[0] * pt[0] + currentTransform[1] * pt[1] + currentTransform[2];
           const y = currentTransform[3] * pt[0] + currentTransform[4] * pt[1] + currentTransform[5];
           if (x < minX) minX = x;
@@ -170,18 +135,18 @@
   const {
     tiles,
     bounds: [xmin, ymin, xmax, ymax],
-  } = collectTilesAndBounds(system.Delta);
+  } = collectTilesAndBounds(system.H8);
   const fullWidth = xmax - xmin;
   const fullHeight = ymax - ymin;
 
   const svg = document.createElementNS(SVG_NS, "svg");
   svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
 
-  const pointsStr = SPECTRE.map(([x, y]) => `${x},${y}`).join(" ");
+  const pointsStr = HAT.map(([x, y]) => `${x},${y}`).join(" ");
   let usesHtml = "";
   for (let i = 0; i < tiles.length; i++) {
     const [label, t] = tiles[i];
-    const cls = label === "Gamma2" ? "tile accent" : "tile";
+    const cls = label === "flipped" ? "tile accent" : "tile";
     usesHtml += `<use href="#monotile" class="${cls}" transform="matrix(${t[0]} ${t[3]} ${t[1]} ${t[4]} ${t[2]} ${t[5]})" />`;
   }
 
