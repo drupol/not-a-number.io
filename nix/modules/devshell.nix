@@ -31,7 +31,6 @@
           (aspellWithDicts (d: [
             d.fr
             d.en
-            d.en-computers
           ]))
         ];
 
