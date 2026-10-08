@@ -1,5 +1,4 @@
 {
   "ignorePatterns": ["/.direnv/", "/.idea/", "/vendor/", "/docs/", "/build/", "CHANGELOG.md", "/layouts/", "/themes/"],
-  "printWidth": 120,
-  "proseWrap": "always"
+  "printWidth": 120
 }
