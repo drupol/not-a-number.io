@@ -2,7 +2,6 @@
 {
   flake-file.inputs = {
     treefmt-nix.url = "github:numtide/treefmt-nix";
-    json-sort.url = "github:drupol/json-sort";
   };
 
   imports = [
@@ -13,9 +12,6 @@
     { pkgs, ... }:
     {
       treefmt = {
-        imports = [
-          inputs.json-sort.treefmtModules.default
-        ];
         projectRootFile = "flake.nix";
         programs = {
           deadnix.enable = true;
