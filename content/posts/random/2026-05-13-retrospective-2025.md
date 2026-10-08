@@ -583,12 +583,10 @@ fewer isolated efforts, more shared building blocks; fewer theatrical transforma
 [`NixCon 2025`]: https://2025.nixcon.org/
 [Numtide]: https://numtide.com
 [GitHub profile]: https://github.com/drupol
-[`Ukraine logo Discourse thread`]:
-  https://discourse.nixos.org/t/proposal-update-the-nixos-logo-for-ukrainian-flag-day-23-august/68375
+[`Ukraine logo Discourse thread`]: https://discourse.nixos.org/t/proposal-update-the-nixos-logo-for-ukrainian-flag-day-23-august/68375
 [Cyber Resilience Act]: https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act
 [Le Phare]: https://le-phare.be/
-[315 merged pull requests]:
-  https://github.com/NixOS/nixpkgs/pulls?q=is%3Apr+author%3Adrupol+merged%3A2025-01-01..2025-12-31+sort%3Aupdated-desc+
+[315 merged pull requests]: https://github.com/NixOS/nixpkgs/pulls?q=is%3Apr+author%3Adrupol+merged%3A2025-01-01..2025-12-31+sort%3Aupdated-desc+
 [Master's thesis on reproducibility in software engineering]: https://doi.org/10.5281/zenodo.12666898
 [`Anduril's threat is existential`]: https://discourse.nixos.org/t/andurils-threat-is-existential/70811/3
 [Rust]: https://rust-lang.org/

@@ -45,7 +45,7 @@ It took a pandemic to let us to work from home. How sad is this, isn't it ?
 {{< figure src="/images/who-led-the-digital-transformation.jpg" caption="Who led the digital transformation?" width=800 >}}
 
 Maybe that this virus was a signal sent by the Earth saying: "_Hey Human, you went too far with me. It's my turn to send
-you something really nasty ! Eat this b**\***s !_"
+you something really nasty ! Eat this b\**\*\**s !_"
 
 Just like in any situation, there's always a good side in a bad situation.
 

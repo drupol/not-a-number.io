@@ -7,7 +7,7 @@ figcaption {
   fill-opacity: 0;
 }
 
-  #background-canvas > img,
+#background-canvas > img,
 #background-canvas > div {
   display: none;
 }
