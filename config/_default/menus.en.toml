@@ -45,9 +45,9 @@ weight = 60
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
-  name = "Source Code"
-  url = "https://github.com/drupol/not-a-number.io"
-  weight = 30
+name = "Source Code"
+url = "https://github.com/drupol/not-a-number.io"
+weight = 30
 
 # [[footer]]
 #   name = "Contact"

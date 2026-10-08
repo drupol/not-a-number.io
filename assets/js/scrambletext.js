@@ -7,11 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   title.classList.add("data-scramble");
 
-  if (
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
-    !window.gsap ||
-    !window.ScrambleTextPlugin
-  ) {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !window.gsap || !window.ScrambleTextPlugin) {
     return;
   }
 
@@ -22,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrambleText: {
       text: title.textContent.trim(),
       chars: "upperAndLowerCase",
-      revealDelay: .5,
+      revealDelay: 0.5,
     },
   });
 });
