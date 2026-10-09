@@ -9,7 +9,7 @@
   ];
 
   perSystem =
-    { pkgs, ... }:
+    { pkgs, lib, ... }:
     {
       treefmt = {
         projectRootFile = "flake.nix";
@@ -29,6 +29,24 @@
           no-cache = true;
           on-unmatched = "warn";
           formatter = {
+            markdown-code-runner = {
+              command = lib.getExe pkgs.markdown-code-runner;
+              includes = [ "*.md" ];
+
+              options = [
+                "--config=${
+                  pkgs.writers.writeTOML "markdown-code-runner-config" {
+                    presets = {
+                      nixfmt = {
+                        command = [ (lib.getExe pkgs.nixfmt-rs) ];
+                        language = "nix";
+                      };
+                    };
+                  }
+                }"
+              ];
+            };
+
             oxfmt = {
               excludes = [ "*.html" ];
             };

@@ -322,7 +322,8 @@ custom `loadNixosAndHmModuleForUser` function built for this project.
                   home.stateVersion = osConfig.system.stateVersion;
                 }
               )
-            ] ++ builtins.map (module: config.flake.modules.homeManager.${module} or { }) modules;
+            ]
+            ++ builtins.map (module: config.flake.modules.homeManager.${module} or { }) modules;
           }
         ];
       };
