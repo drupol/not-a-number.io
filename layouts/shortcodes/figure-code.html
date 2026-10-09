@@ -1,0 +1,14 @@
+{{- $caption := .Get "caption" -}}
+{{- $class := .Get "class" -}}
+{{- $figureClass := .Get "figureClass" -}}
+{{- $href := .Get "href" -}}
+{{- $target := .Get "target" | default "_blank" -}}
+
+<figure{{ with $figureClass }} class="{{ . }}"{{ end }}>
+  {{- with $href }}<a href="{{ . }}" {{ with $target }}target="{{ . }}"{{ end }} class="inline-block">{{ end -}}
+
+  {{ .Inner | markdownify }}
+
+  {{- if $href }}</a>{{ end -}}
+  {{- with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end -}}
+</figure>
