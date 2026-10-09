@@ -41,6 +41,13 @@
                         command = [ (lib.getExe pkgs.nixfmt-rs) ];
                         language = "nix";
                       };
+                      yaml = {
+                        command = [
+                          (lib.getExe pkgs.yamlfmt)
+                          "-in"
+                        ];
+                        language = "yaml";
+                      };
                     };
                   }
                 }"
