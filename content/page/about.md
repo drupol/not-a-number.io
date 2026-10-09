@@ -4,6 +4,7 @@ description: A little about me
 date: 2020-04-08T09:52:21+02:00
 draft: false
 showComments: false
+layout: "simple"
 ---
 
 My job title is _Senior analyst_, which means both a lot and very little at the same time.
