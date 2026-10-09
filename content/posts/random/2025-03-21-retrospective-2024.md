@@ -94,7 +94,7 @@ At the same time, I built and maintained the [OSPO](https://en.wikipedia.org/wik
 infrastructure running [NixOS](https://nixos.org/). Our note-taking server has been up and running without interruption
 for more than 2 years now:
 
-```console {lineNos=inline}
+```terminal {lineNos=inline}
 root@note ~# uptime
  16:51:01  up 817 days  3:46,  1 user,  load average: 0.00, 0.00, 0.00
 ```

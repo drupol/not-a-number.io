@@ -50,7 +50,7 @@ As YAML is quite friendly, it's rather convenient to define new commands, it's f
 
 To use Taskman in your project today, two steps are required:
 
-```bash
+```terminal
 composer require phptaskman/core --dev
 ```
 
@@ -68,13 +68,13 @@ commands:
 
 Now, when you run:
 
-```bash
+```terminal
 ./vendor/bin/taskman
 ```
 
 Your custom command should be available:
 
-```bash
+```terminal
 Taskman dev-master
 
 Usage:

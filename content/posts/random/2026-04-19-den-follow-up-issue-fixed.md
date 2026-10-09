@@ -40,7 +40,7 @@ That created duplicate host module declarations when the same aspect reached res
 example, when multiple users include the same aspect that emits host-level options, those options were emitted multiple
 times:
 
-```console {lineNos=inline}
+```terminal {lineNos=inline}
 error: The option `boot.kernelPackages' is defined multiple times while it's expected to be unique.
 ```
 
