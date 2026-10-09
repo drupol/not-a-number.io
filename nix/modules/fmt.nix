@@ -41,6 +41,25 @@
                         command = [ (lib.getExe pkgs.nixfmt-rs) ];
                         language = "nix";
                       };
+
+                      php = {
+                        language = "php";
+                        command = [
+                          "sh"
+                          "-c"
+                          "${lib.getExe pkgs.phpPackages.php-cs-fixer} fix --quiet --rules=@PSR12 {file}; cat {file}"
+                        ];
+                        input_mode = "file";
+                      };
+
+                      ruff-format = {
+                        language = "python";
+                        command = [
+                          (lib.getExe pkgs.ruff)
+                          "format"
+                          "-"
+                        ];
+                      };
                       yaml = {
                         command = [
                           (lib.getExe pkgs.yamlfmt)

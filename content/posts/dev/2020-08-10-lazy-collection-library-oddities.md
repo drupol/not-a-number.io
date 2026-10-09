@@ -53,7 +53,7 @@ duplicated values from an array_".
 
 There are many ways to do that, the most trivial example is with [array_unique()](https://php.net/array-unique).
 
-```php
+```php {lineNos=inline}
 <?php
 
 $input = ['a', 'b', 'c', 'a', 'd', 'b'];
@@ -71,7 +71,7 @@ $filtered = array_unique($input);
 There is also another fancier way that you might use, by issuing twice the [array_flip()](https://php.net/array-flip)
 function.
 
-```php
+```php {lineNos=inline}
 <?php
 
 $input = ['a', 'b', 'c', 'a', 'd', 'b'];
@@ -92,7 +92,7 @@ We can directly notice that the keys are different, but the values are the same 
 
 Let's break down the calls and print the arrays in between:
 
-```php
+```php {lineNos=inline}
 <?php
 
 $input = ['a', 'b', 'c', 'a', 'd', 'b'];
@@ -124,7 +124,7 @@ The same process is applied for each remaining array values.
 
 From there, we can deduce that:
 
-```php
+```php {lineNos=inline}
 <?php
 
 $input = ['a', 'b', 'c', 'a', 'd', 'b'];
@@ -145,16 +145,16 @@ Iterators and Generators.
 With [loophp/collection](https://github.com/loophp/collection), you can use any kind of iterable types, by default. In
 the following examples, I will use a `Generator`, because it's convenient in this particular example.
 
-```php
+```php {lineNos=inline}
 <?php
 
-$input = static function(): \Generator {
-  yield 'a';
-  yield 'b';
-  yield 'c';
-  yield 'a';
-  yield 'd';
-  yield 'b';
+$input = static function (): \Generator {
+    yield 'a';
+    yield 'b';
+    yield 'c';
+    yield 'a';
+    yield 'd';
+    yield 'b';
 };
 
 $collection = Collection::fromIterable($input())
@@ -162,10 +162,10 @@ $collection = Collection::fromIterable($input())
 
 // Loop over it
 foreach ($collection as $key => $value) {
-  // 'a' => 3
-  // 'b' => 5
-  // 'c' => 2
-  // 'd' => 4
+    // 'a' => 3
+    // 'b' => 5
+    // 'c' => 2
+    // 'd' => 4
 }
 
 // Or just convert it into an array (the same as iterator_to_array($collection))
@@ -181,16 +181,16 @@ $array = $collection->all();
 
 If you do the `flip()` operation twice, what would be the result? Let's try...
 
-```php
+```php {lineNos=inline}
 <?php
 
-$input = static function(): \Generator {
-  yield 'a';
-  yield 'b';
-  yield 'c';
-  yield 'a';
-  yield 'd';
-  yield 'b';
+$input = static function (): \Generator {
+    yield 'a';
+    yield 'b';
+    yield 'c';
+    yield 'a';
+    yield 'd';
+    yield 'b';
 };
 
 $collection = Collection::fromIterable($input())
@@ -199,12 +199,12 @@ $collection = Collection::fromIterable($input())
 
 // Loop over it
 foreach ($collection as $key => $value) {
-  // 0 => 'a'
-  // 1 => 'b'
-  // 2 => 'c'
-  // 3 => 'a'
-  // 4 => 'd'
-  // 5 => 'b'
+    // 0 => 'a'
+    // 1 => 'b'
+    // 2 => 'c'
+    // 3 => 'a'
+    // 4 => 'd'
+    // 5 => 'b'
 }
 
 // Or just convert it into an array (the same as iterator_to_array($collection))
@@ -247,7 +247,7 @@ However, it is still not possible with regular arrays, and it will not be possib
 
 When using a lazy collection library, using any kind of keys is possible.
 
-```php
+```php {lineNos=inline}
 <?php
 
 $input = static function () {
@@ -259,9 +259,9 @@ $input = static function () {
 $collection = Collection::fromIterable($input());
 
 foreach ($collection as $k => $v) {
-  // $k = ['a'], $v = 'a'
-  // $k = StdClass, $v = 'b'
-  // $k = true, $v = 'c'
+    // $k = ['a'], $v = 'a'
+    // $k = StdClass, $v = 'b'
+    // $k = true, $v = 'c'
 }
 ```
 
@@ -281,10 +281,10 @@ also some good information there.
 
 Have you thought about how to sort a lazy collection when it contains duplicated keys ?
 
-```php
+```php {lineNos=inline}
 <?php
 
-$input = static function(): \Generator {
+$input = static function (): \Generator {
     yield 'a' => 'a';
     yield 'b' => 'b';
     yield 'c' => 'c';
@@ -316,10 +316,10 @@ When converting the collection into an array, values having same keys are lost d
 In order to circumvent the issue, you can **normalize** the result. Normalizing the collection will replace keys with
 integers, without duplicates.
 
-```php
+```php {lineNos=inline}
 <?php
 
-$input = static function(): \Generator {
+$input = static function (): \Generator {
     yield 'a' => 'a';
     yield 'b' => 'b';
     yield 'c' => 'c';
@@ -348,10 +348,10 @@ any information ?
 
 This is obviously possible by just looping over the collection object:
 
-```php
+```php {lineNos=inline}
 <?php
 
-$input = static function(): \Generator {
+$input = static function (): \Generator {
     yield 'a' => 'a';
     yield 'b' => 'b';
     yield 'c' => 'c';
@@ -375,10 +375,10 @@ foreach ($collection as $key => $value) {
 
 But there is another alternative, probably better:
 
-```php
+```php {lineNos=inline}
 <?php
 
-$input = static function(): \Generator {
+$input = static function (): \Generator {
     yield 'a' => 'a';
     yield 'b' => 'b';
     yield 'c' => 'c';

@@ -68,7 +68,7 @@ With a custom implementation of the [PHP magic methods](http://php.net/manual/en
 [\_\_get()](http://php.net/manual/en/language.oop5.overloading.php#object.set) and
 [\_\_set()](http://php.net/manual/en/language.oop5.overloading.php#object.set), I've managed to create such a thing:
 
-```php
+```php {lineNos=inline}
 $fooAttribute = $attributeContainer['foo'];
 ```
 

@@ -227,7 +227,7 @@ Let's analyse how it's currently done in Drupal and how I implemented it.
 
 The default implementation is:
 
-```php
+```php {lineNos=inline}
 <?php
 
 $variables['breadcrumb'] = theme(
@@ -259,7 +259,7 @@ the breadcrumb is generated.
 
 Here's how to generate the breadcrumb properly in the `atomium_preprocess_page()`:
 
-```php
+```php {lineNos=inline}
 <?php
 
 $variables['breadcrumb'] = array(

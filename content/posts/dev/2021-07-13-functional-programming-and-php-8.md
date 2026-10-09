@@ -55,7 +55,7 @@ parameter (`limit`).
 
 Example of usage:
 
-```php
+```php {lineNos=inline}
 
 explode(':', 'a:b:c'); // ['a', 'b', 'c']
 
@@ -65,7 +65,7 @@ explode(':', 'a:b:c', 2); // ['a', 'b:c']
 
 Let's say now that we would like to make a _curried_ version of it.
 
-```php
+```php {lineNos=inline}
 
 // Create a curried version of core PHP function "explode"
 // (optional parameters are not even taken in account)
@@ -89,7 +89,7 @@ At first it doesn't seems very useful, but the more you use it, the more you'll 
 
 Another example with `array_map`:
 
-```php
+```php {lineNos=inline}
 
 // Define a simple callback.
 $add1 = fn (int $value): int => $value + 1;
@@ -125,7 +125,7 @@ list of numbers.
 
 Basically, it's a filter application and [`array_filter`][14] should do the job.
 
-```php
+```php {lineNos=inline}
 
 // Define a simple callback
 $odd = fn (int $value): bool => 1 === $value % 2;
@@ -144,7 +144,7 @@ first argument **must** be an `array`, the second a `callable`.
 
 A way to fix this would be to do the following:
 
-```php
+```php {lineNos=inline}
 
 // Define a simple callback
 $odd = fn (int $value): bool => 1 === $value % 2;
@@ -175,7 +175,7 @@ partially solve that problem.
 
 One way to fix it would be to create an extra function that would _flip_ the parameters of a function as such:
 
-```php
+```php {lineNos=inline}
 
 // Define a simple callback
 $odd = fn (int $value): bool => 1 === $value % 2;
@@ -213,7 +213,7 @@ If we take the example of `array_filter` with PHP 7.4, you must provide an `arra
 With PHP 8 and the "named parameters" feature, it is possible to first provide the `callable` and then the `array` as
 such:
 
-```php
+```php {lineNos=inline}
 
 $odd = fn (int $value): bool => 1 === $value % 2;
 $input = [1,2,3];
@@ -228,7 +228,7 @@ fit for practically all use-cases.
 With that "named parameters" feature, such a new _curry_ application could provide the following features and user
 experience:
 
-```php
+```php {lineNos=inline}
 
 // Create a curried version of core PHP function "explode".
 $explode = FPT::curry()('explode');
@@ -259,7 +259,7 @@ optional and most probably has a default value.
 
 Our new Curry function need to be able to deal with that because such things are very common in PHP.
 
-```php
+```php {lineNos=inline}
 
 // Create a curried function of "explode" which must have 3 parameters
 $explode = FPT::curry()('explode', 3);
@@ -299,7 +299,7 @@ arguments, it's more flexible.
 
 It let us use more than one parameter at a time and thus, mimic the behaviour of the _partial_ application.
 
-```php
+```php {lineNos=inline}
 
 // Create a curried function of "explode" which must have 3 parameters
 $explode = FPT::curry()('explode', 3);

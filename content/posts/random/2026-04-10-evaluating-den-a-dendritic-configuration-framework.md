@@ -165,7 +165,7 @@ The `home.stateVersion` defined in the `base` aspect is not propagating to the u
 Fear not ! Den anticipates this and provides a mechanism to establish a
 [mutual provider relationship](https://den.oeiuwq.com/guides/mutual/#denprovidesmutual-provider):
 
-```diff
+```diff {lineNos=inline}
 @@ -7,6 +7,11 @@
    # Enable HomeManager for all users by default
    den.schema.user.classes = lib.mkDefault [ "homeManager" ];
@@ -249,7 +249,7 @@ true
 The breaking point appears when we move from a `1->1` topology to a `1->N` topology. Let's add a second user, `bob`, to
 the `igloo` host:
 
-```diff
+```diff {lineNos=inline}
 @@ -12,10 +12,11 @@
    # hosts. See https://den.oeiuwq.com/guides/mutual/#denprovidesmutual-provider
    den.ctx.user.includes = [ den._.mutual-provider ];

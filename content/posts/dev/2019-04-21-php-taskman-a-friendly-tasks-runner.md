@@ -56,7 +56,7 @@ composer require phptaskman/core --dev
 
 Then, create a file `taskman.yml.dist` that contains your custom commands:
 
-```yaml
+```yaml {lineNos=inline}
 commands:
   hello-world:
     - ls -la
@@ -108,7 +108,7 @@ it _automagically_.
 
 Let's say that your project ship with a file: `taskman.yml.dist` containing:
 
-```yaml
+```yaml {lineNos=inline}
 directories:
   build: "build"
   tests: "tests"
@@ -130,7 +130,7 @@ project and ideally added to `.gitignore`.
 
 That file could be:
 
-```yaml
+```yaml {lineNos=inline}
 directories:
   tests: "${directories.build}/tests"
   log: "${directories.build}/logs"
@@ -148,10 +148,10 @@ Codeception was a good choice, I really enjoyed doing it.
 
 I really liked the ease of testing console application, see it by yourself:
 
-```php
+```php {lineNos=inline}
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 $I = new FunctionalTester($scenario);
 $I->wantTo('Check if the executable is found.');

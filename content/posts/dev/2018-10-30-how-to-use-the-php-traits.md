@@ -68,87 +68,84 @@ Let's see with a basic example.
 In the following example, we want to create a trait that compute
 [the greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor) of 2 integers.
 
-```php
+```php {lineNos=inline}
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 trait GreatestCommonDivisor
 {
-  /**
-   * Get the divisors of a given number.
-   *
-   * @param int $num
-   *   The number.
-   *
-   * @param int $start
-   *   The number to start from.
-   *
-   * @return int[]
-   *   The divisors of the number.
-   */
-  public function factors(int $num, int $start = 2): array
-  {
-    $return = [1, $num];
-
-    $end = ceil(sqrt($num)) + 1;
-
-    for ($i = $start; $i < $end; $i++)
+    /**
+     * Get the divisors of a given number.
+     *
+     * @param int $num
+     *   The number.
+     *
+     * @param int $start
+     *   The number to start from.
+     *
+     * @return int[]
+     *   The divisors of the number.
+     */
+    public function factors(int $num, int $start = 2): array
     {
-      if (0 !== $num % $i) {
-        continue;
-      }
+        $return = [1, $num];
 
-      $return[$i] = $i;
-      $return[$num/$i] = $num/$i;
+        $end = ceil(sqrt($num)) + 1;
+
+        for ($i = $start; $i < $end; $i++) {
+            if (0 !== $num % $i) {
+                continue;
+            }
+
+            $return[$i] = $i;
+            $return[$num / $i] = $num / $i;
+        }
+
+        asort($return);
+
+        return array_values($return);
     }
 
-    asort($return);
+    /**
+     * Get the greatest common divisor.
+     *
+     * @param int ...$x
+     *   The numbers.
+     *
+     * @return int
+     *   The greatest common divisor.
+     */
+    public function gcd(...$x): int
+    {
+        $x = array_map([$this, 'factors'], $x);
 
-    return array_values($return);
-  }
+        $intersect = array_intersect(...$x);
 
-  /**
-   * Get the greatest common divisor.
-   *
-   * @param int ...$x
-   *   The numbers.
-   *
-   * @return int
-   *   The greatest common divisor.
-   */
-  public function gcd(...$x): int
-  {
-    $x = array_map([$this, 'factors'], $x);
-
-    $intersect = array_intersect(...$x);
-
-    return end($intersect);
-  }
+        return end($intersect);
+    }
 }
-
 ```
 
 This trait can be used in any classes just by adding:
 
-```php
+```php {lineNos=inline}
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 class Foo
 {
-  use GreatestCommonDivisor;
+    use GreatestCommonDivisor;
 }
-
 ```
 
 This will add the 2 methods to your class and you'll be able to call them.
 
-```php
+```php {lineNos=inline}
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 $foo = new Foo();
 
@@ -164,7 +161,7 @@ the same names ?
 
 There is a way to avoid name collisions:
 
-```php
+```php {lineNos=inline}
 use \your\namespace\GreatestCommonDivisor {
   GreatestCommonDivisor::gcd as traitGcd;
 }
@@ -194,89 +191,88 @@ See the following example, it's the same as the first example, but rewritten.
 
 First we are going to create a single class.
 
-```php
+```php {lineNos=inline}
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 class GreatestCommonDivisor
 {
-  /**
-   * Get the divisors of a given number.
-   *
-   * @param int $num
-   *   The number.
-   *
-   * @param int $start
-   *   The number to start from.
-   *
-   * @return int[]
-   *   The divisors of the number.
-   */
-  public function factors(int $num, int $start = 2): array
-  {
-    $return = [1, $num];
-
-    $end = ceil(sqrt($num)) + 1;
-
-    for ($i = $start; $i < $end; $i++)
+    /**
+     * Get the divisors of a given number.
+     *
+     * @param int $num
+     *   The number.
+     *
+     * @param int $start
+     *   The number to start from.
+     *
+     * @return int[]
+     *   The divisors of the number.
+     */
+    public function factors(int $num, int $start = 2): array
     {
-      if (0 !== $num % $i) {
-        continue;
-      }
+        $return = [1, $num];
 
-      $return[$i] = $i;
-      $return[$num/$i] = $num/$i;
+        $end = ceil(sqrt($num)) + 1;
+
+        for ($i = $start; $i < $end; $i++) {
+            if (0 !== $num % $i) {
+                continue;
+            }
+
+            $return[$i] = $i;
+            $return[$num / $i] = $num / $i;
+        }
+
+        asort($return);
+
+        return array_values($return);
     }
 
-    asort($return);
 
-    return array_values($return);
-  }
+    /**
+     * Get the greatest common divisor.
+     *
+     * @param int ...$x
+     *   The numbers.
+     *
+     * @return int
+     *   The greatest common divisor.
+     */
+    public function gcd(...$x): int
+    {
+        $x = array_map([$this, 'factors'], $x);
 
+        $intersect = array_intersect(...$x);
 
-  /**
-   * Get the greatest common divisor.
-   *
-   * @param int ...$x
-   *   The numbers.
-   *
-   * @return int
-   *   The greatest common divisor.
-   */
-  public function gcd(...$x): int
-  {
-    $x = array_map([$this, 'factors'], $x);
-
-    $intersect = array_intersect(...$x);
-
-    return end($intersect);
-  }
+        return end($intersect);
+    }
 }
 ```
 
 Then a trait
 
-```php
+```php {lineNos=inline}
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 trait GreatestCommonDivisor
 {
-  /**
-   * Get the greatest common divisor.
-   *
-   * @param int ...$x
-   *   The first number.
+    /**
+     * Get the greatest common divisor.
+     *
+     * @param int ...$x
+     *   The first number.
  *
-   * @return int
-   *   The greatest common divisor.
-   */
-  function gcd(...$x): int
-  {
-    return (new GreatestCommonDivisor())->gcd(...$x);
-  }
+     * @return int
+     *   The greatest common divisor.
+     */
+    public function gcd(...$x): int
+    {
+        return (new GreatestCommonDivisor())->gcd(...$x);
+    }
 }
 ```
 

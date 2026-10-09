@@ -73,7 +73,7 @@ can be demonstrated in PHP. The length of the PHP code is 25 characters, signifi
 difference in length not only generates the entire string but also highlights its high compressibility rate, thereby
 underscoring its very low randomness.
 
-```php
+```php {lineNos=inline}
 echo str_repeat('1', 64); // 25 characters
 ```
 
@@ -83,7 +83,7 @@ there's no much random in it and its Kolmogorov complexity is low. it can be des
 9 repeated 7 times and trimmed to 64 characters_". The length of the PHP code is 48 characters, which is shorter than
 64, also hightlighting its high compressibility rate and therefore its low randomness.
 
-```php
+```php {lineNos=inline}
 echo substr(str_repeat('1234567890', 7), 0, 64); // 48 characters
 ```
 
@@ -101,7 +101,7 @@ string itself, spans 72 characters, exceeding the original string's length. When
 longer than the original string itself, it indicates a very low compressibility rate. This means the string cannot be
 compressed further, thus suggesting its high level of randomness.
 
-```php
+```php {lineNos=inline}
 echo '7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069'; // 72 characters
 ```
 
@@ -160,7 +160,7 @@ hash of `Hello World!`. Knowing this, the string can be succinctly described as 
 reducing significantly its randomness and complexity. The length of the PHP code is now 36 characters, which is shorter
 than 64.
 
-```php
+```php {lineNos=inline}
 echo hash('sha256', 'Hello World!'); // 36 characters
 ```
 

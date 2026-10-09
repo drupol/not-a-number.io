@@ -25,7 +25,7 @@ Programmers][Category theory for programmers]' when I saw something about [Prime
 
 In Python language, it would be written as such:
 
-```python
+```python {lineNos=inline}
 def naturals(n):
     yield n
     yield from naturals(n + 1)
@@ -66,7 +66,7 @@ never seen it before.
 A quick look on Github has led me to some inspiration, and I started to code something and only after two days of
 searching, I came up with this:
 
-```php
+```php {lineNos=inline}
 <?php
 
 function primesGenerator(\Iterator $iterator): \Generator
@@ -75,13 +75,13 @@ function primesGenerator(\Iterator $iterator): \Generator
 
     $iterator = new \CallbackFilterIterator(
         $iterator,
-        fn(int $a): bool => $a % $primeNumber !== 0
+        fn (int $a): bool => $a % $primeNumber !== 0
     );
 
     $iterator->next();
 
     return $iterator->valid() ?
-        yield from primesGenerator($iterator):
+        yield from primesGenerator($iterator) :
         null;
 }
 

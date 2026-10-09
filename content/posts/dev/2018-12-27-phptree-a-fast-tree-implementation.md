@@ -213,7 +213,7 @@ Here's an example of how [this graph](/images/tree-example2.svg) is exported:
 
 ###### To PHP array
 
-```php
+```php {lineNos=inline}
 <?php
 
 $tree = [

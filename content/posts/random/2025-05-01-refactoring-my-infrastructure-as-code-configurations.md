@@ -180,7 +180,7 @@ configuration.
 For example, here is a custom `flake.parts` module. It defines the fonts configuration for both the `dev` and `desktop`
 features. No Home Manager configuration is defined here.
 
-```nix
+```nix {lineNos=inline}
 {
   flake.modules = {
     nixos.dev =
@@ -214,7 +214,7 @@ features. No Home Manager configuration is defined here.
 In the next example module, the module defines the `dev` and `desktop` Home Manager features. It does not define any
 NixOS configuration.
 
-```nix
+```nix {lineNos=inline}
 {
   flake.modules = {
     homeManager.dev =
@@ -238,7 +238,7 @@ NixOS configuration.
 Once in the `modules/` directory, these modules are automatically picked up by
 [`vic/import-tree`](https://github.com/vic/import-tree) in the main `flake.nix` file:
 
-```nix
+```nix {lineNos=inline}
 {
   description = "My Nix infrastructure at home";
 
@@ -256,7 +256,7 @@ The aggregated files are then merged into `config.flake.modules.nixos` by [`flak
 to its built-in [`modules` feature`](https://flake.parts/options/flake-parts-modules.html). This merged configuration is
 ultimately used to build the NixOS configurations, a core capability enabled by Nix flakes.
 
-```nix
+```nix {lineNos=inline}
 {
   inputs,
   lib,
@@ -296,7 +296,7 @@ To go one step further, it would be ideal to define a list of features for each 
 home configurations automatically assemble themselves accordingly. Look no further ! This is precisely the role of the
 custom `loadNixosAndHmModuleForUser` function built for this project.
 
-```nix
+```nix {lineNos=inline}
 {
   inputs,
   ...
@@ -333,7 +333,7 @@ custom `loadNixosAndHmModuleForUser` function built for this project.
 
 Finally, a host machine can declare its configuration as such:
 
-```nix
+```nix {lineNos=inline}
 {
   config,
   ...
