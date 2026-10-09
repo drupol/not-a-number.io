@@ -1,6 +1,8 @@
 ---
 date: 2017-12-17
 featureimage: images/Santa_Claus_waiting_for_a_train_IM1203.JPG
+images:
+  - images/Santa_Claus_waiting_for_a_train_IM1203.JPG
 featureimagecaption: Image by [Annely Salo](https://commons.wikimedia.org/wiki/File:Santa_Claus_waiting_for_a_train_IM1203.JPG).
 tags:
   - php

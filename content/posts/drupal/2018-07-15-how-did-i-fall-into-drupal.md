@@ -1,6 +1,8 @@
 ---
 date: 2018-07-15
 featureimage: images/how-did-i-fall-into-drupal.png
+images:
+  - images/how-did-i-fall-into-drupal.png
 featureimagecaption: ""
 redirect_from:
   - /2018/how-i-fall-into-drupal

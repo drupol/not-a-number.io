@@ -1,6 +1,8 @@
 ---
 date: 2020-08-10
 featureimage: images/IMG_20200718_211804-01.jpeg
+images:
+  - images/IMG_20200718_211804-01.jpeg
 featureimagecaption: Image from Pol Dellaiera
 tags:
   - php

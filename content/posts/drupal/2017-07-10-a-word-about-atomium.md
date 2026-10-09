@@ -1,6 +1,8 @@
 ---
 date: "2017-07-10"
 featureimage: images/atomium.jpg
+images:
+  - images/atomium.jpg
 featureimagecaption: Image by [Niels Mickers](https://commons.wikimedia.org/wiki/File:Atomium_Brussels_-_panoramio_(4).jpg).
 subtitle: A new Drupal 7 base theme
 tags:

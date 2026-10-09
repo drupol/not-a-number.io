@@ -1,6 +1,8 @@
 ---
 date: 2024-01-18
 featureimage: images/galleria-umberto-napoli.jpg
+images:
+  - images/galleria-umberto-napoli.jpg
 featureimagecaption: Gallerie Umberto, Napoli
 tags:
   - random

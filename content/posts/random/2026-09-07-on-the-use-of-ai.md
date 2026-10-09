@@ -4,6 +4,8 @@ tags:
   - random
   - ai
 featureimage: images/Screenshot_20260907_214517.png
+images:
+  - images/Screenshot_20260907_214517.png
 title: "On the use of AI"
 draft: false
 ---

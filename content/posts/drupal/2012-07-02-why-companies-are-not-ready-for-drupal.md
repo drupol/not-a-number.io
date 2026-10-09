@@ -1,6 +1,8 @@
 ---
 date: 2012-07-02
 featureimage: images/losing_money.jpg
+images:
+  - images/losing_money.jpg
 featureimagecaption: Image from [buzzghana.com](http://buzzghana.com/50-foolish-ways-lose-money-daily-ghana/).
 subtitle: It doesn't means that Drupal is not ready for companies ;-)
 tags:

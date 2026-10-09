@@ -8,6 +8,8 @@ tags:
   - nix
 title: Retrospective 2024
 featureimage: images/PXL_20240120_092646597.jpg
+images:
+  - images/PXL_20240120_092646597.jpg
 draft: false
 ---
 

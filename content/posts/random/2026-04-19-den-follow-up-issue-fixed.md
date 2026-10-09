@@ -9,6 +9,8 @@ tags:
   - open-source
 title: "Den Framework Follow-up: Issue Fixed !"
 featureimage: images/PXL_20260412_084121757-EDIT.jpg
+images:
+  - images/PXL_20260412_084121757-EDIT.jpg
 featureimagecaption: "Da-dedup... da-dedup... da-dedup, dedup, dedup... Local street tag art, April 2026"
 draft: false
 ---

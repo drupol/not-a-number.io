@@ -9,6 +9,8 @@ tags:
   - community
 title: Retrospective 2025
 featureimage: images/PXL_20250906_173345772.PANO.jpg
+images:
+  - images/PXL_20250906_173345772.PANO.jpg
 featureimagecaption: Zurich, viewed from Üetliberg
 draft: false
 ---

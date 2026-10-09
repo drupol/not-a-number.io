@@ -1,6 +1,8 @@
 ---
 date: 2019-09-09
 featureimage: images/2019-09-09-summer-vacations-are-over.jpg
+images:
+  - images/2019-09-09-summer-vacations-are-over.jpg
 featureimagecaption: Cala Goloritzé, Baunei, Sardinia
 tags:
   - library

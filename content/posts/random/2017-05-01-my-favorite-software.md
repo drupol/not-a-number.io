@@ -1,6 +1,8 @@
 ---
 date: 2017-05-01
 featureimage: images/my-favorite-software.jpg
+images:
+  - images/my-favorite-software.jpg
 featureimagecaption: Image by Pol Dellaiera.
 subtitle: I just can't live without them
 tags:

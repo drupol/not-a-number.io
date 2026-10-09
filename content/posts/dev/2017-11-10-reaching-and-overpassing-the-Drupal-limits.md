@@ -1,6 +1,8 @@
 ---
 date: 2017-11-10
 featureimage: images/326044514_cedf60b870_b.jpg
+images:
+  - images/326044514_cedf60b870_b.jpg
 featureimagecaption: Image from [FlickR](https://www.flickr.com/photos/98063470@N00/326044514).
 tags:
   - php

@@ -1,6 +1,8 @@
 ---
 date: "2018-07-10"
 featureimage: images/puzzle.jpg
+images:
+  - images/puzzle.jpg
 subtitle: The ultimate missing Drupal 7 module
 tags:
   - drupal

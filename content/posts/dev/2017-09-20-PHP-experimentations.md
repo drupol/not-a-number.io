@@ -1,6 +1,8 @@
 ---
 date: 2017-09-20
 featureimage: images/6053042920_f5d01173fb_b.jpg
+images:
+  - images/6053042920_f5d01173fb_b.jpg
 featureimagecaption: Image from [FlickR](https://www.flickr.com/photos/myfuturedotcom/6053042920).
 tags:
   - php

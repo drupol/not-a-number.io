@@ -1,6 +1,8 @@
 ---
 date: 2021-04-07
 featureimage: images/daffodils.jpg
+images:
+  - images/daffodils.jpg
 featureimagecaption: Image from Pol Dellaiera
 tags:
   - php

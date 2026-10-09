@@ -10,6 +10,8 @@ tags:
   - rnode
   - lxmf
 featureimage: images/down-the-lora-rabbit-hole.png
+images:
+  - images/down-the-lora-rabbit-hole.png
 title: "Down the LoRa(bbit) Hole: From Meshtastic to Reticulum"
 draft: false
 ---

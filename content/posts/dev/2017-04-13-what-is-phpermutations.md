@@ -1,6 +1,8 @@
 ---
 date: 2017-04-13
 featureimage: images/Rubiks-Cube.jpg
+images:
+  - images/Rubiks-Cube.jpg
 featureimagecaption: Image by [William Warby](https://www.flickr.com/photos/wwarby/11913013374/in/photostream/).
 tags:
   - php

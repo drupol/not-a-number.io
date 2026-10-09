@@ -1,6 +1,8 @@
 ---
 date: 2018-02-19
 featureimage: images/3392883329_00b509024e_b.jpg
+images:
+  - images/3392883329_00b509024e_b.jpg
 featureimagecaption: Image by [Mr Hicks46](https://www.flickr.com/photos/teosaurio/3392883329).
 subtitle: An unexpected use of Neo4J
 tags:

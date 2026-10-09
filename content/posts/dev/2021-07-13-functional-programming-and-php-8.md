@@ -1,6 +1,8 @@
 ---
 date: 2021-07-13
 featureimage: images/halle.jpg
+images:
+  - images/halle.jpg
 featureimagecaption: Image from Pol Dellaiera
 tags:
   - php

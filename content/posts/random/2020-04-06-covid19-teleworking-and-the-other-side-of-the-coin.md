@@ -1,6 +1,8 @@
 ---
 date: 2020-04-06
 featureimage: images/e19-empty.jpg
+images:
+  - images/e19-empty.jpg
 featureimagecaption: Belgian E19 motorway, on a Sunday morning in April 2019.
 tags:
   - random

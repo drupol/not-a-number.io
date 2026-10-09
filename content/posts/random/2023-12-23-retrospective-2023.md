@@ -1,6 +1,8 @@
 ---
 date: 2023-12-23
 featureimage: images/PXL_20230819_140619216.jpg
+images:
+  - images/PXL_20230819_140619216.jpg
 featureimagecaption: Izumi, my friend
 tags:
   - retrospective

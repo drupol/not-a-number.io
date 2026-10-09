@@ -1,6 +1,8 @@
 ---
 date: 2022-01-01
 featureimage: images/bxl-landscape.jpg
+images:
+  - images/bxl-landscape.jpg
 featureimagecaption: A view of Brussels
 tags:
   - php

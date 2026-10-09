@@ -1,6 +1,8 @@
 ---
 date: 2018-12-27
 featureimage: images/green-nature-tree-91153.jpg
+images:
+  - images/green-nature-tree-91153.jpg
 featureimagecaption: Image from [pexels.com](https://www.pexels.com/photo/wood-light-nature-forest-91153/)
 tags:
   - php

@@ -10,6 +10,8 @@ tags:
   - software architecture
 title: Refactoring My Infrastructure As Code Configurations
 featureimage: images/124550633-EFFECTS.jpg
+images:
+  - images/124550633-EFFECTS.jpg
 featureimagecaption: Blocks, building blocks everywhere
 draft: false
 ---

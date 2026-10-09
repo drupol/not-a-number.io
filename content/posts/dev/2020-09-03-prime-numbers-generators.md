@@ -1,6 +1,8 @@
 ---
 date: 2020-09-03
 featureimage: images/milky-way.jpg
+images:
+  - images/milky-way.jpg
 featureimagecaption: Image from Pol Dellaiera
 tags:
   - php

@@ -10,6 +10,8 @@ tags:
   - Software Architecture
 title: "Evaluating Den - A Dendritic Configuration Framework"
 featureimage: images/mike-imura-pattern.png
+images:
+  - images/mike-imura-pattern.png
 featureimagecaption: Mike Imura's Non-Periodic pattern (https://arxiv.org/abs/2506.07638)
 draft: false
 ---
