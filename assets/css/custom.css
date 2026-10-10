@@ -30,7 +30,6 @@ html.dark #background-canvas .tile {
 }
 
 .article-content figure {
-  width: max-content;
   max-width: 100%;
   margin-inline: auto;
 }
