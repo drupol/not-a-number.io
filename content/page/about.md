@@ -35,8 +35,8 @@ time, I do not judge people by their personal beliefs, identities, orientations 
 remotely bothered by. The former can be remarkably useful in many situations, especially on public transport, while the
 latter can be rather overwhelming... especially on public transport ! Mother Nature clearly assembled this sensory
 package without much of a plan, but one learns to work with what one is given ! Add an [INTP-A] personality type, a
-healthy appreciation for sarcasm and a tendency to overthink things, and you get a reasonably accurate picture of how I
-experience the world.
+healthy appreciation for sarcasm, the habit of keeping my smartphone upright and close to my ear, and a tendency to
+overthink things and you get a reasonably accurate picture of how I experience the world.
 
 As a Linux and FreeBSD enthusiast, I have worked as a full-stack developer with over a decade of experience in PHP. My
 journey with Drupal began as a hobby, and I progressed to being a [contributor], service provider, and eventually, a
