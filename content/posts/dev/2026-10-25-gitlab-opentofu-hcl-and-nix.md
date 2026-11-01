@@ -41,10 +41,10 @@ approval rules and custom hooks.
 
 ![I have no idea of what I am clickopsing meme](/images/i-have-no-idea-of-what-i-am-clickopsing.jpg)
 
-Managing these settings by hand through GitLab's web interface is what I would call "_ClickOps_": clicking through the
-interface to change live settings. This is an _imperative_ approach: somebody uses GitLab's web interface to make
+Managing these settings by hand through [GitLab]'s web interface is what I would call "_ClickOps_": clicking through the
+interface to change live settings. This is an _imperative_ approach: somebody uses [GitLab]'s web interface to make
 changes, one action at a time. A _declarative_ approach is the opposite: it describes the desired configuration, and
-automation works out how to apply it to GitLab.
+automation works out how to apply it to [GitLab].
 
 _ClickOps_ makes changes **hard to track**. Well, not quite true: there might be some [audit events], depending on the
 system and its available features. But these do not necessarily provide a complete, versioned record. To illustrate
@@ -442,10 +442,10 @@ So now we have to maintain an inventory of the projects _and_ the projects thems
 By contrast, `strict-approval-rules.nix` uses [Terranix] to filter `config.resource.gitlab_project` directly and
 generate one approval rule for each match.
 
-Because `config` holds the merged project definitions—including values contributed or overridden by other modules—there
-is no separate project inventory to maintain and no duplication, making it more natural and less error-prone in the long
-run. This example shows a clear boundary between the languages: [HCL] can parameterise and iterate over data **we
-provide**, while the [Nix module system] can derive new resources **from its composed configuration**.
+Because `config` holds the merged project definitions (*including values contributed or overridden by other modules*)
+there is no separate project inventory to maintain and no duplication, making it more natural and less error-prone in
+the long run. This example shows a clear boundary between the languages: [HCL] can parameterise and iterate over data
+**we provide**, while the [Nix module system] can derive new resources **from its composed configuration**.
 
 ### Building higher-level abstractions
 
@@ -609,7 +609,7 @@ in
 </details>
 
 For this example, `group` names an existing `gitlab_group` resource, and `defaultMembers` is an optional list of
-usernames and access levels. The rule protects `main` from direct pushes and allows Maintainers to merge approved merge
+usernames and access levels. The rule protects `main` from direct pushes and allows maintainers to merge approved merge
 requests. Developers can push to unprotected working branches and [GitLab] does not restrict those pushes to the
 branch's creator. Teams get a small, validated vocabulary for common patterns, which lowers the cognitive load:
 contributors can use the organisation's project options without learning every provider resource [Terranix] can expose.
