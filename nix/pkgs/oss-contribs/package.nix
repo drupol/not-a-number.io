@@ -1,10 +1,10 @@
 {
   lib,
   fetchFromGitHub,
-  php82,
+  php,
 }:
 
-php82.buildComposerProject2 (_finalAttrs: {
+php.buildComposerProject2 (_finalAttrs: {
   pname = "oss-contribs";
   version = "0.2";
 

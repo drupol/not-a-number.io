@@ -38,7 +38,10 @@
                   pkgs.writers.writeTOML "markdown-code-runner-config" {
                     presets = {
                       nixfmt = {
-                        command = [ (lib.getExe pkgs.nixfmt-rs) ];
+                        command = [
+                          (lib.getExe pkgs.nixfmt-rs)
+                          "-"
+                        ];
                         language = "nix";
                       };
 
