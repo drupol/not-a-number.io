@@ -37,6 +37,15 @@
                 "--config=${
                   pkgs.writers.writeTOML "markdown-code-runner-config" {
                     presets = {
+                      hcl = {
+                        command = [
+                          (lib.getExe pkgs.opentofu)
+                          "fmt"
+                          "-"
+                        ];
+                        language = "hcl";
+                      };
+
                       nixfmt = {
                         command = [
                           (lib.getExe pkgs.nixfmt-rs)
