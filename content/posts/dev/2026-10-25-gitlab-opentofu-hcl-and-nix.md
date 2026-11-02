@@ -109,9 +109,9 @@ The natural next step was [Terraform]/[OpenTofu] with the [GitLab provider]. The
 itself, which made it an **obvious** and **natural** choice for this project.
 
 > [!NOTE]
-> [OpenTofu], a fork of [Terraform website], is used throughout the rest of this article. You could replace it with
-> [Terraform] if needed. I prefer [OpenTofu] because it offers a [fully open-source alternative], stricto sensu
-> according to the [Open Source Initiative] ({{< abbr title="Open Source Initiative" >}}OSI{{</>}}) definition.
+> [OpenTofu], a fork of [Terraform], is used throughout the rest of this article. I prefer [OpenTofu] because it offers
+> a [fully open-source alternative], stricto sensu according to the [Open Source Initiative]
+> ({{< abbr title="Open Source Initiative" >}}OSI{{</>}}) definition.
 
 It gave us several benefits:
 
@@ -902,7 +902,6 @@ mistakes that remain are mine.
 [Terranix]: https://terranix.org/
 [GitLab]: https://gitlab.com/
 [Terraform]: https://www.terraform.io/
-[Terraform website]: https://www.terraform.io/
 [AWS]: https://registry.terraform.io/providers/hashicorp/aws/latest
 [GitHub]: https://registry.terraform.io/providers/integrations/github/latest/docs
 [Nix]: https://nixos.org
