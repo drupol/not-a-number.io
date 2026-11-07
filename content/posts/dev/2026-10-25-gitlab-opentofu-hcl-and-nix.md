@@ -141,9 +141,9 @@ I guess you already know where I am going ?
 {{< /alert >}}
 
 This is a job for a language that can compose values and reuse functions. [Nix] is one way to do it, alongside options
-such as [CUE], [KCL] and [Jsonnet]. [Nix] was already part of our everyday tooling, which made it a natural option to
-consider. More importantly, its [Nix module system] gives me the merging and override behaviour I was missing, and
-[Terranix] turns that result into [OpenTofu] configuration.
+such as [CUE], [KCL], [Jsonnet] or [Nickel]. [Nix] was already part of our everyday tooling, which made it a natural
+option to consider. More importantly, its [Nix module system] gives me the merging and override behaviour I was missing,
+and [Terranix] turns that result into [OpenTofu] configuration.
 
 ![Nix VS HCL, distracted boyfriend meme](/images/nix-hcl-distracted-boyfriend-meme.jpg)
 
@@ -930,6 +930,7 @@ mistakes that remain are mine.
 [CUE]: https://cuelang.org/
 [KCL]: https://www.kcl-lang.io/
 [Git]: https://git-scm.com/
+[Nickel]: https://nickel-lang.org/
 [Jsonnet]: https://jsonnet.org/
 [Terranix repository]: https://github.com/terranix/terranix
 [Nix module system]: https://nix.dev/tutorials/module-system/index.html
